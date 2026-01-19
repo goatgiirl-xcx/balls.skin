@@ -431,6 +431,7 @@ Dismount;;verb;;;s
 Dissect;;verb;;;s
 Distance, far off;;inan;{u}zzo </i>[u´.z:o̞]<i>;;s
 Dive;;verb;jan{de} </i>[dʑän.dɛ̝´]<i>;;s
+Dive;;verb;jan{de} </i>[dʑän.dɛ̝´]<i>;Archaic;s
 Dive into lava;;verb;jan{de}de{ya} </i>[dʑän.dɛ̝´.dɛ̝.jä´]<i>;;s
 Diverse;;adj;gu{mwe}de </i>[gu.mwɛ̝´.dɛ̝]<i>;;s
 Do;;verb;{to}be </i>[to̞´.bɛ̝]<i>;;s
@@ -443,7 +444,7 @@ Down;;adj;e{ye} </i>[ɛ̝.jɛ̝´]<i>;;s
 Draft (military);;inan;;;s
 Draft (writing);;verb;;;s
 Dragon;;an;de{de} </i>[dɛ̝.dɛ̝´]<i>;;s
-Dread, fear;;verb;;;s
+Dread, fear;;verb;po{zangzhe} </i>[po̞.zäŋ´.ʑɛ̝´]<i>;;s
 Dream;;an;te{zhetso}ne </i>[tɛ̝.ʑɛ̝:´.tso̞´.nɛ̝]<i>;;s
 Dream, fantasize;;verb;te{zhetso} </i>[tɛ̝.ʑɛ̝:´.tso̞´]<i>;;s
 Drink (alcohol);;verb;be{she}te </i>[bɛ̝.ɕɛ̝´.tɛ̝]<i>;;s
@@ -643,7 +644,7 @@ Glasses;;inan;no{ze}dyi </i>[no̞.zɛ̝´.dji]<i>;;s
 Gleeok;;an;;;hy
 Gloves;;inan;{kye} </i>[kjɛ̝´.]<i>;;s
 Gloves;;inan;{kyeya} </i>[kjɛ̝´.jä´]<i>;;ahan
-Go in a rave/club/bar already intoxicated, pregaming, predrinking;;verb;;slang;s
+Go in a rave/club/bar/party already intoxicated, pregaming, predrinking;;verb;;slang;s
 Go, move;;verb;je{pum} </i>[dʑɛ̝.pum´]<i>;;s
 Goat;;an;be{waa} </i>[bɛ̝.wä:´]<i>;;s
 God;;an;{u}te </i>[u´.tɛ̝]<i>;;s
@@ -657,7 +658,7 @@ Good;;adj;so{de} </i>[so̞.dɛ̝´]<i>;;s
 Goodbye;CUSI;;cu{si} </i>[tɕu.si´]<i>;;s
 Goon;;verb;ye{fe}yeju </i>[jɛ̝.fɛ̝´.jɛ̝.dʑu]<i>;;s
 Goron;;an;;;hy
-Gossip;;verb;;;s
+Gossip;;verb;de{ce} </i>[dɛ̝.tɕɛ̝´]<i>;;s
 Gossip, the word;;inan;;;ahan
 Grape;;an;;;s
 Great;;adj;poo{wa} </i>[po̞:.wä´]<i>;;s
@@ -803,8 +804,8 @@ It;;prn;{sa} </i>[sä´]<i>;Borrowed from Loremese;religion
 It;;prn;zho </i>[ʑo̞]<i>;;s
 It;;prn;zho </i>[ʑo̞]<i>;historical, only used when trying to specify gender in text;s
 Jackal;;an;{sa} </i>[sä´]<i>;;s
-Jealous, envy;;verb;;;s
-Jealousy;;inan;;;s
+Jealous, envy;;verb;sa{zang}po </i>[sä.zäŋ´.po̞]<i>;;s
+Jealousy, envy;;inan;sa{zangshe} </i>[sä.zäŋ´.ɕɛ̝´]<i>;;s
 Jester;;an;yo{tsi}kon </i>[jo̞.tsi´.ko̞n]<i>;Borrowed from Loremese;s
 Jkawi;HAWI;inan;ha{wi}sa </i>[hä.wi´.sä]<i>;;s
 Jkawi (Language);HAWI;inan;ha{wi} {di}ye </i>[hä.wi´.di´.jɛ̝]<i>;;s
@@ -1009,7 +1010,7 @@ Mountain love, sexual love;;verb;ze{po}pese </i>[zɛ̝.po̞´.pɛ̝.sɛ̝]
 Mouse;;an;he{le} </i>[hɛ̝.lɛ̝´]<i>;;s
 Mouth;;an;zu{ce} </i>[zu.tɕɛ̝´]<i>;;s
 Move;;verb;ju{se} </i>[dʑu.sɛ̝´]<i>;;s
-Mud;;inan;;;s
+Mud;;inan;zam{pe} </i>[zäm.pɛ̝´]<i>;;s
 Music;;inan;so{yando} </i>[so̞.jän´.do̞´]<i>;;s
 Mute, hush;;verb;;;s
 Name;;inan;yetu </i>[jɛ̝.tu]<i>;;s
@@ -1119,7 +1120,7 @@ Persist; ;verb;an{ce} </i>[än.tɕɛ̝´]<i>;;s
 Person;;an;;More formal than <ukilen></ukilen>;s
 Pet bowl;;inan;;;s
 Petition;;verb;;;s
-Photo, picture;;inan;{ikyo} </i>[i´.kjo̞´]<i>;;s
+Photograph, picture;;inan;{ikyo} </i>[i´.kjo̞´]<i>;;s
 Pick-me-up, counterbeer;;inan;;;s
 Pick, choose;;verb;;;s
 Pickaxe;;inan;ze{popa}te </i>[zɛ̝.po̞´.pä´.tɛ̝]<i>;;s
@@ -1208,7 +1209,7 @@ Pylon, tower;;inan;;;s
 Quark;;inan;;;s
 Queen (Chess);;inan;o{lizya}ni </i>[o̞.li´.zjä´.ni]<i>;;s
 Question;;inan;u{sya} </i>[u.sjä´]<i>;;s
-Quick, fast;;verb;ge </i>[gɛ̝]<i>;;s
+Quick, fast;;verb;ge </i>[gɛ̝]<i>;;s
 Rabbit;;an;la{wa} </i>[lä.wä´]<i>;;s
 Race;;verb;;;s
 Rail, track;;inan;;;s
@@ -1562,7 +1563,8 @@ Teardrop;;inan;;;s
 Tectonic;;inan;;;s
 Tell truths;;verb;esan{ce} </i>[ɛ̝.sän.tɕɛ̝´]<i>;;s
 Tell, say (to);;verb;e{yeca} </i>[ɛ̝.jɛ̝´.tɕä´]<i>;;s
-Temple gateway;;inan;;;s
+Temple gateway;;inan;de{yewa} </i>[dɛ̝.jɛ̝´.wä´]<i>;;s
+Temple, shrine;;inan;de{ye}yan </i>[dɛ̝.jɛ̝´.jän]<i>;;s
 Ten;14;;na{zhe} </i>[nä.ʑɛ̝´]<i>;Seen in a more slang sense, saying “in inje” is more formal;s
 Tendon;;an;{se} </i>[sɛ̝´]<i>;;s
 Test;;verb;zedun{te} </i>[zɛ̝.dun.tɛ̝´]<i>;;s
@@ -1598,7 +1600,7 @@ Tip;;verb;;;s
 Tisane;;inan;;;s
 Tithe;;verb;;;s
 Today;;inan;;;s
-Tomato;;an;;;s
+Tomato;;an;co{pe}le </i>[tɕo̞.pɛ̝´.lɛ̝]<i>;;s
 Tomorrow;;inan;;;s
 Tone (music);;inan;;;s
 Tongue;;an;{e}tse </i>[ɛ̝´.tsɛ̝]<i>;;s
