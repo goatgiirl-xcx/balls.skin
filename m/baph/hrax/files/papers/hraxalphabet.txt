@@ -1,7 +1,8 @@
 <h1>The writing system of the Hrax</h1>
 <h2>Paper by Darlene Boomhauer</h2>
 <h2>Edited by Mathieu Schnur</h2>
-<p>The Hrax use a fairly simple alphabet to convey many things just like us English speaking humans do. This paper will go over the basics of the alphabet.</p>
+<h2>Published April 9th 2002
+<p>The Hrax use a fairly simple alphabet to convey many things just like us English speaking humans do. This paper will go over the basics of the alphabet as we understand it.</p>
 <table class="doc">
 	<tr>
 		<td><b>Hrax</b>

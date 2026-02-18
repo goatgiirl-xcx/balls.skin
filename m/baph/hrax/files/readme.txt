@@ -8,4 +8,4 @@ You will be given materials to learn the very basics of the Hrax language and on
 <br>
 Best of luck,
 <br>
-United Americas ET Division 12
+United Americas Extra Terrestrial Division 12
