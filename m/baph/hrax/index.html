@@ -162,7 +162,7 @@
 		var dict = {} //starting dictionary
 		var correctDict = {} //correct words
 		var wordLore = {} //lore to individual entries
-		var drive = ["readme", "tykh"] //starting files
+		var drive = ["readme", "tykh/tykh"] //starting files
 		var showsWord = "" //dictionary entry shown, if any
 		var selectedFile = "" //currently selected file
 		
@@ -203,8 +203,8 @@
 			
 			var fileNames = {
 				"readme": "README.TXT",
-				"tykh": "TeachYourKidHrax.PDF",
-				"hraxalphabet": "HraxAlphabet.PDF"
+				"tykh/tykh": "TeachYourKidHrax.PDF",
+				"papers/hraxalphabet": "HraxAlphabet.PDF"
 			}
 			
 			var menuText = "<img class='icon' src='./disk.png'> <text class='finderheader'>Beanrod HDD</text><ul>"
@@ -330,7 +330,7 @@
 			removeMenu();
 			
 			dict = {};
-			drive = ["readme", "tykh"];
+			drive = ["readme", "tykh/tykh"];
 			showsWord = "";
 			selectedFile = "";
 			
@@ -530,8 +530,8 @@
 			var allEntries = Object.keys(dict)
 			var totalCorrect = allEntries.map(e => isCorrect(e)).reduce((partialSum, a) => partialSum + a, 0);
 			
-			if (totalCorrect >= 12 && !drive.includes("hraxalphabet")) {
-				drive.push("hraxalphabet")
+			if (totalCorrect >= 12 && !drive.includes("papers/hraxalphabet")) {
+				drive.push("papers/hraxalphabet")
 			}
 			
 			renderDrive()
