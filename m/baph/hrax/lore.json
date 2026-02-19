@@ -1,6 +1,14 @@
 {
-	"olak": ["The Hrax don't consume food and liquids through the same hole that they talk through. Any further research about this has been blocked, mostly out of privacy for the Hrax."],
-	"hraks": ["The Hrax are squidlike beings."],
+	"olak": ["The Hrax don't consume food and liquids through the same mouth that they talk through. The Hrax have a slower metabolism due to the lack of resources on their home planet."],
+	"hraks": ["The Hrax are squid-like beings with tentacles on their faces.  Their skin is oilier than ours, and almost scale-like. They are mostly humanoid besides the tentacles, some even having facial and head hair, but this is significantly rare, only seen in some clans."],
 	"kuk,kuk": ["The Hrax aren't known to use this to greet eachother, and have mostly only used this with humans. <br>Any similarities between this word and the German word \"Kuckuck\" (\"peekaboo\", lit. \"cuckoo\") are purely accidental, surely."],
-	"lew": ["When a verb ends with \"<hrax> lew</hrax>\", that verb is currently happening, in the present. When \"<hrax> lew</hrax>\" comes after a noun it becomes a verb and is in the present."]
+	"lew": ["\"When a verb ends with \"<hrax> lew</hrax>\", that verb is currently happening, in the present. When \"<hrax> lew</hrax>\" comes after a noun it becomes a verb and is in the present.\" - Teach Your Kid Hrax! 1"],
+	"wel": ["The Hrax don't consume food and liquids through the same mouth that they talk through. Their language being phonetic is a miracle, because it very well could have been a sign language using their tentacles."],
+	"sab": ["As far as we are able to tell, the Hrax don't make a meaningful difference between our fingers and their tentacles. This unfortunetly makes sense, however this makes communicating with them somewhat difficult because they will always ask about our hands."],
+	"hran": ["As far as we are able to tell, the Hrax don't make a meaningful difference between our fingers and their tentacles. While this can be annoying, some have chosen to put their hands facing outwards on their chin to avoid distracting them severly."],
+	"apl": ["The Hrax were enamoured by apples when we originally interogated them. A deputy had one and was snacking on it and was immediatly asked 'about the sphere of flesh he possessed'. He handed it to them and they were hooked. Maybe something about the sugar in the fruit? As far as we understand, this is the only loan word in their language"],
+	"kano": ["The Hrax are a carnivorous species primarily, but have been known to enjoy fruits and vegetables. It's not known whether this is harmful to them like other carnivorous species."],
+	"ogi": ["The word for human doesn't seem to be borrowed from any human language. Some texts seem to suggest it means 'other', as in 'someone other than a Hrax', rather then human. This may be a dialectal thing, but we don't have enough supporting evidence for that."],
+	"eta": ["The Hrax are believed to be a war-mongering planet conquering species. This has been extrapolated from data collected at the 1st and 3rd Crashes."],
+	"jup": [""],
 }
