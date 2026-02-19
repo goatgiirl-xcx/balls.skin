@@ -531,7 +531,7 @@
 			var allEntries = Object.keys(dict)
 			var totalCorrect = allEntries.map(e => isCorrect(e)).reduce((partialSum, a) => partialSum + a, 0);
 			
-			if (totalCorrect >= 12 && !drive.includes("papers/hraxalphabet")) {
+			if (totalCorrect >= 12 && !drive.includes("email/uasis/email1") && !drive.includes("papers/hraxalphabet")) {
 				drive.push("email/uasis/email1")
 				drive.push("papers/hraxalphabet")
 			}
