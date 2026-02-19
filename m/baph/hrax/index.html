@@ -204,7 +204,8 @@
 			var fileNames = {
 				"readme": "README.TXT",
 				"tykh/tykh": "TeachYourKidHrax.PDF",
-				"papers/hraxalphabet": "HraxAlphabet.PDF"
+				"papers/hraxalphabet": "HraxAlphabet.PDF",
+				"email/uasis/email1": "20791225-ETD12-Congrats.EML"
 			}
 			
 			var menuText = "<img class='icon' src='./disk.png'> <text class='finderheader'>Beanrod HDD</text><ul>"
@@ -531,6 +532,7 @@
 			var totalCorrect = allEntries.map(e => isCorrect(e)).reduce((partialSum, a) => partialSum + a, 0);
 			
 			if (totalCorrect >= 12 && !drive.includes("papers/hraxalphabet")) {
+				drive.push("email/uasis/email1")
 				drive.push("papers/hraxalphabet")
 			}
 			
