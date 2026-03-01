@@ -763,6 +763,9 @@ function bijectiveString(m, k) {
 						"dže": "",
 						"tše": "",
 						"hl.": "",
+						"duher": "",
+						"duhr": "",
+						"usok": "",
 						
 						
 						":": ":",
