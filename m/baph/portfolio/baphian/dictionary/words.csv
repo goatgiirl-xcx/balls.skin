@@ -59,7 +59,7 @@ Antimony;;inan;pu{ko} </i>[pu.ko̞´]<i>;;s
 Anxiety;;inan;shin{po} </i>[ɕin.po̞´]<i>;;s
 Apartment;;inan;bi{ce} </i>[bi.tɕɛ̝´]<i>;;s
 Apologize;;verb;;;s
-Appear;;verb;yugu </i>[yu.gu]<i>;;s
+Appear;;verb;yugu </i>[ju.gu]<i>;;s
 Append;;verb;;;s
 Apple;;an;{si}on </i>[si´.o̞n]<i>;Borrowed from Azkali;s
 Application, program;;inan;ju{wa} </i>[dʑu.de.wä´]<i>;;s
@@ -93,10 +93,10 @@ Axe;;inan;{pa} </i>[pä´]<i>;;s
 Axe;;inan;{pa}te </i>[pä´.tɛ̝]<i>;;s
 Azkali;;inan;{atsu}kali </i>[ä´.tsu´.kä.li]<i>;;ahan
 Azkali;;inan;za{ka}li{sa} </i>[zä.kä´.li.sä´]<i>;;s
-Azkali (Language);;inan;za{ka}li{di}ye </i>[zä.kä´.li.di´.jɛ̝]<i>;;s
 Azkali (Language);;inan;{atsu}kali{di}ye </i>[ä´.tsu´.kä.li.di´.jɛ̝]<i>;;ahan
-Azkali (People);;an;za{ka}lisi </i>[zä.kä´.li.si]<i>;;s
+Azkali (Language);;inan;za{ka}li{di}ye </i>[zä.kä´.li.di´.jɛ̝]<i>;;s
 Azkali (People);;an;{atsu}kalisi </i>[ä´.tsu´.kä.li.si]<i>;;ahan
+Azkali (People);;an;za{ka}lisi </i>[zä.kä´.li.si]<i>;;s
 Baby;BEBE;an;bebe </i>[bɛ̝.bɛ̝]<i>;;ahan
 Baby;;an;pepe </i>[pɛ̝.pɛ̝]<i>;;s
 Back;;inan;la{ke} </i>[lä.kɛ̝´]<i>;;s
@@ -548,7 +548,6 @@ Eye;;an;tso </i>[tso̞]<i>;;s
 Eyebrow;;an;a{bu}ha </i>[ä.bu´.hä]<i>;Borrowed from Oikan;s
 Eyeliner;;inan;;;s
 Face;;an;zo{zi} </i>[zo̞.zi´]<i>;;s
-Face;;an;;;s
 Fact;;inan;;;s
 Fake;;adj;{zam}ku </i>[zäm´.ku]<i>;;s
 Fall;;verb;um{we} </i>[um.wɛ̝´]<i>;;s
@@ -677,6 +676,7 @@ Garistan (People);KAZIDAN;an;ka{zi}dan si </i>[kä.zi´.dän si]<i>;;s
 Gate;;inan;pe{wa} </i>[pɛ̝.wä´]<i>;;s
 Genetive marker;;;;Used as the genetive marker;s
 Gerudo;;inan;;;hy
+Get closer;;verb;yuya </i>[ju.jä´]<i>;;s
 Ghostwrite;;verb;;;s
 Gibdo;;inan;;;hy
 Gift;;verb;;;s
@@ -696,21 +696,21 @@ Gloves;;inan;{kyeya} </i>[kjɛ̝´.jä´]<i>;;ahan
 Go in a rave/club/bar/party already intoxicated, pregaming, predrinking;;verb;;slang;s
 Go, move;;verb;je{pum} </i>[dʑɛ̝.pum´]<i>;;s
 Goat;;an;be{waa} </i>[bɛ̝.wä:´]<i>;;s
-God;;an;{u}te </i>[u´.tɛ̝]<i>;;s
 God;;an;{u}te </i>[u´]<i>;;ahan
+God;;an;{u}te </i>[u´.tɛ̝]<i>;;s
 God (Saul);;an;{sa}lu </i>[sä´.lu]<i>;;s
 God (Shidama);;an;;;s
 God (Ukilen), moon;;inan;;;s
 God ray;;inan;;;s
 Godly love;;verb;{u}te{e}pese </i>[u´.tɛ̝.ɛ̝´.pɛ̝.sɛ̝]<i>;Can be used to describe the love between a creator and a creation in any sense except for parents;s
 Godly love;;verb;{u}tepese </i>[u´.tɛ̝.pɛ̝.sɛ̝]<i>;Can be used to describe the love between a creator and a creation in any sense except for parents;ahan
-Gold;;inan;so{to} </i>[so̞.to̞´]<i>;;s
 Gold;;inan;olasotana </i>[o̞.lä.so.tä.nä]<i>;Archaic;s
+Gold;;inan;so{to} </i>[so̞.to̞´]<i>;;s
 Good;;adj;so{de} </i>[so̞.dɛ̝´]<i>;;s
 Goodbye;CUSI;;cu{si} </i>[tɕu.si´]<i>;;s
 Goodness;;noun;so{de}de </i>[so̞.dɛ̝´.de]<i>;;s
 Goon;;verb;ye{fe}yeju </i>[jɛ̝.fɛ̝´.jɛ̝.dʑu]<i>;;s
-Goron;;an;;;hy
+Goron;GOLON;an;golon{zzo} </i>[go̞.lo̞n.z:o̞´]<i>;;hy
 Gossip;;verb;de{ce} </i>[dɛ̝.tɕɛ̝´]<i>;;s
 Gossip, the word;;inan;;;ahan
 Grape;;an;;;s
@@ -752,16 +752,16 @@ Hatchet;;inan;{ba}le </i>[bä´.lɛ̝]<i>;Borrowed from Jkawi;s
 Hate (person);;verb;ja{dule} </i>[dʑä.du´.lɛ̝´]<i>;;s
 Hate, live in someones head rent free;;verb;;;s
 Have;;verb;ko{te} </i>[ko̞.tɛ̝´]<i>;;s
-He, 3rd person masculine;;prn;so </i>[so̞]<i>;;s
 He, 3rd person masculine;;prn;{sa} </i>[sä´]<i>;Borrowed from Loremese;religion
+He, 3rd person masculine;;prn;so </i>[so̞]<i>;;s
 He, 3rd person masculine;;prn;so </i>[so̞]<i>;historical, only used when trying to specify gender in text;s
 Head;;an;zo{she} </i>[zo̞.ɕɛ̝´]<i>;;s
 Heal;;verb;;;s
 Health;;an;;;s
 Hear;;verb;te{te} </i>[tɛ̝.tɛ̝´]<i>;;s
 Heart;;an;shin{zang} </i>[ɕin.zäŋ´]<i>;;s
-Heart attack;;an;bo{ye} </i>[bo̞.jɛ̝´]<i>;Very medical formal;s
 Heart attack;;an;bo{ye} </i>[bo̞.jɛ̝´]<i>;;s
+Heart attack;;an;je{ju} </i>[dʑɛ̝.dʑu´]<i>;Very medical formal;s
 Heavy, big;;adj;je{ju} </i>[dʑɛ̝.dʑu´]<i>;;s
 Hedgehog;;an;dusu{ha} </i>[du.su.hä´]<i>;;s
 Heir;;an;{be}le </i>[bɛ̝´.lɛ̝]<i>;;s
@@ -858,8 +858,8 @@ Iron;;inan;do{mu} </i>[do̞.mu´]<i>;;s
 Island;;inan;zam{gu} </i>[zäm.gu´]<i>;;s
 Issue;;inan;;;s
 Issue, part;;inan;;Almost always used for magazines but can also be used in episodic media;s
-It;;prn;zho </i>[ʑo̞]<i>;;s
 It;;prn;{sa} </i>[sä´]<i>;Borrowed from Loremese;religion
+It;;prn;zho </i>[ʑo̞]<i>;;s
 It;;prn;zho </i>[ʑo̞]<i>;historical, only used when trying to specify gender in text;s
 Jackal;;an;{sa} </i>[sä´]<i>;;s
 Jealous, envy;;verb;sa{zang}po </i>[sä.zäŋ´.po̞]<i>;;s
@@ -1033,8 +1033,8 @@ Mend;;verb;;;s
 Mental;;inan;mu{je}yan </i>[mu.dʑɛ̝´.jän]<i>;;s
 Mercury (planet);;inan;u{je} </i>[u.dʑɛ̝´]<i>;;s
 Merry Christmas;MARI KURISUMASE;;ma{li} ku{lisu}mase </i>[mä.li´ ku.li´.su´.mä.sɛ̝]<i>;;real
-Merry, jolly, happy (for a holiday);MARI;adj;ma{li} </i>[mä.li´]<i>;;real
 Merry, jolly, happy (for a holiday);;adj;jole{ke}da </i>[dʑo̞.lɛ̝.kɛ̝´.dä]<i>;;s
+Merry, jolly, happy (for a holiday);MARI;adj;ma{li} </i>[mä.li´]<i>;;real
 Message;;inan;{pe}teje </i>[pɛ̝´.tɛ̝.dʑɛ̝]<i>;;s
 Metal;;inan;ke{te} </i>[kɛ̝.tɛ̝´]<i>;;s
 Meteor, Comet;;inan;;;s
@@ -1168,8 +1168,8 @@ Pass;;verb;ke{pum} </i>[kɛ̝.pum´]<i>;;s
 Passage;;inan;bu{wo} </i>[bu.wo´]<i>;;s
 Passage of time, delimitative, continuative;;inan;{ke}ju </i>[kɛ̝´.dʑu]<i>;;s
 Passive marker;;;;;s
-Past;;inan;se{de}ye </i>[sɛ̝.dɛ̝´.jɛ̝]<i>;;s
 Past;;noun;{po}ta </i>[po̞´.tä]<i>;Borrowed from Jkawi;s
+Past;;inan;se{de}ye </i>[sɛ̝.dɛ̝´.jɛ̝]<i>;;s
 Path;;inan;lo{ye}te </i>[lo̞.jɛ̝´.tɛ̝]<i>;;s
 Path, street;;inan;lo{yi} </i>[lo̞.ji´]<i>;;s
 Patient;;an;;;s
@@ -1245,7 +1245,7 @@ Pop off, go off;;verb;donge </i>[do̞n.gɛ̝]<i>;;ahan
 Popular, famous;;adj;ko{wa}be{nun} </i>[ko̞.wä´.bɛ̝.nun´]<i>;;s
 Pores;;an;be{kyekye} </i>[bɛ̝.kjɛ̝´.kjɛ̝´]<i>;;ahan
 Pores;;an;dongdong </i>[do̞ŋ.do̞ŋ]<i>;;s
-Pork;;inan;;;s
+Pork;;inan;su{te} </i>[su.tɛ̝´]<i>;;s
 Port;;inan;zon{dyi} </i>[zo̞n.dji´]<i>;;s
 Port (Computer);;inan;{zon} </i>[zo̞n´]<i>;;s
 Positron;;inan;;;s
@@ -1254,9 +1254,9 @@ Potential;;inan;sjɛ̝ </i>[sjɛ̝]<i>;;s
 Poultry, chicken (meat);;inan;;;s
 Pour;;verb;;;s
 Powder;;inan;{la}ma </i>[lä´.mä]<i>;Borrowed from Jkawi;s
+Power;;inan;kaa </i>[kä:]<i>;Treveist;s
 Power;;an;o{wa}ke </i>[o̞.wä´.kɛ̝]<i>;;s
 Power;;an;o{we} </i>[o̞.wɛ̝´]<i>;;s
-Power;;inan;kaa </i>[kä:]<i>;Treveist;s
 Predict;;verb;;;s
 Prepare;;verb;{basye} </i>[bä´.sjɛ̝´]<i>;;s
 President;;an;;Only used for democratically elected presidents;s
@@ -1404,8 +1404,8 @@ Saute;;verb;;;s
 Savour;;verb;;;s
 Say, talk, speak;;verb;e{ye}tu </i>[ɛ̝.jɛ̝´.tu]<i>;;s
 Saying, phrase;;inan;e{ye}ye </i>[ɛ̝.jɛ̝´.jɛ̝]<i>;;s
-Scales;;inan;{su}pi </i>[su´.pi]<i>;Borrowed from Jkawi. Usually used by non-kalis or jkawi in refrence to scales;s
 Scales;;an;{icen} </i>[i´.tɕɛ̝n´]<i>;usually used in reference to fish scales but can be used for all scales;s
+Scales;;inan;{su}pi </i>[su´.pi]<i>;Borrowed from Jkawi. Usually used by non-kalis or jkawi in refrence to scales;s
 Scarab;;an;{hu}fu </i>[hu´.fu]<i>;Borrowed from Jkawi;s
 Scare;;verb;posum{po} </i>[po̞.sum.po̞´]<i>;;s
 Scare;;verb;posum{po} </i>[po̞.sum.po̞´]<i>;;s
@@ -1458,8 +1458,8 @@ Shape;;inan;sohe </i>[so̞.hɛ̝´]<i>;;s
 Share;;verb;;;s
 Shark;;an;ku{ze} </i>[ku.zɛ̝´]<i>;;s
 Sharp;;adj;{ce}to{ko} </i>[tɕɛ̝´.to̞.ko̞´]<i>;;s
-She, 3rd person feminine, ;;prn;zo </i>[zo̞]<i>;;s
 She, 3rd person feminine, ;;prn;{sa} </i>[sä´]<i>;Borrowed from Loremese;religion
+She, 3rd person feminine, ;;prn;zo </i>[zo̞]<i>;;s
 She, 3rd person feminine, ;;prn;zo </i>[zo̞]<i>;historical, only used when trying to specify gender in text;s
 Sheep;;an;{zhe}maa </i>[ʑɛ̝´.mä:]<i>;;s
 Shine, lit;;verb;;;s
@@ -1480,8 +1480,8 @@ Side (math);;inan;bezzo </i>[bɛ̝.z:o̞]<i>;;s
 Side (with), agree;;verb;;;s
 Sign;;verb;;;s
 Sign, board;;inan;;;s
-Silver;;inan;kum{we} </i>[kum.wɛ̝´]<i>;;s
 Silver;;inan;{i}zengke{te} </i>[i´.zɛ̝ŋ.kɛ̝.tɛ̝´ ]<i>;Archaic;s
+Silver;;inan;kum{we} </i>[kum.wɛ̝´]<i>;;s
 Similar;;adj;;;s
 Simmer;;verb;;;s
 Simple;;adj;;;s
@@ -1600,8 +1600,8 @@ Strange;;adj;ke{yo}de </i>[kɛ̝.jo̞´.dɛ̝]<i>;;s
 Strawberry;;an;co{se}le </i>[tɕo̞.sɛ̝´.lɛ̝]<i>;;s
 Streak;;inan;;;s
 Strike;;verb;di{kang} </i>[di.käŋ´]<i>;;s
-String;;inan;{tse} </i>[tsɛ̝´]<i>;;s
 String;;inan;kute </i>[ku.tɛ̝´]<i>;;s
+String;;inan;{tse} </i>[tsɛ̝´]<i>;;s
 Strong;;adj;;;s
 Stuck;;verb;;;s
 Student;;an;;;s
@@ -1871,4 +1871,4 @@ Youth;;an;;;s
 Yuri, girls love, lesbianism;;inan;gimuki </i>[gi.mu.ki]<i>;When used as “Lesbianism” it is seen as vulgar and almost offensive;s
 Zombie;;inan;bi{ye}si </i>[bi.jɛ̝´.si]<i>;;s
 Zombie, reanimated person (not necessarily flesh eating);;inan;deso{yan}nu{e}ze </i>[dɛ̝.so̞.jän´.nu.ɛ̝´.zɛ̝ ]<i>;Incredibly formal, usually only used in Treveist text;s
-Zora;;an;;;hy
+Zora;ZOLA;an;{zo}la{zzo} </i>[zo̞´.lä.z:o̞´ ]<i>;;hy
