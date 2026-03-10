@@ -36,6 +36,7 @@ Alloti;ŚALODI;inan;sha{lo}di{sa} </i>[ɕä.lo̞´.di.sä´]<i>;;s
 Allotian;ŚALODI;an;sha{lo}di si </i>[ɕä.lo̞´.di si]<i>;;s
 Allow, let, can, may;;verb;ze{bee} </i>[zɛ̝.bɛ̝:´]<i>;;s
 Amafjk (Language);AMAHHI;inan;a{ma}hhi {di}ye </i>[ä.mä´.h:i di´.jɛ̝]<i>;;s
+Amber;;inan;shewoha{yi} </i>[ɕɛ̝.wo̞.ha.ji´]<i>;;s
 Analyze;;verb;gu{she}ne </i>[gu.ɕɛ̝´.nɛ̝]<i>;;s
 And;PE;;pe </i>[pɛ̝]<i>;;s
 Andria;ANDIJA;inan;an{di}ya{sa} </i>[än.di´.jä.sä´]<i>;;s
@@ -197,7 +198,7 @@ Born;;verb;wi{le}te </i>[wi.lɛ̝´.tɛ̝]<i>;;s
 Bottle;;inan;li{tepe}we </i>[li.tɛ̝´.pɛ̝´.wɛ̝]<i>;;s
 Bottom (sexual);;an;kasi </i>[kä.si]<i>;;s
 Bow;;inan;zo{ce} </i>[zo̞.ɕɛ̝´]<i>;;s
-Bowl;;inan;;;s
+Bowl;;inan;{pe}yo </i>[pɛ̝´.jo̞]<i>;;s
 Boy;;an;{pa}wa </i>[pä´.wä]<i>;Used for nonkaneeds, borrowed from Loremese;s
 BPD;;inan;;;s
 Brain, mind;;an;mu{je} </i>[mu.dʑɛ̝´]<i>;;s
@@ -635,6 +636,7 @@ Forgive;;verb;;;s
 Fork;;inan;;;s
 Formality marker;;;wa </i>[wä]<i>;Similar to お in some Japanese contexts;s
 Fort;;inan;;;s
+Fossil;;inan;woha{yi} </i>[wo̞.ha.ji´]<i>;;s
 Fountain, water feature;;inan;wo{pefong} </i>[wo̞.pɛ̝´.fo̞ŋ´]<i>;;s
 Four;4;;in{je} </i>[in.dʑɛ̝´]<i>;Used for dates;s
 Four;4;;{kaan} </i>[kä:n´]<i>;;s
@@ -725,8 +727,8 @@ Grow;;verb;e{len} </i>[ɛ̝.lɛ̝n´]<i>;;s
 Growth;;an;e{len}fo{nu} </i>[ɛ̝.lɛ̝n´.fo̞.nu´]<i>;;s
 Guardian;;inan;;;s
 Guardian Angel;;an;;;s
-Guess;;verb;{se}ko </i>[sɛ̝´.ko̞]<i>;Borrowed from Azkali;s
-Guess;;verb;su{sse} </i>[su.s:ɛ̝´]<i>;Uncommon;s
+Guess;SEKO;verb;{se}ko </i>[sɛ̝´.ko̞]<i>;Borrowed from Azkali;ahan
+Guess;;verb;su{sse} </i>[su.s:ɛ̝´]<i>;Uncommon;s
 Guide, help;;verb;;;s
 Gunjas creole;;inan;gun{ja} de{di}ye </i>[gun.dʑä´ dɛ̝.di´.jɛ̝]<i>;;s
 Guts;;an;{si}we </i>[si´.wɛ̝]<i>;;s
@@ -834,7 +836,7 @@ Infant, baby, young child;;an;pe{lezhu} </i>[pɛ̝.lɛ̝´.ʑu´]<i>;;s
 Infect;;verb;;;s
 Infertile;;inan;e{ye}la </i>[ɛ̝.jɛ̝´.lä]<i>;;s
 Inform;;verb;;;s
-Information;;inan;{be}wete </i>[bɛ̝´.wɛ̝.tɛ̝]<i>;;s
+Information;;inan;{be}wete </i>[bɛ̝´.wɛ̝.tɛ̝]<i>;;s
 Injure;;verb;;;s
 Inlet;;inan;;;s
 Inscribe;;verb;;;s
@@ -844,7 +846,7 @@ Insecurities;;inan;;Also used specifically for a part of someone that they don�
 Inspire;;verb;;;s
 Inspire;;verb;;;s
 Interesting;;adj;kopu{lu} </i>[ko̞.pu.lu´]<i>;;s
-International, globbaly;;adj;;;s
+International, globally;;adj;;;s
 Internet;;inan;;;s
 Internet;;inan;;;ahan
 Interrogate ;;verb;po{cyu} </i>[po̞.tɕju´]<i>;;s
@@ -897,7 +899,7 @@ Kill;;verb;be{syi} </i>[bɛ̝.sji´]<i>;;s
 Kimchi;;inan;mu{le} </i>[mu.lɛ̝´ ]<i>;;s
 Kimjang, making kimchi;;verb;mu{le}ja </i>[mu.lɛ̝´.dʑä]<i>;;s
 Kind, nice, friendly;;adj;{sho}ta </i>[ɕo´.ta]<i>;Borrowed from Jkawi;s
-King (Chess);;inan;o{zha} </i>[o̞.ʑä´]<i>;;s
+King (Chess);;inan;o{zha} </i>[o̞.ʑä´]<i>;;s
 Kingdom, land;;inan;;;s
 Kiss;;verb;pe{ze} </i>[pɛ̝.zɛ̝´]<i>;;s
 Kitchen;;inan;;;s
@@ -1196,7 +1198,8 @@ Period (of time);;inan;{ke}da </i>[kɛ̝´.dä]<i>;;s
 Perk, bonus, “plus”;;inan;bbi{ba} </i>[bbi.bä´]<i>;;s
 Persist; ;verb;an{ce} </i>[än.tɕɛ̝´]<i>;;s
 Person;;an;si{ya} </i>[si.jä´]<i>;More formal than <ukilen></ukilen>;s
-Pet bowl;;inan;;;s
+Pet;;an;eze{ya} </i>[ɛ̝.zɛ̝.jä´]<i>;;s
+Pet bowl;;inan;eze{ya}nu{pe}yo </i>[ɛ̝.zɛ̝.jä´.nu.pɛ̝´.jo̞]<i>;;s
 Petition;;verb;;;s
 Photograph, picture;;inan;{ikyo} </i>[i´.kjo̞´]<i>;;s
 Pick-me-up, counterbeer;;inan;;;s
