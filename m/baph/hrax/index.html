@@ -10,6 +10,10 @@
 		
 		hrax {font-family: "Hrax"; font-size:.65em;}
 		
+		* {
+			user-select: none;
+		}
+		
 		table.ui {
 			height:100%;
 			width:100%;
@@ -124,6 +128,10 @@
 			margin-left: 5px;
 			margin-right: 5px;
 		}
+		a.hyperlink {
+			color: blue;
+			text-decoration: underline
+		}
 		
 		</style>
     <!-- <link href="/style.css" rel="stylesheet" type="text/css" media="all"> -->
@@ -153,7 +161,10 @@
 	<script>
 		var dict = {} //starting dictionary
 		var correctDict = {} //correct words
-		var drive = ["readme", "tykh"] //starting files
+		var wordLore = {} //lore to individual entries
+		var drive = ["readme", "tykh/tykh"] //starting files
+		var showsWord = "" //dictionary entry shown, if any
+		var selectedFile = "" //currently selected file
 		
 		function isCorrect(word) {
 			if (!Object.keys(correctDict).includes(word)) {return false}
@@ -162,6 +173,11 @@
 		}
 		
 		function renderDictionary() {
+			if (showsWord) {
+				openDictWord(showsWord)
+				return
+			}
+			
 			var dictMenu = document.getElementById("dictionary")
 			
 			if (Object.keys(dict).length == 0) {
@@ -174,7 +190,7 @@
 			for (let i = 0; i < Object.keys(dict).length; i++) {
 				var meaningCorrect = isCorrect(Object.keys(dict)[i])
 				
-				menuText += "<li><hrax>" + Object.keys(dict)[i] + "</hrax>: \"" + dict[Object.keys(dict)[i]] + "\" " + (meaningCorrect ? "<font style=\"color: blue\">(✓)</font>" : "") + "</li>"
+				menuText += "<li><a href='#' class='hyperlink' onclick='openDictWord(\"" + Object.keys(dict)[i] + "\")'><hrax>" + Object.keys(dict)[i] + "</hrax></a>: \"" + dict[Object.keys(dict)[i]] + "\" " + (meaningCorrect ? "<font style=\"color: blue\">(✓)</font>" : "") + "</li>"
 			}
 			
 			menuText += "</ul>"
@@ -187,13 +203,14 @@
 			
 			var fileNames = {
 				"readme": "README.TXT",
-				"tykh": "TeachYourKidHrax.PDF"
+				"tykh/tykh": "TeachYourKidHrax.PDF",
+				"papers/hraxalphabet": "HraxAlphabet.PDF"
 			}
 			
 			var menuText = "<img class='icon' src='./disk.png'> <text class='finderheader'>Beanrod HDD</text><ul>"
 			
 			for (let i = 0; i < drive.length; i++) {
-				menuText += "<li><a href='#' name='sysfile' id='" + drive[i] + "' onclick='highlight(this)'>" + fileNames[drive[i]] + "</font></li>"
+				menuText += "<li><a href='#' " + (drive[i] == selectedFile ? "class='selected' " : "") + "name='sysfile' id='" + drive[i] + "' onclick='highlight(this)'>" + fileNames[drive[i]] + "</font></li>"
 			}
 			
 			menuText += "</ul>"
@@ -224,9 +241,33 @@
 		})
 		
 		function setMeaning(menu) {
-			menu.querySelector("#innerMenu").innerHTML = "<input type='text' id='meaningInput'></input><br><a class='menuoption' href='#' onclick='dict[\"" + menu.dataset["word"] + "\"] = document.getElementById(\"meaningInput\").value; renderDictionary(); removeMenu()'>Save meaning</a>"
+			menu.querySelector("#innerMenu").innerHTML = "<input type='text' onkeypress='return setMeaningTextboxEvent(event)' id='meaningInput'></input><br><a class='menuoption' id='saveMeaningButton' href='#' onclick='setMeaningInput(\"" + menu.dataset["word"] + "\"); renderDictionary(); removeMenu()'>Save meaning</a>"
 			
 			positionMenu(menu)
+			document.getElementById("meaningInput").focus()
+		}
+		
+		function setMeaningInput(word) {
+			if (!(/\S/.test(document.getElementById("meaningInput").value))) {return}
+			
+			dict[word] = document.getElementById("meaningInput").value;
+			checkFileUnlock()
+			
+			/*
+			if (showsWord.split(",").includes(word) || showsWord == word) {
+				openDictWord(showsWord)
+			}
+			*/
+		}
+		
+		function setMeaningTextboxEvent(e) {
+			e = e || window.event;
+			if (e.keyCode == 13)
+			{
+				document.getElementById('saveMeaningButton').click();
+				return false;
+			}
+			return true;
 		}
 		
 		function positionMenu(menu) {
@@ -257,7 +298,6 @@
 
 			document.body.removeChild(element);
 		}
-		
 		
 		function loadSave() {
 			var element = document.createElement('input');
@@ -290,7 +330,9 @@
 			removeMenu();
 			
 			dict = {};
-			drive = ["readme", "tykh"];
+			drive = ["readme", "tykh/tykh"];
+			showsWord = "";
+			selectedFile = "";
 			
 			renderDrive();
 			renderDictionary();
@@ -331,7 +373,7 @@
 			for (let i = 0; i < menuOld.length; i++)
 			{ menuOld[i].remove() }
 			
-			word = clicked.innerHTML.toLowerCase()
+			var word = clicked.innerHTML.toLowerCase()
 			
 			var newWord = false
 			if (!Object.keys(dict).includes(word)) {
@@ -349,7 +391,7 @@
 						renderDictionary()
 					}
 					
-					subWord[i] = dict[subWord[i]]
+					subWord[i] = dict[subWord[i]] + ((isCorrect(subWord[i])) || (dict[subWord[i]] == "???") ? "" : "?")
 				}
 			}
 			
@@ -358,7 +400,7 @@
 			
 			var meaningCorrect = isCorrect(word)
 			
-			clicked.parentElement.outerHTML += '<div class="menu" data-offsetleft="' + offsetleft + '" data-offsettop="' + parseFloat(parseFloat(clicked.offsetTop) + parseFloat(clicked.offsetHeight)) + '" data-word="' + word +'"><b><i>"' + dict[word] + '"' + (newWord ? ' <font style="color: red">(new word)</font>' : '') + (meaningCorrect ? ' <font style="color: blue">(✓)</font>' : '') + '</b>' + (subWord.length > 1 ? '<br>("' + subWord.join('" + "') + '")' : "") + '</i><hr><font id="innerMenu">' + (meaningCorrect ? '' : '<a href="#" class="menuoption" onclick="setMeaning(this.parentElement.parentElement)">Set meaning</a><br>') + '<a href="#" class="menuoption">Open in dictionary</a></font></div>'
+			clicked.parentElement.outerHTML += '<div class="menu" data-offsetleft="' + offsetleft + '" data-offsettop="' + parseFloat(parseFloat(clicked.offsetTop) + parseFloat(clicked.offsetHeight)) + '" data-word="' + word +'"><b><i>"' + dict[word] + '"' + (newWord ? ' <font style="color: red">(new word)</font>' : '') + (meaningCorrect ? ' <font style="color: blue">(✓)</font>' : '') + '</b>' + (subWord.length > 1 ? '<br>("' + subWord.join('" + "') + '")' : "") + '</i><hr><font id="innerMenu">' + '<a href="#" class="menuoption" onclick="setMeaning(this.parentElement.parentElement)">Set meaning</a><br>' + '<a href="#" class="menuoption" onclick="openDictWord(this.parentElement.parentElement.dataset[\'word\']); removeMenu()">Open in dictionary</a></font></div>'
 			
 			var menu = document.getElementsByClassName("menu")[0]
 			
@@ -400,6 +442,7 @@
 			if (clicked === undefined) {return}
 			
 			clicked.className = "selected"
+			selectedFile = clicked.id
 			
 			var currdoc = document.getElementById("currdoc")
 			
@@ -413,14 +456,104 @@
 			  .then(() => parseHrax())
 		}
 		
-		window.onload = function() {
-			renderDrive();
-			renderDictionary();
+		function openDictWord(clicked) {
+			var dictMenu = document.getElementById("dictionary")
+			var meaningCorrect = isCorrect(clicked)
 			
+			showsWord = clicked
+			
+			dictMenu.innerHTML = "<a href='#' class='hyperlink' onclick='showsWord = \"\"; renderDictionary()'>&lt; Return to dictionary</a><br>"
+			dictMenu.innerHTML += "<font size='+2'><hrax>" + clicked + "</hrax></font> <i>(\"" + dict[clicked] + "\")" + (meaningCorrect ? ' <font style="color: blue">(✓)</font>' : '') + "</i>"
+			
+			// pronuciation is not displayed here, because that would be "cheating, and for liberals" (baphomet, thanksgiving 2024)
+			
+			//if it's a compound, do the following:
+			var subWord = clicked.split(",")
+			
+			if (subWord.length > 1) {
+				dictMenu.innerHTML += "<br>Compound of "
+				
+				for (let i = 0; i < subWord.length; i++) {
+					if (!Object.keys(dict).includes(subWord[i])) {
+						dict[subWord[i]] = "???";
+						renderDictionary()
+					}
+					
+					dictMenu.innerHTML += "<a href='#' class='hyperlink' onclick='openDictWord(\"" + subWord[i] + "\")'><hrax>" + subWord[i] + "</hrax></a> <i>(\"" + dict[subWord[i]] + ((isCorrect(subWord[i])) || (dict[subWord[i]] == "???") ? "" : "?") + "\")</i>"
+					
+					if (i == subWord.length - 2) {dictMenu.innerHTML += " and "}
+					else if (i == subWord.length - 1) {}
+					else {dictMenu.innerHTML += ", "}
+				}
+			}
+			
+			// lore is displayed only when a word is confirmed
+			if (isCorrect(clicked) && Object.keys(wordLore).includes(clicked)) {
+				dictMenu.innerHTML += "<br><br>" + wordLore[clicked]
+			}
+			
+			// list all the compounds:
+			if (subWord.length == 1) {
+				var compoundList = ""
+				
+				for (let i = 0; i < Object.keys(dict).length; i++) {
+					var newSplitWord = Object.keys(dict)[i].split(",")
+					
+					var newSplitWordMeanings = Object.keys(dict)[i].split(",") //.map((element) => (dict[element] + ((isCorrect(element)) || (dict[element] == "???") ? "" : "?")))
+					
+					for (let i = 0; i < newSplitWordMeanings.length; i++) {
+						if (!Object.keys(dict).includes(newSplitWordMeanings[i])) {
+							dict[newSplitWordMeanings[i]] = "???";
+						}
+						
+						newSplitWordMeanings[i] = "\"" + dict[newSplitWordMeanings[i]] + ((isCorrect(newSplitWordMeanings[i])) || (dict[newSplitWordMeanings[i]] == "???") ? "" : "?") + "\""
+					}
+					
+					
+					((isCorrect(Object.keys(dict)[i])) || (dict[Object.keys(dict)[i]] == "???") ? "" : "?")
+					
+					if (newSplitWord.length > 1 && newSplitWord.includes(clicked)) {
+						compoundList += "<li><a class='hyperlink' href='#' onclick='openDictWord(\"" + Object.keys(dict)[i] + "\")'><hrax>" + Object.keys(dict)[i] + "</hrax></a> <i>(\"" + dict[Object.keys(dict)[i]] + ((isCorrect(Object.keys(dict)[i])) || (dict[Object.keys(dict)[i]] == "???") ? "" : "?") + "\", " + newSplitWordMeanings.join(" + ") + ")</i></li>"
+					}
+				}
+				
+				if (compoundList) {
+					dictMenu.innerHTML += "<br><br>Known compounds:"
+					compoundList = "<ul>" + compoundList + "</ul>"
+					dictMenu.innerHTML += compoundList
+				}
+			}
+			
+		}
+		
+		function checkFileUnlock() {
+			var allEntries = Object.keys(dict)
+			var totalCorrect = allEntries.map(e => isCorrect(e)).reduce((partialSum, a) => partialSum + a, 0);
+			
+			if (totalCorrect >= 12 && !drive.includes("papers/hraxalphabet")) {
+				drive.push("papers/hraxalphabet")
+			}
+			
+			renderDrive()
+		}
+		
+		window.onload = function() {
 			fetch("./dic.json")
 			  .then(response => response.json())
 			  .then((data) => {
-				correctDict = data
+			    console.log("fetched dict!");
+				correctDict = data;
+				return fetch("./lore.json");
+			  })
+			  .then(response => response.json())
+			  .then((data) => {
+			    console.log("fetched lore!");
+				wordLore = data;
+			  })
+			  .then(() => {
+				renderDrive();
+				renderDictionary();
+				console.log("done!");
 			  })
 		}
 	</script>

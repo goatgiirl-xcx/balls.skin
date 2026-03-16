@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Boryaworld Calendar Converter</title>
+    <link href="flags/css.css" rel="stylesheet" type="text/css" media="all">
+	<link rel="icon" type="image/x-icon" href="./bw.ico">
+  </head>
+  <body>
+	<font style="font-size: 26px;"><!--West Noellastani:--> </font><font id="errorWNL" name="errorWNL" style="font-size: 26px; color: red"></font><font id="convWNL" name="convWNL" style="font-size: 26px; font-weight: bold;"></font><br>
+	<img><font style="font-size: 26px;"> </font><font id="convWNL1" name="convWNL1" style="font-size: 26px;"></font><br>
+	<script src="cal.js"></script>
+	<script>
+		// --- DISPLAY
+		
+		function convertDate(date) {	
+			document.getElementById('errorWNL').innerHTML = ""
+			document.getElementById('convWNL').innerHTML = ""
+			
+			if (date.getUTCFullYear() < -9999 || date.getUTCFullYear() > 9999) {
+				document.getElementById('errorWNL').innerHTML = "Year must be between -9999 and 9999"
+			} else {
+				var convDateWNL = calcDateWNL(date)
+				
+				var dayNamesWNL = ["Zefang", "Deya", "Mupewe", "Zude", "Soto", "Ge"]
+				var weekNamesWNL = ["Sye", "Sepa", "Sazhe", "Eshe"]
+				var monthNamesWNL = ["Jangsede", "Laze", "Juga", "Nope", "We", "Odoku", "Katanzhe", "Tanzhe", "Fotanzhe", "Shinzang", "Kasuka", "Suka", "Kezzo", "Tonkomse", "Kajangsede", "Etejangsede"]
+				var suffixNamesWNL = ["", " BNC"]
+				var eraNamesWNL = [" Kawilete", " Wilete", " Elen", " Tuwa", " Kanopu", " Nopu", " Kotsana"]
+				
+				document.getElementById('convWNL').innerHTML = dayNamesWNL[convDateWNL[0]] + " " + weekNamesWNL[convDateWNL[1]] + " " + monthNamesWNL[convDateWNL[2]] + " " + convDateWNL[3] + suffixNamesWNL[convDateWNL[4]] //+ eraNamesWNL[convDateWNL[5]]
+			}
+			
+		}
+		
+		function clickButton(useDate) {
+			var inputDate = new Date(Date.UTC(useDate[0], useDate[1], useDate[2], 12, 0, 0))
+			inputDate.setUTCFullYear(useDate[0])
+			inputDate.setUTCMonth(useDate[1])
+			inputDate.setUTCDate(useDate[2])
+		
+			convertDate(inputDate)
+		}
+		
+		function setToday() {
+			var today = new Date()
+			
+			/*
+			document.getElementById('yearGr').value = today.getFullYear()
+			document.getElementById('monthGr').value = today.getMonth()
+			document.getElementById('dayGr').value = today.getDate()
+			*/
+			
+			var useDate = [today.getFullYear(), today.getMonth(), today.getDate()]
+			
+			clickButton(useDate)
+		}
+		
+		setToday()
+	</script>
+  
+</body></html>

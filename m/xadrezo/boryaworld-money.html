@@ -91,12 +91,12 @@ function convertEUR(except) {
 	
 	if (except != "MAG") {
 		if (isNaN(document.forms.baseform.valueEUR.value)) {document.forms.baseform.valueMAG.value = NaN} else {
-		var grain = roundProp(document.forms.baseform.valueEUR.value / (77.646 / 31) * 150 * exchange[document.forms.baseform.currency.value]["inverseRate"], 0);
-		var dram = Math.abs((parseInt(grain / 25)) % 6);
-		var ounce = Math.abs(parseInt(grain / 150));
-		grain = Math.abs(grain % 25)
+		var grain = roundProp(document.forms.baseform.valueEUR.value / (77.646 / 31) * 120 * exchange[document.forms.baseform.currency.value]["inverseRate"], 0);
+		var dram = Math.abs((parseInt(grain / 20)) % 6);
+		var ounce = Math.abs(parseInt(grain / 120));
+		grain = Math.abs(grain % 20)
 		
-		document.forms.baseform.valueMAG.value = (roundProp(document.forms.baseform.valueEUR.value / (77.646 / 31) * 150 * exchange[document.forms.baseform.currency.value]["inverseRate"], 0) < 0 ? "-" : "") + (ounce + "/" + dram + "/" + grain)
+		document.forms.baseform.valueMAG.value = (roundProp(document.forms.baseform.valueEUR.value / (77.646 / 31) * 120 * exchange[document.forms.baseform.currency.value]["inverseRate"], 0) < 0 ? "-" : "") + (ounce + "/" + dram + "/" + grain)
 		} 
 	}
 	
@@ -194,9 +194,9 @@ function convertMAG() {
 	var ounces = document.forms.baseform.valueMAG.value.split("/"); ounces[0] = parseInt(ounces[0]); ounces[1] = parseInt(ounces[1]); ounces[2] = parseInt(ounces[2])
 	var sign; if (Object.is(ounces[0], -0)) {sign = -1} else if (Object.is(ounces[0], 0)) {sign = 1} else {sign = Math.sign(ounces[0])}
 	
-	var ouncesVal = sign * (Math.abs(ounces[0] * 150) + Math.abs(ounces[1] * 25) + Math.abs(ounces[2]))
+	var ouncesVal = sign * (Math.abs(ounces[0] * 120) + Math.abs(ounces[1] * 20) + Math.abs(ounces[2]))
 	
-	document.forms.baseform.valueEUR.value = ouncesVal / 150 * (77.646 / 31) * exchange[document.forms.baseform.currency.value]["rate"]
+	document.forms.baseform.valueEUR.value = ouncesVal / 120 * (77.646 / 31) * exchange[document.forms.baseform.currency.value]["rate"]
 	
 	convertEUR("MAG")
 	document.forms.baseform.valueEUR.value = roundProp(document.forms.baseform.valueEUR.value, EURround)

@@ -1,0 +1,70 @@
+<h1>The writing system of the Hrax</h1>
+<h2>Paper by Darlene Boomhauer</h2>
+<h2>Edited by Mathieu Schnur</h2>
+<h2>Published April 9th 2002
+<p>The Hrax use a fairly simple alphabet to convey many things just like us English speaking humans do. This paper will go over the basics of the alphabet as we understand it.</p>
+<table class="doc">
+	<tr>
+		<td><b>Hrax</b>
+		<td><b>Latin</b>
+	<tr>
+		<td><hrax>a</hrax>
+		<td>A
+	<tr>
+		<td><hrax>e</hrax>
+		<td>E
+	<tr>
+		<td><hrax>i</hrax>
+		<td>I
+	<tr>
+		<td><hrax>o</hrax>
+		<td>O
+	<tr>
+		<td><hrax>u</hrax>
+		<td>U
+	<tr>
+		<td><hrax>b</hrax>
+		<td>B
+	<tr>
+		<td><hrax>d</hrax>
+		<td>D
+	<tr>
+		<td><hrax>g</hrax>
+		<td>G
+	<tr>
+		<td><hrax>h</hrax>
+		<td>H
+	<tr>
+		<td><hrax>hr</hrax>
+		<td>Hr
+	<tr>
+		<td><hrax>k</hrax>
+		<td>K
+	<tr>
+		<td><hrax>l</hrax>
+		<td>L
+	<tr>
+		<td><hrax>m</hrax>
+		<td>M
+	<tr>
+		<td><hrax>n</hrax>
+		<td>N
+	<tr>
+		<td><hrax>p</hrax>
+		<td>P
+	<tr>
+		<td><hrax>s</hrax>
+		<td>S
+	<tr>
+		<td><hrax>t</hrax>
+		<td>T
+	<tr>
+		<td><hrax>w</hrax>
+		<td>W
+	<tr>
+		<td><hrax>ks</hrax>
+		<td>X
+	<tr>
+		<td><hrax>ss</hrax>
+		<td>Z
+</table>

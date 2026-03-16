@@ -1,2 +1,0 @@
-<h2>pweeWorks 1.0 Manual</h2>
-<p>Thank you for purchasing pweeWorks release 1.0. pweeWorks is a field linguistics software suite designed to make your job as simple as possible!</p>

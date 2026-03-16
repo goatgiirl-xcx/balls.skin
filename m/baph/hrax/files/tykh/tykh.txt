@@ -1,0 +1,52 @@
+<center><h1>Teach Your Kid Hrax! 1</h1></center>
+<font size="+2">
+<table class="doc">
+  <tr>
+    <td><hrax>apl</hrax> <img src="./files/tykh/apple.png"></td>
+    <td><hrax>kao</hrax> 🐕🐦</td>
+    <td><hrax>ogi</hrax> 🧍</td>
+    <td><hrax>eta</hrax> 🌐</td>
+    <td><hrax>awul</hrax> 🏠</td>
+    <td><hrax>ul</hrax> 🏢</td>
+  </tr>
+  <tr>
+    <td><hrax>ole</hrax> 🛸</td>
+    <td><hrax>adig</hrax> 🏙️</td>
+    <td><hrax>eni</hrax> ⚡</td>
+    <td><hrax>agu</hrax> 🌧️</td>
+    <td><hrax>ano</hrax> 🔥</td>
+    <td><hrax>sot</hrax> 🧊</td>
+  </tr>
+  <tr>
+    <td><hrax>jup</hrax> 🪴</td>
+    <td><hrax>olak</hrax> 🥣🥤</td>
+    <td><hrax>lew</hrax> 🏃</td>
+    <td><hrax>hraks</hrax> 🐙</td>
+    <td><hrax>egop</hrax> 🧑‍⚕️</td>
+    <td><hrax>kuk</hrax> 🔼</td>
+  </tr>
+  <tr>
+	<td><hrax>alak</hrax> ☀️</td>
+	<td><hrax>kus</hrax> 🌑</td>
+	<td><hrax>mee</hrax> 🐐</td>
+	<td><hrax>wel</hrax> 👄</td>
+	<td><hrax>sab</hrax> ✋</td>
+	<td><hrax>hran</hrax> ☝️</td>
+  </tr>
+  <tr>
+    <td><hrax>ogi,eta</hrax> 🌏</td>
+    <td><hrax>ano,sot</hrax> 🌡️</td>
+    <td><hrax>kao,ogi</hrax> 🧍🐕🐋</td>
+    <td><hrax>eni,agu</hrax> 🌩️</td>
+    <td><hrax>apl,jup</hrax> 🌳🍎</td>
+    <td><hrax>kuk,kuk</hrax> 🙋</td>
+  </tr>
+  
+</table>
+<p>When a verb ends with "<hrax>lew</hrax>", that verb is currently happening, in the present. When "<hrax>lew</hrax>" comes after a noun it becomes a verb and is in the present.</p>
+<p>Let's try out some sentences</p>
+<hrax>lew lew kao</hrax>
+<p>The animal goes</p>
+<hrax>olak lew ogi</hrax>
+<p>The human eats</p>
+</font>

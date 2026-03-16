@@ -1,23 +1,53 @@
 :root {
-  --bg-main: #b75a78;
-  --bg-main2: #9e4561;
-  --bg: #400017;
-  --text: #1b030c;
-  --button-bg: #400017;
-  --jalinkhover: #ffdfe9;
-  --textb: #ffdfe9;
+  --bg-main:#F5E0E9;
+  --bg:#F1D5E1;
+  --text:#381222;
+  --button-bg:#F1D5E1;
+  --jalinkhover:#7e1340;
 }
-body {margin-left:10%; margin-right:10%; background: var(--bg); color:var(--text); background-attachment: fixed;}
+
+.main {
+  max-width: 100%;
+  text-align: center;
+  background: var(--bg-main);
+  border-radius: 5px;
+  padding-bottom:5px;
+}
+
+.main2 {
+  max-width: 100%;
+  border-radius: 5px;
+  padding-bottom:5px;
+}
+
+body {
+  margin-left:10%;
+  margin-right:10%;
+  background: var(--bg);
+  color:var(--text);
+}
 a.jalink, a.jalink:visited {text-decoration:underline; color:var(--text); background-color: rgba(255, 255, 255, 0); padding: 0px}
 a.jalink:hover {color:var(--jalinkhover)}
-a, button, a:visited {text-decoration: none; background-color: var(--button-bg); color: var(--textb); border-radius: 5px; padding-top:5px; padding-bottom:5px; margin-bottom:15px; padding-left:7px; padding-right:7px;}
-.colon3 {width:50%; max-width:250px; height:auto;}
-.main {text-align:center; border-radius:10px; margin-bottom:10px; max-width: 100%; background: var(--bg-main); padding-bottom:10px;}
-.main2 {max-width: 100%; border-radius: 5px; padding-bottom:5px; background: var(--bg-main2)}
-.pfp {width:275px; height:auto; margin-bottom:-1%; margin-top:-1%; border-radius:25%}
-.flag {width:75%; height:auto; max-height:150px;} 
-.emoji {height:12px; width:auto;}
-.center {vertical-align: middle;}
-.jaimg {max-height:300px; height:auto; width:auto;}
+a, button, a:visited {
+  text-decoration: none;
+  background-color: var(--button-bg);
+  color: var(--text);
+  border-radius: 5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-bottom:15px;
+  padding-left:7px;
+  padding-right:7px;
+}
+
+a.entry, a.entry:visited {
+  text-decoration: none;
+  color: var(--text);
+}
+td {vertical-align: top;}
+table {
+  width: 100%;
+  table-layout: fixed;
+  vertical-align: top;
+  }
 .grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));}
-ul {list-style-type: none; margin: 0; padding: 0;}
