@@ -163,7 +163,7 @@
 	<img src="flags/sunteria.png" title="Sunterian calendar" alt=":flag_sun:"><font style="font-size: 26px;"><!--Sunterian:--> </font><font id="errorSUN" name="errorSUN" style="font-size: 26px; color: red"></font><font id="convSUN" name="convSUN" style="font-size: 26px; font-weight: bold;"></font><br>
 	<img><font style="font-size: 26px;"></font><font id="convSUN1" name="convSUN1" style="font-size: 26px;"></font><br>
 	<img src="flags/azkali.png" title="Azkali calendar" alt=":flag_azk:"><font style="font-size: 26px;"> </font><font id="errorAZK" name="errorAZK" style="font-size: 26px; color: red"></font><font id="convAZK" name="convAZK" style="font-size: 26px; font-weight: bold;"></font><br>
-	<img><font style="font-size: 26px;"> </font><font id="convAZK1" name="convAZK1" style="font-size: 26px;"></font><br><br>
+	<!--<img><font style="font-size: 26px;"> </font><font id="convAZK1" name="convAZK1" style="font-size: 26px;"></font>--><br><br>
 	
 	<img src="flags/loremesia.png" title="Loremese calendar" alt=":flag_lrm:"><font style="font-size: 26px;"><!--Loremese:--> </font><font id="errorLRM" name="errorLRM" style="font-size: 26px; color: red"></font><font id="convLRM" name="convLRM" style="font-size: 26px; font-weight: bold;"></font><br>
 	<img><font style="font-size: 26px;"><!--Loremese:--> </font><font id="convLRM1" name="convLRM1" style="font-size: 30px; font-weight: bold;"></font><br>
@@ -175,7 +175,7 @@
 	
 	<img src="flags/chifi.png" title="Rathari calendar" alt=":flag_chf:"><font style="font-size: 26px;"> </font><font id="errorFOI" name="errorFOI" style="font-size: 26px; color: red"></font><font id="convFOI" name="convFOI" style="font-size: 26px; font-weight: bold;"></font><br>
 	<img><font style="font-size: 26px;"> </font><font id="convFOI1" name="convFOI1"></font><br>
-	<!--<img src="flags/qarvaba.png" title="Qarvaban calendar" alt=":flag_qar:"><font style="font-size: 26px;"> </font><font id="errorQAR" name="errorQAR" style="font-size: 26px; color: red"></font><font id="convQAR" name="convQAR" style="font-size: 26px; font-weight: bold;"></font><br>--><br>
+	<img src="flags/qarvaba.png" title="Qarvaban calendar" alt=":flag_qar:"><font style="font-size: 26px;"> </font><font id="errorQAR" name="errorQAR" style="font-size: 26px; color: red"></font><font id="convQAR" name="convQAR" style="font-size: 26px; font-weight: bold;"></font><br><br>
 	
 	<img src="flags/alloti.png" title="Allotian calendar" alt=":flag_all:"><font style="font-size: 26px;"><!--Allotian:--> </font><font id="errorALL" name="errorALL" style="font-size: 26px; color: red"></font><font id="convALL" name="convALL" style="font-size: 26px; font-weight: bold;"></font><br>
 	<img><font style="font-size: 26px;"><!--Alloti:--> </font><font id="convALL1" name="convALL1" style="font-size: 26px;"></font><br>
@@ -233,7 +233,7 @@
 			document.getElementById('convMAL1').innerHTML = ""
 			document.getElementById('convIHO1').innerHTML = ""
 			//document.getElementById('convKZM1').innerHTML = ""
-			document.getElementById('convAZK1').innerHTML = ""
+			//document.getElementById('convAZK1').innerHTML = ""
 			document.getElementById('convFOI1').innerHTML = ""
 			document.getElementById('convCRG1').innerHTML = ""
 			document.getElementById('convJKA1').innerHTML = ""
@@ -371,10 +371,14 @@
 			if (date.getUTCFullYear() < -9999 || date.getUTCFullYear() > 9999) {
 				document.getElementById('errorAZK').innerHTML = "Year must be between -9999 and 9999"
 			} else {
-				var monthNamesAZK = ["Enero", "Epurerro", "Martzo", "Arril", "Maia", "Uni", "Uraia", "Agotzo", "Tzetemer", "Okotzemer", "Notzemer", "Dhetzemer"]
+				//var monthNamesAZK = ["Enero", "Epurerro", "Martzo", "Arril", "Maia", "Uni", "Uraia", "Agotzo", "Tzetemer", "Okotzemer", "Notzemer", "Dhetzemer"]
 				
-				document.getElementById('convAZK').innerHTML = date.getUTCDate() + " " + monthNamesAZK[date.getUTCMonth()] + " " + date.getUTCFullYear()
-				document.getElementById('convAZK1').innerHTML = "<uki>" + convertText(date.getUTCDate() + "  \\" + monthNamesAZK[date.getUTCMonth()] + "  " + String(date.getUTCFullYear()).replaceAll("-", ". . "), "azk") + "</uki>"
+				/*document.getElementById('convAZK').innerHTML = date.getUTCDate() + " " + monthNamesAZK[date.getUTCMonth()] + " " + date.getUTCFullYear()
+				document.getElementById('convAZK1').innerHTML = "<uki>" + convertText(date.getUTCDate() + "  \\" + monthNamesAZK[date.getUTCMonth()] + "  " + String(date.getUTCFullYear()).replaceAll("-", ". . "), "azk") + "</uki>"*/
+				
+				var convDateAZK = calcDateAZK(date)
+				document.getElementById('convAZK').innerHTML = convDateAZK[0] + convDateAZK[1] + " " + convDateAZK[2] + " " + convDateAZK[3]
+				//document.getElementById('convALL1').innerHTML = "<alhi>" + (convDateALL[0] + ", " + convDateALL[1] + " " + convDateALL[2] + " ").toString().toLowerCase() + (convDateALL[3]).toString().replace("BT", "eLotuz") + "</alhi>"
 			}
 			
 			if (date.getUTCFullYear() < -9999 || date.getUTCFullYear() > 9999) {
