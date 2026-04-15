@@ -978,3 +978,60 @@ function calcDateQAR(date) {
 	
 	return [day, month, yearNum, suffix, weekDay]
 }
+
+// --- AZKALI ---
+
+function isLeapAZK(year) {
+	return isLeapALL(year)
+}
+
+function calcDateAZK(date) {
+	var epoch;
+	if ((date.getUTCFullYear() < 100) && (date.getUTCFullYear() > -1)) {
+		epoch = new Date(String(date.getUTCFullYear()).padStart(4, '0') + '-01-01T00:00:00Z')
+	} else {
+		epoch = new Date(Date.UTC(date.getUTCFullYear(), 0, 1))
+	};
+	
+	/*
+	if (Math.floor((date - epoch) / 86400000) < 0) {
+		if ((date.getUTCFullYear() - 1 < 100) && (date.getUTCFullYear() - 1 > -1)) {
+		epoch = new Date(String(date.getUTCFullYear() - 1).padStart(4, '0') + '-07-29T00:00:00Z')
+	} else {
+		epoch = new Date(Date.UTC(date.getUTCFullYear() - 1, 6, 29))
+		};
+	}*/
+	
+	var dayNumber = Math.floor((date - epoch) / 86400000)
+	
+	var day = 0
+	var month = 0
+	var year = epoch.getUTCFullYear() //- 730
+	
+	var leap = isLeapAZK(epoch.getUTCFullYear() + 1)
+	
+	var monthDays = [0, 37, 73, 110, 146, 183, 219, 256, 292, 329, 365, 999];
+	
+	
+	while (true) {
+		if (dayNumber >= monthDays[month] && dayNumber < monthDays[month+1]) break;
+		month = month + 1;
+	}
+	// console.log (epoch)
+	// console.log (dayNumber)
+	
+	var day = dayNumber - monthDays[month] + 1
+	var weekday = mod(day-1, 6)
+	
+	var weekdayNames = ["Uteran, ", "Aurigi, ", "Kuotz, ", "Atzan, ", "Lechi, ", "Pastiz, ", ""]
+	var monthNames = ["Kuoke", "Angapizkea", "Hugnia", "Ngezeiazua", "Gau", "Lerearitsa", "Satseoko", "Karomiko", "Ishio", "Ethingiatz", "Sautazkegakantzigori"]
+	
+	if (dayNumber == 365) {
+			weekday = 6;
+			day = "";
+		}
+	
+	if (year < 1) {year = (Math.abs(year)+1) + " BE"}
+	
+	return [weekdayNames[weekday], day, monthNames[month], year]
+}
