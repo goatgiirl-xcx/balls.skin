@@ -39,7 +39,10 @@ a, button, a:visited {
   padding-left:7px;
   padding-right:7px;
 }
-
+.pfp {
+	max-height:256px;
+	border-radius: 5px;
+}
 a.entry, a.entry:visited {
   text-decoration: none;
   color: var(--text);
