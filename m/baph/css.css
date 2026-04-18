@@ -47,7 +47,7 @@ a, button, a:visited {
 .note {
 	background-color: var(--notebg);
 	border-radius: 5px;
-	max-width: 512px;
+	max-width: 100%;
 	text-align: center;
 	padding-left:7px;
     padding-right:7px;
