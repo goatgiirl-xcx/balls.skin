@@ -46,11 +46,11 @@ a, button, a:visited {
 }	
 .note {
 	background-color: var(--notebg);
-	margin-left:5px;
-	margin-right:5px;
 	border-radius: 5px;
 	max-width: 512px;
 	text-align: center;
+	padding-left:7px;
+    padding-right:7px;
 }
 a.entry, a.entry:visited {
   text-decoration: none;
