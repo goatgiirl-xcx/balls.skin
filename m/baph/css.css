@@ -49,6 +49,7 @@ a, button, a:visited {
 	margin-left:5px;
 	margin-right:5px;
 	border-radius: 5px;
+	max-width: 512px;
 }
 a.entry, a.entry:visited {
   text-decoration: none;
