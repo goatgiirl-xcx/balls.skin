@@ -50,6 +50,7 @@ a, button, a:visited {
 	margin-right:5px;
 	border-radius: 5px;
 	max-width: 512px;
+	text-align: center;
 }
 a.entry, a.entry:visited {
   text-decoration: none;
