@@ -51,6 +51,8 @@ a, button, a:visited {
 	text-align: center;
 	padding-left:7px;
     padding-right:7px;
+	margin-left:25%;
+	margin-right:25%
 }
 a.entry, a.entry:visited {
   text-decoration: none;
