@@ -43,6 +43,7 @@ a, button, a:visited {
 .pfp {
 	max-height:200px;
 	border-radius: 5px;
+}	
 .note {
 	background-color: var(--notebg);
 	margin-left:5px;
