@@ -26,16 +26,10 @@
 h1,h2,h3,h4,h5,h6,h7 {
  font-family: "timesh", "Evajp", "Evatc", "Evasc", "Evakr", "ukilen";
 }
-p, td, ul {
+p, ul, table, th, td, tr, a, a:visited, button {
   font-family: times, serif, "ukilen";
   font-size: 15px;
 }
-a, a:visited, button {
-  font-family: times, serif;
-  font-size: 15px;
+body {
+  font-family: times;
 }
-/*
-a.entry, a.entry:visited {
-  font-size: 15px;
-}
-*/

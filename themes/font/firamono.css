@@ -31,16 +31,10 @@ h1,h2,h3,h4,h5,h6,h7 {
  font-family: "monob";
  font-weight: bold;
 }
-p, td, ul {
+p, ul, table, th, td, tr, a, a:visited, button {
   font-family: "mono";
   font-size: 15px;
 }
-a, a:visited, button {
+body {
   font-family: "mono";
-  font-size: 15px;
 }
-/* 
-a.entry, a.entry:visited {
-  font-size: 15px;
-}
-*/
