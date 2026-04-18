@@ -83,12 +83,13 @@
 			  
 			  for (var i = 0; i < dictData.length; i++) { 
 				
-				var english = dictData[i][0]
-				var baphian = dictData[i][1].trim()
-				var type = dictData[i][2]
-				var extra = dictData[i][3].replaceAll("{", "<ht>").replaceAll("}", "</ht>").trim()
-				var notes = dictData[i][4]
-				var register = dictData[i][5]
+				try {
+					var english = dictData[i][0]
+					var baphian = dictData[i][1].trim()
+					var type = dictData[i][2]
+					var extra = dictData[i][3].replaceAll("{", "<ht>").replaceAll("}", "</ht>").trim()
+					var notes = dictData[i][4]
+					var register = dictData[i][5]
 			  
 				var indEntry = ""
 				
@@ -186,6 +187,12 @@
 				}
 			  
 				totalEntries += indEntry
+				} catch (TypeError) {
+					console.log("error at", i, "entry:", dictData[i])
+					totalEntries = "<b>ERROR in dictionary file at line " + (i+1) + "</b><br>Entry: " + ( dictData[i] == "" ? "<i>(empty)</i>" : "\"" + dictData[i].join(";") + "\"") + "<br><br>Please report this error to Charli or xad"
+					document.getElementById("dictionary").innerHTML = totalEntries
+					return
+				}
 			  }
 			  document.getElementById("dictionary").innerHTML = totalEntries
 			}
