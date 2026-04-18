@@ -40,7 +40,7 @@ a, button, a:visited {
   padding-right:7px;
 }
 .pfp {
-	max-height:256px;
+	max-height:200px;
 	border-radius: 5px;
 }
 a.entry, a.entry:visited {
