@@ -1035,3 +1035,58 @@ function calcDateAZK(date) {
 	
 	return [weekdayNames[weekday], day, monthNames[month], year]
 }
+
+// --- ATHI ---
+
+function isLeapATH(year) {
+	if ((0 == mod(year, 4)) && (0 != mod(year, 100)) || (0 == mod(year, 400))) {
+		return true
+	} else {
+		return false
+	}
+}
+
+function calcDateATH(date) {
+	var epoch;
+	if ((date.getUTCFullYear() < 100) && (date.getUTCFullYear() > -1)) {
+		epoch = new Date(String(date.getUTCFullYear()).padStart(4, '0') + '-12-25T00:00:00Z')
+	} else {
+		epoch = new Date(Date.UTC(date.getUTCFullYear(), 11, 25))
+	};
+	
+	if (Math.floor((date - epoch) / 86400000) < 0) {
+		if ((date.getUTCFullYear() - 1 < 100) && (date.getUTCFullYear() - 1 > -1)) {
+		epoch = new Date(String(date.getUTCFullYear() - 1).padStart(4, '0') + '-12-25T00:00:00Z')
+	} else {
+		epoch = new Date(Date.UTC(date.getUTCFullYear() - 1, 11, 25))
+		};
+	}
+	
+	var dayNumber = Math.floor((date - epoch) / 86400000)
+	
+	var weekday = getWeekdayALL(date)
+	var day = 0
+	var month = 0
+	var year = epoch.getUTCFullYear()+1
+	
+	var leap = isLeapALL(epoch.getUTCFullYear() + 1)
+	
+	var monthDays = [0, 36, 72, 108, 144, 180, 216, 252, 288, 324, 360, 999];
+	
+	while (true) {
+		if (dayNumber >= monthDays[month] && dayNumber < monthDays[month+1]) break;
+		month = month + 1;
+	}
+	// console.log (epoch)
+	// console.log (dayNumber)
+	
+	var day = dayNumber - monthDays[month] + 1
+	
+	var plant = (day > 6 ? mod(month + mod(year, 24) + Math.floor((day-7)/3), 10) : month)
+	
+	var plantNames = ["Relaino", "Wune", "Laliola", "Haoli", "Heloeni", "Winalino", "Sesuli", "Huinalu", "Uenali", "Aliseno"]
+	
+	if (year < 1) {year = (Math.abs(year)+1) + " BE"}
+	
+	return [day, (month == 10 ? "New Year's" : plantNames[month]), (month == 10 ? "" : ", " + plantNames[plant] + ","), year]
+}
