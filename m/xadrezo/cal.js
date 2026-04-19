@@ -1158,7 +1158,7 @@ function calcDateUXA(date) {
 	
 	var dayYear = dayNumber - totalDays - 1;
 	
-	if (dayYear == -1) {dayYear = getYearLengthISL(yearNum) - 1}
+	if (dayYear == -1) {dayYear = getYearLengthUXA(yearNum) - 1}
 	
 	if (dayYear > 0) {
 		while (true) {
