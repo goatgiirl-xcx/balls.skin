@@ -1064,12 +1064,11 @@ function calcDateATH(date) {
 	
 	var dayNumber = Math.floor((date - epoch) / 86400000)
 	
-	var weekday = getWeekdayALL(date)
 	var day = 0
 	var month = 0
 	var year = epoch.getUTCFullYear()+1
 	
-	var leap = isLeapALL(epoch.getUTCFullYear() + 1)
+	var leap = isLeapATH(epoch.getUTCFullYear() + 1)
 	
 	var monthDays = [0, 36, 72, 108, 144, 180, 216, 252, 288, 324, 360, 999];
 	
@@ -1089,4 +1088,89 @@ function calcDateATH(date) {
 	if (year < 1) {year = (Math.abs(year)+1) + " BE"}
 	
 	return [day, (month == 10 ? "New Year's" : plantNames[month]), (month == 10 ? "" : ", " + plantNames[plant] + ","), year]
+}
+
+// --- XRWLPHYZ ---
+
+function isLeapUXA(year) {
+	return (mod(year, 49) == 4 || mod(year, 49) == 14 || mod(year, 49) == 24 || mod(year, 49) == 34 || mod(year, 49) == 44)
+}
+
+function getYearLengthUXA(year) {
+			return 384 - isLeapUXA(year)
+}
+
+function calcDateUXA(date) {
+	var epoch;
+	if ((date.getUTCFullYear() < 100) && (date.getUTCFullYear() > -1)) {
+		epoch = new Date(String(date.getUTCFullYear()).padStart(4, '0') + '-12-22T00:00:00Z')
+	} else {
+		epoch = new Date(Date.UTC(date.getUTCFullYear(), 11, 22))
+	};
+	
+	if (Math.floor((date - epoch) / 86400000) < 0) {
+		if ((date.getUTCFullYear() - 1 < 100) && (date.getUTCFullYear() - 1 > -1)) {
+		epoch = new Date(String(date.getUTCFullYear() - 1).padStart(4, '0') + '-12-22T00:00:00Z')
+	} else {
+		epoch = new Date(Date.UTC(date.getUTCFullYear() - 1, 11, 22))
+		};
+	}
+	
+	var lunarEpoch = new Date(Date.UTC(2026, 3, 18))
+	
+	var dayNumber = Math.floor((date - lunarEpoch) / 86400000) + 1
+	
+	var day = 0
+	var month = 0
+	var year = epoch.getUTCFullYear()+1214
+	var lunarYear = 0
+	
+	if (dayNumber > 0) {
+		var yearNum = 0;
+		var totalDays = 0;
+		while (true) {
+			
+			if (totalDays + getYearLengthUXA(yearNum) > dayNumber) break;
+			totalDays = totalDays + getYearLengthUXA(yearNum);
+			yearNum = yearNum + 1;
+		}
+	} else {
+		var yearNum = 0;
+		var totalDays = 0;
+		while (true) {
+			yearNum = yearNum - 1;
+			totalDays = totalDays - getYearLengthUXA(yearNum);
+			if (totalDays < dayNumber) break;
+		}
+	}
+	
+	if ((dayNumber - totalDays) == 0) {
+		if (dayNumber > 0) {
+			yearNum = yearNum - 1;
+		}
+	}
+	
+	var day = 0
+	var month = 0
+	
+	var monthDays = [0, 30, 59, 89, 118, 148, 177, 207, 236, 266, 295, 325, 354, 999];
+	var monthNames = ["Qalyn", "Baqlyn", "Ther", "Farnw", "Ñas", "Jwk", "Geni", "Khaj", "Pelit", "Melat", "Phaphat", "Qhaxe", "Saryn"]
+	
+	var dayYear = dayNumber - totalDays - 1;
+	
+	if (dayYear == -1) {dayYear = getYearLengthISL(yearNum) - 1}
+	
+	if (dayYear > 0) {
+		while (true) {
+			if (dayYear >= monthDays[month] && dayYear < monthDays[month+1]) break;
+			month = month + 1;
+			
+		}
+	}
+	
+	var day = dayYear - monthDays[month] + 1
+	
+	if (year < 1) {year = (Math.abs(year)+1) + " BE"}
+	
+	return [day, monthNames[month], year]
 }
