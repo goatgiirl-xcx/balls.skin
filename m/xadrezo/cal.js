@@ -1092,12 +1092,67 @@ function calcDateATH(date) {
 
 // --- XRWLPHYZ ---
 
-function isLeapUXA(year) {
-	return (mod(year, 49) == 4 || mod(year, 49) == 14 || mod(year, 49) == 24 || mod(year, 49) == 34 || mod(year, 49) == 44)
+function isLongUXA(year) {
+	var epact = getEpact(year)
+	var epactN = getEpact(year+1)
+	
+	return (!(0 < epact[0] && epact[0] < 20) + (epact[0] == 19 && epactN[0] == 1) + (epact[0] == 18 && epactN[0] == 1) - (epact[0] == 20 && epactN[0] == 0))
 }
 
-function getYearLengthUXA(year) {
-			return 384 - isLeapUXA(year)
+function getNewMoonsUXA(year, stop = false, stop2 = false) {
+	var epact = getEpact(year)
+	var epactN = getEpact(year+1)
+	var offset = 86400000 * (mod(31-epact[0], 30) + (mod(31-epact[0], 30) == 0 ? 30 : 0) - 1)
+	var hollow = 86400000 * (((epact[0] != 0) && (epact[0] < (25 - epact[1])) ? -1 : 0) - epact[1])
+	
+	var moons = [setDate(year, 1, 1, offset),				// january
+					setDate(year, 1, 31, offset + hollow), 	// february
+					setDate(year, 3, 1, offset), 			// march
+					setDate(year, 3, 31, offset + hollow),	// april
+					setDate(year, 4, 29, offset), 			// may
+					setDate(year, 5, 29, offset + hollow),	// june
+					setDate(year, 6, 27, offset), 			// july
+					setDate(year, 7, 27, offset + hollow),	// august
+					setDate(year, 8, 25, offset), 			// september
+					setDate(year, 9, 24, offset + hollow),	// october
+					setDate(year, 10, 23, offset),			// november
+					setDate(year, 11, 22, offset + hollow),	// december
+					setDate(year, 12, 21, offset)			// undecember
+				]
+	
+	if (moons.slice(-1)[0].getUTCMonth() == 0) {moons.pop()} // remove next year moons
+	
+	if (epact[0] == 19 && epactN[0] == 1) {moons.push(setDate(year, 12, 31))}
+	if (epact[0] == 18 && epactN[0] == 1) {moons.push(setDate(year+1, 1, 1))}
+	if (epact[0] == 20 && epactN[0] == 0) {moons.pop()}
+	
+	if (stop == false) {
+		moons = moons.flat()
+		
+		if (stop2 == false) {
+			for (let i = 0; i < moons.length - 1; i++) {
+				if ((moons[i] - moons[i-1]) / 86400000 == 29 && (moons[i+1] - moons[i]) / 86400000 == 31) {
+					moons[i] = setDate(moons[i].getUTCFullYear(), moons[i].getUTCMonth() + 1, moons[i].getUTCDate(), 86400000)
+				}
+			}
+			
+			//moons.pop() // last moon needed for 31-fixing is now unnecessary
+			
+			var moonDays = [];
+			for (let i = 0; i < moons.length; i++) {
+				moonDays.push((moons[i] - moons[0]) / 86400000)
+			}
+			
+			moonDays.push(999)
+			
+			return moonDays
+		} else {
+			return moons
+		}
+		
+	} else {
+		return moons.flat()
+	}
 }
 
 function calcDateUXA(date) {
@@ -1116,61 +1171,47 @@ function calcDateUXA(date) {
 		};
 	}
 	
-	var lunarEpoch = new Date(Date.UTC(2026, 3, 18))
-	
-	var dayNumber = Math.floor((date - lunarEpoch) / 86400000) + 1
+	var today = Math.floor(date/86400000)
 	
 	var day = 0
 	var month = 0
 	var year = epoch.getUTCFullYear()+1214
-	var lunarYear = 0
+	var lunarYear = date.getUTCFullYear()
 	
-	if (dayNumber > 0) {
-		var yearNum = 0;
-		var totalDays = 0;
-		while (true) {
-			
-			if (totalDays + getYearLengthUXA(yearNum) > dayNumber) break;
-			totalDays = totalDays + getYearLengthUXA(yearNum);
-			yearNum = yearNum + 1;
-		}
-	} else {
-		var yearNum = 0;
-		var totalDays = 0;
-		while (true) {
-			yearNum = yearNum - 1;
-			totalDays = totalDays - getYearLengthUXA(yearNum);
-			if (totalDays < dayNumber) break;
-		}
+	var monthDays = getNewMoonsUXA(lunarYear)
+	var dayYear = today - Math.floor(getNewMoonsUXA(lunarYear, false, true)[0] / 86400000)
+
+	if (dayYear < 0) {
+		lunarYear -= 1
+		monthDays = getNewMoonsUXA(lunarYear)
+		dayYear = today - Math.floor(getNewMoonsUXA(lunarYear, false, true)[0] / 86400000)
 	}
 	
-	if ((dayNumber - totalDays) == 0) {
-		if (dayNumber > 0) {
-			yearNum = yearNum - 1;
-		}
-	}
-	
-	var day = 0
-	var month = 0
-	
-	var monthDays = [0, 30, 59, 89, 118, 148, 177, 207, 236, 266, 295, 325, 354, 999];
-	var monthNames = ["Qalyn", "Baqlyn", "Ther", "Farnw", "Ñas", "Jwk", "Geni", "Khaj", "Pelit", "Melat", "Phaphat", "Qhaxe", "Saryn"]
-	
-	var dayYear = dayNumber - totalDays - 1;
-	
-	if (dayYear == -1) {dayYear = getYearLengthUXA(yearNum) - 1}
-	
-	if (dayYear > 0) {
+	if (dayYear >= 0) {
 		while (true) {
 			if (dayYear >= monthDays[month] && dayYear < monthDays[month+1]) break;
 			month = month + 1;
-			
 		}
 	}
 	
-	var day = dayYear - monthDays[month] + 1
+	day = dayYear - monthDays[month] + 1
+	
+	var firstMonth = 10
+	var firstMonthOffset = lunarYear - 2026
+	
+	if (firstMonthOffset < 0) {
+		for (let i = 2026; i > 2026 + firstMonthOffset; i--) {
+			firstMonth -= 12 + isLongUXA(i-1)
+		}
+	} else {
+		for (let i = 2026; i < 2026 + firstMonthOffset; i++) {
+			firstMonth += 12 + isLongUXA(i)
+		}
+	}
+	
+	var monthNames = ["Qalyn", "Baqlyn", "Ther", "Farnw", "Ñas", "Jwk", "Geni", "Khaj", "Pelit", "Melat", "Phaphat", "Qhaxe", "Saryn"]
 	
 	if (year < 1) {year = (Math.abs(year)+1) + " BE"}
 	
-	return [day, monthNames[month], year]
+	return [day, monthNames[mod(firstMonth+month, 13)], year]
 }
