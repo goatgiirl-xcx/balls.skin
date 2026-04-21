@@ -1035,3 +1035,183 @@ function calcDateAZK(date) {
 	
 	return [weekdayNames[weekday], day, monthNames[month], year]
 }
+
+// --- ATHI ---
+
+function isLeapATH(year) {
+	if ((0 == mod(year, 4)) && (0 != mod(year, 100)) || (0 == mod(year, 400))) {
+		return true
+	} else {
+		return false
+	}
+}
+
+function calcDateATH(date) {
+	var epoch;
+	if ((date.getUTCFullYear() < 100) && (date.getUTCFullYear() > -1)) {
+		epoch = new Date(String(date.getUTCFullYear()).padStart(4, '0') + '-12-25T00:00:00Z')
+	} else {
+		epoch = new Date(Date.UTC(date.getUTCFullYear(), 11, 25))
+	};
+	
+	if (Math.floor((date - epoch) / 86400000) < 0) {
+		if ((date.getUTCFullYear() - 1 < 100) && (date.getUTCFullYear() - 1 > -1)) {
+		epoch = new Date(String(date.getUTCFullYear() - 1).padStart(4, '0') + '-12-25T00:00:00Z')
+	} else {
+		epoch = new Date(Date.UTC(date.getUTCFullYear() - 1, 11, 25))
+		};
+	}
+	
+	var dayNumber = Math.floor((date - epoch) / 86400000)
+	
+	var day = 0
+	var month = 0
+	var year = epoch.getUTCFullYear()+1
+	
+	var leap = isLeapATH(epoch.getUTCFullYear() + 1)
+	
+	var monthDays = [0, 36, 72, 108, 144, 180, 216, 252, 288, 324, 360, 999];
+	
+	while (true) {
+		if (dayNumber >= monthDays[month] && dayNumber < monthDays[month+1]) break;
+		month = month + 1;
+	}
+	// console.log (epoch)
+	// console.log (dayNumber)
+	
+	var day = dayNumber - monthDays[month] + 1
+	
+	var plant = (day > 6 ? mod(month + mod(year, 24) + Math.floor((day-7)/3), 10) : month)
+	
+	var plantNames = ["Relaino", "Wune", "Laliola", "Haoli", "Heloeni", "Winalino", "Sesuli", "Huinalu", "Uenali", "Aliseno"]
+	
+	if (year < 1) {year = (Math.abs(year)+1) + " BE"}
+	
+	return [day, (month == 10 ? "New Year's" : plantNames[month]), (month == 10 ? "" : ", " + plantNames[plant] + ","), year]
+}
+
+// --- XRWLPHYZ ---
+
+function isLongUXA(year) {
+	var epact = getEpact(year)
+	var epactN = getEpact(year+1)
+	
+	return (!(0 < epact[0] && epact[0] < 20) + (epact[0] == 19 && epactN[0] == 1) + (epact[0] == 18 && epactN[0] == 1) - (epact[0] == 20 && epactN[0] == 0))
+}
+
+function getNewMoonsUXA(year, stop = false, stop2 = false) {
+	var epact = getEpact(year)
+	var epactN = getEpact(year+1)
+	var offset = 86400000 * (mod(31-epact[0], 30) + (mod(31-epact[0], 30) == 0 ? 30 : 0) - 1)
+	var hollow = 86400000 * (((epact[0] != 0) && (epact[0] < (25 - epact[1])) ? -1 : 0) - epact[1])
+	
+	var moons = [setDate(year, 1, 1, offset),				// january
+					setDate(year, 1, 31, offset + hollow), 	// february
+					setDate(year, 3, 1, offset), 			// march
+					setDate(year, 3, 31, offset + hollow),	// april
+					setDate(year, 4, 29, offset), 			// may
+					setDate(year, 5, 29, offset + hollow),	// june
+					setDate(year, 6, 27, offset), 			// july
+					setDate(year, 7, 27, offset + hollow),	// august
+					setDate(year, 8, 25, offset), 			// september
+					setDate(year, 9, 24, offset + hollow),	// october
+					setDate(year, 10, 23, offset),			// november
+					setDate(year, 11, 22, offset + hollow),	// december
+					setDate(year, 12, 21, offset)			// undecember
+				]
+	
+	if (moons.slice(-1)[0].getUTCMonth() == 0) {moons.pop()} // remove next year moons
+	
+	if (epact[0] == 19 && epactN[0] == 1) {moons.push(setDate(year, 12, 31))}
+	if (epact[0] == 18 && epactN[0] == 1) {moons.push(setDate(year+1, 1, 1))}
+	if (epact[0] == 20 && epactN[0] == 0) {moons.pop()}
+	
+	if (stop == false) {
+		moons = moons.flat()
+		
+		if (stop2 == false) {
+			for (let i = 0; i < moons.length - 1; i++) {
+				if ((moons[i] - moons[i-1]) / 86400000 == 29 && (moons[i+1] - moons[i]) / 86400000 == 31) {
+					moons[i] = setDate(moons[i].getUTCFullYear(), moons[i].getUTCMonth() + 1, moons[i].getUTCDate(), 86400000)
+				}
+			}
+			
+			//moons.pop() // last moon needed for 31-fixing is now unnecessary
+			
+			var moonDays = [];
+			for (let i = 0; i < moons.length; i++) {
+				moonDays.push((moons[i] - moons[0]) / 86400000)
+			}
+			
+			moonDays.push(999)
+			
+			return moonDays
+		} else {
+			return moons
+		}
+		
+	} else {
+		return moons.flat()
+	}
+}
+
+function calcDateUXA(date) {
+	var epoch;
+	if ((date.getUTCFullYear() < 100) && (date.getUTCFullYear() > -1)) {
+		epoch = new Date(String(date.getUTCFullYear()).padStart(4, '0') + '-12-22T00:00:00Z')
+	} else {
+		epoch = new Date(Date.UTC(date.getUTCFullYear(), 11, 22))
+	};
+	
+	if (Math.floor((date - epoch) / 86400000) < 0) {
+		if ((date.getUTCFullYear() - 1 < 100) && (date.getUTCFullYear() - 1 > -1)) {
+		epoch = new Date(String(date.getUTCFullYear() - 1).padStart(4, '0') + '-12-22T00:00:00Z')
+	} else {
+		epoch = new Date(Date.UTC(date.getUTCFullYear() - 1, 11, 22))
+		};
+	}
+	
+	var today = Math.floor(date/86400000)
+	
+	var day = 0
+	var month = 0
+	var year = epoch.getUTCFullYear()+1214
+	var lunarYear = date.getUTCFullYear()
+	
+	var monthDays = getNewMoonsUXA(lunarYear)
+	var dayYear = today - Math.floor(getNewMoonsUXA(lunarYear, false, true)[0] / 86400000)
+
+	if (dayYear < 0) {
+		lunarYear -= 1
+		monthDays = getNewMoonsUXA(lunarYear)
+		dayYear = today - Math.floor(getNewMoonsUXA(lunarYear, false, true)[0] / 86400000)
+	}
+	
+	if (dayYear >= 0) {
+		while (true) {
+			if (dayYear >= monthDays[month] && dayYear < monthDays[month+1]) break;
+			month = month + 1;
+		}
+	}
+	
+	day = dayYear - monthDays[month] + 1
+	
+	var firstMonth = 10
+	var firstMonthOffset = lunarYear - 2026
+	
+	if (firstMonthOffset < 0) {
+		for (let i = 2026; i > 2026 + firstMonthOffset; i--) {
+			firstMonth -= 12 + isLongUXA(i-1)
+		}
+	} else {
+		for (let i = 2026; i < 2026 + firstMonthOffset; i++) {
+			firstMonth += 12 + isLongUXA(i)
+		}
+	}
+	
+	var monthNames = ["Qalyn", "Baqlyn", "Ther", "Farnw", "Ñas", "Jwk", "Geni", "Khaj", "Pelit", "Melat", "Phaphat", "Qhaxe", "Saryn"]
+	
+	if (year < 1) {year = (Math.abs(year)+1) + " BE"}
+	
+	return [day, monthNames[mod(firstMonth+month, 13)], year]
+}
