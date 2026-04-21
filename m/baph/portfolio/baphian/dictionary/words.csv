@@ -4,8 +4,8 @@ Ablative marker, away from;;;wo̞ </i>[wo̞]<i>;;s
 Able, be able;;verb;{e}dze </i>[ɛ̝´.dzɛ̝]<i>;;s
 Above;;adj;{e}ze </i>[ɛ̝´.zɛ̝]<i>;;s
 Above, high;;adj;{e}ze </i>[ɛ̝´.zɛ̝]<i>;;s
-Academic;;adj;;;s
-Academy, academia;;inan;;;s
+Academic;;adj;{ye}pe{dyi} </i>[jɛ̝´.pɛ̝.dji´ ]<i>;;s
+Academy, academia;;inan;{ye}pe{dyi} </i>[jɛ̝´.pɛ̝.dji´ ]<i>;;s
 Accusative marker;;;;Animate: gɛ̝ <br> Inanimate: zɛ̝´;s
 Across;;adj;kegu </i>[kɛ̝.gu]<i>;;s
 Act (as a character, a certain way);;verb;ma{tti}lu </i>[mä.t:i´.lu]<i>;;s
@@ -19,9 +19,8 @@ Advert , advertisment;;inan;po{babe} </i>[po̞.bä´.bɛ̝´]<i>;;s
 Advertise;;verb;po{badiinbe} </i>[po̞.bä´.di:n´.bɛ̝´]<i>;;s
 Advise;;verb;e{yesa} </i>[ɛ̝.jɛ̝´.sä´]<i>;;s
 Aerocuda;KAKKUDA;an;ka{kku}da </i>[kä.k:u´.dä]<i>;;hy
-Africa;;inan;;;real
-African;;adj;;;real
-African (person);;an;;;real
+Africa;AFULIKA;inan;{a}fu{li}ka </i>[ä´.fu.li´.kä]<i>;;real
+African (person);AFULIKA;an;{a}fu{li}kasi </i>[ä´.fu.li´.kä.si]<i>;;real
 After;;adj;e{pa} </i>[e.pä]<i>;POSTPOSITION: Used to mark past tense in literary contexts<br> ADVERB: After<br> Borrowed from Loremese;religion
 After;;adj;fo{dam} </i>[fo̞.däm´]<i>;POSTPOSITION: Used to mark past tense in literary contexts<br> ADVERB: After;s
 Afternoon, midday;;inan;{dam}jo </i>[däm´.dʑo̞]<i>;;s
@@ -55,6 +54,7 @@ Annihilate, destroy;;verb;be{se} </i>[bɛ̝.sɛ̝´]<i>;;s
 Announce;;verb;{yepo} </i>[jɛ̝´.po̞´]<i>;;s
 Annoy;;verb;{kyenun} </i>[kjɛ̝´.nun´]<i>;;s
 Anorexia;;inan;shisi{we} </i>[ɕi.si.wɛ̝´]<i>;;s
+Anorexia;;inan;;;ahan
 Another (thing);;adj;zhin{se} </i>[ʑin.sɛ̝´]<i>;;s
 Anral;ANLA;inan;an{lasa} </i>[än.lä´.sä´]<i>;;s
 Anralian (Language);ANLA;inan;an{la} {di}ye </i>[än.lä´ di´.jɛ̝]<i>;;s
@@ -331,6 +331,7 @@ Club, rave;;inan;ze{pun} </i>[zɛ̝.pun´]<i>;;s
 Cocaine, coke;;inan;;;s
 Coffee;;inan;;;s
 Coffee bean;;an;;;s
+Coffin;;inan;;;s
 Coin;;inan;;;s
 Cold;;adj;son{kku} </i>[so̞ŋ.k:u´]<i>;;s
 Collar;;inan;;;s
@@ -519,7 +520,8 @@ Earth, Dirt;;an;zam{fong} </i>[zäm.fo̞ŋ´]<i>;;s
 Earthquake;;inan;;;s
 East;;inan;a </i>[ä]<i>;;s
 Eat;;verb;si{we} </i>[si.wɛ̝´]<i>;;s
-Edit, change;;verb;;;s
+Eating disorder;;inan;si{de} </i>[si.dɛ̝´]<i>;;s
+Edit, change;;verb;;s;s
 Education;;inan;;;s
 Egg;;an;ju{mu}de </i>[dʑu.mu´.dɛ̝]<i>;;s
 Eight;12;;du{sa} </i>[du.sä´]<i>;Seen in a more slang sense, saying “in ce” is more formal;s
@@ -1318,7 +1320,7 @@ Powder;;inan;{la}ma </i>[lä´.mä]<i>;Borrowed from Jkawi;s
 Power;;inan;kaa </i>[kä:]<i>;Treveist;s
 Power;;an;o{wa}ke </i>[o̞.wä´.kɛ̝]<i>;;s
 Power;;an;o{we} </i>[o̞.wɛ̝´]<i>;;s
-
+Praise;;verb;;;s
 Predict;;verb;;;s
 Prepare;;verb;{basye} </i>[bä´.sjɛ̝´]<i>;;s
 President;;an;;Only used for democratically elected presidents;s
@@ -1479,7 +1481,7 @@ Scales;;an;{icen} </i>[i´.tɕɛ̝n´]<i>;usually used in reference to fish s
 Scarab;;an;{hu}fu </i>[hu´.fu]<i>;Borrowed from Jkawi;s
 Scare;;verb;posum{po} </i>[po̞.sum.po̞´]<i>;;s
 Scare;;verb;posum{po} </i>[po̞.sum.po̞´]<i>;;s
-School;;inan;;;s
+School;;inan;{ye}pe{dyi} </i>[jɛ̝´.pɛ̝.dji´]<i>;;s
 Scorpion;;an;du{sa} </i>[du.sä´]<i>;;s
 Scout, survey;;verb;;;s
 Scratch;;verb;{i}ge </i>[i´.gɛ̝]<i>;;s
