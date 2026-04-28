@@ -9,9 +9,17 @@ img.px {
     src: url(mallian.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'Agbolan';
+    font-style: normal;
+    font-weight: 700;
+    src: url(agbolan.ttf) format('truetype');
+}
+
 body { font-family: 'Fira Mono', monospace}
 
 .mallian { font-family: mallian, monospace; font-size: 27pt;}
+.mallian { font-family: agbolan, monospace; font-size: 27pt;}
 
 @font-face {
     font-family: 'Fira Mono';
