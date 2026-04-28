@@ -64,12 +64,6 @@ function tgb(input) {
   for (let i = 0; i < input.length;) {
     let ch = input[i];
 
-    if (ch === " ") {
-      result.push("E000");
-      i++;
-      continue;
-    }
-
     let cons = matchConsonant(input, i);
 
     if (cons) {
