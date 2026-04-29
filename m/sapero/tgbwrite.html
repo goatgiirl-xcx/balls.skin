@@ -96,7 +96,7 @@ function tgb(input) {
 };
 
 function trans() {
-    document.getElementById("tgb").innerHTML = tgb(document.getElementById("text").value);
+    document.getElementById("tgb").innerHTML = tgb(document.getElementById("text").value).replace(/\n/g, "<br>");
 }
 document.getElementById("text").addEventListener('input', () => { trans(); });
 
