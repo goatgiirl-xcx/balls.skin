@@ -6,100 +6,99 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link href="" rel="stylesheet" type="text/css" media="screen" id="theme-link">
 <link rel="stylesheet" href="css.css">
-
 <style>
 	.transcript {font-size: xx-large; padding-left: 2em;}
 </style>
 <title>sap of the knowledge tree</title>
 </head>
-
 <body><div class="main">
-
     <h1>Agbolan Text Display</h1>
-
     <hr>
-
 	<section class="transcript">
-        <textarea type="text" id="text" name="text" placeholder="enter text here" style="display:inline; min-width:50vw"></textarea>
+		<textarea type="text" id="text" name="text" placeholder="enter text here" style="display:inline; min-width:50vw"></textarea>
 		<p><span class="agbolan" id="tgb"></span></p>
 	</section>
-
 </div>
 <script>
 function tgb(input) {
-  input = input.normalize("NFC");
-  const vowelMap = {
-    "í": ["i","1"], "é": ["e","2"], "á": ["a","3"], "ó": ["o","4"], "ú": ["u","5"],
-    "ì": ["i","A"], "è": ["e","B"], "à": ["a","C"], "ò": ["o","D"], "ù": ["u","E"]
-  };
+	input = input.normalize("NFC");
+	const vowelMap = {
+		"í": ["i","1"], "é": ["e","2"], "á": ["a","3"], "ó": ["o","4"], "ú": ["u","5"],
+		"ì": ["i","A"], "è": ["e","B"], "à": ["a","C"], "ò": ["o","D"], "ù": ["u","E"]
+	};
 
-  const consonantMap = {
-    "i": "01", "e": "02", "a": "03", "o": "04", "u": "05",
-    "b": "10", "bh": "11", "by": "12",
-    "c": "20", "ch": "21",
-    "d": "30", "dh": "31", "dy": "32",
-    "f": "40",
-    "g": "50", "gh": "51",
-    "w": "60", "wy": "62", "wyh": "63",
-    "j": "70", "jy": "72", "jyh": "73",
-    "k": "80", "kh": "81",
-    "p": "90", "ph": "91", "py": "92", "pyh": "93",
-    "l": "A0",
-    "m": "B0", "mh": "B1",
-    "n": "C0", "nh": "C1",
-    "t": "D0", "th": "D1",
-    "v": "E0"
-  };
+	const consonantMap = {
+		"i": "01", "e": "02", "a": "03", "o": "04", "u": "05",
+		"b": "10", "bh": "11", "by": "12",
+		"c": "20", "ch": "21",
+		"d": "30", "dh": "31", "dy": "32",
+		"f": "40",
+		"g": "50", "gh": "51",
+		"w": "60", "wy": "62", "wyh": "63",
+		"j": "70", "jy": "72", "jyh": "73",
+		"k": "80", "kh": "81",
+		"p": "90", "ph": "91", "py": "92", "pyh": "93",
+		"l": "A0",
+		"m": "B0", "mh": "B1",
+		"n": "C0", "nh": "C1",
+		"t": "D0", "th": "D1",
+		"v": "E0"
+	};
 
-  function matchConsonant(str, i) {
-    const patterns = Object.keys(consonantMap).sort((a, b) => b.length - a.length);
-    for (let p of patterns) {
-      if (str.slice(i, i + p.length) === p) return p;
-    }
-    return null;
-  }
+	function matchConsonant(str, i) {
+		const patterns = Object.keys(consonantMap).sort((a, b) => b.length - a.length);
+		for (let p of patterns) {
+			if (str.slice(i, i + p.length) === p) return p;
+		}
+		return null;
+	}
 
-  let result = [];
+	let result = [];
 
-  for (let i = 0; i < input.length;) {
-    let ch = input[i];
+	for (let i = 0; i < input.length;) {
+		let ch = input[i];
 
-    let cons = matchConsonant(input, i);
+		let cons = matchConsonant(input, i);
 
-    if (cons) {
-      let base = consonantMap[cons];
-      i += cons.length;
+		if (cons) {
+			let base = consonantMap[cons];
+			i += cons.length;
 
-      let next = input[i];
+			let next = input[i];
+		
+			if (cons === "n") {
+				if (matchConsonant(input, i)) {
+					result.push("ECF0");
+					continue;
+				}
+			}
 
-      if (vowelMap[next]) {
-        let [, mark] = vowelMap[next];
-        result.push("E" + base + mark);
-        i++;
-      } else {
-        result.push("E" + base + "0");
-      }
-      continue;
-    }
+			if (vowelMap[next]) {
+				let [, mark] = vowelMap[next];
+				result.push("E" + base + mark);
+				i++;
+			} else {
+				result.push("E" + base + "0");
+			}
+			continue;
+		}
 
-    if (vowelMap[ch]) {
-      let [base, mark] = vowelMap[ch];
-      result.push("E" + consonantMap[base] + mark);
-      i++;
-      continue;
-    }
-	
-	result.push(input.codePointAt(i).toString(16).toUpperCase().padStart(4, "0"));
-	i++;
-  }
-  return result.map(code => String.fromCharCode(parseInt(code, 16))).join("");
+		if (vowelMap[ch]) {
+			let [base, mark] = vowelMap[ch];
+			result.push("E" + consonantMap[base] + mark);
+			i++;
+			continue;
+		}
+		result.push(input.codePointAt(i).toString(16).toUpperCase().padStart(4, "0"));
+		i++;
+	}
+	return result.map(code => String.fromCharCode(parseInt(code, 16))).join("");
 };
 
 function trans() {
-    document.getElementById("tgb").innerHTML = tgb(document.getElementById("text").value).replace(/\n/g, "<br>");
+	document.getElementById("tgb").innerHTML = tgb(document.getElementById("text").value).replace(/\n/g, "<br>");
 }
 document.getElementById("text").addEventListener('input', () => { trans(); });
-
 </script>
 <script src="/js.js"></script>
 </body>
