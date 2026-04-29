@@ -62,16 +62,17 @@ function tgb(input) {
 
 		if (cons) {
 			let base = consonantMap[cons];
-			i += cons.length;
+			let prev = input[i - 1];
+			let next = input[i + cons.length];
 
-			let next = input[i];
-		
-			if (cons === "n") {
-				if (matchConsonant(input, i)) {
-					result.push("ECF0");
-					continue;
+			if (cons === "n" && vowelMap[prev] && (!vowelMap[next])) {
+				result.push("ECF0");
+				i += cons.length;
+				continue;
 				}
 			}
+			
+			i += cons.length;
 
 			if (vowelMap[next]) {
 				let [, mark] = vowelMap[next];
