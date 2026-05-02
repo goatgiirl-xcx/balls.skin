@@ -1038,6 +1038,45 @@ function calcDateAZK(date) {
 
 // --- ATHI ---
 
+function numberATH(number) {
+	var conv = parseInt(number).toString(24)
+	
+	var digits = {
+		"0": "`",
+		"1": "1",
+		"2": "2",
+		"3": "3",
+		"4": "4",
+		"5": "5",
+		"6": "6",
+		"7": "7",
+		"8": "8",
+		"9": "9",
+		"a": "0",
+		"b": "-",
+		"c": "~",
+		"d": "!",
+		"e": "@",
+		"f": "#",
+		"g": "$",
+		"h": "%",
+		"i": "^",
+		"j": "&",
+		"k": "*",
+		"l": "(",
+		"m": ")",
+		"n": "_"
+		}
+	
+	var res = ""
+	
+	for (let i = 0; i < conv.length; i++) {
+		res += digits[conv[i]]
+	}
+	
+	return res
+}
+
 function isLeapATH(year) {
 	if ((0 == mod(year, 4)) && (0 != mod(year, 100)) || (0 == mod(year, 400))) {
 		return true
@@ -1085,9 +1124,10 @@ function calcDateATH(date) {
 	
 	var plantNames = ["Relaino", "Wune", "Laliola", "Haoli", "Heloeni", "Winalino", "Sesuli", "Huinalu", "Uenali", "Aliseno"]
 	
-	if (year < 1) {year = (Math.abs(year)+1) + " BE"}
+	var suffix = ""
+	if (year < 1) {year = (Math.abs(year)+1); suffix = " MH"}
 	
-	return [day, (month == 10 ? "New Year's" : plantNames[month]), (month == 10 ? "" : ", " + plantNames[plant] + ","), year]
+	return [day, (month == 10 ? "Ina si Siala Muale" : plantNames[month]), (month == 10 ? "" : ", " + plantNames[plant] + ","), year, suffix]
 }
 
 // --- XRWLPHYZ ---

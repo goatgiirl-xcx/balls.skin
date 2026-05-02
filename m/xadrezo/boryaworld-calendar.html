@@ -65,6 +65,11 @@
 		src: url('Tithri.otf') format('opentype');
 	}
 	
+	@font-face {
+		font-family: 'athi';
+		src: url('Athi.otf') format('opentype');
+	}
+	
 	rt {
 		font-family: sans-serif
 	}
@@ -128,6 +133,10 @@
 	  font-family: tithri;
 	}
 	
+	ath {
+	  font-family: athi;
+	}
+	
 	</style>
   </head>
   <body>
@@ -183,7 +192,8 @@
 	<img src="flags/cring.png" title="Cring calendar" alt=":flag_crg:" style="border: 1px solid"><font style="font-size: 26px;"> </font><font id="errorCRG" name="errorCRG" style="font-size: 26px; color: red"></font><font id="convCRG" name="convCRG" style="font-size: 26px; font-weight: bold;"></font><br>
 	<img><font style="font-size: 26px;"> </font><font id="convCRG1" name="convCRG1" style="font-size: 26px;"></font><br><br>
 	
-	<img src="flags/athi.png" title="Athi calendar" alt=":flag_ath:"><font style="font-size: 26px;"> </font><font id="errorATH" name="errorATH" style="font-size: 26px; color: red"></font><font id="convATH" name="convATH" style="font-size: 26px; font-weight: bold;"></font><br><br>
+	<img src="flags/athi.png" title="Athi calendar" alt=":flag_ath:"><font style="font-size: 26px;"> </font><font id="errorATH" name="errorATH" style="font-size: 26px; color: red"></font><font id="convATH" name="convATH" style="font-size: 26px; font-weight: bold;"></font><br>
+	<img><font style="font-size: 26px;"> </font><font id="convATH1" name="convATH1" style="font-size: 26px;"></font><br><br>
 	
 	<img src="flags/mallia.png" title="Mallian calendar" alt=":flag_mal:"><font style="font-size: 26px;"> </font><font id="errorMAL" name="errorMAL" style="font-size: 26px; color: red"></font><font id="convMAL" name="convMAL" style="font-size: 26px; font-weight: bold;"></font><br>
 	<img><font style="font-size: 26px;"> </font><font id="convMAL1" name="convMAL1" style="font-size: 26px;"></font><br>
@@ -244,6 +254,7 @@
 			document.getElementById('convFOI1').innerHTML = ""
 			document.getElementById('convCRG1').innerHTML = ""
 			document.getElementById('convJKA1').innerHTML = ""
+			document.getElementById('convATH1').innerHTML = ""
 		
 			document.getElementById('convGRE').innerHTML = date.getUTCDate() + " " + date.toLocaleString('en-GB', { timeZone: 'UTC', month: 'long' }) + " " + Math.abs(date.getUTCFullYear() - 1*(date.getUTCFullYear() < 1)) + " BCE".repeat(date.getUTCFullYear() < 1)
 		
@@ -453,7 +464,9 @@
 			} else {
 				var convDateATH = calcDateATH(date)
 				
-				document.getElementById('convATH').innerHTML = convDateATH[0] + " " + convDateATH[1] + convDateATH[2] + " " + convDateATH[3]
+				document.getElementById('convATH').innerHTML = convDateATH[0] + " " + convDateATH[1] + convDateATH[2] + " " + convDateATH[3] + convDateATH[4]
+				
+				document.getElementById('convATH1').innerHTML = "<ath>" + numberATH(convDateATH[0]) + " " + convDateATH[1] + convDateATH[2] + " " + numberATH(convDateATH[3]) + convDateATH[4] + "</ath>"
 			}
 			
 			if (date.getUTCFullYear() < -9999 || date.getUTCFullYear() > 9999) {
