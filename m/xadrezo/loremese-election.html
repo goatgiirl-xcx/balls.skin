@@ -173,10 +173,10 @@ function calcPoll(province) {
 					(pollRes[7] || 0) + (pollRes[9] || 0) + (pollRes[25] || 0)
 					]
 	
-	modPoll.push(100 - modPoll.reduce((acc, num) => acc + num, 0) + 15)
+	modPoll.push((100 - modPoll.reduce((acc, num) => acc + num, 0)) * 3.12)
 	
 	// get percentage
-	modPoll = modPoll.map(function(x) { return (x / 115) })
+	modPoll = modPoll.map(function(x) { return (x / modPoll.reduce((acc, num) => acc + num, 0)) })
 	
 	// print percentage
 	pollPerc = modPoll.map(function(x) {return roundProp(x * 100, 0)})
