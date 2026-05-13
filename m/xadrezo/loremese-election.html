@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loremese election calculator</title>
+<link href="./css.css" rel="stylesheet" type="text/css" media="all">
+<link rel="icon" type="image/x-icon" href="./bw.ico">
+<style>
+	th, td { text-align: center}
+	body { font-family: Verdana, Tahoma}
+	
+	table, th, td {
+		border: 1px solid black;
+	}
+	
+	.big {
+		font-size: 140%
+	}
+	
+	.fu {color: purple}
+	.sd {color: red}
+	.fm {color: gold; text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000}
+	.co {color: dodgerblue}
+	.na {color: black}
+	.id {color: grey}
+	
+	img {
+		height: 1rem;
+		border: 1px solid black;
+	}
+	
+</style>
+</head><body>
+<h1>Loremese election calculator</h1>
+<h2><img src="./flags/loremesia.png" /> National</h2>
+<table>
+<tr><th>Free Unioneer</th><th>Social Democrat</th><th>Free-Minded</th><th>Conservative</th><th>Nationalist</th><th>Independent</th></tr>
+<tr><th id="nationseat0" class="big fu">...</th><th id="nationseat1" class="big sd">...</th><th id="nationseat2" class="big fm">...</th><th id="nationseat3" class="big co">...</th><th id="nationseat4" class="big na">...</th><th id="nationseat5" class="big id">...</th></tr>
+<tr><th id="nationperc0">...</th><th id="nationperc1">...</th><th id="nationperc2">...</th><th id="nationperc3">...</th><th id="nationperc4">...</th><th id="nationperc5">...</th></tr>
+</table>
+<p><i>Last update: <i id="lastupdated">...</i></i></p>
+<p><i>Polling data retrieved from <a href="https://dawum.de" target="_blank">dawum.de</a> (<a href="https://opendatacommons.org/licenses/odbl/1.0/" target="_blank">Open Database License (ODbL)</a>)</i></p>
+<h2>By province</h2>
+<h3><img src="./flags/lrm/vrida.png" /> Vrida (5 seats)</h3>
+<table>
+<tr><th>Free Unioneer</th><th>Social Democrat</th><th>Free-Minded</th><th>Conservative</th><th>Nationalist</th><th>Independent</th></tr>
+<tr><th id="vridaseat0" class="big fu">...</th><th id="vridaseat1" class="big sd">...</th><th id="vridaseat2" class="big fm">...</th><th id="vridaseat3" class="big co">...</th><th id="vridaseat4" class="big na">...</th><th id="vridaseat5" class="big id">...</th></tr>
+<tr><th id="vridaperc0">...</th><th id="vridaperc1">...</th><th id="vridaperc2">...</th><th id="vridaperc3">...</th><th id="vridaperc4">...</th><th id="vridaperc5">...</th></tr>
+</table>
+<h3><img src="./flags/lrm/gerduno.png" /> Gerduno (3 seats)</h3>
+<table>
+<tr><th>Free Unioneer</th><th>Social Democrat</th><th>Free-Minded</th><th>Conservative</th><th>Nationalist</th><th>Independent</th></tr>
+<tr><th id="gerdunoseat0" class="big fu">...</th><th id="gerdunoseat1" class="big sd">...</th><th id="gerdunoseat2" class="big fm">...</th><th id="gerdunoseat3" class="big co">...</th><th id="gerdunoseat4" class="big na">...</th><th id="gerdunoseat5" class="big id">...</th></tr>
+<tr><th id="gerdunoperc0">...</th><th id="gerdunoperc1">...</th><th id="gerdunoperc2">...</th><th id="gerdunoperc3">...</th><th id="gerdunoperc4">...</th><th id="gerdunoperc5">...</th></tr>
+</table>
+<h3><img src="./flags/lrm/brauria.png" /> Brauria (4 seats)</h3>
+<table>
+<tr><th>Free Unioneer</th><th>Social Democrat</th><th>Free-Minded</th><th>Conservative</th><th>Nationalist</th><th>Independent</th></tr>
+<tr><th id="brauriaseat0" class="big fu">...</th><th id="brauriaseat1" class="big sd">...</th><th id="brauriaseat2" class="big fm">...</th><th id="brauriaseat3" class="big co">...</th><th id="brauriaseat4" class="big na">...</th><th id="brauriaseat5" class="big id">...</th></tr>
+<tr><th id="brauriaperc0">...</th><th id="brauriaperc1">...</th><th id="brauriaperc2">...</th><th id="brauriaperc3">...</th><th id="brauriaperc4">...</th><th id="brauriaperc5">...</th></tr>
+</table>
+<h3><img src="./flags/lrm/oreino.png" /> Oreino (8 seats)</h3>
+<table>
+<tr><th>Free Unioneer</th><th>Social Democrat</th><th>Free-Minded</th><th>Conservative</th><th>Nationalist</th><th>Independent</th></tr>
+<tr><th id="oreinoseat0" class="big fu">...</th><th id="oreinoseat1" class="big sd">...</th><th id="oreinoseat2" class="big fm">...</th><th id="oreinoseat3" class="big co">...</th><th id="oreinoseat4" class="big na">...</th><th id="oreinoseat5" class="big id">...</th></tr>
+<tr><th id="oreinoperc0">...</th><th id="oreinoperc1">...</th><th id="oreinoperc2">...</th><th id="oreinoperc3">...</th><th id="oreinoperc4">...</th><th id="oreinoperc5">...</th></tr>
+</table>
+<h3><img src="./flags/lrm/dervesaus.png" /> Dervesaus (3 seats)</h3>
+<table>
+<tr><th>Free Unioneer</th><th>Social Democrat</th><th>Free-Minded</th><th>Conservative</th><th>Nationalist</th><th>Independent</th></tr>
+<tr><th id="dervesausseat0" class="big fu">...</th><th id="dervesausseat1" class="big sd">...</th><th id="dervesausseat2" class="big fm">...</th><th id="dervesausseat3" class="big co">...</th><th id="dervesausseat4" class="big na">...</th><th id="dervesausseat5" class="big id">...</th></tr>
+<tr><th id="dervesausperc0">...</th><th id="dervesausperc1">...</th><th id="dervesausperc2">...</th><th id="dervesausperc3">...</th><th id="dervesausperc4">...</th><th id="dervesausperc5">...</th></tr>
+</table>
+<h3><img src="./flags/lrm/sa-zlova.png" /> Sa Zlova (7 seats)</h3>
+<table>
+<tr><th>Free Unioneer</th><th>Social Democrat</th><th>Free-Minded</th><th>Conservative</th><th>Nationalist</th><th>Independent</th></tr>
+<tr><th id="sazlovaseat0" class="big fu">...</th><th id="sazlovaseat1" class="big sd">...</th><th id="sazlovaseat2" class="big fm">...</th><th id="sazlovaseat3" class="big co">...</th><th id="sazlovaseat4" class="big na">...</th><th id="sazlovaseat5" class="big id">...</th></tr>
+<tr><th id="sazlovaperc0">...</th><th id="sazlovaperc1">...</th><th id="sazlovaperc2">...</th><th id="sazlovaperc3">...</th><th id="sazlovaperc4">...</th><th id="sazlovaperc5">...</th></tr>
+</table>
+<h3><img src="./flags/lrm/udria.png" /> Udria (10 seats)</h3>
+<table>
+<tr><th>Free Unioneer</th><th>Social Democrat</th><th>Free-Minded</th><th>Conservative</th><th>Nationalist</th><th>Independent</th></tr>
+<tr><th id="udriaseat0" class="big fu">...</th><th id="udriaseat1" class="big sd">...</th><th id="udriaseat2" class="big fm">...</th><th id="udriaseat3" class="big co">...</th><th id="udriaseat4" class="big na">...</th><th id="udriaseat5" class="big id">...</th></tr>
+<tr><th id="udriaperc0">...</th><th id="udriaperc1">...</th><th id="udriaperc2">...</th><th id="udriaperc3">...</th><th id="udriaperc4">...</th><th id="udriaperc5">...</th></tr>
+</table>
+<h3><img src="./flags/lrm/berzocrid.png" /> Berzoçrid (4 seats)</h3>
+<table>
+<tr><th>Free Unioneer</th><th>Social Democrat</th><th>Free-Minded</th><th>Conservative</th><th>Nationalist</th><th>Independent</th></tr>
+<tr><th id="berzocridseat0" class="big fu">...</th><th id="berzocridseat1" class="big sd">...</th><th id="berzocridseat2" class="big fm">...</th><th id="berzocridseat3" class="big co">...</th><th id="berzocridseat4" class="big na">...</th><th id="berzocridseat5" class="big id">...</th></tr>
+<tr><th id="berzocridperc0">...</th><th id="berzocridperc1">...</th><th id="berzocridperc2">...</th><th id="berzocridperc3">...</th><th id="berzocridperc4">...</th><th id="berzocridperc5">...</th></tr>
+</table>
+<h3><img src="./flags/lrm/launo.png" /> Launo (3 seats)</h3>
+<table>
+<tr><th>Free Unioneer</th><th>Social Democrat</th><th>Free-Minded</th><th>Conservative</th><th>Nationalist</th><th>Independent</th></tr>
+<tr><th id="launoseat0" class="big fu">...</th><th id="launoseat1" class="big sd">...</th><th id="launoseat2" class="big fm">...</th><th id="launoseat3" class="big co">...</th><th id="launoseat4" class="big na">...</th><th id="launoseat5" class="big id">...</th></tr>
+<tr><th id="launoperc0">...</th><th id="launoperc1">...</th><th id="launoperc2">...</th><th id="launoperc3">...</th><th id="launoperc4">...</th><th id="launoperc5">...</th></tr>
+</table>
+<h3><img src="./flags/lrm/costrelo.png" /> Costrelo (3 seats)</h3>
+<table>
+<tr><th>Free Unioneer</th><th>Social Democrat</th><th>Free-Minded</th><th>Conservative</th><th>Nationalist</th><th>Independent</th></tr>
+<tr><th id="costreloseat0" class="big fu">...</th><th id="costreloseat1" class="big sd">...</th><th id="costreloseat2" class="big fm">...</th><th id="costreloseat3" class="big co">...</th><th id="costreloseat4" class="big na">...</th><th id="costreloseat5" class="big id">...</th></tr>
+<tr><th id="costreloperc0">...</th><th id="costreloperc1">...</th><th id="costreloperc2">...</th><th id="costreloperc3">...</th><th id="costreloperc4">...</th><th id="costreloperc5">...</th></tr>
+</table>
+<script>
+var polls;
+
+var provinces = {	"vrida": {"state": 5, "seats": 5, "pop": 8713690},
+					"gerduno": {"state": 3, "seats": 3, "pop": 1738507},
+					"brauria": {"state": 16, "seats": 4, "pop": 4469432},
+					"oreino": {"state": 11, "seats": 8, "pop": 18729543},
+					"dervesaus": {"state": 2, "seats": 3, "pop": 2062275},
+					"sazlova": {"state": 4, "seats": 7, "pop": 15489212},
+					"udria": {"state": 12, "seats": 10, "pop": 25151720},
+					"berzocrid": {"state": 10, "seats": 4, "pop": 6837689},
+					"launo": {"state": 6, "seats": 3, "pop": 1089284},
+					"costrelo": {"state": 13, "seats": 3, "pop": 718648},
+					}
+
+Object.filter = (obj, predicate) => 
+    Object.assign(...Object.keys(obj)
+                    .filter( key => predicate(obj[key]) )
+                    .map( key => ({ [key]: obj[key] }) ) );
+
+function largestRemainderRound(numbers, desiredTotal) {
+  var result = numbers.map(function(number, index) {
+    return {
+      floor: Math.floor(number),
+      remainder: getRemainder(number),
+      index: index,
+    };
+  }).sort(function(a, b) {
+    return b.remainder - a.remainder;
+  });
+
+  var lowerSum = result.reduce(function(sum, current) {
+    return sum + current.floor;
+  }, 0);
+
+  var delta = desiredTotal - lowerSum;
+  for (var i = 0; i < delta; i++) {
+    result[i].floor++;
+  }
+
+  return result.sort(function(a, b) {
+    return a.index - b.index;
+  }).map(function(result) {
+    return result.floor;
+  });
+}
+
+function getRemainder(number) {
+  var remainder = number - Math.floor(number);
+  return remainder.toFixed(4);
+}
+
+function roundProp(x, y) {
+	return (parseFloat(x)).toFixed(y)
+}
+
+function calcPoll(province) {
+	var state = provinces[province]["state"]
+	var seats = provinces[province]["seats"]
+	var pop   = provinces[province]["pop"]
+	
+	var realPoll = Object.entries(Object.filter(polls.Surveys, entry => entry.Parliament_ID == state)).slice(-1)[0][1]
+	var pollRes = realPoll.Results
+	
+	//Free Unioneer, Social Democrat, Free-Minded, Conservative, Nationalist, Independent
+	var modPoll = [ (pollRes[5] || 0) + (pollRes[23] || 0),
+					(pollRes[2] || 0) + (pollRes[4] || 0),
+					(pollRes[3] || 0) + (pollRes[6] || 0) + (pollRes[8] || 0) + (pollRes[18] || 0),
+					(pollRes[1] || 0) + (pollRes[101] || 0) + (pollRes[102] || 0),
+					(pollRes[7] || 0) + (pollRes[9] || 0) + (pollRes[25] || 0)
+					]
+	
+	modPoll.push((100 - modPoll.reduce((acc, num) => acc + num, 0)) * 3.12)
+	
+	// get percentage
+	modPoll = modPoll.map(function(x) { return (x / modPoll.reduce((acc, num) => acc + num, 0)) })
+	
+	// print percentage
+	pollPerc = modPoll.map(function(x) {return roundProp(x * 100, 0)})
+	for (let i = 0; i < pollPerc.length; i++) {
+		document.querySelector("#" + province + "perc" + i).innerHTML = pollPerc[i] + "%"
+	}
+	
+	// calculate seats
+	seatCalc = largestRemainderRound(modPoll.map(function(x) {return x * seats}), seats)
+	
+	// print seats
+	for (let i = 0; i < seatCalc.length; i++) {
+		document.querySelector("#" + province + "seat" + i).innerHTML = seatCalc[i]
+	}
+	
+	return [seatCalc, modPoll]
+}
+
+function calcAllPolls() {
+	var nationPollSeats = [0, 0, 0, 0, 0, 0]
+	var nationPollPerc = [0, 0, 0, 0, 0, 0]
+	
+	for (let i = 0; i < Object.keys(provinces).length; i++) {
+		var currprov = Object.keys(provinces)[i]
+		
+		var provres = calcPoll(currprov)
+		
+		nationPollSeats = nationPollSeats.map(function (num, idx) {return num + provres[0][idx]})
+		nationPollPerc = nationPollPerc.map(function (num, idx) {return num + (provres[1][idx] * provinces[currprov]["pop"])})
+	}
+	
+	nationPollPerc = nationPollPerc.map(function(x) { return roundProp((x / 85000000) * 100, 1) })
+	
+	for (let i = 0; i < nationPollPerc.length; i++) {
+		document.querySelector("#" + "nation" + "perc" + i).innerHTML = nationPollPerc[i] + "%"
+	}
+	
+	for (let i = 0; i < nationPollSeats.length; i++) {
+		document.querySelector("#" + "nation" + "seat" + i).innerHTML = nationPollSeats[i]
+	}
+	
+}
+
+fetch('https://api.dawum.de/newest_surveys.json')
+	.then(res => res.json())
+	.then(out => polls = out)
+	.then(() => document.querySelector("#lastupdated").innerHTML = new Date(polls.Database.Last_Update))
+	.then(() => calcAllPolls())
+</script>
+</body></html>

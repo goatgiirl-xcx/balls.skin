@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Loremese Converter</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+	<link rel="icon" type="image/x-icon" href="./bw.ico">
+	<style>
+	body {
+	  background-color: white;
+	  color: black;
+	  font-family: Verdana, Tahoma;
+	}
+	
+	.big {
+		font-family: "Bahnschrift";
+		font-size: 2em;
+		/*max-height: 80%;*/
+		font-weight: bold;
+	}
+	
+	</style>
+  </head>
+  <body>
+	<label for="rom">Insert Loremese here:</label><br>
+	<input type="text" id="rom" name="rom" style="width: 99%" onkeyup="clickButton()"></input><br>
+	<!-- <button type="button" onclick="clickButton()">Convert</button> -->
+	<br>
+	<font id="conv" name="conv" class="big"></font>
+	
+	<script>
+		function translateLRM(syl) {
+			var translate = {
+				"a": "α",
+				"b": "в",
+				"g": "г",
+				"d": "d",
+				"e": "є",
+				"u": "y",
+				"v": "y",
+				"z": "z",
+				"i": "ϝ",
+				"c": "k",
+				"l": "l",
+				"m": "m",
+				"n": "n",
+				"s": "ʒ",
+				"o": "o",
+				"p": "c",
+				"r": "p",
+				"ç": "w",
+				"t": "т",
+				
+				"à": "ὰ",
+				"è": "є̀",
+				"ì": "ϝ̀",
+				"ò": "ò",
+				"ù": "ỳ",
+				"ï": "ϝ̃",
+				"ü": "ỹ",
+				"h": "u",
+				"f": "θ",
+				
+				"A": "A",
+				"B": "В",
+				"G": "Γ",
+				"D": "Δ",
+				"E": "E",
+				"U": "Y",
+				"V": "Y",
+				"Z": "Z",
+				"I": "Ϝ",
+				"C": "K",
+				"L": "Λ",
+				"M": "M",
+				"N": "N",
+				"S": "Ʒ",
+				"O": "O",
+				"P": "C",
+				"R": "P",
+				"Ç": "W",
+				"T": "T",
+				
+				"À": "À",
+				"È": "È",
+				"Ì": "Ϝ̀",
+				"Ò": "Ò",
+				"Ù": "Ỳ",
+				"Ï": "Ϝ̃",
+				"Ü": "Ỹ",
+				"H": "H",
+				"F": "ϴ",
+				
+				"₱": "₵",
+				"€": "₵",
+				"$": "₵",
+				"¤": "₵",
+				
+				"~": "~",
+				"<": "<",
+				">": ">",
+				" ": " ",
+				"?": "¡",
+			}
+
+			if (syl in translate) {return translate[syl]}
+			if (/\b\d+\b/ig.test(syl)) {return syl}
+			if (/\p{P}/uig.test(syl)) {return syl}
+			return "<font style=\"color: red;\">�</font>"
+		}
+
+		function convertTextLRM(inputText) {
+			convstring = "";
+			for (var i = 0; i < inputText.length; i++) {
+				convstring += translateLRM(inputText[i])}
+
+			return convstring
+		}
+		
+		function clickButton() {
+			document.getElementById("conv").innerHTML = convertTextLRM(document.getElementById("rom").value);
+		}
+		
+		clickButton()
+	</script>
+	<!--<br><br><br>
+	<p id="footer"></p>
+	<script>
+		if ( window.location == window.parent.location ) {
+			document.getElementById("footer").innerHTML = "<hr><b><i>xadrezo.neocities.org</i></b> - <a href=\"impressum.html\">Impressum (DE)</a>";
+		}
+	</script>
+	-->
+  </body>
+</html>
