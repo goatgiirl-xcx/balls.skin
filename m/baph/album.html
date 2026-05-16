@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charli's Album Recommendations</title>
+</head>
+
+<style>
+* {
+	image-rendering: pixelated;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--album: 256px;
+	--album-grid: calc(var(--album)/1.75);
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+	color: white;
+	font-family: monospace, sans-serif;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+#gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, var(--album-grid));
+	grid-template-rows: repeat(auto-fit, var(--album-grid));
+	width: calc(100vw - (var(--album) + 2em) - mod(100vw - (var(--album) + 2em), var(--album-grid)));
+	height: 100vh;
+	overflow-y: auto;
+}
+
+#display {
+	padding: 1em;
+	text-align: center;
+	width: calc(var(--album) + mod(100vw - (var(--album) + 2em), var(--album-grid)));
+	flex-grow: 1;
+}
+
+#gallery img {
+	width: var(--album-grid);
+	height: var(--album-grid);
+}
+
+#display img {
+	width: var(--album);
+	height: var(--album);
+}
+
+a {
+	color: inherit;
+}
+
+#display-artist, #display-album {
+	font-size: 200%;
+}
+
+a[href=""] {
+  display: none;
+}
+</style>
+
+<body>
+<section id="gallery">
+</section>
+
+<section id="display">
+	<img id="display-image" src="">
+	<p id="display-artist">Artist</p>
+	<p id="display-album">Album</p>
+	<p id="display-year">Year</p>
+	<p id="display-genre">Genre</p>
+	<br>
+	<p>Recommended: <span id="display-rec"></span></p>
+	<br>
+	<p><a id="display-lastfm" href="">LastFM</a></p>
+	<p><a id="display-youtube" href="">YouTube</a></p>
+	<p><a id="display-spotify" href="">Spotify</a></p>
+	<p><a id="display-bandcamp" href="">Bandcamp</a></p>
+</section>
+
+</body>
+
+<script>
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+  }
+  return array
+}
+
+music =  [
+	{
+		"artist": "Charli xcx",
+		"album": "brat",
+		"year": "2024",
+		"genre": "Club",
+		"rec": "Von dutch",
+		"lastfm": "https://www.last.fm/music/Charli+xcx/BRAT",
+		"youtube": "https://www.youtube.com/playlist?list=OLAK5uy_nSIlyvjzWS-Y6sZb24dhzcg0UlQazxn5k",
+		"spotify": "https://open.spotify.com/album/2lIZef4lzdvZkiiCzvPKj7",
+		"bandcamp": "",
+		"art": "https://lastfm.freetls.fastly.net/i/u/770x0/71abb7a003dbb06ec227739aee86beb1.jpg#71abb7a003dbb06ec227739aee86beb1"
+	},
+	{
+		"artist": "Charli xcx",
+		"album": "how i'm feeling now",
+		"year": "2020",
+		"genre": "Hyperpop",
+		"rec": "party 4 u",
+		"lastfm": "https://www.last.fm/music/Charli+xcx/how+i%27m+feeling+now",
+		"youtube": "https://www.youtube.com/playlist?list=OLAK5uy_kHjqL8bBNaNPRD5pNivPR3z8xDvlsq54Y",
+		"spotify": "https://open.spotify.com/album/3a9qH2VEsSiOZvMrjaS0Nu",
+		"bandcamp": "",
+		"art": "https://lastfm.freetls.fastly.net/i/u/770x0/9d584d6fc6300f7fbd98de3efacfd1ba.jpg#9d584d6fc6300f7fbd98de3efacfd1ba"
+	},
+	{
+		"artist": "onsite",
+		"album": "On-Site!",
+		"year": "2026",
+		"genre": "Digital hardcore",
+		"rec": "LISDEX 20mg",
+		"lastfm": "https://www.last.fm/music/OnSite/ON-SITE!",
+		"youtube": "",
+		"spotify": "",
+		"bandcamp": "https://onsitedigital.bandcamp.com/album/on-site",
+		"art": "https://lastfm.freetls.fastly.net/i/u/770x0/72cc2c599a35eef6afabee60a8481e40.jpg#72cc2c599a35eef6afabee60a8481e40"
+	},
+	
+	
+	
+	/*
+	{
+		"artist": "",
+		"album": "",
+		"year": "",
+		"genre": "",
+		"rec": "",
+		"lastfm": "",
+		"youtube": "",
+		"spotify": "",
+		"bandcamp": "",
+		"art": ""
+	},
+	*/
+];
+
+shuffleArray(music).forEach((album) => {
+	img = document.createElement("img");
+	img.src = album.art;
+	img.alt = album.artist + " - " + album.album;
+	img.setAttribute("data-artist", album.artist);
+	img.setAttribute("data-album", album.album);
+	img.setAttribute("data-year", album.year);
+	img.setAttribute("data-genre", album.genre);
+	img.setAttribute("data-rec", album.rec);
+	img.setAttribute("data-lastfm", album.lastfm);
+	img.setAttribute("data-youtube", album.youtube);
+	img.setAttribute("data-spotify", album.spotify);
+	img.setAttribute("data-bandcamp", album.bandcamp);
+	document.getElementById("gallery").appendChild(img);
+});
+
+document.querySelectorAll("#gallery img").forEach((cover) => {
+	cover.addEventListener("click", () => {
+		document.getElementById("display-image").src = cover.src;
+		document.getElementById("display-artist").textContent = cover.getAttribute("data-artist");
+		document.getElementById("display-album").textContent = cover.getAttribute("data-album");
+		document.getElementById("display-image").alt = cover.getAttribute("data-album");
+		document.getElementById("display-year").textContent = cover.getAttribute("data-year");
+		document.getElementById("display-genre").textContent = cover.getAttribute("data-genre");
+		document.getElementById("display-rec").textContent = cover.getAttribute("data-rec");
+		document.getElementById("display-lastfm").href = cover.getAttribute("data-lastfm");
+		document.getElementById("display-youtube").href = cover.getAttribute("data-youtube");
+		document.getElementById("display-spotify").href = cover.getAttribute("data-spotify");
+		document.getElementById("display-bandcamp").href = cover.getAttribute("data-bandcamp");
+	});
+});
+</script>
+</html>
