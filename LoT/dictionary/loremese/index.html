@@ -220,6 +220,15 @@
 						wortstamm = loremese.slice(0, -1);
 						var tabelle = "<table><tr><th>Nominative</th><td>" + loremese + "</td></tr><tr><th>Genitive</th><td>" + loremese + "s" + "</td></tr>";
 						tabelle += "<tr><th>Dative</th><td>" + loremese + "i" + "</td></tr></table>"
+						
+						switch (loremese) {
+							case "Açica Critesa":
+								tabelle = "<table><tr><th>Nominative</th><td>" + "Açica Critesa" + "</td></tr><tr><th>Genitive</th><td>" + "Açicom Critesom" + "</td></tr>";
+								tabelle += "<tr><th>Dative</th><td>" + "Açicom Critesom" + "</td></tr></table>"
+								break;
+							default:
+								break;
+						}
 						break;
 					case "i":
 						wortstamm = loremese.slice(0, -1);
@@ -248,10 +257,6 @@
 							case "Elaudertos Gordos":
 								tabelle = "<table><tr><th>Nominative</th><td>" + "Elaudertos Gordos" + "</td></tr><tr><th>Genitive</th><td>" + "Elaudertom Gordom" + "</td></tr>";
 								tabelle += "<tr><th>Dative</th><td>" + "Elaudertom Gordom" + "</td></tr></table>"
-								break;
-							case "Açica Critesa":
-								tabelle = "<table><tr><th>Nominative</th><td>" + "Açica Critesa" + "</td></tr><tr><th>Genitive</th><td>" + "Açicom Critesom" + "</td></tr>";
-								tabelle += "<tr><th>Dative</th><td>" + "Açicom Critesom" + "</td></tr></table>"
 								break;
 							default:
 								break;
