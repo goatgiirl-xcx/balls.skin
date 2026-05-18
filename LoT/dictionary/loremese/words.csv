@@ -1,7 +1,5 @@
 a, an;no;adjp;;
 about, concerning;peri;;with dative;Originally used with the genitive case in older Loremese.
-Aeruvia;Airuvia;fp;;
-Aeruvian;airuvico;adjp;;
 after;emped;;with dative;
 all;senzo;adjp;;
 all, everything;senzo;n;;
@@ -18,6 +16,8 @@ Anralian;imbrucico;adjp;;
 apple, fruit;malo;n;;The meaning “fruit” is restricted to compounds and overly careless colloquial speech.
 armed force;auges;n;;
 ask;pauto;v;;
+Athi;açico;adjp;;
+Athi States;Açica Critesa;np;;
 attack;celmia;f;;
 attack;celmo;v;;
 autumn, fall;eson;f;;
@@ -101,9 +101,11 @@ creator;creaitor;m / f;;
 Cring;Cringia;fp;;
 Cringian, Cringish;cringico;adjp;;
 cup;peitor;m;;When used as a unit of measurement, it is equal to approx. 286.9 milliliters or 286.9 grams.
-day;daiti;f;;
+Daqudran;Dacouzran;np;;
+Daqudranian;dacouzranico;adjp;;
 Davidria;Davidria;fp;;
 Davidrian;davidrico;adjp;;
+day;daiti;f;;
 defence;bulaçia;f;;
 defend;bulaço;v;;
 democracy;damocretia;f;;
@@ -222,6 +224,8 @@ icicle;leonzombo;m;;
 ...ify;...anio;v;;
 Ihoshar;Ioçar;np;;Also colloquially spelled as <i>Ihoçhar</i>.
 Ihoshari;ioçarico;adjp;;Also colloquially spelled as <i>ihoçharico</i>.
+Ikeve;Ichevi;np;;
+Ikevean;ichevico;adjp;;
 ill, sick;oligo;adj;;
 in;en;;with dative;
 Iquistia;Icvistia;fp;;
@@ -237,8 +241,6 @@ joke;ioco;m;;
 juice, sap;saca;f;;
 Jyosti;Iosti;np;;
 Jyostian;iostico;adjp;;
-Kasten;Casten;np;;
-Kastenian;castenico;adjp;;
 Kgokkonitlag;Gonitlagia;fp;;
 Kgokkonitlagian;gonitlagico;adjp;;
 king;orez;m;;
@@ -252,8 +254,6 @@ know of, be familiar with;zloço;v;;This verb is used in the sense of “to be a
 lake;locu;m;;
 land, country;gavo;m;;
 language;dazva;f;;
-Lasia;Lasia;fp;;
-Lasian;lasico;adjp;;
 laugh;ioco;vit;;
 lava, magma;zemocrovio;m;;
 leaf, page;bolio;n;;
@@ -316,8 +316,6 @@ on;apo;;with accusative;
 one;oino;num;;
 open;celio;v;;
 or;au;;;
-Osteros;Ostero;mp;;
-Osterosian;osterico;adjp;;
 over;ampi;;with accusative;
 park;parco;m;;
 Pyatle;Patal;np;;
@@ -362,8 +360,6 @@ round;epivlivo;adj;;
 rose;vrido;n;;
 Rosiastan;Rosamoricia;fp;;
 Rosiastani;rosamoricico;adjp;;
-Rostav;Rostau;np;;
-Rostavian;rostavico;adjp;;
 ruin;rauti;f;;
 ruin;ravo;v;;
 rumour;bama;f;;
@@ -460,8 +456,6 @@ today;sadaiti;;;
 tomorrow;noctior;;;
 tooth;zombo;m;;
 track;pletro;n;;When used as a unit of measurement, it is equal to approx. 30.61 meters.
-Traule;Trauli;np;;
-Traulean;traulico;adjp;;
 tree;doru;n;;
 tree bark;blavo;m;;
 trousers;campino;m;plural only;The word is plural only. The singular forms are not used.
