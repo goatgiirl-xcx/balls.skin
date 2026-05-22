@@ -263,12 +263,12 @@ Capital;;inan;{be}wepoo{wa} </i>[bɛ̝´.wɛ̝.po̞:.wä´ ]<i>;;s
 Capitalism;;inan;pofo{lu}te </i>[po̞.fo̞.lu´.tɛ̝]<i>;;s
 Captain (ship);;an;zon{e}fo{nu} </i>[zo̞n.ɛ̝´.fo̞.nu´]<i>;;s
 Car;;inan;kepe{ce} </i>[kɛ̝.pɛ̝.tɕɛ̝´]<i>;;s
-Card (deck);;inan;;;s
+Card (deck);;inan;zu{zhe} </i>[zu.ʑɛ̝´]<i>;;s
 Card (game);;inan;;;s
-Card game;;inan;;;s
-Card, contact card;;inan;;;s
+Card game;;inan;zu{zhe}zo{ka} </i>[zu.ʑɛ̝´.zo̞.kä´]<i>;;s
+Card, contact card;;inan;zu{zhe} </i>[zu.ʑɛ̝´]<i>;;s
 Care;;verb;{e}pe{ba} </i>[ɛ̝´.pɛ̝.bä´]<i>;;s
-Career;;inan;;;s
+Career (history);;inan;we{kam}he </i>[wɛ̝.käm´.hɛ̝]<i>;;s
 Carnation;;an;;;s
 Cartel;;inan;;;s
 Carve (flesh);;verb;ye{te} </i>[jɛ̝.tɛ̝´]<i>;;s
@@ -276,7 +276,7 @@ Carve (stone);;verb;{kizang} </i>[ki´.zäŋ´]<i>;;s
 Case (legal);;an;;;s
 Case (linguistics);;inan;;;s
 Case (storage);;inan;;;s
-Cast (light);;verb;;;s
+Cast (light), light (way);;verb;{ki}jkye </i>[ki´.kjɛ̝]<i>;;s
 Cast (spell);;verb;;;s
 Castle;;inan;ke{le} </i>[kɛ̝.lɛ̝´]<i>;;s
 Castle (Chess);;verb;ma{tse} </i>[mä.tsɛ̝´]<i>;;s
@@ -293,7 +293,7 @@ Center;;adj;{fo}pu </i>[fo̞´.pu]<i>;;s
 Certain, be certain;;verb;yu{ye}yim </i>[ju.jɛ̝´.jim]<i>;;s
 Chaebol;;inan;{ku}sabate </i>[ku´.s:ä.bä.tɛ̝]<i>;Considered rude but is becoming more widely used, especially in news outlets;s
 Chain;;inan;;;s
-Chair;;inan;;;s
+Chair;;inan;so{lum} </i>[so̞.lum´]<i>;;s
 Change;;verb;de{kye} </i>[dɛ̝.kjɛ̝´]<i>;;s
 Chapter;;inan;mu{za}zzo </i>[mu.zä´.z:o̞]<i>;;s
 Chasm;;inan;{jue}de </i>[ju´.ɛ̝´.dɛ̝]<i>;;s
@@ -308,10 +308,10 @@ Child labour laws;;inan;pe{leesewa}wo </i>[pɛ̝.lɛ̝:´.sɛ̝´.wä´.wo̞]
 Child, kid;;an;pe{le} </i>[pɛ̝.lɛ̝´]<i>;;s
 Chip, crisp;;inan;;;s
 Cholto;CODO;;{co}do </i>[tɕo̞´.do̞]<i>;Codo is a filler word, like “well”, it can also be used as a diminutive;s
-Chopsticks;;inan;;;s
+Chopsticks;;inan;ce{gu} </i>[tɕɛ̝.gu´]<i>;;s
 Christmas;KURISUMASE;inan;ku{lisu}mase </i>[ku.li´.su´.mä.sɛ̝]<i>;;real
 Christmas time;KURISUMASE;inan;ku{lisu}maseda </i>[ku.li´.su´.mä.sɛ̝.dä]<i>;;real
-Chuchu;;an;;;hy
+Chuchu;CUCU;an;{cu}cu </i>[tɕu´.tɕu]<i>;;hy
 Chunk;;inan;;;s
 Church (Saulist);;inan;za{ta}zha{da} </i>[zä.tä´.ʑä.dä´]<i>;Borrowed from Loremese;s
 Church (Shidamist);;an;;;s
@@ -530,7 +530,8 @@ Earth, Dirt;;an;zam{fong} </i>[zäm.fo̞ŋ´]<i>;;s
 Earthquake;;inan;;;s
 East;;inan;a </i>[ä]<i>;;s
 Eat;;verb;si{we} </i>[si.wɛ̝´]<i>;;s
-Eating disorder;;inan;si{de} </i>[si.dɛ̝´]<i>;;s
+Eating disorder;;ahan;si{de} </i>[si.dɛ̝´]<i>;;s
+Eating disorder;;inan;si{de} </i>[si.do̞.ki´.dɛ̝]<i>;Medical;s
 Eco-terrorism;;inan;;;s
 Edit, change;;verb;;;s
 Education;;inan;;;s
@@ -709,8 +710,8 @@ Furnace;;inan;{wo}ye </i>[wo̞´.jɛ̝]<i>;;s
 Further, more far;ITO;adj;{u}zzo{i}to </i>[u´.z:o̞.i´.to̞]<i>;;s
 Future marker;;;;;s
 Gallery;;inan;jo{zun}je </i>[dʑo̞.zun´.dʑɛ̝]<i>;;s
-Game;;inan;;;s
-Game;;verb;;;s
+Game;;inan;zo{ka} </i>[zo̞.kä´]<i>;;s
+Game;;verb;zo{ka} </i>[zo̞.kä´]<i>;;s
 Gardenia;;an;;;s
 Garistan;KAZIDAN;inan;ka{zi}dan{sa} </i>[kä.zi´.dän.sä´]<i>;;s
 Garistan (Language);KAZIDAN;inan;ka{zi}dan {di}ye </i>[kä.zi´.dän di´.jɛ̝]<i>;;s
@@ -793,6 +794,7 @@ Hangover;;inan;;;s
 Hangover;;inan;;;s
 Happen;;verb;lo{ga} </i>[lo̞.gä´]<i>;;s
 Happy;;adj;zo{wun} </i>[zo̞.wun´]<i>;;s
+Hard, tough;;adj;ke{zhe} </i>[kɛ̝.ʑɛ̝´]<i>;;s
 Harm, beat, fight;;verb;{te}weyun </i>[tɛ̝´.wɛ̝.jun]<i>;;s
 Harvest;;inan;su{ka} </i>[su.kä´]<i>;;s
 Harvest;;verb;su{ka} </i>[su.kä´]<i>;;s
@@ -846,7 +848,7 @@ Horse;;an;{I}zan </i>[i´.zän]<i>;;s
 Hot;;adj;ju{kyu} </i>[dʑu.kju´]<i>;;s
 Hour;;inan;;;s
 House, home;;inan;pe{dyi} </i>[pɛ̝.dji´]<i>;;s
-How;;;;;s
+How;;;;;s
 Hoyoverse;HOJOBEZU;inan;hoyobezu </i>[ho̞´.jo̞.bɛ̝´.zu]<i>;;real
 Hug;;verb;ze{gan} </i>[zɛ̝.gän´]<i>;;s
 Hum;;verb;ke{do} </i>[ke.do´]<i>;;s
@@ -926,7 +928,7 @@ Jester;JOTSIKON;an;yo{tsi}kon </i>[jo̞.tsi´.ko̞n]<i>;Borrowed from Loremese;s
 Jkawi;HAWI;inan;ha{wi}sa </i>[hä.wi´.sä]<i>;;s
 Jkawi (Language);HAWI;inan;ha{wi} {di}ye </i>[hä.wi´.di´.jɛ̝]<i>;;s
 Jkawi (People);HAWI;an;ha{wi} si </i>[hä.wi´.si]<i>;;s
-Job, work;;inan;;;s
+Job, work;;inan;we{kam} </i>[wɛ̝.käm´]<i>;;s
 Joint;;inan;;;s
 Joke;;inan;;;s
 Jolly, merry, happy (for a holiday);;adj;jole </i>[dʑo̞.lɛ̝]<i>;;real
@@ -1223,7 +1225,7 @@ Oven, stove;;inan;wo{lang} </i>[wo̞.läŋ´]<i>;when used as “Stove” it 
 Owe;;verb;;;s
 Package;;inan;;;s
 Package, wrap;;verb;;;s
-Page, paper;;inan;zu{pe} </i>[zu.pɛ̝´.wɛ̝]<i>;When used as “paper” it’s informal;s
+Page, paper;;inan;zu{pe} </i>[zu.pɛ̝´]<i>;When used as “paper” it’s informal;s
 Pain;;inan;dizhu </i>[di.ʑu]<i>;;s
 Paint;;inan;tu{pe} </i>[tu.pɛ̝´]<i>;;s
 Paint (on something);;verb;tu{pe} </i>[tu.pɛ̝´]<i>;;s
@@ -1290,6 +1292,7 @@ Pick, choose;;verb;;;s
 Pickaxe;;inan;ze{popa}te </i>[zɛ̝.po̞´.pä´.tɛ̝]<i>;;s
 Pickaxe;;inan;ze{popa}te </i>[zɛ̝.po̞´.pä´.tɛ̝]<i>;;s
 Pig;;an;su{ha} </i>[su.hä´]<i>;Borrowed from Oikan;s
+Pile;;inan;;;s
 Pilot (mech);PECE;an;pece </i>[pɛ̝.tɕɛ̝]<i>;Used exclusively in mech shows;s
 Pilot (show);;inan;{e}ko{be} </i>[ɛ̝´.ko̞.bɛ̝´]<i>;;s
 Pilot (vehicle, aircraft);;an;pe{ce}ce </i>[pɛ̝.tɕɛ̝´.tɕɛ̝]<i>;;s
@@ -1303,7 +1306,6 @@ Plague;;inan;;;s
 Plane, field;;inan;tin{fong} </i>[tin.fo̞ŋ´]<i>;;s
 Plant;;an;di{de} </i>[di.dɛ̝´]<i>;;s
 Plant for bugs, inedible plants classifier, bug (archaic);;inan;{sye}yun </i>[sjɛ̝´.jun]<i>;;s
-Plastic;;inan;;;s
 Plastic;;inan;;;s
 Plastic;;inan;;;ahan
 Plate;;inan;;;s
@@ -1325,7 +1327,7 @@ Politics;;inan;;;s
 Pond bird, duck, swan;;an;fe{de} </i>[fɛ̝.dɛ̝´]<i>;;s
 Poop (Formal), feces;;inan;;;s
 Poop (Informal);;inan;;;s
-Pop music, pop;;inan;ko{nun} </i>[ko̞.nun´]<i>;;s
+Pop music, pop;KONUN;inan;ko{nun} </i>[ko̞.nun´]<i>;;s
 Pop off, go off;;verb;donge </i>[do̞n.gɛ̝]<i>;;ahan
 Popular, famous;;adj;ko{wa}be{nun} </i>[ko̞.wä´.bɛ̝.nun´]<i>;;s
 Pores;;an;be{kyekye} </i>[bɛ̝.kjɛ̝´.kjɛ̝´]<i>;;ahan
@@ -1623,6 +1625,7 @@ Snow (see notes);;inan;{la}ze </i>[lä´.zɛ̝]<i>;Usually used for snow that
 So, therefore;;;de{suba}an </i>[dɛ̝.su´.bä´.an]<i>;;s
 Social;;adj;;;s
 Society;;inan;{belu}po </i>[bɛ̝´.lu´.po̞]<i>;;s
+Soft;;adj;de{jim} </i>[dɛ̝.jim´]<i>;;s
 Soldier;;an;{ling}ke </i>[liŋ´.kɛ̝]<i>;;s
 Sole (of foot);;an;;;s
 Solo (music artist);;an;in{wa} </i>[in.wä´.si]<i>;;s
@@ -1815,7 +1818,7 @@ Thumb;;an;;;s
 Tide;;an;;;s
 Tide pool;;inan;;;s
 Tie (up);;verb;mo{te} </i>[mo̞.tɛ̝´]<i>;;s
-Tiger;;an;ting{li} </i>[ɕɛ̝.tiŋ.li´]<i>;;s
+Tiger;;an;sheting{li} </i>[ɕɛ̝.tiŋ.li´]<i>;;s
 Tight;;adj;;;s
 Time (concept);;inan;e{ke} </i>[ɛ̝.kɛ̝´]<i>;The concept of time itself, not a specific instance;s
 Tip;;verb;;;s
@@ -1910,7 +1913,7 @@ Virginity;;inan;;;s
 Vital;;adj;so{ko} </i>[so̞.ko̞´]<i>;;s
 Voice;;an;zu{yan} </i>[zu.jän´]<i>;;s
 Vomit;;verb;wu{te} </i>[wu.tɛ̝´]<i>;;s
-Vroom;;;buun </i>[bu:n]<i>;;s
+Vroom;BUUN;;buun </i>[bu:n]<i>;;s
 Wait;;verb;ku{de} </i>[ku.dɛ̝´]<i>;;s
 Wake up;;verb;{fye} </i>[fjɛ̝´]<i>;;s
 Wake up;;verb;te{zefang} </i>[tɛ̝.ʑɛ̝´.fäŋ´]<i>;;s
@@ -1925,8 +1928,8 @@ Watch, observe, survey, monitor;;verb;gu{gu} </i>[gu.gu´]<i>;;s
 Water;;an;mu{pe}we </i>[mu.pɛ̝´.wɛ̝]<i>;;s
 Water feature;;inan;mu{pefong} </i>[mu.pɛ̝´.fo̞ŋ´]<i>;;s
 Wax;;inan;{cape}we </i>[tɕä´.pɛ̝´.wɛ̝]<i>;;s
-We;;prn;e{we} </i>[e.wɛ̝´]<i>;;s
-We;;prn;{no}su </i>[no̞´.su]<i>;Borrowed from Loremese;religion
+We;;prn;lo{we} </i>[lo̞.wɛ̝´]<i>;;s
+We;;prn;{no}su </i>[no̞´.su]<i>;Borrowed from Loremese;religion
 Weak;;adj;tu{wa} </i>[tu.wä´]<i>;;s
 Weave;;verb;ku{te}pu </i>[ku.tɛ̝´.pu]<i>;;s
 Weed, cannabis;;an;;;ahan
