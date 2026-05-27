@@ -391,6 +391,7 @@ Couch;FILA;inan;{fi}la </i>[fi´.lä]<i>;Borrowed from Jkawi. Older;s
 Could, may do;;verb;sye </i>[sjɛ̝]<i>;;s
 Counsel;;verb;;;s
 Count;;verb;zo{te} </i>[zo̞.tɛ̝´]<i>;;s
+Countdown;;inan;ye{te} </i>[jɛ̝.tɛ̝´]<i>;;s
 Country, nation;;inan;pe{ta} </i>[pɛ̝.tä´]<i>;;s
 County;;inan;;;s
 Cousin;;an;;;s
@@ -462,6 +463,7 @@ Delegate;;verb;;;s
 Delete;;verb;{kese} </i>[kɛ̝´.sɛ̝´]<i>;;s
 Delusion;;inan;;;s
 Demand;;verb;{e}zanla{fa} </i>[ɛ̝´.zän.lä.fä´]<i>;;s
+Demise, die (formal, dramatic);;verb;bi{kaye}ta </i>[bi.kä´.jɛ̝´.tä]<i>;;s
 Democracy;;inan;;;s
 Demon (general);;inan;;;s
 Demonic;;adj;;;s
@@ -844,7 +846,7 @@ Honour;;inan;se{he} </i>[sɛ̝.hɛ̝´]<i>;;s
 Hope;;verb;ye{ze} </i>[jɛ̝.zɛ̝´]<i>;;s
 Horn;;an;{zhe} </i>[ʑɛ̝´]<i>;;s
 Horriblin;;an;;;hy
-Horse;;an;{I}zan </i>[i´.zän]<i>;;s
+Horse;;an;{i}zan </i>[i´.zän]<i>;;s
 Hot;;adj;ju{kyu} </i>[dʑu.kju´]<i>;;s
 Hour;;inan;;;s
 House, home;;inan;pe{dyi} </i>[pɛ̝.dji´]<i>;;s
@@ -935,6 +937,7 @@ Jolly, merry, happy (for a holiday);;adj;jole </i>[dʑo̞.lɛ̝]<i>;;real
 Jot;;verb;;;s
 Journal;;inan;;;s
 Journal;;verb;;;s
+Jug;;inan;;;s
 Juice, crushed fruit;;inan;;;s
 Jump;;verb;{za} </i>[zä´]<i>;;s
 Jump;;verb;{za} </i>[zä´]<i>;;s
@@ -1133,9 +1136,11 @@ Month;;inan;{ge} </i>[gɛ̝´]<i>;;s
 Mood, tone, vibe;;inan;;;s
 Moon worship;;inan;;;s
 Moon, Stellar body;;an;{ge} </i>[gɛ̝´]<i>;;s
-More;ITO;;{i}to </i>[i´.to̞]<i>;;s
+More;ITO;adj;{i}to </i>[i´.to̞]<i>;;s
+More, comparative;;adj;{zan} </i>[zän´]<i>;;s
 Morning;;inan;{epe} </i>[ɛ̝´.pɛ̝´]<i>;;s
 Moss;;an;;;s
+Most, superlative;;adj;hu{zan} </i>[hu.zän´]<i>;;s
 Mother;MACA;an;ma{ca} </i>[mä.tɕä´]<i>;Used for nonkaneeds;s
 Mound (Big);;inan;;;s
 Mound (Small);;inan;;;s
@@ -1435,6 +1440,7 @@ Regulate;;verb;;;s
 Rejoice;;verb;;;s
 Relax;;verb;;;s
 Relay;;verb;;;s
+Release, set off, let out;;verb;pɛ̝.wo̞ </i>[pɛ̝.wo̞]<i>;;s
 Remain;;verb;zhu{le} </i>[ʑu.lɛ̝´]<i>;;s
 Remember;;verb;yu{tin} </i>[ju.tin´]<i>;;s
 Remove;;verb;e{ke} </i>[ɛ̝.kɛ̝´]<i>;;s
@@ -1462,6 +1468,7 @@ Rito;;an;;;hy
 River;;an;{ju}ga </i>[dʑu´.gä]<i>;;s
 River;;an;{ju}ga </i>[dʑu´.gä]<i>;Archaic;s
 Road, highway;;inan;de{kye} </i>[dɛ̝.kjɛ̝´]<i>;;s
+Roar, scream (animal);;verb;{po}ge </i>[po̞´.gɛ̝]<i>;;s
 Roast;;verb;;;s
 Rockeater;;inan;wo{zang}sisi </i>[wo̞.zäŋ´.si.si]<i>;Slur for Kalis;s
 Rod (metal), blade (unattached);;inan;;;s
@@ -1548,6 +1555,7 @@ Serve;;verb;ba{to} </i>[bä.to̞´]<i>;;s
 Service;;inan;;;s
 Service (industry);;inan;;;s
 Set;;verb;a{ta} </i>[ä.tä´]<i>;;s
+Settings, config;ŽI;inan;de{yazhi} </i>[dɛ̝.jä´.ʑi´]<i>;;s
 Settle;;verb;;;s
 Seven;11;;{daa} </i>[dä:´]<i>;Seen in a more slang sense, saying “in in” is more formal;s
 Sew;;verb;ji{de} </i>[dʑi.dɛ̝´]<i>;;s
@@ -1823,6 +1831,7 @@ Tight;;adj;;;s
 Time (concept);;inan;e{ke} </i>[ɛ̝.kɛ̝´]<i>;The concept of time itself, not a specific instance;s
 Tip;;verb;;;s
 Tisane;;inan;;;s
+Titan, giant;;an;de{za} </i>[dɛ̝.zä´]<i>;;s
 Tithe;;verb;;;s
 Today;;inan;;;s
 Tomato;;an;co{pe}le </i>[tɕo̞.pɛ̝´.lɛ̝]<i>;;s
