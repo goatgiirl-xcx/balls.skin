@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="" rel="stylesheet" type="text/css" media="screen" id="theme-link">
+<link rel="stylesheet" href="css.css">
+
+<style>
+	.transcript {font-size: xx-large; padding-left: 2em;}
+</style>
+<title>sap of the knowledge tree</title>
+</head>
+
+<body><div class="main">
+
+    <h1>Mallian Text Display</h1>
+
+    <hr>
+
+	<section class="transcript">
+        <input type="text" id="text" name="text" placeholder="entər têkst hír" style="display:inline; min-width:50vw">
+		<p><span class="mallian" id="angular"></span></p>
+	</section>
+
+    <hr>
+
+    <h2>Number Converter</h2>
+    <section class="transcript">
+        <input type="number" id="number" name="number" placeholder="2143" style="display:inline; min-width:50vw">
+		<p><span class="mallian" id="gematria"></span> : Gematria</p>
+		<p><span class="mallian" id="ternary"></span> : Ternary</p>
+		<p><span class="mallian" id="balanced"></span> : Balanced Ternary</p>
+    </section>
+
+    <hr>
+
+    <section class="mallian transcript">
+        <p>()[]“»«”:;{},.</p>
+        <p>&/\+-*~= • $€£ % @</p>
+        <p>678901234</p>
+        <p>!?‽ </p>
+        <p>bvnzdgjrhktsfplwm xßŋ þð</p>
+        <p>aáâeéêoóôuúûiíîə æøy</p>
+    </section>
+
+</div>
+<script>
+function trans() {
+    document.getElementById("angular").innerHTML = document.getElementById("text").value;
+}
+document.getElementById("text").addEventListener('input', () => { trans(); });
+
+function tb3(n) {
+    if (n < 0) {
+        sign = "-";
+        n = Math.abs(n);
+    } else {
+        sign = "";
+    }
+    let d = [];
+    while (n !== 0) {
+        let x = n % 9;
+        n = Math.floor(n / 9);
+        if (x > 4) {
+            x -= 9;
+            n += 1;
+        }
+        d.push(x);
+    }
+    return d.reverse().map((_) => (sign === "-" ? "432109876" : "678901234")[_ + 4]).join("") || "0";
+}
+
+function t3(n) {
+    if (n < 0) {
+        sign = "-";
+        n = Math.abs(n);
+    } else {
+        sign = "";
+    }
+    let d = [];
+    while (n !== 0) {
+        d.push(n % 9);
+        n = Math.floor(n / 9);
+    }
+    return [sign, d.reverse().map((_) => "012346789"[_]).join("")].join("")|| "0";
+}
+
+function gematria(n) {
+    if (n < 0) {
+        sign = "-";
+        n = Math.abs(n);
+    } else {
+        sign = "";
+    }
+    if (n == 0) { return "“ə”"}
+    let d = [];
+
+    d.push('m'.repeat(n / 2000)); n %= 2000; 
+    d.push('w'.repeat(n / 1000)); n %= 1000; 
+    d.push('l'.repeat(n / 500)); n %= 500; 
+    d.push('p'.repeat(n / 400)); n %= 400;
+    d.push('f'.repeat(n / 300)); n %= 300;
+    d.push('s'.repeat(n / 200)); n %= 200;
+    d.push('t'.repeat(n / 100)); n %= 100;
+    d.push('k'.repeat(n / 50)); n %= 50;
+    d.push('h'.repeat(n / 40)); n %= 40;
+    d.push('r'.repeat(n / 30)); n %= 30;
+    d.push('j'.repeat(n / 20)); n %= 20;
+    d.push('g'.repeat(n / 10)); n %= 10;
+    d.push('d'.repeat(n / 5)); n %= 5;
+    d.push('z'.repeat(n / 4)); n %= 4;
+    d.push('n'.repeat(n / 3)); n %= 3;
+    d.push('v'.repeat(n / 2)); n %= 2;
+    d.push('b'.repeat(n));
+    
+    return ["“", sign, d.join(""), "”"].join("")|| "ə";
+}
+
+function conv() {
+    numb = document.getElementById("number").value;
+    document.getElementById("gematria").innerHTML = gematria(numb);
+    document.getElementById("balanced").innerHTML = tb3(numb);
+    document.getElementById("ternary").innerHTML = t3(numb);
+}
+document.getElementById("number").addEventListener('input', () => { conv(); });
+</script>
+<script src="/js.js"></script>
+</body>
+</html>

@@ -1,22 +1,15 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baphian Lyrics Translations</title>
-	<link href="./../css.css" rel="stylesheet" type="text/css" media="screen">
-	<link href="" rel="stylesheet" type="text/css" media="screen" id="font-link">
-	<link href="" rel="stylesheet" type="text/css" media="screen" id="theme-link">
-  </head>
-  <body>
-    <div class="main">
-		<h1>The Baphian Lyrics Translations Project</h1>
-		<h3>All songs translated by Charli unless otherwise specified</h3>
-		
-	</div>
-	<script src="/js.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            window.location.href = (window.location).toString().replaceAll("/baph/", "/charli/")
+        </script>
+        <title>Redirect</title>
+    </head>
+    <body>
+        If you are not redirected automatically, follow this <a id="redirectLink" href='#'>link</a>.
+    </body>
 	<script>
-	loadLanguage()
+		document.getElementById("redirectLink").href = (window.location).toString().replaceAll("/baph/", "/charli/")
 	</script>
-  </body>
 </html>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baphian Dictionary</title>
+	<link href="" rel="stylesheet" type="text/css" media="screen" id="font-link">
+    <link href="" rel="stylesheet" type="text/css" media="screen" id="theme-link">
+	<link rel="icon" type="image/x-icon" href="/img/dictionary.ico">
+	<style>
+	@font-face {
+	  font-family: 'ukilen';
+	  src: url("/font/UkilenLg.otf");
+	}	
+	.entry:after {
+		font-family: 'ukilen';
+		content: "";
+	}
+	.entry {
+		font-family: 'ukilen';
+		text-decoration: none;
+		font-size:32px
+	}
+	ht {
+		text-decoration-line: overline;
+	}
+	</style>
+  </head>
+  <body>
+	<div class="main">
+		<a href="https://balls.skin/font/UkilenLg.otf">font</a> <select id="register" name="register" onchange="readFile()">
+			<option value="all">All words</option>
+			<optgroup label="In Boryaworld">
+			<option value="s">Standard Baphian</option>
+			<option value="service">Service register</option>
+			<option value="religion">Religious register</option>
+			<option value="high">High class register</option>
+			<option value="ahan">Ahanan dialect</option>
+			</optgroup>
+			<optgroup label="Out of Boryaworld">
+			<option value="real">Real world</option>
+			<option value="baph">Baphisms</option>
+			<option value="hy">Zelda-specific</option>
+			</optgroup>
+		</select>
+		<h1>Baphian Dictionary</h1>
+		
+		
+		<div name="dictionary" id="dictionary" style="text-align:initial">
+		</div>
+	</div>
+	
+    <br><br><br>
+	<p id="footer"></p>
+	<script src="papaparse.min.js"></script>
+	<script>
+		//PAPA Parser (https://www.papaparse.com/) used to convert TEXT to CSV
+		function readFile() {  
+		  var reader = new FileReader();
+		
+		  // document.getElementById('errorMessage').innerHTML = ""	  
+		  fetch("words.csv")
+		  .then(res => res.blob()) // Gets the response and returns it as a blob
+		  .then(blob => {
+			var content = reader.readAsText(blob);
+		});
+		
+		  document.getElementById("dictionary").innerHTML = "<br>Loading...";
+		
+		  reader.onload = function () {
+			var data = Papa.parse(reader.result, { header: false });
+
+			if (data.errors.length) {
+			  // document.getElementById('errorMessage').innerHTML = "* Error parsing CSV: " + JSON.stringify(data.errors)      
+			  console.error(data.errors)
+			} else {
+			  console.log("Loaded dictionary")
+			  dictData = Object.entries(data)[0][1]
+
+			  var totalEntries = ""
+			  
+			  var selregister = document.querySelector("#register").value
+			  
+			  for (var i = 0; i < dictData.length; i++) { 
+				
+				try {
+					var english = dictData[i][0]
+					var baphian = dictData[i][1].trim()
+					var type = dictData[i][2]
+					var extra = dictData[i][3].replaceAll("{", "<ht>").replaceAll("}", "</ht>").trim()
+					var notes = dictData[i][4]
+					var register = dictData[i][5]
+			  
+				var indEntry = ""
+				
+				switch (selregister) {
+					case "s":
+						if (["ahan", "real", "baph", "hy"].includes(register)) {
+							console.log(dictData[i] + " skipped!")
+							continue
+						}
+						break;
+					case "service":
+						if (!["", "s", "service", "bw"].includes(register)) {
+							console.log(dictData[i] + " skipped!")
+							continue
+						}
+						break;
+					case "religion":
+						if (!["", "religion", "bw"].includes(register)) {
+							console.log(dictData[i] + " skipped!")
+							continue
+						}
+						break;
+					case "high":
+						if (!["", "s", "high", "bw"].includes(register)) {
+							console.log(dictData[i] + " skipped!")
+							continue
+						}
+						break;
+					case "ahan":
+						if (["religion", "real", "baph"].includes(register)) {
+							console.log(dictData[i] + " skipped!")
+							continue
+						}
+						break;
+					case "real":
+						if (["bw", "baph"].includes(register)) {
+							console.log(dictData[i] + " skipped!")
+							continue
+						}
+						break;
+					case "baph":
+						if (["bw", "religion"].includes(register)) {
+							console.log(dictData[i] + " skipped!")
+							continue
+						}
+						break;
+					case "hy":
+						if (!["s", "hy"].includes(register)) {
+							console.log(dictData[i] + " skipped!")
+							continue
+						}
+						break;
+					default:
+						// accept all
+				}
+				
+				
+				if ((type == "") && (notes == "")) {
+					indEntry = "<p>" + english + ": <font style='font-size:32px; font-family:ukilen; '>" + baphian.replaceAll("\'", "'") + "</font>"
+					if (extra) { indEntry +=  " <i>(" + extra + (register == "ahan" ? ", Ahananism" : "") + (register == "baph" ? ", baphism" : "") + ")</i>" }
+					else if (register == "ahan") {  indEntry += "<i>(Ahananism)</i>" }
+					else if (register == "baph") {  indEntry += "<i>(baphism)</i>" }
+					indEntry += "</p>"
+				} else if  ((type == "") && (notes != "")) {
+					indEntry = "<p>" + english + ": <font style='font-size:32px; font-family:ukilen; '><a href=\"#\" onclick=\"grammar('" + english + "', '" + baphian + "', '" + type + "', '" + extra + "', '" + notes + "');\" class=\"entry\">" + baphian + "</a></font>"
+					if (extra) { indEntry +=  " <i>(" + extra + (register == "ahan" ? ", Ahananism" : "") + (register == "baph" ? ", baphism" : "") + ", see notes)</i>" } else {indEntry +=  " <i>(" + (register == "ahan" ? "Ahananism, " : "") + (register == "baph" ? "baphism, " : "") + "see notes)</i>" }
+					indEntry += "</p>"
+				} else {
+					var prettyArt = type
+					
+					switch (type) {
+						case "an":
+							prettyArt = "animate noun"
+							break;
+						case "inan":
+							prettyArt = "inanimate noun"
+							break;
+						case "adj":
+							prettyArt = "adjective"
+							break;
+						case "verb":
+							prettyArt = "verb"
+							break;
+						case "prn":
+							prettyArt = "pronoun"
+							break;
+					}
+					
+					indEntry = "<p>" + english + ": <font style='font-size:32px; font-family:ukilen;'><a href=\"#\" onclick=\"grammar('" + english + "', '" + baphian + "', '" + type + "', '" + extra + "', '" + notes + "');\" class=\"entry\">" + baphian + "</a></font> <i>(" + prettyArt
+					if (extra) { indEntry +=  ", " + extra + ""}
+					if (register == "ahan") { indEntry +=  ", Ahananism"}
+					if (register == "baph") { indEntry +=  ", baphism"}
+					if (notes) { indEntry +=  ", see notes"}
+					indEntry += ")</i></p>"
+				}
+			  
+				totalEntries += indEntry
+				} catch (TypeError) {
+					console.log("error at", i, "entry:", dictData[i])
+					totalEntries = "<b>ERROR in dictionary file at line " + (i+1) + "</b><br>Entry: " + ( dictData[i] == "" ? "<i>(empty)</i>" : "\"" + dictData[i].join(";") + "\"") + "<br><br>Please report this error to Charli or xad"
+					document.getElementById("dictionary").innerHTML = totalEntries
+					return
+				}
+			  }
+			  document.getElementById("dictionary").innerHTML = totalEntries
+			}
+		  };
+		}
+		
+		function fC(stems, ending) {
+			var output = ""
+			
+			for (let i = 0; i < stems.length; i++) {
+			  output += "<br><i>" + stems[i] + ending + "</i>"
+			}
+			
+			return output
+		}
+		
+		function grammar(english, baphian, type, extra, notes) {
+			if (type == "") {openNewPage( "<span class='ukilen'>" + baphian + "</span> <i>" + extra.split("</i>")[0].trim() + "</i> \"" + english + "\"", "", notes); return} 
+			
+			var tabelle = ""
+			var stem = extra.split("</i>")[0].trim().split(", ")
+			
+			switch (type) { // inflection types go here
+				// NOUN INFLECTION GOES HERE
+				case "an":
+				case "adj":
+					var nomSg = baphian;
+					var accSg = baphian + ""
+					var datSg = baphian + ""
+					var genSg = baphian + ""
+					var ablSg = baphian + ""
+					var vocSg = baphian + ""
+					var locSg = baphian + ""
+					
+					var nomDu = nomSg + ""
+					var accDu = accSg + ""
+					var datDu = datSg + ""
+					var genDu = genSg + ""
+					var ablDu = ablSg + ""
+					var vocDu = vocSg + ""
+					var locDu = locSg + ""
+					
+					var nomPl = nomSg + ""
+					var accPl = accSg + ""
+					var datPl = datSg + ""
+					var genPl = genSg + ""
+					var ablPl = ablSg + ""
+					var vocPl = vocSg + ""
+					var locPl = locSg + ""
+					
+					tabelle = "<table><tr><th></th><th>Singular</th><th>Dual</th><th>Plural</th></tr>"
+					tabelle += "<tr><th>Nominative</th><td><font class=\"ukilen\">" + nomSg + "</font>" + fC(stem, "") + "</td><td><font class=\"ukilen\">" + nomDu + "</font>" + fC(stem, "<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + nomPl + "</font>" + fC(stem, "<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Accusative</th><td><font class=\"ukilen\">" + accSg + "</font>" + fC(stem, "ge") + "</td><td><font class=\"ukilen\">" + accDu + "</font>" + fC(stem, "ge<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + accPl + "</font>" + fC(stem, "ge<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Dative</th><td><font class=\"ukilen\">" + datSg + "</font>" + fC(stem, "we") + "</td><td><font class=\"ukilen\">" + datDu + "</font>" + fC(stem, "we<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + datPl + "</font>" + fC(stem, "we<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Genitive</th><td><font class=\"ukilen\">" + genSg + "</font>" + fC(stem, "ke") + "</td><td><font class=\"ukilen\">" + genDu + "</font>" + fC(stem, "ke<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + genPl + "</font>" + fC(stem, "ke<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Ablative</th><td><font class=\"ukilen\">" + ablSg + "</font>" + fC(stem, "je") + "</td><td><font class=\"ukilen\">" + ablDu + "</font>" + fC(stem, "je<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + ablPl + "</font>" + fC(stem, "je<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Vocative</th><td><font class=\"ukilen\">" + vocSg + "</font>" + fC(stem, "mu") + "</td><td><font class=\"ukilen\">" + vocDu + "</font>" + fC(stem, "mu<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + vocPl + "</font>" + fC(stem, "mu<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Locative</th><td><font class=\"ukilen\">" + locSg + "</font>" + fC(stem, "jan") + "</td><td><font class=\"ukilen\">" + locDu + "</font>" + fC(stem, "jan<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + locPl + "</font>" + fC(stem, "jan<ht>we</ht>") + "</td></tr>"
+					
+					tabelle += "</table>"
+					break;
+				case "inan":
+					var nomSg = baphian;
+					var accSg = baphian + ""
+					var datSg = baphian + ""
+					var genSg = baphian + ""
+					var ablSg = baphian + ""
+					var vocSg = baphian + ""
+					var locSg = baphian + ""
+					
+					var nomDu = nomSg + ""
+					var accDu = accSg + ""
+					var datDu = datSg + ""
+					var genDu = genSg + ""
+					var ablDu = ablSg + ""
+					var vocDu = vocSg + ""
+					var locDu = locSg + ""
+					
+					var nomPl = nomSg + ""
+					var accPl = accSg + ""
+					var datPl = datSg + ""
+					var genPl = genSg + ""
+					var ablPl = ablSg + ""
+					var vocPl = vocSg + ""
+					var locPl = locSg + ""
+					
+					tabelle = "<table><tr><th></th><th>Singular</th><th>Dual</th><th>Plural</th></tr>"
+					tabelle += "<tr><th>Nominative</th><td><font class=\"ukilen\">" + nomSg + "</font>" + fC(stem, "") + "</td><td><font class=\"ukilen\">" + nomDu + "</font>" + fC(stem, "<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + nomPl + "</font>" + fC(stem, "<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Accusative</th><td><font class=\"ukilen\">" + accSg + "</font>" + fC(stem, "ze") + "</td><td><font class=\"ukilen\">" + accDu + "</font>" + fC(stem, "ze<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + accPl + "</font>" + fC(stem, "ze<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Dative</th><td><font class=\"ukilen\">" + datSg + "</font>" + fC(stem, "she") + "</td><td><font class=\"ukilen\">" + datDu + "</font>" + fC(stem, "she<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + datPl + "</font>" + fC(stem, "she<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Genitive</th><td><font class=\"ukilen\">" + genSg + "</font>" + fC(stem, "ke") + "</td><td><font class=\"ukilen\">" + genDu + "</font>" + fC(stem, "ke<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + genPl + "</font>" + fC(stem, "ke<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Ablative</th><td><font class=\"ukilen\">" + ablSg + "</font>" + fC(stem, "ce") + "</td><td><font class=\"ukilen\">" + ablDu + "</font>" + fC(stem, "ce<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + ablPl + "</font>" + fC(stem, "ce<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Vocative</th><td><font class=\"ukilen\">" + vocSg + "</font>" + fC(stem, "nu") + "</td><td><font class=\"ukilen\">" + vocDu + "</font>" + fC(stem, "nu<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + vocPl + "</font>" + fC(stem, "nu<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Locative</th><td><font class=\"ukilen\">" + locSg + "</font>" + fC(stem, "an") + "</td><td><font class=\"ukilen\">" + locDu + "</font>" + fC(stem, "an<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + locPl + "</font>" + fC(stem, "an<ht>we</ht>") + "</td></tr>"
+					tabelle += "</table>"
+					break;
+				case "prn":
+					var nomSg = baphian;
+					var accSg = baphian + ""
+					var datSg = baphian + ""
+					var genSg = baphian + ""
+					var ablSg = baphian + ""
+					var vocSg = baphian + ""
+					var locSg = baphian + ""
+					
+					var nomDu = nomSg + ""
+					var accDu = accSg + ""
+					var datDu = datSg + ""
+					var genDu = genSg + ""
+					var ablDu = ablSg + ""
+					var vocDu = vocSg + ""
+					var locDu = locSg + ""
+					
+					var nomPl = nomSg + ""
+					var accPl = accSg + ""
+					var datPl = datSg + ""
+					var genPl = genSg + ""
+					var ablPl = ablSg + ""
+					var vocPl = vocSg + ""
+					var locPl = locSg + ""
+					
+					if (baphian == "") { //1st
+						tabelle = "<table><tr><th></th><th>Singular</th><th>Plural</th></tr>"
+						tabelle += "<tr><th>Nominative</th><td><font class=\"ukilen\">" + nomSg + "</font>" + "<br><i>lo</i>" + "</td><td><font class=\"ukilen\">" + nomPl + "</font>" + "<br><i>lo<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Accusative</th><td><font class=\"ukilen\">" + accSg + "</font>" + "<br><i>lu</i>" + "</td><td><font class=\"ukilen\">" + accPl + "</font>" + "<br><i>lu<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Dative</th><td><font class=\"ukilen\">" + datSg + "</font>" + "<br><i>le</i>" + "</td><td><font class=\"ukilen\">" + datPl + "</font>" + "<br><i>le<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Genitive</th><td><font class=\"ukilen\">" + genSg + "</font>" + "<br><i><ht>la</ht></i>" + "</td><td><font class=\"ukilen\">" + genPl + "</font>" + "<br><i><ht>lawe</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Ablative</th><td><font class=\"ukilen\">" + ablSg + "</font>" + "<br><i>li</i>" + "</td><td><font class=\"ukilen\">" + ablPl + "</font>" + "<br><i>li<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Vocative</th><td><font class=\"ukilen\">" + vocSg + "</font>" + "<br><i>la</i>" + "</td><td><font class=\"ukilen\">" + vocPl + "</font>" + "<br><i>la<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Locative</th><td><font class=\"ukilen\">" + locSg + "</font>" + "<br><i><ht>le</ht></i>" + "</td><td><font class=\"ukilen\">" + locPl + "</font>" + "<br><i><ht>lewe</ht></i>" + "</td></tr>"
+					} else if (baphian == "" || baphian == "" || baphian == "" || baphian == "" || baphian == "") { //3rd
+						var onset = "s"
+						
+						switch (stem[0]) {
+							case "zo":
+								onset = "z"
+								break;
+							case "sho":
+								onset = "sh"
+								break;
+							case "zho":
+								onset = "zh"
+								break;
+							default:
+								break;
+						}
+						
+						tabelle = "<table><tr><th></th><th>Singular</th><th>Plural</th></tr>"
+						tabelle += "<tr><th>Nominative</th><td><font class=\"ukilen\">" + nomSg + "</font>" + "<br><i>" + onset + "o</i>" + "</td><td><font class=\"ukilen\">" + nomPl + "</font>" + "<br><i>" + onset + "o<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Accusative</th><td><font class=\"ukilen\">" + accSg + "</font>" + "<br><i>" + onset + "u</i>" + "</td><td><font class=\"ukilen\">" + accPl + "</font>" + "<br><i>" + onset + "u<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Dative</th><td><font class=\"ukilen\">" + datSg + "</font>" + "<br><i>" + onset + "e</i>" + "</td><td><font class=\"ukilen\">" + datPl + "</font>" + "<br><i>" + onset + "e<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Genitive</th><td><font class=\"ukilen\">" + genSg + "</font>" + "<br><i><ht>" + onset + "a</ht></i>" + "</td><td><font class=\"ukilen\">" + genPl + "</font>" + "<br><i><ht>" + onset + "awe</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Ablative</th><td><font class=\"ukilen\">" + ablSg + "</font>" + "<br><i>" + onset + "i</i>" + "</td><td><font class=\"ukilen\">" + ablPl + "</font>" + "<br><i>" + onset + "i<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Vocative</th><td><font class=\"ukilen\">" + vocSg + "</font>" + "<br><i>" + onset + "a</i>" + "</td><td><font class=\"ukilen\">" + vocPl + "</font>" + "<br><i>" + onset + "a<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Locative</th><td><font class=\"ukilen\">" + locSg + "</font>" + "<br><i><ht>" + onset + "e</ht></i>" + "</td><td><font class=\"ukilen\">" + locPl + "</font>" + "<br><i><ht>" + onset + "ewe</ht></i>" + "</td></tr>"
+						
+					} else { //2nd
+						tabelle = "<table><tr><th></th><th>Singular</th><th>Dual</th><th>Plural</th></tr>"
+						tabelle += "<tr><th>Nominative</th><td><font class=\"ukilen\">" + nomSg + "</font>" + "<br><i>e</i>" + "</td><td><font class=\"ukilen\">" + nomDu + "</font>" + "<br><i>e<ht>yo</ht></i>" + "</td><td><font class=\"ukilen\">" + nomPl + "</font>" + "<br><i>e<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Accusative</th><td><font class=\"ukilen\">" + accSg + "</font>" + "<br><i>hu</i>" + "</td><td><font class=\"ukilen\">" + accDu + "</font>" + "<br><i>hu<ht>yo</ht></i>" + "</td><td><font class=\"ukilen\">" + accPl + "</font>" + "<br><i>hu<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Dative</th><td><font class=\"ukilen\">" + datSg + "</font>" + "<br><i>he</i>" + "</td><td><font class=\"ukilen\">" + datDu + "</font>" + "<br><i>he<ht>yo</ht></i>" + "</td><td><font class=\"ukilen\">" + datPl + "</font>" + "<br><i>he<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Genitive</th><td><font class=\"ukilen\">" + genSg + "</font>" + "<br><i><ht>ha</ht></i>" + "</td><td><font class=\"ukilen\">" + genDu + "</font>" + "<br><i><ht>hayo</ht></i>" + "</td><td><font class=\"ukilen\">" + genPl + "</font>" + "<br><i><ht>hawe</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Ablative</th><td><font class=\"ukilen\">" + ablSg + "</font>" + "<br><i>hi</i>" + "</td><td><font class=\"ukilen\">" + ablDu + "</font>" + "<br><i>hi<ht>yo</ht></i>" + "</td><td><font class=\"ukilen\">" + ablPl + "</font>" + "<br><i>hi<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Vocative</th><td><font class=\"ukilen\">" + vocSg + "</font>" + "<br><i>ha</i>" + "</td><td><font class=\"ukilen\">" + vocDu + "</font>" + "<br><i>ha<ht>yo</ht></i>" + "</td><td><font class=\"ukilen\">" + vocPl + "</font>" + "<br><i>ha<ht>we</ht></i>" + "</td></tr>"
+						tabelle += "<tr><th>Locative</th><td><font class=\"ukilen\">" + locSg + "</font>" + "<br><i><ht>he</ht></i>" + "</td><td><font class=\"ukilen\">" + locDu + "</font>" + "<br><i><ht>heyo</ht></i>" + "</td><td><font class=\"ukilen\">" + locPl + "</font>" + "<br><i><ht>hewe</ht></i>" + "</td></tr>"
+					}
+						tabelle += "</table>"
+					break;
+				case "verb":
+					var FrpPrfPos = baphian + ""
+					var PasPrfPos = baphian + ""
+					var PrePrfPos = baphian
+					var FutPrfPos = baphian + ""
+					var FrpPrfNeg = baphian + ""
+					var PasPrfNeg = baphian + ""
+					var PrePrfNeg = baphian + ""
+					var FutPrfNeg = baphian + ""
+					
+					var FrpImpPos = baphian + ""
+					var PasImpPos = baphian + ""
+					var PreImpPos = baphian + ""
+					var FutImpPos = baphian + ""
+					var FrpImpNeg = baphian + ""
+					var PasImpNeg = baphian + ""
+					var PreImpNeg = baphian + ""
+					var FutImpNeg = baphian + ""
+					
+					var FrpConPos = baphian + ""
+					var PasConPos = baphian + ""
+					var PreConPos = baphian + ""
+					var FutConPos = baphian + ""
+					var FrpConNeg = baphian + ""
+					var PasConNeg = baphian + ""
+					var PreConNeg = baphian + ""
+					var FutConNeg = baphian + ""
+					
+					var FrpHabPos = baphian + ""
+					var PasHabPos = baphian + ""
+					var PreHabPos = baphian + ""
+					var FutHabPos = baphian + ""
+					var FrpHabNeg = baphian + ""
+					var PasHabNeg = baphian + ""
+					var PreHabNeg = baphian + ""
+					var FutHabNeg = baphian + ""
+					
+					var FrpDelPos = baphian + ""
+					var PasDelPos = baphian + ""
+					var PreDelPos = baphian + ""
+					var FutDelPos = baphian + ""
+					var FrpDelNeg = baphian + ""
+					var PasDelNeg = baphian + ""
+					var PreDelNeg = baphian + ""
+					var FutDelNeg = baphian + ""
+					
+					tabelle = "<table><tbody><tr><th rowspan=\"2\"></th><th colspan=\"2\">Perfect</th><th colspan=\"2\">Imperfect</th><th colspan=\"2\">Conditional</th><th colspan=\"2\">Habitual</th><th colspan=\"2\">Delimitative/Continuative </th></tr><tr><th>Positive</th><th>Negative</th><th>Positive</th><th>Negative</th><th>Positive</th><th>Negative</th><th>Positive</th><th>Negative</th><th>Positive</th><th>Negative</th></tr>"
+					tabelle += "<tr><th>Gnomic</th><td><font class=\"ukilen\">" + FrpPrfPos + "</font>" + fC(stem, "<ht>de</ht>") + "</td><td><font class=\"ukilen\">" + FrpPrfNeg + "</font>" + fC(stem, "<ht>dele</ht>") + "</td><td><font class=\"ukilen\">" + FrpImpPos + "</font>" + fC(stem, "<ht>le</ht>") + "</td><td><font class=\"ukilen\">" + FrpImpNeg + "</font>" + fC(stem, "<ht>lele</ht>") + "</td><td><font class=\"ukilen\">" + FrpConPos + "</font>" + fC(stem, "<ht>ye</ht>") + "</td><td><font class=\"ukilen\">" + FrpConNeg + "</font>" + fC(stem, "<ht>yele</ht>") + "</td><td ><font class=\"ukilen\">" + FrpHabPos + "</font>" + fC(stem, "<ht>ze</ht>") + "</td><td><font class=\"ukilen\">" + FrpHabNeg + "</font>" + fC(stem, "<ht>zele</ht>") + "</td><td ><font class=\"ukilen\">" + FrpDelPos + "</font>" + fC(stem, "<ht>ne</ht>") + "</td><td><font class=\"ukilen\">" + FrpDelNeg + "</font>" + fC(stem, "<ht>nele</ht>") +"</td></tr>"
+					tabelle += "<tr><th>Past</th><td><font class=\"ukilen\">" + PasPrfPos + "</font>" + fC(stem, "de") + "</td><td><font class=\"ukilen\">" + PasPrfNeg + "</font>" + fC(stem, "de<ht>le</ht>") + "</td><td><font class=\"ukilen\">" + PasImpPos + "</font>" + fC(stem, "le") + "</td><td><font class=\"ukilen\">" + PasImpNeg + "</font>" + fC(stem, "le<ht>le</ht>") + "</td><td><font class=\"ukilen\">" + PasConPos + "</font>" + fC(stem, "ye") + "</td><td><font class=\"ukilen\">" + PasConNeg + "</font>" + fC(stem, "ye<ht>le</ht>") + "</td><td><font class=\"ukilen\">" + PasHabPos + "</font>" + fC(stem, "ze") + "</td><td><font class=\"ukilen\">" + PasHabNeg + "</font>" + fC(stem, "ze<ht>le</ht>") + "</td><td><font class=\"ukilen\">" + PasDelPos + "</font>" + fC(stem, "ne") + "</td><td><font class=\"ukilen\">" + PasDelNeg + "</font>" + fC(stem, "ne<ht>le</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Present</th><td><font class=\"ukilen\">" + PrePrfPos + "</font>" + fC(stem, "") + "</td><td><font class=\"ukilen\">" + PrePrfNeg + "</font>" + fC(stem, "<ht>le</ht>") + "</td><td><font class=\"ukilen\">" + PreImpPos + "</font>" + fC(stem, "lo") + "</td><td><font class=\"ukilen\">" + PreImpNeg + "</font>" + fC(stem, "lo<ht>le</ht>") + "</td><td><font class=\"ukilen\">" + PreConPos + "</font>" + fC(stem, "yo") + "</td><td><font class=\"ukilen\">" + PreConNeg + "</font>" + fC(stem, "yo<ht>le</ht>") + "</td><td><font class=\"ukilen\">" + PreHabPos + "</font>" + fC(stem, "zo") + "</td><td><font class=\"ukilen\">" + PreHabNeg + "</font>" + fC(stem, "zo<ht>le</ht>") + "</td><td><font class=\"ukilen\">" + PreDelPos + "</font>" + fC(stem, "no") + "</td><td><font class=\"ukilen\">" + PreDelNeg + "</font>" + fC(stem, "no<ht>le</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Future</th><td><font class=\"ukilen\">" + FutPrfPos + "</font>" + fC(stem, "<ht>di</ht>") + "</td><td><font class=\"ukilen\">" + FutPrfNeg + "</font>" + fC(stem, "<ht>dile</ht>") + "</td><td><font class=\"ukilen\">" + FutImpPos + "</font>" + fC(stem, "<ht>li</ht>") + "</td><td><font class=\"ukilen\">" + FutImpNeg + "</font>" + fC(stem, "<ht>lile</ht>") + "</td><td><font class=\"ukilen\">" + FutConPos + "</font>" + fC(stem, "<ht>yi</ht>") + "</td><td><font class=\"ukilen\">" + FutConNeg + "</font>" + fC(stem, "<ht>yile</ht>") + "</td><td><font class=\"ukilen\">" + FutHabPos + "</font>" + fC(stem, "<ht>zi</ht>") + "</td><td><font class=\"ukilen\">" + FutHabNeg + "</font>" + fC(stem, "<ht>zile</ht>") + "</td><td><font class=\"ukilen\">" + FutDelPos + "</font>" + fC(stem, "<ht>ni</ht>") + "</td><td><font class=\"ukilen\">" + FutDelNeg + "</font>" + fC(stem, "<ht>nile</ht>") +"</td></tr>"
+					tabelle += "</table>"
+					
+					var nomSgNom = baphian + "";
+					var accSgNom = baphian + ""
+					var datSgNom = baphian + ""
+					var genSgNom = baphian + ""
+					var ablSgNom = baphian + ""
+					var vocSgNom = baphian + ""
+					var locSgNom = baphian + ""
+					
+					var nomDuNom = nomSgNom + ""
+					var accDuNom = accSgNom + ""
+					var datDuNom = datSgNom + ""
+					var genDuNom = genSgNom + ""
+					var ablDuNom = ablSgNom + ""
+					var vocDuNom = vocSgNom + ""
+					var locDuNom = locSgNom + ""
+					
+					var nomPlNom = nomSgNom + ""
+					var accPlNom = accSgNom + ""
+					var datPlNom = datSgNom + ""
+					var genPlNom = genSgNom + ""
+					var ablPlNom = ablSgNom + ""
+					var vocPlNom = vocSgNom + ""
+					var locPlNom = locSgNom + ""
+					
+					tabelle += "<p>Nominalisation:</p><p><table><tr><th></th><th>Singular</th><th>Dual</th><th>Plural</th></tr>"
+					tabelle += "<tr><th>Nominative</th><td><font class=\"ukilen\">" + nomSgNom + "</font>" + fC(stem, "fo<ht>nu</ht>") + "</td><td><font class=\"ukilen\">" + nomDuNom + "</font>" + fC(stem, "fo<ht>nuyo</ht>") + "</td><td><font class=\"ukilen\">" + nomPlNom + "</font>" + fC(stem, "fo<ht>nuwe</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Accusative</th><td><font class=\"ukilen\">" + accSgNom + "</font>" + fC(stem, "fo<ht>nu</ht>ze") + "</td><td><font class=\"ukilen\">" + accDuNom + "</font>" + fC(stem, "fo<ht>nu</ht>ze<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + accPlNom + "</font>" + fC(stem, "fo<ht>nu</ht>ze<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Dative</th><td><font class=\"ukilen\">" + datSgNom + "</font>" + fC(stem, "fo<ht>nu</ht>she") + "</td><td><font class=\"ukilen\">" + datDuNom + "</font>" + fC(stem, "fo<ht>nu</ht>she<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + datPlNom + "</font>" + fC(stem, "fo<ht>nu</ht>she<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Genitive</th><td><font class=\"ukilen\">" + genSgNom + "</font>" + fC(stem, "fo<ht>nu</ht>ke") + "</td><td><font class=\"ukilen\">" + genDuNom + "</font>" + fC(stem, "fo<ht>nu</ht>ke<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + genPlNom + "</font>" + fC(stem, "fo<ht>nu</ht>ke<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Ablative</th><td><font class=\"ukilen\">" + ablSgNom + "</font>" + fC(stem, "fo<ht>nu</ht>ce") + "</td><td><font class=\"ukilen\">" + ablDuNom + "</font>" + fC(stem, "fo<ht>nu</ht>ce<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + ablPlNom + "</font>" + fC(stem, "fo<ht>nu</ht>ce<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Vocative</th><td><font class=\"ukilen\">" + vocSgNom + "</font>" + fC(stem, "fo<ht>nu</ht>nu") + "</td><td><font class=\"ukilen\">" + vocDuNom + "</font>" + fC(stem, "fo<ht>nu</ht>nu<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + vocPlNom + "</font>" + fC(stem, "fo<ht>nu</ht>nu<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Locative</th><td><font class=\"ukilen\">" + locSgNom + "</font>" + fC(stem, "fo<ht>nu</ht>an") + "</td><td><font class=\"ukilen\">" + locDuNom + "</font>" + fC(stem, "fo<ht>nu</ht>an<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + locPlNom + "</font>" + fC(stem, "fo<ht>nu</ht>an<ht>we</ht>") + "</td></tr>"
+					tabelle += "</table>"
+					
+					var nomSgAgn = baphian + "";
+					var accSgAgn = baphian + ""
+					var datSgAgn = baphian + ""
+					var genSgAgn = baphian + ""
+					var ablSgAgn = baphian + ""
+					var vocSgAgn = baphian + ""
+					var locSgAgn = baphian + ""
+					
+					var nomDuAgn = nomSgAgn + ""
+					var accDuAgn = accSgAgn + ""
+					var datDuAgn = datSgAgn + ""
+					var genDuAgn = genSgAgn + ""
+					var ablDuAgn = ablSgAgn + ""
+					var vocDuAgn = vocSgAgn + ""
+					var locDuAgn = locSgAgn + ""
+					
+					var nomPlAgn = nomSgAgn + ""
+					var accPlAgn = accSgAgn + ""
+					var datPlAgn = datSgAgn + ""
+					var genPlAgn = genSgAgn + ""
+					var ablPlAgn = ablSgAgn + ""
+					var vocPlAgn = vocSgAgn + ""
+					var locPlAgn = locSgAgn + ""
+					
+					tabelle += "<p>Agentive:</p><p><table><tr><th></th><th>Singular</th><th>Dual</th><th>Plural</th></tr>"
+					tabelle += "<tr><th>Nominative</th><td><font class=\"ukilen\">" + nomSgAgn + "</font>" + fC(stem, "si") + "</td><td><font class=\"ukilen\">" + nomDuAgn + "</font>" + fC(stem, "si<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + nomPlAgn + "</font>" + fC(stem, "si<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Accusative</th><td><font class=\"ukilen\">" + accSgAgn + "</font>" + fC(stem, "sige") + "</td><td><font class=\"ukilen\">" + accDuAgn + "</font>" + fC(stem, "sige<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + accPlAgn + "</font>" + fC(stem, "sige<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Dative</th><td><font class=\"ukilen\">" + datSgAgn + "</font>" + fC(stem, "siwe") + "</td><td><font class=\"ukilen\">" + datDuAgn + "</font>" + fC(stem, "siwe<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + datPlAgn + "</font>" + fC(stem, "siwe<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Genitive</th><td><font class=\"ukilen\">" + genSgAgn + "</font>" + fC(stem, "sike") + "</td><td><font class=\"ukilen\">" + genDuAgn + "</font>" + fC(stem, "sike<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + genPlAgn + "</font>" + fC(stem, "sike<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Ablative</th><td><font class=\"ukilen\">" + ablSgAgn + "</font>" + fC(stem, "sije") + "</td><td><font class=\"ukilen\">" + ablDuAgn + "</font>" + fC(stem, "sije<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + ablPlAgn + "</font>" + fC(stem, "sije<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Vocative</th><td><font class=\"ukilen\">" + vocSgAgn + "</font>" + fC(stem, "simu") + "</td><td><font class=\"ukilen\">" + vocDuAgn + "</font>" + fC(stem, "simu<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + vocPlAgn + "</font>" + fC(stem, "simu<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Locative</th><td><font class=\"ukilen\">" + locSgAgn + "</font>" + fC(stem, "sijan") + "</td><td><font class=\"ukilen\">" + locDuAgn + "</font>" + fC(stem, "sijan<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + locPlAgn + "</font>" + fC(stem, "sijan<ht>we</ht>") + "</td></tr>"
+					tabelle += "</table></p>"
+					
+					var nomSgRes = baphian + "";
+					var accSgRes = baphian + ""
+					var datSgRes = baphian + ""
+					var genSgRes = baphian + ""
+					var ablSgRes = baphian + ""
+					var vocSgRes = baphian + ""
+					var locSgRes = baphian + ""
+					
+					var nomDuRes = nomSgRes + ""
+					var accDuRes = accSgRes + ""
+					var datDuRes = datSgRes + ""
+					var genDuRes = genSgRes + ""
+					var ablDuRes = ablSgRes + ""
+					var vocDuRes = vocSgRes + ""
+					var locDuRes = locSgRes + ""
+					
+					var nomPlRes = nomSgRes + ""
+					var accPlRes = accSgRes + ""
+					var datPlRes = datSgRes + ""
+					var genPlRes = genSgRes + ""
+					var ablPlRes = ablSgRes + ""
+					var vocPlRes = vocSgRes + ""
+					var locPlRes = locSgRes + ""
+					
+					tabelle += "<p>Resultative:</p><p><table><tr><th></th><th>Singular</th><th>Dual</th><th>Plural</th></tr>"
+					tabelle += "<tr><th>Nominative</th><td><font class=\"ukilen\">" + nomSgRes + "</font>" + fC(stem, "zhu") + "</td><td><font class=\"ukilen\">" + nomDuRes + "</font>" + fC(stem, "zhu<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + nomPlRes + "</font>" + fC(stem, "zhu<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Accusative</th><td><font class=\"ukilen\">" + accSgRes + "</font>" + fC(stem, "zhuze") + "</td><td><font class=\"ukilen\">" + accDuRes + "</font>" + fC(stem, "zhuze<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + accPlRes + "</font>" + fC(stem, "zhuze<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Dative</th><td><font class=\"ukilen\">" + datSgRes + "</font>" + fC(stem, "zhushe") + "</td><td><font class=\"ukilen\">" + datDuRes + "</font>" + fC(stem, "zhushe<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + datPlRes + "</font>" + fC(stem, "zhushe<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Genitive</th><td><font class=\"ukilen\">" + genSgRes + "</font>" + fC(stem, "zhuke") + "</td><td><font class=\"ukilen\">" + genDuRes + "</font>" + fC(stem, "zhuke<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + genPlRes + "</font>" + fC(stem, "zhuke<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Ablative</th><td><font class=\"ukilen\">" + ablSgRes + "</font>" + fC(stem, "zhuce") + "</td><td><font class=\"ukilen\">" + ablDuRes + "</font>" + fC(stem, "zhuce<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + ablPlRes + "</font>" + fC(stem, "zhuce<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Vocative</th><td><font class=\"ukilen\">" + vocSgRes + "</font>" + fC(stem, "zhunu") + "</td><td><font class=\"ukilen\">" + vocDuRes + "</font>" + fC(stem, "zhunu<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + vocPlRes + "</font>" + fC(stem, "zhunu<ht>we</ht>") + "</td></tr>"
+					tabelle += "<tr><th>Locative</th><td><font class=\"ukilen\">" + locSgRes + "</font>" + fC(stem, "zhuan") + "</td><td><font class=\"ukilen\">" + locDuRes + "</font>" + fC(stem, "zhuan<ht>yo</ht>") + "</td><td><font class=\"ukilen\">" + locPlRes + "</font>" + fC(stem, "zhuan<ht>we</ht>") + "</td></tr>"
+					tabelle += "</table>"
+					break;
+				default:
+					break;
+			}
+			
+			openNewPage("<span class='ukilen'>" + baphian + "</span> <i>" + extra.split("</i>")[0].trim() + "</i> \"" + english + "\"", tabelle, notes)
+		}
+	
+		function openNewPage(title, content, notes) {
+		  var opened = window.open("");
+		  
+		  opened.document.write("<html><head><title>" + title + "</title><link href=\"\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" id=\"font-link\"><link href=\"\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" id=\"theme-link\"><link rel=\"icon\" type=\"image/x-icon\" href=\"/img/dictionary.ico\"><style>table {width: auto;} table, th, td { border: 1px solid;} th, td {  width: 120px; text-align: center; white-space: nowrap;} @font-face{font-family: 'ukilen';src: url(\"/font/UkilenLg.otf\");} .ukilen{font-family:'ukilen'} ht {text-decoration-line: overline;}</style></head><div class=\"main2\"><h2>" + title + "</h2><body><p>" + content + "</p>" + (notes != "" ? "<h3>Notes</h3><p>" + (notes).replaceAll("“", "\"").replaceAll("”", "\"") + "</p>" : "") + "</div><script src=\"/js.js\"><\/script></body></html>");
+		}
+		
+		readFile()
+	</script>
+	<script src="/js.js"></script>
+  </body>
+</html>
