@@ -1,6 +1,7 @@
 :root {
   --bg-main:#F5E0E9;
   --bg:#F1D5E1;
+  --notebg:#BFADB5;
   --text:#381222;
   --button-bg:#F1D5E1;
   --jalinkhover:#7e1340;
@@ -39,7 +40,20 @@ a, button, a:visited {
   padding-left:7px;
   padding-right:7px;
 }
-
+.pfp {
+	max-height:200px;
+	border-radius: 5px;
+}	
+.note {
+	background-color: var(--notebg);
+	border-radius: 5px;
+	max-width: 100%;
+	text-align: center;
+	padding-left:7px;
+    padding-right:7px;
+	margin-left:20%;
+	margin-right:20%
+}
 a.entry, a.entry:visited {
   text-decoration: none;
   color: var(--text);
