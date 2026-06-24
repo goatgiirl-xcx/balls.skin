@@ -41,6 +41,7 @@
 			<option value="real">Real world</option>
 			<option value="baph">Baphisms</option>
 			<option value="hy">Zelda-specific</option>
+			<option value="dr">Deltarune-specific</option>
 			</optgroup>
 		</select>
 		<h1>Baphian Dictionary</h1>
@@ -138,6 +139,12 @@
 						break;
 					case "hy":
 						if (!["s", "hy"].includes(register)) {
+							console.log(dictData[i] + " skipped!")
+							continue
+						}
+						break;
+					case "dr":
+						if (!["s", "dr"].includes(register)) {
 							console.log(dictData[i] + " skipped!")
 							continue
 						}
