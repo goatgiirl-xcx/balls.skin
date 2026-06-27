@@ -67,6 +67,7 @@ Antimony;;inan;pu{ko} </i>[pu.ko̞´]<i>;;s
 Anxiety;;inan;shin{po} </i>[ɕin.po̞´]<i>;;s
 Any time, ever;;inan;gu{ke} </i>[gu.kɛ̝´]<i>;;s
 Apartment;;inan;bi{ce} </i>[bi.tɕɛ̝´]<i>;;s
+APC;;inan;in{za}fonupefo{lu}zhuwe{tem} </i>[in.zä´.fo̞.nu.pɛ̝.fo̞.lu´.ʑu.wɛ̝.tɛ̝m´]<i>;Fashion brand, translation of Atelier de Production et de Création, what apc stands for;real
 Apologize;;verb;so{ze} </i>[so̞.zɛ̝´]<i>;;s
 Appear;;verb;yugu </i>[ju.gu]<i>;;s
 Append;;verb;bbi{ba} </i>[b:i.bä´]<i>;;s
@@ -403,6 +404,7 @@ Cow;;an;se{ku} </i>[sɛ̝.ku´]<i>;;s
 Crab;;an;ke{ye} </i>[kɛ̝.jɛ̝´]<i>;;s
 Crane (bird);;an;;;s
 Crayon;;inan;{ca}tu{pe} </i>[tɕä´.tu.pɛ̝´]<i>;;s
+Cream;;inan;e{bbi} </i>[ɛ̝.b:i´]<i>;;s
 Create;;verb;ja{be} </i>[dʑä.bɛ̝´]<i>;;s
 Creole;;inan;de{di}ye </i>[dɛ̝.di´.jɛ̝]<i>;;s
 Crestwalking, walking in the rain and falling face first;;verb;;;s
@@ -475,8 +477,8 @@ Demonic;;adj;;;s
 Den;;inan;ran{be} </i>[ran.bɛ̝´]<i>;;s
 Deposit;;verb;;;s
 Desert;;inan;{pu}ye </i>[pu´.jɛ̝]<i>;;s
-Design;;inan;;;s
-Design;;verb;;;s
+Design;;inan;pefo{lu}zhu </i>[pɛ̝.fo̞.lu´.ʑu]<i>;;s
+Design;;verb;pefo{lu} </i>[pɛ̝.fo̞.lu´]<i>;;s
 Diagnose;;verb;;;s
 Diamond;;inan;;;s
 Dictate;;verb;;;s
@@ -1193,6 +1195,8 @@ Night;;an;ko{she} </i>[ko̞.ɕɛ̝´]<i>;;s
 Night;;inan;;;s
 Nine;13;;{gu}ko </i>[gu´.ko̞]<i>;Seen in a more slang sense, saying “in ju” is more formal;s
 No, not;;;do{ku} </i>[do̞.ku´]<i>;Used as a general negation;s
+No, not;;;do{ku} </i>[do̞]<i>;More formal than spelling do but less formal than saying doku. Used as a general negation;s
+No, not;DO;;do </i>[do̞]<i>;Less formal than doku, used as a general negation;s
 Noble;;adj;a{bang} </i>[ä.bäŋ´]<i>;;s
 Nontemporal, “no matter”;;;;“No matter” /kä.i´.ku/;s
 Normal, average;;adj;{to}bezo </i>[to̞´.bɛ̝.zo̞]<i>;;s
@@ -1417,6 +1421,7 @@ Put down;;verb;{a}te </i>[ä´.tɛ̝]<i>;;s
 Quark;;inan;;;s
 Queen (Chess);;inan;o{lizya}ni </i>[o̞.li´.zjä´.ni]<i>;Borrowed from Loremese;s
 Question;;inan;u{sya} </i>[u.sjä´]<i>;;s
+Question marker;;;{yu} </i>[ju´]<i>;Used to mark a statement being a question, optional but encouraged;s
 Question, ask;;verb;;;s
 Quick, fast;;verb;ge </i>[gɛ̝]<i>;;s
 Rabbit;;an;la{wa} </i>[lä.wä´]<i>;;s
@@ -1804,11 +1809,12 @@ Target;;inan;be{kam} </i>[bɛ̝.käm´]<i>;;s
 Taste;;verb;;;s
 Tattoo;;inan;su{zun} </i>[su.zun´]<i>;;ahan
 Tattoo;;inan;su{zun} </i>[su.zun´]<i>;;s
-Tea;;inan;;;s
-Tea leaf;;an;;;s
+Tea;;inan;{we}ja </i>[wɛ̝´.dʑä]<i>;;s
+Tea (formal);;inan;wa{je} </i>[wä.dʑɛ̝´]<i>;;s
+Tea leaf;;an;{wekya} </i>[wɛ̝´.kjä´]<i>;;s
 Tea puck;;inan;;;s
-Teach;;verb;;;s
-Teacher;;an;;;s
+Teach;;verb;{ba}jim </i>[bä´.jim]<i>;;s
+Teacher;;an;{ba}jimsi </i>[bä´.jim.si]<i>;;s
 Team, group;;an;;;s
 Tear(drop)s, the act of crying;;an;ta{ge} </i>[tä.gɛ̝´]<i>;;s
 Teardrop;;inan;ta{pe} </i>[tä.pɛ̝´]<i>;specifically for teardrops and not the act of crying itself;s
@@ -1913,7 +1919,7 @@ Tyrosian (Language);DAILOŚIJA;inan;da{i}lo{shi}ya {di}ye </i>[dä.i´.lo̞.�
 Tyrosian (People);DAILOŚIJA;an;da{i}lo{shi}ya si </i>[dä.i´.lo̞.ɕi´.jä si]<i>;;s
 Ukilen;;inan;{u}jelin </i>[u´.dʑɛ̝.lin]<i>;;s
 Under;;adj;nu{wun} </i>[nu.wun´]<i>;;s
-Understand;;verb;{ye}tu </i>[jɛ̝´.tu]<i>;;s
+Understand, get;;verb;{ye}tu </i>[jɛ̝´.tu]<i>;;s
 Unequal;;verb;de{du} </i>[dɛ̝.du´]<i>;;s
 Unify;;verb;insa{se} </i>[in.sä.sɛ̝´]<i>;;s
 Union;1;inan;inpe{ta} </i>[in.pɛ̝.tä´]<i>;Specifically for countries;s
@@ -2019,6 +2025,7 @@ Work (on);;verb;we{zhe}an </i>[wɛ̝.ʑɛ̝´.än]<i>;;s
 Work, writing, book (formal);;inan;;;s
 Worker;;an;{e}sye </i>[ɛ̝´.sjɛ̝]<i>;;s
 Worker;;an;we{zhe}hesi </i>[wɛ̝.ʑɛ̝´.hɛ̝.si]<i>;;s
+Workshop;;inan;we{tem} </i>[wɛ̝.tɛ̝m´]<i>;;s
 World;;inan;{je} </i>[dʑɛ̝´]<i>;;s
 Worm;;an;tu{te} </i>[tu.tɛ̝´]<i>;;s
 Worship;;verb;;;s
