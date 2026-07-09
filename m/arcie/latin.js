@@ -259,5 +259,5 @@ function latinPronouncer() {
 	}
 	
 	latinRespell = latinText.join(" ");
-	document.getElementById("respelloutput").innerHTML = "Pronunciation respelling: " + latinRespell;
+	document.getElementById("respelloutput").innerHTML = "<a href = \"https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key\">Pronunciation respelling</a>: <i>" + latinRespell + "</i>";
 }
