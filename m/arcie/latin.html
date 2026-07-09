@@ -4,10 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Latin to English pronunciation</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
-        <link href="css.css" rel="stylesheet" type="text/css" media="all">
+        <link href="" rel="stylesheet" type="text/css" media="screen" id="font-link">
+        <link href="" rel="stylesheet" type="text/css" media="screen" id="theme-link">
     </head>
     <body>
         <h1>Latin to English pronunciation tool</h1>
@@ -16,7 +14,8 @@
 			<label for="latin">Insert Latin here:</label>
 			<input type="text" onkeyup="latinPronouncer()" id="latin" name="latin">
 		</form>
-		<p id="output"></p>
+		<p id="ipaoutput"></p>
+        <p id="respelloutput"></p>
    		<script src="latin.js"></script>
     </body>
 </html>
