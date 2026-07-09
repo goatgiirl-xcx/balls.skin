@@ -11,7 +11,7 @@
 		<a href="javascript:void(0)" onclick="location.hash = ''; loadArticle()"><img class="logo" src="./oranjbosk-kelkfoa.svg"></a>
 		<div style="display: flex; margin-left: 8px; flex-direction: column; flex-grow: 1">
 			<div style="color: white; flex-grow: 1; font-weight: bold" id="date"></div>
-			<div style="color: white;"><a style="color: white" class="noclick" href="javascript:void(0);">Novaji</a> · <a style="color: white" href="javascript:void(0);" onclick="location.hash = '#ludi'; loadArticle()">Ludi</a> · <a style="color: white" href="javascript:void(0);" onclick="switchLang('en.html');">ENGLISH</a></div>
+			<div style="color: white;"><a style="color: white" href="javascript:void(0);" onclick="location.hash = '#novaji'; loadArticle()">Novaji</a> · <a style="color: white" href="javascript:void(0);" onclick="location.hash = '#ludi'; loadArticle()">Ludi</a> · <a style="color: white" href="javascript:void(0);" onclick="switchLang('en.html');">ENGLISH</a></div>
 			<div style="color: white;"><a style="color: white" href="javascript:void(0);" onclick="location.hash = '#kontakt'; loadArticle()">Kontakt</a></div>
 		</div>
 		<img class="ad" id="ad">
@@ -92,6 +92,27 @@
 				
 				articleField.appendChild(iframe)
 				break
+			case "novaji":
+				document.title = "Arkiv de novaji · Oranjbosk Kelkfoa"; 
+				articleField.innerHTML = "<h2>Arkiv de novaji</h2><p>Artikli es adported e sharjed dinamikale. Ergo list base poteserio esar nekomplet.</p><p><i>Sharjant artikli...</i></p>";
+				
+				(async() => {
+					console.log("waiting for variable");
+					while(articleList === undefined)
+						await new Promise(resolve => setTimeout(resolve, 1000));
+					console.log("variable is defined");
+					
+					var archiveList = articleList
+					
+					var output = ""
+					for (let i = 0; i < archiveList.length; i++) {
+					  output += "<p>" + '· <a href="javascript:void(0)" onclick="location.hash = \'#' + archiveList[i].name.slice(0, -5) + '\'; loadArticle()">' + await getTitle(archiveList[i].path) + '</a>' + " (" + parseDateFormat(archiveList[i].name) + ")" + "<br>" + "</p>"
+				}
+				
+				articleField.innerHTML = "<h2>Arkiv de novaji</h2><p>Artikli es adported e sharjed dinamikale. Ergo list base poteserio esar nekomplet.</p>" + output
+				})();
+				
+				break
 			default:
 				var loadFile
 				
@@ -131,7 +152,6 @@
 		};
 	
 	async function setArticleLink(list, index) {
-		
 		try {
 			res = '· <a href="javascript:void(0)" onclick="location.hash = \'#' + list[index].name.slice(0, -5) + '\'; loadArticle()">' + await getTitle(list[index].path) + '</a>' + "<br>"
 		} catch (error) {
@@ -143,16 +163,18 @@
 	}
 	
 	var articleList
+	var sidebarArticleList
 	
 	fetch("https://api.github.com/repositories/761978945/contents/m/xadrezo/ok/artikli")
 	.then(res => res.json())
 	.then(json => articleList = json)
-	.then(() => articleList.reverse())
-	.then(() => setArticleLink(articleList, 0)
+	.then(() => sidebarArticleList = structuredClone(articleList))
+	.then(() => sidebarArticleList.reverse())
+	.then(() => setArticleLink(sidebarArticleList, 0)
 		.then(res => document.querySelector("#articleList1").innerHTML = res))
-	.then(() => setArticleLink(articleList, 1)
+	.then(() => setArticleLink(sidebarArticleList, 1)
 		.then(res => document.querySelector("#articleList2").innerHTML = res))
-	.then(() => setArticleLink(articleList, 2)
+	.then(() => setArticleLink(sidebarArticleList, 2)
 		.then(res => document.querySelector("#articleList3").innerHTML = res))
   </script>
 </html>
