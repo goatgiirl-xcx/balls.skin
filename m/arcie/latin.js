@@ -177,10 +177,10 @@ function latinPronouncer() {
 		string = string.replace(/^([^.]*)o\./g, "$1ᵿ.");
 		string = string.replace(/^([^.]*)o²\./g, "$1ə².");
 		//med unstr
-		string = string.replace(/\.([^.]*)a([^.]*)\./g,".$1ə$2.");
-		string = string.replace(/\.([^.]*)e([^.]*)\./g,".$1ᵻ$2.");
-		string = string.replace(/\.([^.]*)i([^.]*)\./g,".$1ᵻ$2.");
-		string = string.replace(/\.([^.]*)o([^.]*)\./g,".$1ə$2.");
+		string = string.replace(/\.([^.]*)a([^.`]*)\./g,".$1ə$2.");
+		string = string.replace(/\.([^.]*)e([^.`]*)\./g,".$1ᵻ$2.");
+		string = string.replace(/\.([^.]*)i([^.`]*)\./g,".$1ᵻ$2.");
+		string = string.replace(/\.([^.]*)o([^.`]*)\./g,".$1ə$2.");
 		//secondary stress
 		string = massReplace(string, { "a`" : "æ`" , "e`" : "ɛ`" , "i`" : "ɪ`" , "o`" : "ɒ`" });
 		//adj to stress
