@@ -24,13 +24,14 @@
 			<text id="articleList2"></text>
 			<text id="articleList3"></text>
 			<hr>
-			<b>Shak</b><br>
-			XAD <a class="noclick" href="javascript:void(0);">½:½</a> SAP<br>
-			XAD <a class="noclick" href="javascript:void(0);">1:0</a> KAT<br>
-			KAT <a class="noclick" href="javascript:void(0);">½:½</a> XAD<br>
+			<b>Ekonomia</b><br>
+			<text id="ecoList1"><i>Sharjant...</i><br></text>
 			<hr>
-			<b>Shogi</b><br>
-			XAD <a class="noclick" href="javascript:void(0);">1:0</a> EMM<br>
+			<b>Sport</b><br>
+			<text id="sportList1"><i>Sharjant linki...</i></text>
+			<text id="sportList2"></text>
+			<text id="sportList3"></text>
+			<a href="javascript:void(0);" onclick="location.hash = '#sport'; loadArticle()">(plu...)</a>
 			<hr>
 		</div>
 		<div id="article">
@@ -61,13 +62,13 @@
 	function loadArticle() {
 		loadAds()
 		
-		var hash = location.hash.slice(1)
+		var hash = (location.hash.slice(1,7) == "sport-" ? "sport-" : location.hash.slice(1))
 		var articleField = document.querySelector("#article")
 		
 		switch (hash) {
 			case "":
 				document.title = "Oranjbosk Kelkfoa"; 
-				articleField.innerHTML = "<h2>Velkom!</h2><p>Velkom a <b>Oranjbosk Kelkfoa</b>, prim (e sol) gaset pro Oranjbosk e omni de Hellcraft. Klika su linki in flankbar a aperiar artikli, ma nota bene ke no omni linki es klikabl.</p><p>Oranjbosk Kelkfoa es entrepren nedependant per: <br><i>xadrezo, 384/266 Oranjbosk</i>.</p><p>If vo desir publikar artikl siloke, kontakta noi if it plis. Submitasioni esero posible traduked u redakted, a konformar plu bene ko nostr gidlinii.</p>"
+				articleField.innerHTML = "<h2>Velkom!</h2><p>Velkom a <b>Oranjbosk Kelkfoa</b>, prim (e sol) gaset pro Oranjbosk e omni de Hellcraft. Klika su linki in flankbar a aperiar artikli.</p><p>Oranjbosk Kelkfoa es entrepren nedependant per: <br><i>xadrezo, 384/266 Oranjbosk</i>.</p><p>If vo desir publikar artikl siloke, kontakta noi if it plis. Submitasioni esero posible traduked u redakted, a konformar plu bene ko nostr gidlinii.</p>"
 				break
 			case "kontakt":
 				document.title = "Kontakt · Oranjbosk Kelkfoa"; 
@@ -113,6 +114,34 @@
 				})();
 				
 				break
+			case "sport":
+				document.title = "Arkiv de sport · Oranjbosk Kelkfoa"; 
+				articleField.innerHTML = "<h2>Arkiv de sport</h2><p>Artikli es adported e sharjed dinamikale. Ergo list base poteserio esar nekomplet.</p><p><i>Sharjant artikli...</i></p>";
+				
+				(async() => {
+					console.log("waiting for variable");
+					while(sportList === undefined)
+						await new Promise(resolve => setTimeout(resolve, 1000));
+					console.log("variable is defined");
+					
+					var archiveList = sportList
+					
+					var output = ""
+					for (let i = 0; i < Math.max(1, archiveList.length); i++) {
+					  output += "<p>" + setSportsArticleLink(archiveList, i, 1) + "</p>"
+				}
+				
+				articleField.innerHTML = "<h2>Arkiv de sport</h2><p>Artikli es adported e sharjed dinamikale. Ergo list base poteserio esar nekomplet.</p>" + output
+				})();
+				
+				break
+			case "sport-":
+				var loadFile
+				
+				fetch("https://balls.skin/m/xadrezo/ok/sport/" + location.hash.slice(7) + ".json")
+				.then(res => res.json())
+				.then(json => loadFile = json)
+				.then(() => {document.title = loadFile[language]["title"] +  " · Oranjbosk Kelkfoa"; articleField.innerHTML = "<h2>" + loadFile[language]["title"] + "</h2><h4>" + loadFile["author"] + ", " + parseDateFormat(hash.slice(0,-3)) + "</h4><p>" + loadFile[language]["content"] + "</p>"})
 			default:
 				var loadFile
 				
@@ -162,6 +191,22 @@
 		return res
 	}
 	
+	function setSportsArticleLink(list, index, longForm) {
+		var sportTypes = {	"chess": [" ♔", " (shak)"],
+							"shogi": [" 🦁", " (shogi)"],
+							"football": [" 🏈", " (futbol)"]
+		}
+		
+		try {
+			res = '· ' + list[index]["player1"][longForm] + ' <a href="' + (list[index]["externalLink"] ? list[index]["externalLink"] : 'javascript:void(0)" onclick="location.hash = \'#' + list[index]["link"] + '\'; loadArticle()') + '">' + list[index]["player1score"] + ':' + list[index]["player2score"] + '</a> ' + list[index]["player2"][longForm] + sportTypes[list[index]["sport"]][longForm] + (longForm ? ' (' + parseDateFormat(list[index]["date"]) + ')' : "") + '</a>' + "<br>"
+		} catch (error) {
+			console.error(error);
+			res = (index == 0 ? "<i>nokos nov</i><br>" : "")
+		}
+		
+		return res
+	}
+	
 	var articleList
 	var sidebarArticleList
 	
@@ -176,5 +221,25 @@
 		.then(res => document.querySelector("#articleList2").innerHTML = res))
 	.then(() => setArticleLink(sidebarArticleList, 2)
 		.then(res => document.querySelector("#articleList3").innerHTML = res))
+	
+	var exchangeRate
+
+	fetch('https://www.floatrates.com/daily/eur.json')
+		.then(res => res.json())
+		.then(out => exchangeRate = Object.assign({}, exchangeRate, out))
+		.then(() => document.querySelector("#ecoList1").innerHTML = "US$1 = €" + parseFloat(exchangeRate["usd"]["inverseRate"]).toFixed(3) + "<br>€1 = US$" + parseFloat(exchangeRate["usd"]["rate"]).toFixed(3))
+	
+	var sportList
+	var sidebarSportList
+	
+	fetch("https://balls.skin/m/xadrezo/ok/sport.json")
+	.then(res => res.json())
+	.then(json => sportList = json)
+	.then(() => sidebarSportList = structuredClone(sportList))
+	.then(() => sidebarSportList.reverse())
+	.then(() => document.querySelector("#sportList1").innerHTML = setSportsArticleLink(sidebarSportList, 0, 0))
+	.then(() => document.querySelector("#sportList2").innerHTML = setSportsArticleLink(sidebarSportList, 1, 0))
+	.then(() => document.querySelector("#sportList3").innerHTML = setSportsArticleLink(sidebarSportList, 2, 0))
+	
   </script>
 </html>
