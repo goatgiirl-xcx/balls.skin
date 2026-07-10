@@ -24,13 +24,14 @@
 			<text id="articleList2"></text>
 			<text id="articleList3"></text>
 			<hr>
-			<b>Chess</b><br>
-			XAD <a class="noclick" href="javascript:void(0);">½:½</a> SAP<br>
-			XAD <a class="noclick" href="javascript:void(0);">1:0</a> KAT<br>
-			KAT <a class="noclick" href="javascript:void(0);">½:½</a> XAD<br>
+			<b>Economy</b><br>
+			<text id="ecoList1"><i>Loading...</i><br></text>
 			<hr>
-			<b>Shogi</b><br>
-			XAD <a class="noclick" href="javascript:void(0);">1:0</a> EMM<br>
+			<b>Sports</b><br>
+			<text id="sportList1"><i>Loading links...</i></text>
+			<text id="sportList2"></text>
+			<text id="sportList3"></text>
+			<a href="javascript:void(0);" onclick="location.hash = '#sport'; loadArticle()">(more...)</a>
 			<hr>
 		</div>
 		<div id="article">
@@ -61,13 +62,13 @@
 	function loadArticle() {
 		loadAds()
 		
-		var hash = location.hash.slice(1)
+		var hash = (location.hash.slice(1,7) == "sport-" ? "sport-" : location.hash.slice(1))
 		var articleField = document.querySelector("#article")
 		
 		switch (hash) {
 			case "":
 				document.title = "Orangewood Occasional"; 
-				articleField.innerHTML = "<h2>Welcome!</h2><p>Welcome to the <b>Orangewood Occasional</b> (<i>Oranjbosk Kelkfoa</i>, <b>OK</b>), the first (and only) newspaper for Orangewood and all of Hellcraft. Click on the links on the sidebar to open articles, but note that not all links are clickable.</p><p>The Orangewood Occasional is an independent enterprise by: <br><i>xadrezo, 384/266 Orangewood</i>.</p><p>If you wish to publish an article here, please contact us. Submissions may be translated and edited to better conform with our guidelines.</p>"
+				articleField.innerHTML = "<h2>Welcome!</h2><p>Welcome to the <b>Orangewood Occasional</b> (<i>Oranjbosk Kelkfoa</i>, <b>OK</b>), the first (and only) newspaper for Orangewood and all of Hellcraft. Click on the links on the sidebar to open articles.</p><p>The Orangewood Occasional is an independent enterprise by: <br><i>xadrezo, 384/266 Orangewood</i>.</p><p>If you wish to publish an article here, please contact us. Submissions may be translated and edited to better conform with our guidelines.</p>"
 				break
 			case "kontakt":
 				document.title = "Contact · Orangewood Occasional"; 
@@ -113,6 +114,34 @@
 				})();
 				
 				break
+			case "sport":
+				document.title = "Sports archive · Orangewood Occasional"; 
+				articleField.innerHTML = "<h2>Sports archive</h2><p>Articles are fetched and loaded dynamically. The list below may therefore be incomplete.</p><p><i>Loading articles...</i></p>";
+				
+				(async() => {
+					console.log("waiting for variable");
+					while(sportList === undefined)
+						await new Promise(resolve => setTimeout(resolve, 1000));
+					console.log("variable is defined");
+					
+					var archiveList = sportList
+					
+					var output = ""
+					for (let i = 0; i < Math.max(1, archiveList.length); i++) {
+					  output += "<p>" + setSportsArticleLink(archiveList, i, 1) + "</p>"
+				}
+				
+				articleField.innerHTML = "<h2>Sports archive</h2><p>Articles are fetched and loaded dynamically. The list below may therefore be incomplete.</p>" + output
+				})();
+				
+				break
+			case "sport-":
+				var loadFile
+				
+				fetch("https://balls.skin/m/xadrezo/ok/sport/" + location.hash.slice(7) + ".json")
+				.then(res => res.json())
+				.then(json => loadFile = json)
+				.then(() => {document.title = loadFile[language]["title"] +  " · Orangewood Occasional"; articleField.innerHTML = "<h2>" + loadFile[language]["title"] + "</h2><h4>" + loadFile["author"] + ", " + parseDateFormat(hash.slice(0,-3)) + "</h4><p>" + loadFile[language]["content"] + "</p>"})
 			default:
 				var loadFile
 				
@@ -152,12 +181,27 @@
 		};
 	
 	async function setArticleLink(list, index) {
-		
 		try {
 			res = '· <a href="javascript:void(0)" onclick="location.hash = \'#' + list[index].name.slice(0, -5) + '\'; loadArticle()">' + await getTitle(list[index].path) + '</a>' + "<br>"
 		} catch (error) {
 			console.error(error);
 			res = ""
+		}
+		
+		return res
+	}
+	
+	function setSportsArticleLink(list, index, longForm) {
+		var sportTypes = {	"chess": [" ♔", " (Chess)"],
+							"shogi": [" 🦁", " (Shogi)"],
+							"football": [" 🏈", " (Football)"]
+		}
+		
+		try {
+			res = '· ' + list[index]["player1"][longForm] + ' <a href="' + (list[index]["externalLink"] ? list[index]["externalLink"] : 'javascript:void(0)" onclick="location.hash = \'#' + list[index]["link"] + '\'; loadArticle()') + '">' + list[index]["player1score"] + ':' + list[index]["player2score"] + '</a> ' + list[index]["player2"][longForm] + sportTypes[list[index]["sport"]][longForm] + (longForm ? ' (' + parseDateFormat(list[index]["date"]) + ')' : "") + '</a>' + "<br>"
+		} catch (error) {
+			//console.error(error);
+			res = (index == 0 ? "<i>none recent</i><br>" : "")
 		}
 		
 		return res
@@ -177,5 +221,25 @@
 		.then(res => document.querySelector("#articleList2").innerHTML = res))
 	.then(() => setArticleLink(sidebarArticleList, 2)
 		.then(res => document.querySelector("#articleList3").innerHTML = res))
+	
+	var exchangeRate
+
+	fetch('https://www.floatrates.com/daily/eur.json')
+		.then(res => res.json())
+		.then(out => exchangeRate = Object.assign({}, exchangeRate, out))
+		.then(() => document.querySelector("#ecoList1").innerHTML = "US$1 = €" + parseFloat(exchangeRate["usd"]["inverseRate"]).toFixed(3) + "<br>€1 = US$" + parseFloat(exchangeRate["usd"]["rate"]).toFixed(3))
+	
+	var sportList
+	var sidebarSportList
+	
+	fetch("https://balls.skin/m/xadrezo/ok/sport.json")
+	.then(res => res.json())
+	.then(json => sportList = json)
+	.then(() => sidebarSportList = structuredClone(sportList))
+	.then(() => sidebarSportList.reverse())
+	.then(() => document.querySelector("#sportList1").innerHTML = setSportsArticleLink(sidebarSportList, 0, 0))
+	.then(() => document.querySelector("#sportList2").innerHTML = setSportsArticleLink(sidebarSportList, 1, 0))
+	.then(() => document.querySelector("#sportList3").innerHTML = setSportsArticleLink(sidebarSportList, 2, 0))
+	
   </script>
 </html>
