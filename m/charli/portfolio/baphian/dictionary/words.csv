@@ -370,7 +370,7 @@ Conditional marker;;;;;s
 Cone;;inan;;;s
 Confess, tell;;verb;ke{je} </i>[kɛ̝.dʑɛ̝´]<i>;;s
 Conglomerate, chaebol;;inan;ze{pa} </i>[zɛ̝.pä´]<i>;;s
-Connect;;verb;;;s
+Connect, contact;;verb;ja{ye} </i>[dʑä.jɛ̝´]<i>;When used as “contact” it is usually only in the context of contacting online;s
 Conquer;;verb;;;s
 Consider, think about, reflect, figure out;;verb;fo{lu} </i>[fo̞.lu´]<i>;;s
 Container;;inan;pe{kyo} </i>[pɛ̝.kjo̞´]<i>;;s
@@ -406,7 +406,7 @@ Crab;;an;ke{ye} </i>[kɛ̝.jɛ̝´]<i>;;s
 Crane (bird);;an;;;s
 Crayon;;inan;{ca}tu{pe} </i>[tɕä´.tu.pɛ̝´]<i>;;s
 Cream;;inan;e{bbi} </i>[ɛ̝.b:i´]<i>;;s
-Create;;verb;ja{be} </i>[dʑä.bɛ̝´]<i>;;s
+Create, craft;;verb;ja{be} </i>[dʑä.bɛ̝´]<i>;;s
 Creole;;inan;de{di}ye </i>[dɛ̝.di´.jɛ̝]<i>;;s
 Crestwalking, walking in the rain and falling face first;;verb;;;s
 Crime;;inan;e{ke}yun </i>[ɛ̝.kɛ̝´.jun]<i>;;s
@@ -544,6 +544,8 @@ Eat;;verb;si{we} </i>[si.wɛ̝´]<i>;;s
 Eating disorder;;ahan;si{de} </i>[si.dɛ̝´]<i>;;s
 Eating disorder;;inan;si{de} </i>[si.do̞.ki´.dɛ̝]<i>;Medical;s
 Eco-terrorism;;inan;;;s
+Economic;;adj;po{de}we </i>[po̞.dɛ̝´.wɛ̝]<i>;;s
+Economy;;an;po{de}we </i>[po̞.dɛ̝´.wɛ̝]<i>;;s
 Edit, change;;verb;;;s
 Education;;inan;;;s
 Egg;;an;ju{mu}de </i>[dʑu.mu´.dɛ̝]<i>;;s
@@ -837,7 +839,7 @@ Heartbeat;;an;shinko{je} </i>[ɕin.ko̞.dʑɛ̝´]<i>;;s
 Heavy, big;;adj;je{ju} </i>[dʑɛ̝.dʑu´]<i>;;s
 Hedgehog;;an;dusu{ha} </i>[du.su.hä´]<i>;;s
 Heir;;an;{be}le </i>[bɛ̝´.lɛ̝]<i>;;s
-Hell, underworld;;inan;;;s
+Hell, underworld;;inan;nu{ya} </i>[nu.jä´]<i>;;s
 Hello, hi;GI;;{gi} </i>[gi´]<i>;;s
 Help;;verb;{sa} </i>[sä´]<i>;;s
 Henralia;ENLALIJA;inan;en{la}li{ya}sa </i>[ɛ̝n.lä´.li.jä´.sä]<i>;;s
@@ -921,6 +923,7 @@ Insect, bug;;an;{sye} </i>[sjɛ̝´]<i>;;s
 Insecure;;adj;;;s
 Insecurities;;inan;;Also used specifically for a part of someone that they don’t like, which they don’t feel necessarily insecure about;s
 Inshallah, by god;MALISANAKOTSA;;{ma}lisana{ko}tsa </i>[mä´.li.sä.nä.ko̞´.tsä]<i>;Borrowed from Azkali<br>Inshallah is the closest cultural equivalent in English.;s
+Inside;;inan;o{kam}an </i>[o̞.käm´.än]<i>;;s
 Inspire;;verb;;;s
 Inspire;;verb;;;s
 Instrument;;inan;{iyan} </i>[i´.jän´]<i>;;s
@@ -1146,6 +1149,8 @@ Middle, center;;adj;{fo} </i>[fo̞´]<i>;;s
 Might, may, have a possibilty of doing;;verb;;;s
 Militia, armed forces;;an;;;s
 Milk;;inan;e{lang}we </i>[ɛ̝.läŋ´..wɛ̝]<i>;;s
+Mine;;verb;mu{ja} </i>[mu.dʑä´]<i>;;s
+Minecraft;;inan;mu{be} </i>[mu.bɛ̝´]<i>;;real
 Mint;;verb;;;s
 Minute;;inan;;;s
 Mirror;;inan;;;s
@@ -1193,8 +1198,9 @@ Neon (element);;inan;{i}zenge </i>[i´.zɛ̝ŋ.ɛ̝]<i>;;s
 Neon, very bright and saturated in colour;;adj;{i}zengze </i>[i´.zɛ̝ŋ.zɛ̝]<i>;;s
 Neptune; ;inan;be{weje} </i>[bɛ̝.wɛ̝´.dʑɛ̝´ ]<i>;;s
 Neutron;;inan;;;s
-New;;adj;jan{ge} </i>[dʑäŋ.gɛ̝´]<i>;;s
-News (media);;inan;;;s
+New;;adj;jang{ge} </i>[dʑäŋ.gɛ̝´]<i>;;s
+New;;adj;ja </i>[dʑä]<i>;;s
+News (media);;inan;ja{te} </i>[dʑä.tɛ̝´]<i>;;s
 Newspaper;;inan;;;s
 Next;;adj;fo{dam}tin </i>[fo̞.däm´.tin]<i>;;s
 Nibble, pick at;;verb;;;s
@@ -1243,7 +1249,7 @@ Opposite;;adj;he{gee} </i>[hɛ̝.gɛ̝:´]<i>;;s
 Opress;;verb;;;s
 Or;DONUN;;do{nun} </i>[do̞.nun´]<i>;;s
 Orange (colour);;adj;she{shu} </i>[ɕɛ̝.ɕu´]<i>;;s
-Orange (fruit);;inan;;;s
+Orange (fruit);;inan;she{fo} </i>[ɕɛ̝.fo̞´]<i>;;s
 Orchid;;an;;;s
 Order;;inan;de{suba} </i>[dɛ̝.su´.bä´]<i>;;s
 Order;;inan;du{zo} </i>[du.zo̞´]<i>;;s
@@ -1253,6 +1259,7 @@ Osteros (People);SODEZO;an;so{de}zo si </i>[so̞.dɛ̝´.zo̞ si]<i>;;s
 Other;;adj;de{yun} </i>[dɛ̝.jun´]<i>;;s
 Other;;inan;de{yun} </i>[dɛ̝.jun´]<i>;;s
 Out;;adj;ke{yen} </i>[kɛ̝.jɛ̝n´]<i>;;s
+Outside;;inan;ke{yen}yan </i>[kɛ̝.jɛ̝n´.jän]<i>;;s
 Oven, stove;;inan;wo{lang} </i>[wo̞.läŋ´]<i>;when used as “Stove” it is an Ahananism;s
 Owe;;verb;;;s
 Package;;inan;;;s
@@ -1455,6 +1462,7 @@ Real;;adj;;;s
 Realise / realize, understand;;verb;;;s
 Reason, motive;;inan;{ba}tso </i>[bä´.tso]<i>;;s
 Receive, get;;verb;si{de}du </i>[si.dɛ̝´.du]<i>;;s
+Recent;;adj;jo{ge} </i>[dʑo̞.gɛ̝´]<i>;;s
 Recieve;;verb;si{de} </i>[si.dɛ̝´]<i>;;s
 Record;;verb;{sha}ke </i>[ɕä´.kɛ̝]<i>;;s
 Recording;;inan;{sha}ke </i>[ɕä´.kɛ̝]<i>;;s
@@ -1774,6 +1782,7 @@ Succeed;;verb;;;s
 Succubus, demon (feminine);;an;;;baph
 Succubus, sex demon, sex vampire;;an;zepenuse{we}si </i>[zɛ̝.pɛ̝.nu.sɛ̝.wɛ̝´.si]<i>;;s
 Suck (on);;verb;he{zhe}fi </i>[hɛ̝.ʑɛ̝´.fi]<i>;;s
+Sudoku;;inan;inta{ka} </i>[in.tä.kä´]<i>;;s
 Suffer;;verb;e{she} </i>[ɛ̝.ɕɛ̝´.]<i>;;s
 Sugar (plant), sugarcane;;an;se{do} </i>[sɛ̝.do̞´]<i>;;s
 Sugar (powder);;inan;se{do}la </i>[sɛ̝.do̞´.lä]<i>;;s
