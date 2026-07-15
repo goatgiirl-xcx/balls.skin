@@ -9,14 +9,16 @@
         <link href="" rel="stylesheet" type="text/css" media="screen" id="theme-link">
     </head>
     <body>
-        <h1>Latin to English pronunciation tool</h1>
-        <p>This tool converts Latin words to their <a href="https://en.wikipedia.org/wiki/Traditional_English_pronunciation_of_Latin">traditional English pronunciation</a>. <strong>Be sure to include macrons when inputting the Latin text.</strong></p>
-		<form id="form">
-			<label for="latin">Insert Latin here:</label>
-			<input type="text" onkeyup="latinPronouncer()" id="latin" name="latin">
-		</form>
-		<p id="ipaoutput"></p>
-        <p id="respelloutput"></p>
+        <div class = "main">
+            <h1>Latin to English pronunciation tool</h1>
+            <p>This tool converts Latin words to their <a href="https://en.wikipedia.org/wiki/Traditional_English_pronunciation_of_Latin">traditional English pronunciation</a>. <strong>Be sure to include macrons when inputting the Latin text.</strong></p>
+            <form id="form">
+                <label for="latin">Insert Latin here:</label>
+                <input type="text" onkeyup="latinPronouncer()" id="latin" name="latin">
+            </form>
+            <p id="ipaoutput"></p>
+            <p id="respelloutput"></p>
+        </div>
    		<script src="latin.js"></script>
         <script src="/js.js"></script>
         <script>loadLanguage()</script>
