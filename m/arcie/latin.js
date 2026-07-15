@@ -229,6 +229,7 @@ function latinPronouncer() {
 	for (let i = 0; i < latinText.length; i++) {
 		string = latinText[i];
 		string = string.replace(/ə\.r/g, "ər.");
+		string = string.replace(/ɜː\.r/g, "ɜːr.");
 		string = string.replace(/^([^.]+)jᵿ/g, "$1ew");
 		string = string.replace(/([\.\ˈ\ˌ])([^.]+)jᵿ]/g, "$1$2ew"); 
 		string = string.replace(/^([^.]+)juː/g, "$1ew");
