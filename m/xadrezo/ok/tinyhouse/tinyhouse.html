@@ -555,7 +555,7 @@
 			
 			var inCheck = board.checkedPieces()
 			
-			switch (board.result()) {
+			switch (board.result(true)) {
 				case "1-0":
 					outputWindow.innerHTML = (inCheck ? textBank["blackWinsCheckmate"] : textBank["blackWinsStalemate"]) + " "
 					break
