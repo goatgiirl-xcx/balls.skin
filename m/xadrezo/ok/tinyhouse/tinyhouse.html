@@ -543,7 +543,16 @@
 	
 	function randomMove() {
 		  const moves = board.legalMoves().split(" ");
-		  const move = moves[Math.floor(Math.random() * moves.length)];
+		  var move;
+		  
+		  for (let i = 0; i < moves.length; i++) {
+			if (board.sanMove(moves[i]).includes("#")) {
+				move = moves[i];
+			}
+		  }
+		  
+		  if (!move) {move = moves[Math.floor(Math.random() * moves.length)]};
+		  
 		  setTimeout(function(){
 			console.log("RANDOM MOVE:", move)
 			board.push(move);
