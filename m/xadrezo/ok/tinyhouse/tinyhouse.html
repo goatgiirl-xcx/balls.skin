@@ -221,6 +221,13 @@
 		*/
 	})
 </script>
+<script>
+/*window.onerror = function (message, file, line, col, error) {
+   alert("Error occurred: " + error.message);
+   //outputWindow.innerHTML = error.message
+   return false;
+};*/
+</script>
 <script src="./stockfish.js"></script>
 <script>
 	let ffish = null;
@@ -262,7 +269,6 @@
 		engine.FS.writeFile('/variants.ini', data);
 		
 		engine.postMessage("uci");
-		
 		engine.postMessage("setoption name VariantPath value /variants.ini");
 		engine.postMessage("setoption name UCI_Variant value tinyhouse");
 		engine.postMessage("setoption name Skill Level value 0");
@@ -317,6 +323,22 @@
 				"promoteFerz": "Promovar a elefant",
 				"promoteHorse": "Promovar a kaval",
 				"cancel": "Anular"
+			}
+			break;
+		case "sux":
+			textBank = {
+				"newGame": "𒂊𒉈𒁲 𒉋",
+				"yourMove": "𒂟𒍪 𒁄𒀀𒀊.",
+				"theirMove": "𒊮 𒌈𒆪𒁉...",
+				"blackWinsCheckmate": "𒂟 𒈪𒄀 𒈗 𒁁𒀀𒋫 𒅇𒈠 𒉌𒁺.",
+				"blackWinsStalemate": "𒂟 𒈪𒄀 𒄃𒁀𒋫 𒅇𒈠 𒉌𒁺.",
+				"redWinsCheckmate": "𒂟 𒋜 𒈗 𒁁𒀀𒋫 𒅇𒈠 𒉌𒁺.",
+				"redWinsStalemate": "𒂟 𒋜 𒄃𒁀𒋫 𒅇𒈠 𒉌𒁺.",
+				"youDraw": "𒂟 𒈾𒈨 𒅇𒈠 𒉡𒁺.",
+				"promoteWazir": "𒄑𒇀𒂠 𒆭",
+				"promoteFerz": "𒄠𒋛𒂠 𒆭",
+				"promoteHorse": "𒀲𒆳𒊏𒂠 𒆭",
+				"cancel": "𒉡𒁄"
 			}
 			break;
 		default:
@@ -519,6 +541,19 @@
 		renderBoard(player)
 	}
 	
+	function randomMove() {
+		  const moves = board.legalMoves().split(" ");
+		  const move = moves[Math.floor(Math.random() * moves.length)];
+		  setTimeout(function(){
+			console.log("RANDOM MOVE:", move)
+			board.push(move);
+			renderBoardState()
+			if (checkEnd()) {return}
+			allowInput = true;
+			outputWindow.innerHTML = textBank["yourMove"]
+		  }, 1000);
+	}
+	
 	function pushMove(move) {
 		allowInput = false;
 		moveInput = []
@@ -528,9 +563,14 @@
 		
 		if (checkEnd()) {return}
 		
-		ffish.postMessage("position startpos moves " + board.moveStack())
-		ffish.postMessage("go movetime 1000")
-		outputWindow.innerHTML = textBank["theirMove"]
+		if (ffish) { // check if engine active
+			ffish.postMessage("position startpos moves " + board.moveStack())
+			ffish.postMessage("go movetime 1000")
+			outputWindow.innerHTML = textBank["theirMove"]
+		} else {
+			outputWindow.innerHTML = textBank["theirMove"]
+			randomMove()
+		}
 	}
 	
 	function newGame() {
