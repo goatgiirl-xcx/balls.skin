@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Webpage description goes here" />
+  <meta charset="utf-8">
+  <title>Tinyhouse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <style>
+	body {
+		margin: 0px;
+		font-family: Verdana;
+	}
+	
+	p {
+		--font-family: Verdana;
+		text-align: center;
+	}
+	
+	div.metacontainer {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+	
+	div.boardcontainer {
+		aspect-ratio : 1 / 1;
+		height: 302px; --max(300px, min(calc(100vh - 16px), calc(100vw - 16px), 800px));
+		user-select: none;
+		float: left;
+		display: flex;
+		margin-bottom: 20px;
+	}
+	
+	div.board {
+		aspect-ratio : 1 / 1;
+		border: 5px solid #000;
+	}
+	
+	div.square {
+		width: 25%;
+		height: 25%;
+		display: inline-block;
+		vertical-align: bottom;
+	}
+	
+	div.white {
+		background-color: #F0D9B5;
+		color: #B58863;
+	}
+	
+	div.white.select {
+		background-color: #FFF36B;
+	}
+	
+	div.black {
+		background-color: #B58863;
+		color: #F0D9B5;
+	}
+	
+	div.black.select {
+		background-color: #FFDB00;
+	}
+	
+	
+	div.pocketcontainer {
+		aspect-ratio: 1 / 4;
+		height: 302px; --max(300px, min(calc(100vh - 16px), calc(100vw - 16px), 800px));
+		user-select: none;
+		padding-left: 6px;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	div.pocket {
+		aspect-ratio : 1 / 2;
+		border: 5px solid #000;
+		height: 138px;
+		margin-bottom: 6px;
+		background-color: white;
+	}
+	
+	div.pocketsquare {
+		width: 50%;
+		height: 25%;
+		display: inline-block;
+		vertical-align: bottom;
+	}
+	
+	.squarelabel {
+		position: relative;
+		top: calc(100% - 1.2rem);
+		padding: 0.2rem;
+		--font-family: Verdana;
+	}
+	
+	.Kpiece {
+		background-image: url("./pieces/K.svg");
+		background-size: 75%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.Kpiece.check {
+		background-image: url("./pieces/K.svg"), radial-gradient(red,rgba(0,0,0,0));
+		background-size: 75%, 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.Hpiece {
+		background-image: url("./pieces/H.svg");
+		background-size: 75%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.Wpiece {
+		background-image: url("./pieces/W.svg");
+		background-size: 75%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.Fpiece {
+		background-image: url("./pieces/F.svg");
+		background-size: 75%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.Ppiece {
+		background-image: url("./pieces/P.svg");
+		background-size: 75%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.kpiece {
+		background-image: url("./pieces/K_.svg");
+		background-size: 75%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.kpiece.check {
+		background-image: url("./pieces/K_.svg"), radial-gradient(red,rgba(0,0,0,0));
+		background-size: 75%, 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.hpiece {
+		background-image: url("./pieces/H_.svg");
+		background-size: 75%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.wpiece {
+		background-image: url("./pieces/W_.svg");
+		background-size: 75%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.fpiece {
+		background-image: url("./pieces/F_.svg");
+		background-size: 75%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+	.ppiece {
+		background-image: url("./pieces/P_.svg");
+		background-size: 75%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+  </style>
+</head>
+
+<body>
+
+<div class="metacontainer">
+	<div class="boardcontainer">
+		<div class="board"></div>
+	</div>
+	<div class="pocketcontainer">
+		<div class="pocket" id="pocket-top"></div>
+		<div class="pocket" id="pocket-bottom"></div>
+	</div>
+</div>
+<div id="outputWindow"></div>
+
+<script src="./coi-serviceworker.min.js"></script>
+<script type="module">
+	import Module from './ffish.js';
+	
+	const response = await fetch('./variants.ini');
+	const data = await response.text();
+	
+	new Module().then(ffish => {
+		ffish.loadVariantConfig(data)
+		
+		window.ffishB = ffish;
+		
+		/*
+		let board = new ffish.Board("tinyhouse");
+		
+		console.log("Board initialized:", board !== undefined);
+		
+		const moves = board.legalMoves();
+		console.log("Legal Moves:", moves);
+
+		board.push("c1d3");
+		console.log("New FEN:", board.fen());
+		
+		board.delete();
+		*/
+	})
+</script>
+<script src="./stockfish.js"></script>
+<script>
+	let ffish = null;
+	let board = null;
+	
+	Stockfish().then(async function(engine) {
+		ffish = engine;
+		
+		engine.addMessageListener((line) => {
+			if (line.startsWith('id')||line.startsWith('info')||line.startsWith('option')||line === "") {
+				return
+			}
+			
+			if (line.startsWith('uciok')) {
+				console.log("UCI OK!")
+				return
+			}
+			
+			if (line.startsWith('readyok')) {
+				console.log("READY!")
+				return
+			}
+			
+			if (line.startsWith('bestmove')) {
+				console.log("BEST MOVE: " + line.split(" ")[1])
+				board.push(line.split(" ")[1])
+				renderBoardState()
+				if (checkEnd()) {return}
+				allowInput = true;
+				outputWindow.innerHTML = textBank["yourMove"]
+				return
+			}
+			
+			console.log("ENGINE:", line);
+		});
+		
+		const response = await fetch('./variants.ini');
+		const data = await response.text();
+		engine.FS.writeFile('/variants.ini', data);
+		
+		engine.postMessage("uci");
+		
+		engine.postMessage("setoption name VariantPath value /variants.ini");
+		engine.postMessage("setoption name UCI_Variant value tinyhouse");
+		engine.postMessage("setoption name Skill Level value 0");
+		engine.postMessage("position startpos");
+		//engine.postMessage("d");
+	});
+</script>
+<script>
+	var boardState = {}
+	var player = 0
+	
+	var moveInput = []
+	
+	var boardwidth = 4
+	var boardheight = 4
+	
+	var language = location.hash.slice(1)
+	
+	var colLabel;
+	var rowLabel;
+	
+	var allowInput = false;
+	
+	var textBank = {}
+	
+	var outputWindow = document.querySelector("#outputWindow")
+	
+	// board coordinates
+	switch (language) {
+		case "sux":
+			colLabel = ["𒌅", "𒋫", "𒋾", "𒋼"]
+			rowLabel = ["", "𒁹", "𒈫", "𒐈", "𒐉"]
+			break;
+		default:
+			colLabel = ["a", "b", "c", "d"]
+			rowLabel = Array.from({length: 5}, (x, i) => i)
+	}
+	
+	// text outputs
+	switch (language) {
+		case "ob":
+			textBank = {
+				"newGame": "Lud nov",
+				"yourMove": "Votr marsh.",
+				"theirMove": "Pensant...",
+				"blackWinsCheckmate": "Noar gani mediu mat.",
+				"blackWinsStalemate": "Noar gani mediu pat.",
+				"redWinsCheckmate": "Rub gani mediu mat.",
+				"redWinsStalemate": "Rub gani mediu pat.",
+				"youDraw": "Lud es nul.",
+				"promoteWazir": "Promovar a kar",
+				"promoteFerz": "Promovar a elefant",
+				"promoteHorse": "Promovar a kaval",
+				"cancel": "Anular"
+			}
+			break;
+		default:
+			textBank = {
+				"newGame": "New Game",
+				"yourMove": "Your move.",
+				"theirMove": "Thinking...",
+				"blackWinsCheckmate": "Black wins by checkmate.",
+				"blackWinsStalemate": "Black wins by stalemate.",
+				"redWinsCheckmate": "Red wins by checkmate.",
+				"redWinsStalemate": "Red wins by stalemate.",
+				"youDraw": "The game is a draw.",
+				"promoteWazir": "Promote to Chariot",
+				"promoteFerz": "Promote to Elephant",
+				"promoteHorse": "Promote to Horse",
+				"cancel": "Cancel"
+			}
+	}
+	
+	function renderBoard(isBlack = 0) {
+		const boardRender = document.querySelector(".board")
+		const pocketTopRender = document.querySelector("#pocket-top")
+		const pocketBottomRender = document.querySelector("#pocket-bottom")
+		
+		var checkSpace = boardState["check"]
+		
+		var internalColLabel = ["a", "b", "c", "d"]
+		var internalRowLabel = Array.from({length: 5}, (x, i) => i)
+		
+		boardRender.innerHTML = ""
+		pocketTopRender.innerHTML = ""
+		pocketBottomRender.innerHTML = ""
+		
+		if (!isBlack) {
+			for (let i = 0; i < (boardwidth * boardheight); i++) {
+				const colour = ((i % 2) + (Math.floor(i / (boardwidth)) % 2))%2 == 0 ? "white" : "black"
+				
+				boardSquare = document.createElement("div")
+				boardSquare.classList.add("square")
+				boardSquare.classList.add(colour)
+				
+				if (internalColLabel[i % (boardwidth)] + internalRowLabel[((boardwidth) - Math.floor(i / (boardwidth)))] == checkSpace) {boardSquare.classList.add("check")}
+				
+				if (boardState[i + 1] || false) {boardSquare.classList.add(boardState[i + 1] + "piece")}
+				if (boardState["select1"] == (i+1) || false) {boardSquare.classList.add("select")}
+				if (boardState["select2"] == (i+1) || false) {boardSquare.classList.add("select")}
+				
+				boardSquare.onclick = function() {clickSquare(i) /*console.log(i + 1);*/};
+				//boardSquare.innerHTML = colLabel[i % 8] + (8 - Math.floor(i / 8))
+				boardSquare.innerHTML = "<text class='squarelabel'>" + (Math.floor(i / (boardwidth)) == (boardwidth-1) ? colLabel[i % (boardwidth)] : "") + (i % (boardwidth) == 0 ? rowLabel[(boardwidth) - Math.floor(i / (boardwidth))] : "") + "<text>"
+				boardRender.append(boardSquare)
+			}
+			
+			for (let i = 0; i < 8; i++) {
+				pocketSquare = document.createElement("div")
+				pocketSquare.classList.add("pocketsquare")
+				pocketSquare.classList.add("white")
+				if (boardState["P" + (i+1)] || false) {pocketSquare.classList.add(boardState["P" + (i+1)] + "piece")}
+				if (boardState["select1"] == "P" + (i + 1) || false) {pocketSquare.classList.add("select")}
+				
+				pocketSquare.onclick = function() {clickSquare(i, true)}
+				pocketBottomRender.append(pocketSquare)
+			}
+			
+			for (let i = 8; i < 16; i++) {
+				pocketSquare = document.createElement("div")
+				pocketSquare.classList.add("pocketsquare")
+				pocketSquare.classList.add("black")
+				if (boardState["P" + (i+1)] || false) {pocketSquare.classList.add(boardState["P" + (i+1)] + "piece")}
+				if (boardState["select1"] == "P" + (i + 1) || false) {pocketSquare.classList.add("select")}
+				
+				pocketSquare.onclick = function() {clickSquare(i, true)}
+				pocketTopRender.append(pocketSquare)
+			}
+		} else {
+			for (let i = (boardwidth * boardheight - 1); i >= 0; i--) {
+				const colour = ((i % 2) + (Math.floor(i / (boardwidth)) % 2))%2 == 0 ? "white" : "black"
+				
+				boardSquare = document.createElement("div")
+				boardSquare.classList.add("square")
+				boardSquare.classList.add(colour)
+				
+				if (internalColLabel[i % (boardwidth)] + internalRowLabel[((boardwidth) - Math.floor(i / (boardwidth)))] == checkSpace) {boardSquare.classList.add("check")}
+				
+				if (boardState[i + 1] || false) {boardSquare.classList.add(boardState[i + 1] + "piece")}
+				if (boardState["select1"] == (i + 1) || false) {boardSquare.classList.add("select")}
+				if (boardState["select2"] == (i + 1) || false) {boardSquare.classList.add("select")}
+				
+				boardSquare.onclick = function() {clickSquare(i) /*console.log(i + 1);*/};
+				//boardSquare.innerHTML = colLabel[i % 8] + (8 - Math.floor(i / 8))
+				boardSquare.innerHTML = "<text class='squarelabel'>" + (Math.floor(i / (boardwidth)) == 0 ? colLabel[i % (boardwidth)] : "") + (i % boardwidth == (boardwidth-1) ? rowLabel[boardwidth - Math.floor(i / (boardwidth))] : "") + "<text>"
+				boardRender.append(boardSquare)
+			}
+			
+			for (let i = 0; i < 8; i++) {
+				pocketSquare = document.createElement("div")
+				pocketSquare.classList.add("pocketsquare")
+				pocketSquare.classList.add("white")
+				if (boardState["P" + (i+1)] || false) {pocketSquare.classList.add(boardState["P" + (i+1)] + "piece")}
+				if (boardState["select1"] == "P" + (i + 1) || false) {pocketSquare.classList.add("select")}
+				
+				pocketSquare.onclick = function() {clickSquare(i, true)}
+				pocketTopRender.append(pocketSquare)
+			}
+			
+			for (let i = 8; i < 16; i++) {
+				pocketSquare = document.createElement("div")
+				pocketSquare.classList.add("pocketsquare")
+				pocketSquare.classList.add("black")
+				if (boardState["P" + (i+1)] || false) {pocketSquare.classList.add(boardState["P" + (i+1)] + "piece")}
+				if (boardState["select1"] == "P" + (i + 1) || false) {pocketSquare.classList.add("select")}
+				
+				pocketSquare.onclick = function() {clickSquare(i, true)}
+				pocketBottomRender.append(pocketSquare)
+			}
+		}
+	}
+	
+	function clickSquare(i, isPocket) {
+		var internalColLabel = ["a", "b", "c", "d"]
+		var internalRowLabel = Array.from({length: 5}, (x, i) => i)
+		
+		//console.log(colLabel[i % (boardwidth)] + rowLabel[((boardwidth) - Math.floor(i / (boardwidth)))], "-", i + 1, "-", (boardState[i + 1] || "<empty>"))
+		
+		//i = i + 1
+		
+		if (!allowInput) {return}
+		
+		if (isPocket) {
+			i = "P" + (i+1)
+		}
+		
+		//console.log(i, (isPocket ? boardState[i] : boardState[i+1]) || false)
+		
+		if (((isPocket ? boardState[i] : boardState[i+1]) || false) && ((isPocket ? (boardState[i] == boardState[i].toUpperCase()) && !player : ((boardState[i+1] == boardState[i+1].toUpperCase()) && !player)) || false) && (moveInput.length == 0)) {
+			if (isPocket) {moveInput.push(boardState[i] + "@")}
+			else {moveInput.push(internalColLabel[i % (boardwidth)] + internalRowLabel[((boardwidth) - Math.floor(i / (boardwidth)))])}
+			
+			boardState["select1"] = (isPocket ? i : (i+1))
+			renderBoard(player)
+			return
+		}
+		
+		if (moveInput.length == 1) {
+			if (isPocket) {moveInput = []; delete boardState["select1"]; renderBoard(player); return}
+			
+			moveInput.push(internalColLabel[i % (boardwidth)] + internalRowLabel[((boardwidth) - Math.floor(i / (boardwidth)))])
+			
+			if (!board.legalMoves().split(" ").includes(moveInput.join("")) && board.legalMoves().includes(moveInput.join(""))) { //promoting pawn!
+				allowInput = false;
+				boardState["select2"] = (i+1)
+				console.log("PAWN PROMOTION!", moveInput)
+				outputWindow.innerHTML = '<button onclick="moveInput.push(\'w\'); pushMove(moveInput.join(\'\'))">' + textBank["promoteWazir"] + '</button> ' + '<button onclick="moveInput.push(\'f\'); pushMove(moveInput.join(\'\'))">' + textBank["promoteFerz"] + '</button> ' + '<button onclick="moveInput.push(\'h\'); pushMove(moveInput.join(\'\'))">' + textBank["promoteHorse"] + '</button> ' + '<button onclick="moveInput = []; delete boardState[\'select1\']; delete boardState[\'select2\']; renderBoard(player); allowInput = true; outputWindow.innerHTML = textBank[\'yourMove\']">' + textBank["cancel"] + '</button> '
+			} else if (board.legalMoves().split(" ").includes(moveInput.join(""))) {
+				boardState["select2"] = (i+1)
+				pushMove(moveInput.join(""))
+			} else {moveInput = []; delete boardState["select1"];}
+		}
+		
+		//console.log(internalColLabel[i % (boardwidth)] + internalRowLabel[((boardwidth) - Math.floor(i / (boardwidth)))])
+		
+		//console.log(moveInput)
+		//return internalColLabel[i % (boardwidth)] + internalRowLabel[((boardwidth) - Math.floor(i / (boardwidth)))]
+		
+		renderBoard(player)
+	}
+	
+	function flipBoard() {
+		player = !player
+		renderBoard(player)
+	}
+	
+	function renderBoardState() {
+		var boardString = board.toString().split(/[ \n]/g) 
+		var pocketWhite = board.pocket(1).split("")
+		var pocketBlack = board.pocket(0).split("")
+		
+		boardState = {}
+		
+		for (let i = 0; i < boardString.length; i++) {
+			if (boardString[i] != ".") {
+				boardState[i+1] = boardString[i]
+			}
+		}
+		
+		for (let i = 0; i < pocketWhite.length; i++) {
+			if (pocketWhite[i] != "") {
+				boardState["P" + (i+1)] = pocketWhite[i].toUpperCase()
+			}
+		}
+		
+		for (let i = 0; i < pocketBlack.length; i++) {
+			if (pocketBlack[i] != "") {
+				boardState["P" + (i+9)] = pocketBlack[i]
+			}
+		}
+		
+		if (board.checkedPieces()) {boardState["check"] = board.checkedPieces()}
+		
+		renderBoard(player)
+	}
+	
+	function pushMove(move) {
+		allowInput = false;
+		moveInput = []
+		
+		board.push(move)
+		renderBoardState()
+		
+		if (checkEnd()) {return}
+		
+		ffish.postMessage("position startpos moves " + board.moveStack())
+		ffish.postMessage("go movetime 1000")
+		outputWindow.innerHTML = textBank["theirMove"]
+	}
+	
+	function newGame() {
+		if (board !== null) {
+			if (!board.isDeleted()) {board.delete()}
+			}
+		
+		outputWindow.innerHTML = ''
+		
+		moveInput = []
+		board = new ffishB.Board("tinyhouse")
+		renderBoardState()
+		
+		outputWindow.innerHTML = textBank["yourMove"]
+		allowInput = true;
+	}
+	
+	function checkEnd() {
+		if (board.isGameOver(true)) {
+			allowInput = false;
+			console.log(board.result(1));
+			
+			var inCheck = board.checkedPieces()
+			
+			switch (board.result()) {
+				case "1-0":
+					outputWindow.innerHTML = (inCheck ? textBank["blackWinsCheckmate"] : textBank["blackWinsStalemate"]) + " "
+					break
+				case "0-1":
+					outputWindow.innerHTML = (inCheck ? textBank["redWinsCheckmate"] : textBank["redWinsStalemate"]) + " "
+					break
+				case "1/2-1/2":
+					outputWindow.innerHTML = textBank["youDraw"] + " "
+					break
+			}
+			
+			outputWindow.innerHTML += '<button onclick="newGame()">' + textBank["newGame"] + '</button>'
+			return true}
+		return false
+	}
+	
+	function getPgn(board) {
+	  let pgn = "";
+	  const reversedMoves = [];
+	  let moveStack = board.moveStack();
+
+	  while (moveStack.length > 0) {
+		reversedMoves.push(moveStack.split(" ").pop());
+		board.pop();
+		moveStack = board.moveStack();
+	  }
+
+	  if (!board.turn() && reversedMoves.length > 0) {
+		pgn += board.fullmoveNumber() + "... ";
+	  }
+
+	  while (reversedMoves.length > 0) {
+		const move = reversedMoves.pop();
+
+		if (board.turn()) {
+		  pgn += board.fullmoveNumber() + ". ";
+		}
+
+		pgn += board.sanMove(move) + " ";
+		board.push(move);
+	  }
+
+	  const result = board.result(true);
+	  if (result !== "*") pgn += result;
+	  return pgn.trim();
+	}
+	
+	renderBoard(player)
+	outputWindow.innerHTML = '<button onclick="newGame()">' + textBank["newGame"] + '</button>'
+	
+</script>
+
+</body>
+</html>

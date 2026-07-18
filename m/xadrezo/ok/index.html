@@ -76,7 +76,7 @@
 				break
 			case "ludi":
 				document.title = "Ludi · Oranjbosk Kelkfoa"; 
-				articleField.innerHTML = "<h2>Ludi</h2><p>· <a href=\"javascript:void(0);\" onclick=\"location.hash = '#sudoku'; loadArticle()\">Sudoku</a></p>"
+				articleField.innerHTML = "<h2>Ludi</h2><p>· <a href=\"javascript:void(0);\" onclick=\"location.hash = '#sudoku'; loadArticle()\">Sudoku</a></p><p>· <a href=\"javascript:void(0);\" onclick=\"location.hash = '#domet'; loadArticle()\">Domet</a></p>"
 				break
 			case "sudoku":
 				document.title = "Sudoku · Oranjbosk Kelkfoa"; 
@@ -86,6 +86,21 @@
 				var iframe = document.createElement('iframe')
 				iframe.onload = function() {document.querySelector("#sudokuheader").innerHTML = "Enigmat diurnik pro " + parseDateFormat(iframe.contentWindow.seedVar)}
 				iframe.src = './sudoku/sudoku.html#ob'
+				iframe.scrolling = 'no'
+				iframe.width = '400'
+				iframe.height = '350'
+				iframe.frameBorder = '0'
+				
+				articleField.appendChild(iframe)
+				break
+			case "domet":
+				document.title = "Domet · Orangewood Occasional"; 
+				articleField.innerHTML = "<h2>Domet</h2>" //<IFRAME id='sudokufield' SRC='./sudoku/sudoku.html#ob'  SCROLLING='no' WIDTH='400' HEIGHT='400' FRAMEBORDER='0'></IFRAME>" //WIDTH='240' HEIGHT='260'
+				//document.querySelector("#sudokuheader").innerHTML = document.querySelector("#sudokufield").contentWindow.seedVar
+				
+				var iframe = document.createElement('iframe')
+				//iframe.onload = function() {document.querySelector("#sudokuheader").innerHTML = "Daily puzzle for " + parseDateFormat(iframe.contentWindow.seedVar)}
+				iframe.src = './tinyhouse/tinyhouse.html#ob'
 				iframe.scrolling = 'no'
 				iframe.width = '400'
 				iframe.height = '350'
