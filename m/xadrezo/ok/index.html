@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oranjbosk Kelkfoa</title>
     <link href="./style.css" rel="stylesheet" type="text/css" media="all">
+	<script src="./coi-serviceworker.min.js"></script>
   </head>
   <body>
 	<div class="masthead">
@@ -72,11 +73,11 @@
 				break
 			case "kontakt":
 				document.title = "Kontakt · Oranjbosk Kelkfoa"; 
-				articleField.innerHTML = "<h2>Kontakt</h2><h4>In Hellcraft</h4><p>xadrezo<br>384/266 Oranjbosk</p><h4>Eksteriore</h4><img src='https://xadrezo.neocities.org/impressum.png'/>"
+				articleField.innerHTML = "<h2>Kontakt</h2><h4>In Hellcraft</h4><p>xadrezo<br>384/266 Oranjbosk</p><h4>Eksteriore</h4><img src='./impressum.png'/>"
 				break
 			case "ludi":
 				document.title = "Ludi · Oranjbosk Kelkfoa"; 
-				articleField.innerHTML = "<h2>Ludi</h2><p>· <a href=\"javascript:void(0);\" onclick=\"location.hash = '#sudoku'; loadArticle()\">Sudoku</a></p>"
+				articleField.innerHTML = "<h2>Ludi</h2><p>· <a href=\"javascript:void(0);\" onclick=\"location.hash = '#sudoku'; loadArticle()\">Sudoku</a></p><p>· <a href=\"javascript:void(0);\" onclick=\"location.hash = '#domet'; loadArticle()\">Domet</a></p>"
 				break
 			case "sudoku":
 				document.title = "Sudoku · Oranjbosk Kelkfoa"; 
@@ -90,6 +91,22 @@
 				iframe.width = '400'
 				iframe.height = '350'
 				iframe.frameBorder = '0'
+				
+				articleField.appendChild(iframe)
+				break
+			case "domet":
+				document.title = "Domet · Oranjbosk Kelkfoa"; 
+				articleField.innerHTML = "<h2>Domet</h2>" //<IFRAME id='sudokufield' SRC='./sudoku/sudoku.html#ob'  SCROLLING='no' WIDTH='400' HEIGHT='400' FRAMEBORDER='0'></IFRAME>" //WIDTH='240' HEIGHT='260'
+				//document.querySelector("#sudokuheader").innerHTML = document.querySelector("#sudokufield").contentWindow.seedVar
+				
+				var iframe = document.createElement('iframe')
+				//iframe.onload = function() {document.querySelector("#sudokuheader").innerHTML = "Daily puzzle for " + parseDateFormat(iframe.contentWindow.seedVar)}
+				iframe.src = './tinyhouse/tinyhouse.html#ob'
+				iframe.scrolling = 'no'
+				iframe.width = '450'
+				iframe.height = '350'
+				iframe.frameBorder = '0'
+				iframe.credentialless = true
 				
 				articleField.appendChild(iframe)
 				break
