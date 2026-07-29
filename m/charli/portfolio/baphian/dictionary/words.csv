@@ -35,7 +35,7 @@ Album (photos);;inan;{ikyoje} </i>[i´.kjo̞´.dʑɛ̝´]<i>;;s
 Alcohol;;inan;su{ya} </i>[su.jä´]<i>;;s
 Alcohol;;inan;su{ya} </i>[su.jä´]<i>;;s
 Alhi;LAI;inan;la{i} {di}ye </i>[lä.i´ di´.jɛ̝]<i>;;s
-All, everything;;adj;gu </i>[gu]<i>;;s
+All, everything, whole;;adj;gu </i>[gu]<i>;;s
 Alleviate;;verb;tin{he} </i>[tin.hɛ̝´]<i>;;s
 Alloti;ŚALODI;inan;sha{lo}di{sa} </i>[ɕä.lo̞´.di.sä´]<i>;;s
 Allotian;ŚALODI;an;sha{lo}di si </i>[ɕä.lo̞´.di si]<i>;;s
@@ -115,6 +115,7 @@ Back;;inan;la{ke} </i>[lä.kɛ̝´]<i>;;s
 Back;;inan;la{ke} </i>[lä.kɛ̝´]<i>;;s
 Back and forth, sine (informal);;inan;se{ke} </i>[sɛ̝.kɛ̝´]<i>;Used in Ahanan to refer to sine wave synths, can be used for sine waves in general but not common;s
 Back, return;;verb;je{ke} </i>[dʑɛ̝.kɛ̝´]<i>;;s
+Backstory;;inan;{po}ta{u}tee{ye} </i>[po̞´.tä.u´.tɛ̝.ɛ̝.jɛ̝´]<i>;;s
 Bad;DEFOTE;adj;de{fo}te </i>[dɛ̝.fo̞´.tɛ̝]<i>;;s
 Bad;;adj;de{fo}te </i>[dɛ̝.fo̞´.tɛ̝]<i>;Widely considered to be racially motivated against Kaneeds, specifically Baphians, use with caution, there is not a good alternative besides spelling it out alphabetically;s
 Bad;;adj;de{fo}te </i>[dɛ̝.fo̞´.tɛ̝]<i>;Widely considered to be racially motivated against Kalis, use with caution, there is not a good alternative besides spelling it out alphabetically;s
@@ -398,7 +399,7 @@ Correspond;;verb;;;s
 Corrupt;;verb;;;s
 Corruption;;inan;;;s
 Cotton;;an;;;s
-Couch;FILA;inan;{fi}la </i>[fi´.lä]<i>;Borrowed from Jkawi. Older;s
+Couch, sofa;FILA;inan;{fi}la </i>[fi´.lä]<i>;Borrowed from Jkawi. Older;s
 Could, may do;;verb;sye </i>[sjɛ̝]<i>;;s
 Counsel;;verb;;;s
 Count;;verb;zo{te} </i>[zo̞.tɛ̝´]<i>;;s
@@ -466,6 +467,8 @@ Debt (money);;inan;;;s
 Decay;;verb;;;s
 Decide, choose, pick;;verb;ko{wa} </i>[ko̞.wä´]<i>;;s
 Declare;;verb;;;s
+Decline;;verb;;;s
+Decoration;;inan;ko{de} </i>[ko̞.dɛ̝´]<i>;;s
 Deduce;;verb;;;s
 Deer;;an;{nyefu} </i>[njɛ̝´.fu´]<i>;;s
 Defence;;inan;;;s
@@ -725,6 +728,7 @@ Fresh;;adj;de{ye}ze </i>[dɛ̝.jɛ̝´.zɛ̝]<i>;;s
 Friend;;an;{sho}si </i>[ɕo´.si]<i>;;s
 Friendship;;an;;;s
 Front;;inan;se{de}ye </i>[sɛ̝.dɛ̝´.jɛ̝]<i>;;s
+Frown;;an;e{zi} </i>[ɛ̝.zi´]<i>;;s
 Frozen love, familial love;;verb;dong{ko}pese </i>[do̞ŋ.ko̞´.pɛ̝.sɛ̝]<i>;;ahan
 Frozen love, familial love;;verb;dong{koe}pese </i>[do̞ŋ.ko̞´.ɛ̝´.pɛ̝.sɛ̝]<i>;;s
 Fruit;;an;we{she}le </i>[wɛ̝.ɕɛ̝´.lɛ̝]<i>;;s
@@ -736,6 +740,7 @@ Full;;adj;{je}de </i>[dʑɛ̝´.dɛ̝]<i>;;s
 Fun;;adj;;;s
 Funny;;adj;le{keke} </i>[lɛ̝.kɛ̝´.kɛ̝´]<i>;;s
 Furnace;;inan;{wo}ye </i>[wo̞´.jɛ̝]<i>;;s
+Furniture;;inan;;;s
 Further, more far;ITO;adj;{u}zzo{i}to </i>[u´.z:o̞.i´.to̞]<i>;;s
 Future marker;;;;;s
 Gallery;;inan;jo{zun}je </i>[dʑo̞.zun´.dʑɛ̝]<i>;;s
@@ -828,7 +833,7 @@ Hand, Paw;;an;{kye} </i>[kjɛ̝´]<i>;;s
 Hangover;;inan;;;s
 Hangover;;inan;;;s
 Happen;;verb;lo{ga} </i>[lo̞.gä´]<i>;;s
-Happy;;adj;zo{wun} </i>[zo̞.wun´]<i>;;s
+Happy, glad;;adj;zo{wun} </i>[zo̞.wun´]<i>;;s
 Hard, tough;;adj;ke{zhe} </i>[kɛ̝.ʑɛ̝´]<i>;;s
 Harm, beat, fight;;verb;{te}weyun </i>[tɛ̝´.wɛ̝.jun]<i>;;s
 Harvest;;inan;su{ka} </i>[su.kä´]<i>;;s
@@ -963,6 +968,7 @@ Je ne sais quoi, an indescrible quality;;inan;;;s
 Jealous, envy;;verb;sa{zang}po </i>[sä.zäŋ´.po̞]<i>;;s
 Jealousy, envy;;inan;sa{zangshe} </i>[sä.zäŋ´.ɕɛ̝´]<i>;;s
 Jester;JOTSIKON;an;yo{tsi}kon </i>[jo̞.tsi´.ko̞n]<i>;Borrowed from Loremese;s
+Jewelry;;inan;u{de} </i>[u.dɛ̝´]<i>;;s
 Jkawi;HAWI;inan;ha{wi}sa </i>[hä.wi´.sä]<i>;;s
 Jkawi (Language);HAWI;inan;ha{wi} {di}ye </i>[hä.wi´.di´.jɛ̝]<i>;;s
 Jkawi (People);HAWI;an;ha{wi} si </i>[hä.wi´.si]<i>;;s
@@ -1108,6 +1114,7 @@ Machine;;inan;kesi </i>[kɛ̝.si]<i>;;s
 Mad, angry;;adj;de{zi} </i>[dɛ̝.zi´]<i>;;s
 Magic;;inan;ye{pe}de{su} </i>[jɛ̝.pɛ̝´.dɛ̝.su´]<i>;;s
 Magma;;inan;nu{wun}zam{fong}wojo{we} </i>[nu.wun´.zäm.fo̞ŋ´.wo̞.dʑo̞.wɛ̝´]<i>;;s
+Mahjong;;inan;;;real
 Mail;;verb;;;s
 Mail, letter;;inan;{kye}zu{pe} </i>[kjɛ̝´.zu.pɛ̝´]<i>;;s
 Maintain;;verb;du{tekye} </i>[du.tɛ̝´.kjɛ̝´]<i>;;s
@@ -1308,6 +1315,8 @@ Passage of time, delimitative, continuative;;inan;{ke}ju </i>[kɛ̝´.dʑu]<i
 Passive marker;;;;;s
 Past;;inan;se{de}ye </i>[sɛ̝.dɛ̝´.jɛ̝]<i>;;s
 Past;;noun;{po}ta </i>[po̞´.tä]<i>;Borrowed from Jkawi;s
+Patch;;inan;;;s
+Patch-work;;inan;;;s
 Path, road;;inan;lo{ye}te </i>[lo̞.jɛ̝´.tɛ̝]<i>;;s
 Path, street, route;;inan;lo{yi} </i>[lo̞.ji´]<i>;;s
 Patient;;an;;;s
@@ -1335,11 +1344,13 @@ Perform;;verb;;;s
 Performance;;inan;;;s
 Performative, fake;;adj;;;s
 Performer;;an;;;s
+Perfume;;inan;jim{te} </i>[dʑim.tɛ̝´]<i>;;s
 Period (of time), moment;;inan;{ke}da </i>[kɛ̝´.dä]<i>;;s
 Period, menstruation;;an;{gete} </i>[gɛ̝´.tɛ̝´]<i>;;s
 Perk, bonus, “plus”;;inan;bbi{ba} </i>[bbi.bä´]<i>;;s
 Persist; ;verb;an{ce} </i>[än.tɕɛ̝´]<i>;;s
 Person;;an;si{ya} </i>[si.jä´]<i>;More formal than <ukilen></ukilen>;s
+Personality;;inan;si{ya} </i>[si.jä´]<i>;;s
 Pet;;an;eze{ya} </i>[ɛ̝.zɛ̝.jä´]<i>;;s
 Pet bowl;;inan;eze{ya}nu{pe}yo </i>[ɛ̝.zɛ̝.jä´.nu.pɛ̝´.jo̞]<i>;;s
 Petition;;verb;;;s
@@ -1688,6 +1699,7 @@ Small, little;;adj;se{zhu} </i>[sɛ̝.ʑu´]<i>;;s
 Smart, intelligent;;adj;{ye}yim{nun} </i>[jɛ̝´.jim.nun´]<i>;;s
 Smell;;verb;jim{she} </i>[dʑim.ɕɛ̝´]<i>;Archaic;s
 Smell;;verb;jim{she} </i>[dʑim.ɕɛ̝´]<i>;;s
+Smile;;an;{wunzi} </i>[wun´.zi´]<i>;;s
 Smoke;;inan;du{be}no </i>[du.bɛ̝´.no̞]<i>;;s
 Smooth;;adj;{ca}to{ko} </i>[tɕä´.to̞.ko̞´]<i>;;s
 Snack;;verb;;;s
@@ -1737,6 +1749,7 @@ Split;;verb;ke{sem} </i>[kɛ̝.sɛ̝m´]<i>;;s
 Sponsor;;verb;;;s
 Spoon;;inan;;;s
 Sport;;inan;{eju} </i>[ɛ̝´.dʑu´]<i>;;s
+Spray;;verb;;;s
 Spring;;verb;;;s
 Spring (season);;an;de{ya} </i>[dɛ̝.jä´]<i>;;s
 Square (shape, informal);;inan;in{ka} </i>[in.kä´]<i>;;s
