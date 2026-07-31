@@ -1168,6 +1168,7 @@ Meal;;inan;wafe{an} </i>[wä.fɛ̝.än´]<i>;Formal;s
 Mean;;verb;mo{ze} </i>[mo̞.zɛ̝´]<i>;;s
 Meat;;inan;din{te} </i>[din.tɛ̝´]<i>;;s
 Medal, trophy;;inan;;;s
+Medicine;;inan;so{shezhi} </i>[so̞.ɕɛ̝´.ʑi´]<i>;;s
 Meditate;;verb;ze{ju}mu </i>[zɛ̝.dʑu´.mu]<i>;;s
 Meet, gather;;verb;juje </i>[dʑu.dʑɛ̝´]<i>;;s
 Meeting place;;inan;;;s
@@ -1211,6 +1212,7 @@ Month;;inan;{ge} </i>[gɛ̝´]<i>;;s
 Mood, tone, vibe;;inan;;;s
 Moon worship;;inan;;;s
 Moon, Stellar body;;an;{ge} </i>[gɛ̝´]<i>;;s
+Moonrise;;an;{ge}ze </i>[gɛ̝´.zɛ̝]<i>;;s
 More;ITO;adj;{i}to </i>[i´.to̞]<i>;;s
 More, comparative;;adj;{zan} </i>[zän´]<i>;;s
 Morning;;inan;{epe} </i>[ɛ̝´.pɛ̝´]<i>;;s
@@ -1309,8 +1311,8 @@ Out;;adj;ke{yen} </i>[kɛ̝.jɛ̝n´]<i>;;s
 Outside;;inan;ke{yen}yan </i>[kɛ̝.jɛ̝n´.jän]<i>;;s
 Oven, stove;;inan;wo{lang} </i>[wo̞.läŋ´]<i>;when used as “Stove” it is an Ahananism;s
 Owe;;verb;;;s
-Package;;inan;;;s
-Package, wrap;;verb;;;s
+Package;;inan;te{zhi} </i>[tɛ̝.ʑi´]<i>;;s
+Package, wrap;;verb;te{zhi} </i>[tɛ̝.ʑi´]<i>;;s
 Page, paper;;inan;zu{pe} </i>[zu.pɛ̝´]<i>;When used as “paper” it’s informal;s
 Pain;;inan;dizhu </i>[di.ʑu]<i>;;s
 Paint;;inan;tu{pe} </i>[tu.pɛ̝´]<i>;;s
@@ -1398,6 +1400,7 @@ Pizza;OTIKAMA;inan;oti{ka}ma </i>[o̞.ti.kä´.mä]<i>;Of Azkali origin, history
 Pizza;;inan;sokusu{lang} </i>[so̞.ku.su.läŋ´]<i>;Of Baphian origin, history of the dish is very contentious;s
 Place;;inan;o{kam} </i>[o̞.käm´]<i>;;s
 Plague;;inan;;;s
+Plane (of existence);;inan;zo{dan}zotin{fong} </i>[zo̞.dän´.zo̞.tin.fo̞ŋ´]<i>;;s
 Plane, field;;inan;tin{fong} </i>[tin.fo̞ŋ´]<i>;;s
 Plant;;an;di{de} </i>[di.dɛ̝´]<i>;;s
 Plant for bugs, inedible plants classifier, bug (archaic);;inan;{sye}yun </i>[sjɛ̝´.jun]<i>;;s
@@ -1615,7 +1618,7 @@ Scales;;an;{icen} </i>[i´.tɕɛ̝n´]<i>;usually used in reference to fish s
 Scales;;inan;{su}pi </i>[su´.pi]<i>;Borrowed from Jkawi. Usually used by non-kalis or jkawi in refrence to scales;s
 Scarab;;an;{hu}fu </i>[hu´.fu]<i>;Borrowed from Jkawi;s
 Scare;;verb;posum{po} </i>[po̞.sum.po̞´]<i>;;s
-Scare;;verb;posum{po} </i>[po̞.sum.po̞´]<i>;;s
+Scare, terrorise / terrorize;;verb;posum{po} </i>[po̞.sum.po̞´]<i>;;s
 Schizophrenia;;inan;;;s
 School;;inan;{ye}pe{dyi} </i>[jɛ̝´.pɛ̝.dji´]<i>;;s
 Scorpion;;an;du{sa} </i>[du.sä´]<i>;;s
@@ -1838,7 +1841,7 @@ Student;;an;;;s
 Study;;verb;{ye}e{ke} </i>[jɛ̝´.ɛ̝.kɛ̝´]<i>;;s
 Stupid, dumb, foolish;;adj;{e}teto </i>[ɛ̝´.tɛ̝.to̞]<i>;;s
 Style (fashion);;inan;le{ze} </i>[lɛ̝.zɛ̝´]<i>;;s
-Stylish;;adj;;;s
+Stylish;;adj;le{ze}tu </i>[lɛ̝.zɛ̝´.tu]<i>;;s
 Submit, give up;;verb;;;s
 Subscribe;;verb;;;s
 Succeed;;verb;;;s
@@ -1857,8 +1860,8 @@ Summon, call;;verb;;;s
 Sun worship;;inan;;;s
 Sun, Stellar body;;inan;ze{fang} </i>[zɛ̝.fäŋ´]<i>;;s
 Sunglasses;;inan;tso{syi}ke </i>[tso̞.sji´.kɛ̝]<i>;;s
-Sunrise, morning light;;inan;;;s
-Sunshine;;an;;;s
+Sunrise, morning light;;inan;{fang}ze </i>[fäŋ´.zɛ̝]<i>;;s
+Sunshine;;an;tso{syi}ke </i>[tso̞.sji´.kɛ̝]<i>;;s
 Sunteria;;inan;a{ke}ma{sa} </i>[ä.kɛ̝´.mä.sä´]<i>;;s
 Sunterian (Language;;inan;a{ke}ma {di}ye </i>[ä.kɛ̝´.mä di´.jɛ̝]<i>;;s
 Sunterian (People);;an;a{ke}ma si </i>[ä.kɛ̝´.mä si]<i>;;s
@@ -1871,13 +1874,13 @@ Sushi;;inan;po{kyo} </i>[po̞.kjo̞´]<i>;;s
 Suspicious;;verb;{so}gudo </i>[so̞´.gu.do̞]<i>;;s
 Swamp;;inan;;;s
 Swarm;;an;;;s
-Sweat;;inan;;;s
-Sweat;;verb;;;s
+Sweat;;verb;in{pe} </i>[in.pɛ̝´]<i>;;s
+Sweat;;inan;in{pe}zhu </i>[in.pɛ̝´.ʑu]<i>;;s
 Sweater;;inan;kujeze{ya} </i>[ku.dʑɛ̝.zɛ̝.jä´]<i>;;s
 Sweet (taste);;adj;se{te} </i>[sɛ̝.tɛ̝´]<i>;;s
 Swell;;verb;sho{she} </i>[ɕo̞.ɕɛ̝´]<i>;;s
 Swim;;verb;{zang} </i>[zäŋ´]<i>;;s
-Sword;;inan;;;s
+Sword, blade;;inan;{ki}a{si} </i>[ki´.ä.si´]<i>;;s
 Sympathy;;inan;she{zo}zi </i>[ɕɛ̝.zo̞´.zi]<i>;;s
 System (technology);;inan;;;s
 System, structure of doing something;;inan;;;s
@@ -1897,7 +1900,7 @@ Tattoo;;inan;su{zun} </i>[su.zun´]<i>;;s
 Tea;;inan;{we}ja </i>[wɛ̝´.dʑä]<i>;;s
 Tea (formal);;inan;wa{je} </i>[wä.dʑɛ̝´]<i>;;s
 Tea leaf;;an;{wekya} </i>[wɛ̝´.kjä´]<i>;;s
-Tea puck;;inan;;;s
+Tea puck;;inan;{we}yo </i>[wɛ̝´.jo̞]<i>;;s
 Teach;;verb;{ba}jim </i>[bä´.jim]<i>;;s
 Teacher;;an;{ba}jimsi </i>[bä´.jim.si]<i>;;s
 Team, group;;an;;;s
@@ -1913,8 +1916,8 @@ Temple, shrine;;inan;de{ye}yan </i>[dɛ̝.jɛ̝´.jän]<i>;;s
 Ten;14;;na{zhe} </i>[nä.ʑɛ̝´]<i>;Seen in a more slang sense, saying “in inje” is more formal;s
 Tendon;;an;{se} </i>[sɛ̝´]<i>;;s
 Terrible;;adj;;;s
-Terrorism;;inan;;;s
-Terrorist;;an;;;s
+Terrorism;;inan;po{tsa} </i>[po̞.tsä´]<i>;;s
+Terrorist;;an;po{tsa}si </i>[po̞.tsä´.si]<i>;;s
 Test;;verb;zedun{te} </i>[zɛ̝.dun.tɛ̝´]<i>;;s
 Testicle;;an;suyo </i>[su.jo̞]<i>;;s
 Thank;;verb;tong{kom}se </i>[to̞ŋ.ko̞m´.sɛ̝]<i>;;s
@@ -1953,11 +1956,11 @@ Tisane;;inan;;;s
 Titan, giant;;an;de{za} </i>[dɛ̝.zä´]<i>;;s
 Tithe;;verb;;;s
 Tobacco ;;an;za{de} </i>[zä.dɛ̝´]<i>;;s
-Today;;inan;;;s
+Today;;inan;yonu </i>[jo̞.nu]<i>;;s
 Together, union;;inan;insa{se}zhu </i>[in.sä.sɛ̝´.ʑu]<i>;For anything not a country;s
 Tomato;;an;co{pe}le </i>[tɕo̞.pɛ̝´.lɛ̝]<i>;;s
 Tomb, mausoleum;;inan;{dodyi} </i>[do̞´.dji´]<i>;;s
-Tomorrow;;inan;;;s
+Tomorrow;;inan;fo{pe} </i>[fo̞.pɛ̝´]<i>;;s
 Tone (music);;inan;;;s
 Tongue;;an;{e}tse </i>[ɛ̝´.tsɛ̝]<i>;;s
 Tooth;;an;fun{long} </i>[fun.lo̞ŋ´]<i>;;s
@@ -1970,8 +1973,8 @@ Toward, dative marker;;verb;le{ya} </i>[lɛ̝.jä´]<i>;;s
 Tower, pylon;;inan;ma{tse} </i>[mä.tsɛ̝´]<i>;;s
 Town;;inan;{be}we </i>[bɛ̝´.wɛ̝]<i>;;s
 Toy;;inan;tu{pa} </i>[tu.pä´]<i>;;s
-Transcend;;verb;;;s
-Transcribe;;verb;;;s
+Transcend;;verb;jeze{ze} </i>[dʑɛ̝.zɛ̝.zɛ̝´]<i>;;s
+Transcribe;;verb;{je}te </i>[dʑɛ̝´.tɛ̝]<i>;;s
 Transfer;;verb;{eje} </i>[ɛ̝´.dʑɛ̝´]<i>;;s
 Transformation;;inan;se{wa}fo{nu} </i>[sɛ̝.wä´.fo̞.nu´]<i>;;s
 Translate;;verb;e{ye}de{ke} </i>[ɛ̝.jɛ̝´.dɛ̝.kɛ̝´]<i>;;s
@@ -2028,14 +2031,14 @@ Use;;verb;{i}sheke </i>[i´.ɕɛ̝.kɛ̝]<i>;;s
 USP, unique selling point;;inan;;;s
 Usurp, coup de tat;;verb;;;s
 Uterus;;an;;;s
-Vaccinate;;verb;;;s
-Vaccine;;inan;;;s
+Vaccinate;;verb;so{shesan} </i>[so̞.ɕɛ̝´.sän´]<i>;;s
+Vaccine, antidote;;inan;so{she} </i>[so̞.ɕɛ̝´]<i>;;s
 Vagina;;an;;;s
 Valley;;inan;;;s
 Vampire, bloodsucker;;inan;jo{we}si{we}si </i>[dʑo̞.wɛ̝´.si.wɛ̝´.si]<i>;;s
 Vegan leather;;inan;ku{zam}e{yacen} </i>[ku.zäm´.ɛ̝.jä´.tɕɛ̝n´]<i>;;s
 Vehicle;;inan;pe{ce} </i>[pɛ̝.tɕɛ̝´]<i>;;s
-Venison;;inan;;;s
+Venison, deer meat;;inan;{nyete} </i>[njɛ̝´.tɛ̝´]<i>;;s
 Venus;;inan;su{ko} </i>[su.ko̞´]<i>;;s
 Verdant, lush, lavish;;adj;;;s
 Vesta;;an;u{wa}de{je} </i>[u.wä´.dɛ̝.dʑɛ̝´]<i>;;s
@@ -2049,7 +2052,7 @@ Vomit;;verb;wu{te} </i>[wu.tɛ̝´]<i>;;s
 Vroom;BUUN;;buun </i>[bu:n]<i>;;s
 Wait;;verb;ku{de} </i>[ku.dɛ̝´]<i>;;s
 Wake up;;verb;{fye} </i>[fjɛ̝´]<i>;;s
-Wake up;;verb;te{zefang} </i>[tɛ̝.ʑɛ̝´.fäŋ´]<i>;;s
+Wake up;;verb;te{zhefang} </i>[tɛ̝.ʑɛ̝´.fäŋ´]<i>;;s
 Walk;;verb;{e}ze </i>[ɛ̝´.zɛ̝]<i>;;s
 Wall;;inan;zam{ko} </i>[zäm.ko̞´]<i>;;s
 Want, prefer;;verb;la{fa} </i>[lä.fä´]<i>;;s
@@ -2096,11 +2099,11 @@ Wing;;an;de{ge} </i>[dɛ̝.gɛ̝´]<i>;;s
 Winter;;inan;zu </i>[zu]<i>;;s
 Wipe;;verb;da{de} </i>[dä.dɛ̝´]<i>;;s
 Wire;;inan;be{je} </i>[bɛ̝.dʑɛ̝´]<i>;;s
-Witch;;an;;;s
+Witch, wizard;;an;ye{pe}si </i>[jɛ̝.pɛ̝´.si]<i>;;s
 With (instrumental);;;tete </i>[tɛ̝.tɛ̝]<i>;;s
 Withdraw (drug), be nauseous;;verb;;;s
 Without;;;tete{ku} </i>[tɛ̝.tɛ̝.ku´]<i>;;s
-Witness;;verb;;;s
+Witness;;verb;gu{tsa} </i>[gu.tsä´]<i>;;s
 Witty;;adj;mu{mu}ki </i>[mu.mu´.ki]<i>;Borrowed from Jkawi. Negative;s
 Wizzrobe;;an;;;hy
 Wobble, (unstablely) move, warble;;verb;ta{ni} </i>[tä.ni´]<i>;;s
