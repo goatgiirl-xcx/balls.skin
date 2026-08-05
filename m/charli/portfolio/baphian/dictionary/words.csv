@@ -17,7 +17,7 @@ Adma;;an;{a}be </i>[ä´.bɛ̝]<i>;See <a href=https://lot.icosahedr.onlin
 Admit;;inan;gu{ye} </i>[gu.jɛ̝´]<i>;;s
 Advert , advertisment;;inan;po{babe} </i>[po̞.bä´.bɛ̝´]<i>;;s
 Advertise;;verb;po{badiinbe} </i>[po̞.bä´.di:n´.bɛ̝´]<i>;;s
-Advise;;verb;e{yesa} </i>[ɛ̝.jɛ̝´.sä´]<i>;;s
+Advise, guide;;verb;e{yesa} </i>[ɛ̝.jɛ̝´.sä´]<i>;;s
 Aerocuda;KAKKUDA;an;ka{kku}da </i>[kä.k:u´.dä]<i>;;hy
 Africa;AFULIKA;inan;{a}fu{li}ka </i>[ä´.fu.li´.kä]<i>;;real
 African (person);AFULIKA;an;{a}fu{li}kasi </i>[ä´.fu.li´.kä.si]<i>;;real
@@ -463,7 +463,11 @@ Davidrian (Language);TAWIDIJA;inan;ta{wi}di{ya} {di}ye </i>[tä.wi´.di.jä´
 Davidrian (People);TAWIDIJA;an;ta{wi}di{ya} si </i>[tä.wi´.di.jä´ si]<i>;;s
 Day (measurement);;inan;jo{pe} </i>[dʑo̞.pɛ̝´]<i>;;s
 Daydream;;verb;;;s
+<<<<<<< Updated upstream
 Daytime;;an;{fang}ze </i>[fäŋ´.dä]<i>;;s
+=======
+Daytime, day;;an;{fang}ze </i>[fäŋ´.dä]<i>;;s
+>>>>>>> Stashed changes
 Dead;;adj;{bi} </i>[bi´]<i>;;s
 Death;;inan;bi{ye}fo{nu} </i>[bi.jɛ̝´.fo̞.nu´]<i>;;s
 Death bed, where someone is (bed)rotting;;inan;ku{sa} </i>[ku.sä´]<i>;;s
@@ -769,19 +773,18 @@ Garistan;KAZIDAN;inan;ka{zi}dan{sa} </i>[kä.zi´.dän.sä´]<i>;;s
 Garistan (Language);KAZIDAN;inan;ka{zi}dan {di}ye </i>[kä.zi´.dän di´.jɛ̝]<i>;;s
 Garistan (People);KAZIDAN;an;ka{zi}dan si </i>[kä.zi´.dän si]<i>;;s
 Gate;;inan;pe{wa} </i>[pɛ̝.wä´]<i>;;s
-Gemstone;;inan;;;s
+Gemstone;;inan;{izang} </i>[i´.zäŋ´]<i>;;s
 Genetive marker;;;;Used as the genetive marker;s
 Gerudo;;inan;;;hy
 Get closer;;verb;yuya </i>[ju.jä´]<i>;;s
 Ghostwrite;;verb;tu{tseje}si </i>[tu.tsɛ̝´.dʑɛ̝´.si]<i>;;s
 Gibdo;;inan;;;hy
 Gift;;inan;{ba}zhu </i>[bä´.ʑu]<i>;;s
-Gift;;verb;;;s
-Ginseng;;an;;;s
+Ginseng;;an;soko </i>[so̞.ko̞]<i>;;s
 Girl;KALA;an;ka{la} </i>[kä.lä´]<i>;Informal, not usually used for younger females, borrowed from Azkali;s
 Girl;;an;{pa}wala </i>[pä´.wä.lä]<i>;Used for nonkaneeds, borrowed from Loremese;s
 Give;;verb;{ba} </i>[bä´]<i>;;s
-Give (out of kindness), gunnen;;verb;so{ba} </i>[so̞.bä´]<i>;;s
+Give (out of kindness), gift, gunnen;;verb;so{ba} </i>[so̞.bä´]<i>;;s
 Give permission, consent;;verb;wan </i>[wän]<i>;;s
 Glance;;verb;{gu}ko </i>[gu´.ko̞]<i>;;s
 Glass;;inan;li{she}pu{ye} </i>[li.ɕɛ̝´.pu.jɛ̝´]<i>;;s
@@ -789,18 +792,23 @@ Glasses;;inan;no{ze}dyi </i>[no̞.zɛ̝´.dji]<i>;;s
 Gleeok;;an;;;hy
 Gloves;;inan;{kye} </i>[kjɛ̝´.]<i>;;s
 Gloves;;inan;{kyeya} </i>[kjɛ̝´.jä´]<i>;;ahan
+Glue;;inan;lo{pe}fe </i>[lo̞.pɛ̝´.fɛ̝]<i>;;s
 Go (alone);;verb;je{wa} </i>[dʑɛ̝.wä´]<i>;;s
-Go in a rave/club/bar/party already intoxicated, pregaming, predrinking;;verb;;slang;s
+Go in a rave/club/bar/party already intoxicated, pregaming, predrinking;;verb;o{le} </i>[o̞.lɛ̝´]<i>;slang;s
 Go, move;;verb;je{pum} </i>[dʑɛ̝.pum´]<i>;;s
 Goat;;an;be{waa} </i>[bɛ̝.wä:´]<i>;;s
-Gochugang;;inan;;;s
-Gochugaru;;inan;;;s
+Gochugang;;inan;fu{pe}lo </i>[fu.pɛ̝´.lo̞]<i>;;s
+Gochugaru;;inan;fu{bi}tu </i>[fu.bi´.tu]<i>;;s
 God;;an;{a} </i>[ä´]<i>;;ahan
 God;;an;{u}te </i>[u´.tɛ̝]<i>;;s
 God (Saul);;an;{sa}lu </i>[sä´.lu]<i>;;s
 God (Shidama);;an;{tsi}dam </i>[tsi´.däm]<i>;;s
 God (Ukilen), moon;;inan;;;s
+<<<<<<< Updated upstream
 God ray;;inan;;;s
+=======
+God ray;;inan;{u}ke </i>[u´.kɛ̝]<i>;;s
+>>>>>>> Stashed changes
 Godly love;;verb;{u}te{e}pese </i>[u´.tɛ̝.ɛ̝´.pɛ̝.sɛ̝]<i>;Can be used to describe the love between a creator and a creation in any sense except for parents;s
 Godly love;;verb;{u}tepese </i>[u´.tɛ̝.pɛ̝.sɛ̝]<i>;Can be used to describe the love between a creator and a creation in any sense except for parents;ahan
 Gold;;inan;olasotana </i>[o̞.lä.so.tä.nä]<i>;Archaic;s
@@ -812,28 +820,38 @@ Goon;;verb;ye{fe}yeju </i>[jɛ̝.fɛ̝´.jɛ̝.dʑu]<i>;;s
 Goron;GOLON;an;golon{zzo} </i>[go̞.lo̞n.z:o̞´]<i>;;hy
 Gossip;;verb;de{ce} </i>[dɛ̝.tɕɛ̝´]<i>;;s
 Gossip, the word;;inan;ye{we} </i>[jɛ̝.wɛ̝´]<i>;from: speech + blood;ahan
-Grab;;verb;;;s
-Grape;;an;;;s
+Grape;;an;co{yode} </i>[tɕo̞.jo̞´.dɛ̝´]<i>;;s
 Grasseater;;inan;za{sye}sisi </i>[zä.sjɛ̝´.si.si]<i>;Slur for goat Kaneeds;s
 Grave, (small) tomb;;inan;{dosa} </i>[do̞´.sä´]<i>;;s
 Great king, emperor;;an;e{le} </i>[ɛ̝.lɛ̝´]<i>;;s
 Great, awesome;;adj;poo{ta} </i>[po̞:.tä]<i>;;s
 Great, grand, major;;adj;poo{wa} </i>[po̞:.wä´]<i>;;s
 Green;;adj;je{zhu} </i>[dʑɛ̝.ʑu´]<i>;;s
+<<<<<<< Updated upstream
 Green out;;verb;kaye{dade} </i>[kä.jɛ̝.dä´.dɛ̝´]<i>;;s
 Grill;;verb;zho{co} </i>[ʑo̞.tɕo̞´]<i>;;s
 Grotto;;an;;;s
+=======
+Green out;;verb;kaye{dade} </i>[kä.jɛ̝.dä´.dɛ̝´]<i>;;s
+Grill;;verb;zho{co} </i>[ʑo̞.tɕo̞´]<i>;;s
+Grotto;;an;zu{sye} </i>[zu.sjɛ̝´]<i>;;s
+>>>>>>> Stashed changes
 Ground, floor;;inan;za{ti} </i>[zä.ti´]<i>;;s
 Group;;an;te{yum} </i>[tɛ̝.jum´]<i>;;s
-Grove, pocket (of nature), oasis;;an;;;s
+Grove, pocket (of nature), oasis;;an;{syefu} </i>[sjɛ̝´.fu´]<i>;;s
 Grow;;verb;e{len} </i>[ɛ̝.lɛ̝n´]<i>;;s
 Growth;;an;e{len}fo{nu} </i>[ɛ̝.lɛ̝n´.fo̞.nu´]<i>;;s
+<<<<<<< Updated upstream
 Guard;;verb;;;s
 Guardian;;inan;;;s
 Guardian Angel;;inan;;;s
+=======
+Guard, protect;;verb;ko{wo} </i>[ko̞.wo̞´]<i>;;s
+Guardian;;inan;ko{wo}si </i>[ko̞.wo̞´.si]<i>;;s
+Guardian Angel;;inan;ko{wodoba}si </i>[ko̞.wo̞´.do̞´.bä´.si]<i>;;s
+>>>>>>> Stashed changes
 Guess;SEKO;verb;{se}ko </i>[sɛ̝´.ko̞]<i>;Borrowed from Azkali;ahan
 Guess;;verb;su{sse} </i>[su.s:ɛ̝´]<i>;Uncommon;s
-Guide, help;;verb;;;s
 Gunjas creole;;inan;gun{ja} de{di}ye </i>[gun.dʑä´ dɛ̝.di´.jɛ̝]<i>;;s
 Guts;;an;{si}we </i>[si´.wɛ̝]<i>;;s
 Guy, unc;MALA;an;ma{la} </i>[mä.lä´]<i>;Informal, not usually used for younger males, borrowed from Azkali;s
@@ -874,7 +892,7 @@ Hedgehog;;an;dusu{ha} </i>[du.su.hä´]<i>;;s
 Heir;;an;{be}le </i>[bɛ̝´.lɛ̝]<i>;;s
 Hell, underworld;;inan;nu{ya} </i>[nu.jä´]<i>;;s
 Hello, hi;GI;;{gi} </i>[gi´]<i>;;s
-Help;;verb;{sa} </i>[sä´]<i>;;s
+Help, save;;verb;{sa} </i>[sä´]<i>;;s
 Henralia;ENLALIJA;inan;en{la}li{ya}sa </i>[ɛ̝n.lä´.li.jä´.sä]<i>;;s
 Henralian (Language);ENLALIJA;inan;en{la}li{ya} {di}ye </i>[ɛ̝n.lä´.li.jä´ di´.jɛ̝]<i>;;s
 Henralian (People);ENLALIJA;an;en{la}li{ya} si </i>[ɛ̝n.lä´.li.jä´ si]<i>;;s
@@ -892,7 +910,7 @@ Hit;;verb;di </i>[di]<i>;;s
 Hit, smoke;;verb;se{be} </i>[sɛ̝.bɛ̝´]<i>;;s
 Hive;;inan;{capedyi} </i>[tɕä´.pɛ̝´.dji´]<i>;;s
 Hold;;verb;du{te} </i>[du.tɛ̝´]<i>;;s
-Hold;;verb;du{te} </i>[du.tɛ̝´]<i>;;s
+Hold, grab;;verb;du{te} </i>[du.tɛ̝´]<i>;;s
 Hole;;inan;{e}de </i>[ɛ̝´.dɛ̝]<i>;;s
 Holiday, festival;;inan;;;s
 Holy, god-like;;adj;{u}te </i>[u´.tɛ̝]<i>;;s
@@ -1156,7 +1174,7 @@ Manipulate;;verb;;;s
 Manual, by self;;adj;su{to} </i>[su.to̞´]<i>;;s
 Manual, stickshift;;inan;su{su} </i>[su.to̞´]<i>;;s
 Many;;adj;be{nun} </i>[bɛ̝.nun´]<i>;;s
-Marijuana, weed, cannabis, drug (soft);;inan;kaye{da} </i>[kä.jɛ̝.dä´]<i>;Has been genericized in modern baphia to be any soft drug, not including alcohol;s
+Marijuana, weed, cannabis, drug (soft);;inan;kaye{da} </i>[kä.jɛ̝.dä´]<i>;Has been genericized in modern baphia to be any soft drug, not including alcohol;s
 Mark, sign;;inan;;;s
 Mars;;inan;jan{ke}kya </i>[dʑäŋ.kɛ̝´.kjä]<i>;;s
 Marsh;;inan;;;s
@@ -1329,8 +1347,8 @@ Pants, trousers, bottoms;;inan;;;s
 Paper;;inan;zu{pe}we </i>[zu.pɛ̝´.wɛ̝]<i>;;s
 Parallel, side by side;;adj;in{zzo} </i>[in.z:o̞]<i>;;s
 Parent;;an;{te} </i>[tɛ̝´]<i>;;s
-Park;;inan;;;s
 Park;;verb;;;s
+Park, nature reserve;;inan;;;s
 Parking lot;;inan;;;s
 Parliment;;an;ko{wa}zhu </i>[ko̞.wä´.ʑu]<i>;;s
 Part;;inan;{i}zzo </i>[i´.z:o̞]<i>;;s
@@ -1345,6 +1363,11 @@ Passage of time, delimitative, continuative;;inan;{ke}ju </i>[kɛ̝´.dʑu]<i
 Passive marker;;;;;s
 Past;;noun;{po}ta </i>[po̞´.tä]<i>;Borrowed from Jkawi;s
 Past;;inan;se{de}ye </i>[sɛ̝.dɛ̝´.jɛ̝]<i>;;s
+<<<<<<< Updated upstream
+=======
+Paste;;inan;lo{pe} </i>[lo̞.pɛ̝´]<i>;;s
+Paste, glue;;verb;lo{pe} </i>[lo̞.pɛ̝´]<i>;;s
+>>>>>>> Stashed changes
 Patch (software);;inan;ke{tsa} </i>[kɛ̝.tsä´]<i>;;s
 Patch-work;;inan;{tsa}zzozo </i>[tsä´.z:o̞.zo]<i>;;s
 Patch, (small) piece of fabric;;inan;kyooko </i>[kyo̞:.ko̞]<i>;Archaic, mostly used in the north;s
@@ -1609,15 +1632,15 @@ Rumourmonger, chismosa;;an;;;s
 Run;;verb;{e}she </i>[ɛ̝´.ɕɛ̝]<i>;;s
 Runway;;inan;;;s
 Sad;;adj;e{she} </i>[ɛ̝.ɕɛ̝´]<i>;;s
-Salad;;inan;;;s
+Salad;;inan;{sye}u{ya} </i>[sjɛ̝´.u.jä´]<i>;;s
 Salt;;inan;to{ze} </i>[to̞.zɛ̝´]<i>;;s
 Same;;adj;de{su} </i>[dɛ̝.su´]<i>;;s
 Sand;;inan;li{she} </i>[li.ɕɛ̝´]<i>;;s
 Sanguine, blood (formal);;an;jo{we} </i>[dʑo̞.wɛ̝´]<i>;;s
-Satisfy;;verb;;;s
+Satisfy;;verb;de{fa} </i>[dɛ̝.fä´]<i>;;s
 Saturn;;inan;{sang} </i>[säŋ´]<i>;;s
-Saute;;verb;;;s
-Savour;;verb;;;s
+Sauté;;verb;desa{be} </i>[dɛ̝.sä.bɛ̝´]<i>;;s
+Savour;;verb;du{se} </i>[du.sɛ̝´]<i>;;s
 Say, talk, speak;;verb;e{ye}tu </i>[ɛ̝.jɛ̝´.tu]<i>;;s
 Saying, phrase;;inan;e{ye}ye </i>[ɛ̝.jɛ̝´.jɛ̝]<i>;;s
 Scales;;an;{icen} </i>[i´.tɕɛ̝n´]<i>;usually used in reference to fish scales but can be used for all scales;s
@@ -1723,6 +1746,7 @@ Sky;;an;o{do}ku </i>[o̞.do̞´.ku]<i>;;s
 Sleep;;verb;te{zhe} </i>[tɛ̝.ʑɛ̝´]<i>;;s
 Slide;;verb;yeju{se} </i>[jɛ̝.dʑu.sɛ̝´]<i>;;s
 Slide (slang), masturbate;;verb;yeju </i>[jɛ̝.dʑu]<i>;;s
+Slime;;inan;loye{fe} </i>[lo̞.jɛ̝.fɛ̝´]<i>;;s
 Slop (bad);;inan;;;s
 Slop (good);;inan;;;s
 Slow;;adj;nu{se}de </i>[nu.sɛ̝´.dɛ̝]<i>;;s
@@ -1822,14 +1846,16 @@ Step, stairs;;inan;ke{lum} </i>[kɛ̝.lum´]<i>;;s
 Stesa;SODESA;inan;sode{sa}sa </i>[so̞.dɛ̝.sä´.sä]<i>;;s
 Stesan (People);SODESA;an;sode{sa} si </i>[so̞.dɛ̝.sä´ si]<i>;;s
 Stew;;verb;;;s
+Stick (to), attach;;verb;lo{fe} </i>[lo̞.fɛ̝´]<i>;;s
 Stick, rod;;an;de{gu} </i>[dɛ̝.gu´]<i>;;s
 Stickshift, manual;;inan;;;s
+Sticky;;adj;lozhu </i>[lo̞.ʑu]<i>;;s
 Still, not moving;;verb;ki{si} </i>[ki.su´]<i>;;s
 Stimulant;;inan;;;s
 Stimulate;;verb;wetete </i>[wɛ̝.tɛ̝.tɛ̝]<i>;;s
 Stone, rock;;inan;wo{zang} </i>[wo̞.zäŋ´]<i>;;s
-Stoned, high;;adj;kaye{da}yan </i>[kä.jɛ̝.dä´.yän]<i>;;s
-Stoner;;an;kaye{da}si </i>[kä.jɛ̝.dä´.si]<i>;;s
+Stoned, high;;adj;kaye{da}yan </i>[kä.jɛ̝.dä´.yän]<i>;;s
+Stoner;;an;kaye{da}si </i>[kä.jɛ̝.dä´.si]<i>;;s
 Stop, cease;;verb;je{pe} </i>[dʑɛ̝.pɛ̝´]<i>;;s
 Story, legend;;inan;{u}tee{je} </i>[u´.tɛ̝.ɛ̝.jɛ̝´]<i>;;s
 Stove;;inan;de{kyo} </i>[dɛ̝.kjo̞´]<i>;;s
@@ -1900,7 +1926,7 @@ Tame;;verb;ze{juya} </i>[zɛ̝.dʑu´.jä´]<i>;;s
 Tan;;verb;;;s
 Tap;;verb;;;s
 Target;;inan;be{kam} </i>[bɛ̝.käm´]<i>;;s
-Taste;;verb;;;s
+Taste;;verb;du{tse} </i>[du.tsɛ̝´]<i>;;s
 Tattoo;;inan;su{zun} </i>[su.zun´]<i>;;ahan
 Tattoo;;inan;su{zun} </i>[su.zun´]<i>;;s
 Tea;;inan;{we}ja </i>[wɛ̝´.dʑä]<i>;;s
@@ -2043,6 +2069,7 @@ Vagina;;an;;;s
 Valley;;inan;;;s
 Vampire, bloodsucker;;inan;jo{we}si{we}si </i>[dʑo̞.wɛ̝´.si.wɛ̝´.si]<i>;;s
 Vegan leather;;inan;ku{zam}e{yacen} </i>[ku.zäm´.ɛ̝.jä´.tɕɛ̝n´]<i>;;s
+Vegetable;;an;{syede} </i>[sjɛ̝´.dɛ̝´]<i>;;s
 Vehicle;;inan;pe{ce} </i>[pɛ̝.tɕɛ̝´]<i>;;s
 Venison, deer meat;;inan;{nyete} </i>[njɛ̝´.tɛ̝´]<i>;;s
 Venus;;inan;su{ko} </i>[su.ko̞´]<i>;;s
@@ -2144,7 +2171,11 @@ Yellow;;adj;she{zze} </i>[ɕɛ̝.z:ɛ̝´]<i>;;s
 Yesterday;;inan;;;s
 Young;;adj;je{se} </i>[dʑɛ̝.sɛ̝´]<i>;;s
 Young child;;an;pe{le} </i>[pɛ̝.lɛ̝´]<i>;;s
+<<<<<<< Updated upstream
 Youth, young person;;an;;;s
+=======
+Youth, young person;;an;jesi </i>[dʑɛ̝.si]<i>;;s
+>>>>>>> Stashed changes
 Yuri, girls love, lesbianism;;inan;gimuki </i>[gi.mu.ki]<i>;When used as “Lesbianism” it is seen as vulgar and almost offensive;s
 Zombie;;inan;bi{ye}si </i>[bi.jɛ̝´.si]<i>;;s
 Zombie;;inan;deso{yan}nu{e}ze </i>[dɛ̝.so̞.jän´.nu.ɛ̝´.zɛ̝ ]<i>;;religion
