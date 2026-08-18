@@ -1006,7 +1006,7 @@ function calcDateAZK(date) {
 	
 	var day = 0
 	var month = 0
-	var year = epoch.getUTCFullYear() //- 730
+	var year = epoch.getUTCFullYear() + 8816
 	
 	var leap = isLeapAZK(epoch.getUTCFullYear() + 1)
 	

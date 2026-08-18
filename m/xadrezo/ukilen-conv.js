@@ -532,6 +532,7 @@ function bijectiveString(m, k) {
 						"hešem": "",
 						"hešm": "",
 						"hesher": "",
+						"heshr": "",
 						"deiguder": "",
 						"deigudr": "",
 						"mem": "",
