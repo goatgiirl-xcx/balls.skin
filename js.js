@@ -6,7 +6,7 @@ function loadLightMode() {
 		  return
         }
 		
-		if ((location.href.slice(0, 27) == "https://balls.skin/m/charli") && !(localStorage.theme == "dark" || localStorage.theme == "light" || localStorage.theme == "darkc" || localStorage.theme == "lightc" || localStorage.theme == "yorha" || localStorage.theme == "coquette" || localStorage.theme == "cunty" || localStorage.theme == "brat" || localStorage.theme == "holly")) {
+		if ((location.href.slice(0, 27) == "https://balls.skin/m/charli") && !(localStorage.theme == "dark" || localStorage.theme == "light" || localStorage.theme == "darkc" || localStorage.theme == "lightc" || localStorage.theme == "yorha" || localStorage.theme == "coquette" || localStorage.theme == "cunty" || localStorage.theme == "brat" || localStorage.theme == "vampiric")) {
 			theme.href = "/m/charli/css.css"
 			return
 		}
