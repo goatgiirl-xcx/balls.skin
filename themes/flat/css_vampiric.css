@@ -1,8 +1,10 @@
 :root {
   --bg-main: #2c0505;
   --bg:#180303;
+  --notebg:#5c3535;
   --text: #ffffff;
   --button-bg: #1a0b0b;
+  --jalinkhover:#7e1313;
 }
 
 .main {
@@ -25,7 +27,8 @@ body {
   background: var(--bg);
   color:var(--text);
 }
-
+a.jalink, a.jalink:visited {text-decoration:underline; color:var(--text); background-color: rgba(255, 255, 255, 0); padding: 0px}
+a.jalink:hover {color:var(--jalinkhover)}
 a, button, a:visited {
   text-decoration: none;
   background-color: var(--button-bg);
@@ -37,7 +40,20 @@ a, button, a:visited {
   padding-left:7px;
   padding-right:7px;
 }
-
+.pfp {
+	max-height:200px;
+	border-radius: 5px;
+}	
+.note {
+	background-color: var(--notebg);
+	border-radius: 5px;
+	max-width: 100%;
+	text-align: center;
+	padding-left:7px;
+    padding-right:7px;
+	margin-left:20%;
+	margin-right:20%
+}
 a.entry, a.entry:visited {
   text-decoration: none;
   color: var(--text);
@@ -48,3 +64,4 @@ table {
   table-layout: fixed;
   vertical-align: top;
   }
+.grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));}
