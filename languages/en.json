@@ -36,6 +36,7 @@
   "lightmode": "Light mode",
   "darkmode": "Dark mode",
   "bloodmode": "Blood mode",
+  "vampiricmode": "Vampiric mode",
   "pweemode": "Piss mode",
   "hollymode": "Christmas mode",
   "grapemode": "Grape juice mode",
@@ -254,5 +255,9 @@
   "blueberrymode":"Blueberry mode",
   "raspberrymode":"Raspberry mode",
   "blog":"Blog",
-  "clickhere":"Click here"
+  "clickhere":"Click here",
+  "chshrine": "Shrines",
+  "chdiary": "Diary",
+  "chessay": "Essays",
+  "chalbum": "Music recs"
 }

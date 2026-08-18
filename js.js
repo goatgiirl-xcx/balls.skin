@@ -99,7 +99,9 @@ function loadLightMode() {
           theme.href = "/themes/flat/css_blueberry.css"
         } else if (localStorage.theme == "raspberry"){
           theme.href = "/themes/flat/css_raspberry.css"
-        } else {
+        } else if (localStorage.theme == "vampiric"){
+          theme.href = "/themes/flat/css_vampiric.css"
+        else {
 		  theme.href = "/themes/flat/css.css" 
 		}
 }

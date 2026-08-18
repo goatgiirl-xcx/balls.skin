@@ -1,0 +1,50 @@
+:root {
+  --bg-main: #351919;
+  --bg:#0e0404;
+  --text: #f0d3e1;
+  --button-bg: #220a0a;
+}
+
+.main {
+  max-width: 100%;
+  text-align: center;
+  background: var(--bg-main);
+  border-radius: 5px;
+  padding-bottom:5px;
+}
+
+.main2 {
+  max-width: 100%;
+  border-radius: 5px;
+  padding-bottom:5px;
+}
+
+body {
+  margin-left:10%;
+  margin-right:10%;
+  background: var(--bg);
+  color:var(--text);
+}
+
+a, button, a:visited {
+  text-decoration: none;
+  background-color: var(--button-bg);
+  color: var(--text);
+  border-radius: 5px;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-bottom:15px;
+  padding-left:7px;
+  padding-right:7px;
+}
+
+a.entry, a.entry:visited {
+  text-decoration: none;
+  color: var(--text);
+}
+td {vertical-align: top;}
+table {
+  width: 100%;
+  table-layout: fixed;
+  vertical-align: top;
+  }
