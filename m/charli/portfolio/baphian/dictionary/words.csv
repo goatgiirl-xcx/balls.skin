@@ -19,6 +19,7 @@ Advert , advertisment;;inan;po{babe} </i>[po̞.bä´.bɛ̝´]<i>;;s
 Advertise;;verb;po{badiinbe} </i>[po̞.bä´.di:n´.bɛ̝´]<i>;;s
 Advise, guide;;verb;e{yesa} </i>[ɛ̝.jɛ̝´.sä´]<i>;;s
 Aerocuda;KAKKUDA;an;ka{kku}da </i>[kä.k:u´.dä]<i>;;hy
+Afraid;;adj;{ke}ye </i>[kɛ̝´.jɛ̝]<i>;;s
 Africa;AFULIKA;inan;{a}fu{li}ka </i>[ä´.fu.li´.kä]<i>;;real
 African (person);AFULIKA;an;{a}fu{li}kasi </i>[ä´.fu.li´.kä.si]<i>;;real
 After;;adj;e{pa} </i>[e.pä]<i>;POSTPOSITION: Used to mark past tense in literary contexts<br> ADVERB: After<br> Borrowed from Loremese;religion
@@ -164,6 +165,7 @@ Beef (meat);;inan;se{te} </i>[sɛ̝.tɛ̝´]<i>;;s
 Beetle;;an;um{he} </i>[um.hɛ̝´]<i>;;s
 Before;;adj;ka{le} </i>[kä.lɛ̝´]<i>;;s
 Befriend, become friends;;verb;{sho}sise </i>[ɕo´.si.sɛ̝]<i>;;s
+Beg, plead;;verb;jo{zhe} </i>[dʑo̞.ʑɛ̝´]<i>;;s
 Being (Non humanoid);;an;e{ya}wan </i>[ɛ̝.jä´.wän]<i>;;s
 Being, person;;an;si </i>[si]<i>;Can be used for specific people but uncommon;s
 Believe;;verb;{i}dze </i>[i´.dzɛ̝]<i>;;s
@@ -355,6 +357,7 @@ Collar;;inan;{e}u{de} </i>[ɛ̝´.u.dɛ̝´]<i>;;s
 Collect;;verb;du{nun} </i>[du.nun´]<i>;;s
 Colonize;;verb;ko{be} </i>[ko̞.bɛ̝´]<i>;;s
 Colour / color;;inan;tu{zong} </i>[tu.zo̞ŋ´]<i>;;s
+Columbine (flower);;an;se{su}we </i>[sɛ̝.su´.wɛ̝]<i>;Borrowed from Athi;s
 Combine freely, mix and match;;verb;seu{ya} </i>[sɛ̝.u.jä´]<i>;;s
 Come, head towards;;verb;yu </i>[ju]<i>;;s
 Commit suicide;;verb;{zu}je{beton} </i>[zu´.dʑɛ̝.bɛ̝´.to̞n´]<i>;;s
@@ -670,6 +673,7 @@ Fight;;verb;ko{tsa} </i>[ko̞.tsä´]<i>;;s
 Filth;;inan;di{yo} </i>[di.jo̞´]<i>;;s
 Filthy;;adj;di{yo} </i>[di.jo̞´]<i>;;s
 Find;;verb;{tsi}he </i>[tsi´.hɛ̝]<i>;;s
+Finger;;an;se{ta} </i>[sɛ̝.tä´]<i>;;s
 Finger;;an;se{ta}we </i>[sɛ̝.tä´.wɛ̝]<i>;;s
 Fingernail;;inan;zon{to} </i>[zo̞n.to̞´]<i>;;s
 Finish, end, over;;verb;{ke} </i>[kɛ̝´]<i>;;s
@@ -730,6 +734,9 @@ Fragment;;inan;;;s
 Fragment, shatter;;verb;be{zhu} </i>[bɛ̝.ʑu´]<i>;;s
 Fragrence;;an;{shoshe} </i>[ɕo´.ɕɛ̝´]<i>;;s
 Fragrent;;adj;{shoshe} </i>[ɕo´.ɕɛ̝´]<i>;;s
+Frame (building);;inan;;;s
+Frame (picture);;inan;;;s
+Framework;;inan;gu{co} </i>[gu.tɕo̞´]<i>;;s
 France;KANADA;inan;u{ma}ka{na}da </i>[u.mä´.kä.nä´.dä]<i>;;real
 Free;;adj;u{ya} </i>[u.jä´]<i>;;s
 Free (of charge);;adj;po{sangku} </i>[po̞.säŋ´.ku´]<i>;;s
@@ -780,7 +787,7 @@ Ginseng;;an;soko </i>[so̞.ko̞]<i>;;s
 Girl;KALA;an;ka{la} </i>[kä.lä´]<i>;Informal, not usually used for younger females, borrowed from Azkali;s
 Girl;;an;{pa}wala </i>[pä´.wä.lä]<i>;Used for nonkaneeds, borrowed from Loremese;s
 Give;;verb;{ba} </i>[bä´]<i>;;s
-Give (out of kindness), gift, gunnen;;verb;so{ba} </i>[so̞.bä´]<i>;;s
+Give (out of kindness), gift, gunnen, donate;;verb;so{ba} </i>[so̞.bä´]<i>;;s
 Give permission, consent;;verb;wan </i>[wän]<i>;;s
 Glance;;verb;{gu}ko </i>[gu´.ko̞]<i>;;s
 Glass;;inan;li{she}pu{ye} </i>[li.ɕɛ̝´.pu.jɛ̝´]<i>;;s
@@ -872,7 +879,7 @@ Hedgehog;;an;dusu{ha} </i>[du.su.hä´]<i>;;s
 Heir;;an;{be}le </i>[bɛ̝´.lɛ̝]<i>;;s
 Hell, underworld;;inan;nu{ya} </i>[nu.jä´]<i>;;s
 Hello, hi;GI;;{gi} </i>[gi´]<i>;;s
-Help, save;;verb;{sa} </i>[sä´]<i>;;s
+Help, save, support;;verb;{sa} </i>[sä´]<i>;;s
 Henralia;ENLALIJA;inan;en{la}li{ya}sa </i>[ɛ̝n.lä´.li.jä´.sä]<i>;;s
 Henralian (Language);ENLALIJA;inan;en{la}li{ya} {di}ye </i>[ɛ̝n.lä´.li.jä´ di´.jɛ̝]<i>;;s
 Henralian (People);ENLALIJA;an;en{la}li{ya} si </i>[ɛ̝n.lä´.li.jä´ si]<i>;;s
@@ -973,6 +980,7 @@ Intuit;;verb;;;s
 Investigate;;verb;;;s
 Invite;;verb;{bakam} </i>[bä´.käm´ ]<i>;;s
 Ion;;inan;;;s
+Iris;;an;ha{o}we </i>[hä.o̞´.wɛ̝]<i>;Borrowed from Athi;s
 Iron;;inan;do{mu} </i>[do̞.mu´]<i>;;s
 Island;;inan;zam{gu} </i>[zäm.gu´]<i>;;s
 Issue;;inan;;;s
@@ -1035,6 +1043,7 @@ Kiss;;verb;pe{ze} </i>[pɛ̝.zɛ̝´]<i>;;s
 Kitchen;;inan;;;s
 Kjaxono (Language);GAONO;inan;{ga}ono {di}ye </i>[gä´.o̞.no̞ di´.jɛ̝]<i>;;s
 Knee;;an;yu{pe} </i>[ju.pɛ̝´]<i>;;s
+Kneel;;verb;yu{da} </i>[ju.dä´]<i>;;s
 Knife;;inan;{ki}kam </i>[ki´.käm]<i>;;s
 Knight;;an;{ke}ka </i>[kɛ̝´.kä]<i>;;s
 Knight;;an;{ling}ke </i>[liŋ´.kɛ̝]<i>;;ahan
@@ -1044,7 +1053,7 @@ Knock;;verb;ta{e} </i>[tä.ɛ̝´]<i>;;s
 Know;;verb;{ye}yim </i>[jɛ̝´.jim]<i>;;s
 Lace;;inan;;;s
 Lack, not have;;verb;do{te} </i>[do̞.tɛ̝´]<i>;;s
-Lake;;inan;nu </i>[nu]<i>;;s
+Lake, pool;;inan;nu </i>[nu]<i>;;s
 Land;;inan;zam{fong} </i>[zäm.fo̞ŋ´]<i>;;s
 Language;;inan;{di}ye </i>[di´.jɛ̝]<i>;;s
 Languish, grow weak;;verb;;;s
@@ -1151,6 +1160,7 @@ Mandrake;;inan;ko(be) </i>[ko̞.bɛ̝´]<i>;;s
 Mania;GUŚUFJEŽU;inan;gu{shufye}zhu </i>[gu.ɕɛ̝´.fjɛ̝´.ʑu]<i>;;s
 Mania;;an;gu{shufye}zhu </i>[gu.ɕɛ̝´.fjɛ̝´.ʑu]<i>;;ahan
 Manipulate;;verb;;;s
+Mantra, incantation;;inan;;;s
 Manual, by self;;adj;su{to} </i>[su.to̞´]<i>;;s
 Manual, stickshift;;inan;su{su} </i>[su.to̞´]<i>;;s
 Many;;adj;be{nun} </i>[bɛ̝.nun´]<i>;;s
@@ -1450,6 +1460,8 @@ Power;;inan;kaa </i>[kä:]<i>;Treveist;s
 Power;;an;o{wa}ke </i>[o̞.wä´.kɛ̝]<i>;;s
 Power;;an;o{we} </i>[o̞.wɛ̝´]<i>;;s
 Praise;;verb;sotue </i>[so̞.tu.ɛ̝.]<i>;;s
+Pray;;verb;;;s
+Prayer;;inan;u{zhe} </i>[u´.ʑɛ̝´]<i>;;s
 Predict;;verb;;;s
 Prepare;;verb;{basye} </i>[bä´.sjɛ̝´]<i>;;s
 President;;an;;Only used for democratically elected presidents;s
@@ -1527,6 +1539,7 @@ Reason, motive;;inan;{ba}tso </i>[bä´.tso]<i>;;s
 Receive, get;;verb;si{de}du </i>[si.dɛ̝´.du]<i>;;s
 Recent;;adj;jo{ge} </i>[dʑo̞.gɛ̝´]<i>;;s
 Recieve;;verb;si{de} </i>[si.dɛ̝´]<i>;;s
+Recite (prayer, mantra);;verb;ete </i>[ɛ̝.tɛ̝]<i>;;s
 Record;;verb;{sha}ke </i>[ɕä´.kɛ̝]<i>;;s
 Recording;;inan;{sha}ke </i>[ɕä´.kɛ̝]<i>;;s
 Recover;;verb;;;s
@@ -1551,6 +1564,7 @@ Remove;;verb;e{ke} </i>[ɛ̝.kɛ̝´]<i>;;s
 Renew;;verb;;;s
 Rent;;verb;;;s
 Repair;;verb;;;s
+Repeat (a prayer, mantra);;verb;etezo </i>[ɛ̝.tɛ̝.zo̞]<i>;;s
 Report;;verb;yu{ba} </i>[ju.bä´]<i>;;s
 Represent (legally);;verb;;Can be used to generally mean representing something;s
 Represent (politically);;verb;;;s
@@ -1589,7 +1603,7 @@ Rook (Chess);;inan;di{li}zo </i>[di.li´.zo̞]<i>;Borrowed from Loremese;s
 Room;;inan;he{de} </i>[hɛ̝.dɛ̝´]<i>;;s
 Root;;an;ko </i>[ko̞]<i>;;s
 Rope;;inan;la{ye} </i>[lä.jɛ̝´]<i>;;s
-Rose;;an;;;s
+Rose;;an;nu{me}we </i>[nu.mɛ̝´.wɛ̝]<i>;Borrowed from Athi;s
 Rosiastan;LOSIJA;inan;lo{si}ya{sa}sa </i>[lo̞.si´.jä.sä´.sä]<i>;;s
 Rosiastani (Language);LOSIJA;inan;lo{si}ya{sa} {di}ye </i>[lo̞.si´.jä.sä´ di´.jɛ̝]<i>;;s
 Rosiastani (People);LOSIJA;an;lo{si}ya{sa} si </i>[lo̞.si´.jä.sä´ si]<i>;;s
@@ -1688,6 +1702,7 @@ Shock;;verb;;;s
 Shoot (a gun);;verb;donge </i>[do̞n.gɛ̝]<i>;;s
 Shop;;verb;si{to} </i>[si.to´]<i>;;ahan
 Shop;;inan;si{tokam} </i>[si.to´.käm´]<i>;;s
+Shore;;inan;ze{fong} </i>[zɛ̝.fo̞ŋ´]<i>;;s
 Short;;adj;{sa}te </i>[sä´.tɛ̝]<i>;;s
 Should, ought to;;verb;;;s
 Show, present;;verb;ko{be}ze </i>[ko̞.bɛ̝´.zɛ̝]<i>;;s
@@ -1715,6 +1730,7 @@ Sit;;verb;{pwi}she </i>[pwi´.ɕɛ̝]<i>;;s
 Situation, deal, cause, circumstance;;inan;sa{se} </i>[sä.sɛ̝´]<i>;;s
 Six;6;;nu </i>[nu]<i>;;s
 Size;;inan;;;s
+Skeleton;;inan;mon{co} </i>[mo̞n.tɕo̞´]<i>;;s
 Skill;;inan;mu{se} </i>[mu.sɛ̝´]<i>;;s
 Skin;;an;su{cen} </i>[su.tɕɛ̝n´]<i>;;s
 Skulltula;;an;;;hy
@@ -1876,6 +1892,7 @@ Sunterian (Language;;inan;a{ke}ma {di}ye </i>[ä.kɛ̝´.mä di´.j�
 Sunterian (People);;an;a{ke}ma si </i>[ä.kɛ̝´.mä si]<i>;;s
 Superconduct;;inan;;;s
 Superconductor;;inan;;;s
+Support (movement, standing), hold (upwards);;verb;{co} </i>[tɕo̞´ ]<i>;;s
 Support, rack;;inan;{co} </i>[tɕo̞´ ]<i>;;s
 Sure, certain;;adj;;;s
 Surgery;;inan;{kye}te </i>[kjɛ̝´.tɛ̝]<i>;;s
@@ -1895,36 +1912,41 @@ System (technology);;inan;;;s
 System, structure of doing something;;inan;;;s
 Table;;inan;{an}ka </i>[än´.kä]<i>;Unknown origin;s
 Tail;;an;ko{se} </i>[ko̞.sɛ̝´]<i>;;s
-Tailor;;verb;;;s
+Tailor;;verb;u{be} </i>[u.bɛ̝´]<i>;;s
+Tailor;;an;u{be}si </i>[u.bɛ̝´.si]<i>;;s
 Take;;verb;e{ke}te </i>[ɛ̝.kɛ̝´.tɛ̝]<i>;;s
 Talus;;inan;;;hy
 Tame;;adj;ze{juya} </i>[zɛ̝.dʑu´.jä´]<i>;;s
 Tame;;verb;ze{juya} </i>[zɛ̝.dʑu´.jä´]<i>;;s
-Tan;;verb;;;s
-Tap;;verb;;;s
+Tan;;verb;ze{cen} </i>[zɛ̝.tɕɛ̝n´]<i>;;s
+Tan;;adj;ze{cen} </i>[zɛ̝.tɕɛ̝n´]<i>;;s
 Target;;inan;be{kam} </i>[bɛ̝.käm´]<i>;;s
 Taste;;verb;du{tse} </i>[du.tsɛ̝´]<i>;;s
 Tattoo;;inan;su{zun} </i>[su.zun´]<i>;;ahan
 Tattoo;;inan;su{zun} </i>[su.zun´]<i>;;s
-Tea;;inan;{we}ja </i>[wɛ̝´.dʑä]<i>;;s
-Tea (formal);;inan;wa{je} </i>[wä.dʑɛ̝´]<i>;;s
-Tea leaf;;an;{wekya} </i>[wɛ̝´.kjä´]<i>;;s
-Tea puck;;inan;{we}yo </i>[wɛ̝´.jo̞]<i>;;s
+Tea;;inan;we{mi} </i>[wɛ̝.mi´]<i>;Borrowed from Athi;s
+Tea (black);;inan;weye </i>[wɛ̝.jɛ̝]<i>;Borrowed from Athi;s
+Tea (formal);;inan;wa{mi} </i>[wä.mi´]<i>;Ultimately from Athi;s
+Tea (green);;inan;we{zhu} </i>[wɛ̝.ʑu´]<i>;Ultimately from Athi;s
+Tea (herbal);;inan;wewe </i>[wɛ̝.wɛ̝]<i>;Ultimately from Athi;s
+Tea (white);;inan;we{i} </i>[wɛ̝.i´]<i>;Ultimately from Athi;s
+Tea leaf;;an;{wekya} </i>[wɛ̝´.kjä´]<i>;Ultimately from Athi;s
+Tea puck;;inan;{we}yo </i>[wɛ̝´.jo̞]<i>;Ultimately from Athi;s
 Teach;;verb;{ba}jim </i>[bä´.jim]<i>;;s
 Teacher;;an;{ba}jimsi </i>[bä´.jim.si]<i>;;s
 Team, group;;an;;;s
 Tear(drop)s, the act of crying;;an;ta{ge} </i>[tä.gɛ̝´]<i>;;s
 Teardrop;;inan;ta{pe} </i>[tä.pɛ̝´]<i>;specifically for teardrops and not the act of crying itself;s
 Tectonic;;inan;;;s
-Tell story;;verb;;;s
+Tell story;;verb;e{u}tee{ye} </i>[ɛ̝.u´.tɛ̝.ɛ̝.jɛ̝´]<i>;;s
 Tell truths;;verb;esan{ce} </i>[ɛ̝.sän.tɕɛ̝´]<i>;;s
 Tell, say (to);;verb;e{yeca} </i>[ɛ̝.jɛ̝´.tɕä´]<i>;;s
-Temperature, heat (general);;inan;;;s
+Temperature, heat (general);;inan;ju{te} </i>[dʑu.tɛ̝´]<i>;;s
 Temple gateway;;inan;de{yewa} </i>[dɛ̝.jɛ̝´.wä´]<i>;;s
 Temple, shrine;;inan;de{ye}yan </i>[dɛ̝.jɛ̝´.jän]<i>;;s
 Ten;14;;na{zhe} </i>[nä.ʑɛ̝´]<i>;Seen in a more slang sense, saying “in inje” is more formal;s
 Tendon;;an;{se} </i>[sɛ̝´]<i>;;s
-Terrible;;adj;;;s
+Terrible;;adj;poye </i>[po̞.jɛ̝]<i>;;s
 Terrorism;;inan;po{tsa} </i>[po̞.tsä´]<i>;;s
 Terrorist;;an;po{tsa}si </i>[po̞.tsä´.si]<i>;;s
 Test;;verb;zedun{te} </i>[zɛ̝.dun.tɛ̝´]<i>;;s
@@ -1949,21 +1971,21 @@ Thing;ŽI;inan;{zhi} </i>[ʑi´]<i>;More formal. Borrowed from Loremese;s
 Thing, object;;inan;{diin} </i>[di:n´]<i>;;s
 Think;;verb;pu{lu} </i>[pu.lu´]<i>;;s
 Three;3;;ju </i>[dʑu]<i>;;s
-Throne;;inan;;;s
+Throne;;inan;lun{lum} </i>[lun.lum´]<i>;;s
 Throw;;verb;don{she} </i>[do̞n.ɕɛ̝´]<i>;;s
 Throw out (usually rubbish);;verb;don{ze} </i>[do̞n.zɛ̝´]<i>;;s
 Throw out of a window, defenestrate;;verb;donli{she}de </i>[do̞n.li.ɕɛ̝´.dɛ̝]<i>;;s
-Thumb;;an;;;s
-Tide;;an;;;s
-Tide pool;;inan;;;s
+Thumb;;an;{pa}se </i>[pä´.sɛ̝]<i>;;s
+Tide;;an;ze{yu} </i>[zɛ̝.ju´]<i>;;s
+Tide pool;;an;zenu </i>[zɛ̝.nu]<i>;;s
 Tie (up);;verb;mo{te} </i>[mo̞.tɛ̝´]<i>;;s
 Tiger;;an;sheting{li} </i>[ɕɛ̝.tiŋ.li´]<i>;;s
 Tight;;adj;;;s
 Time (concept);;inan;e{ke} </i>[ɛ̝.kɛ̝´]<i>;The concept of time itself, not a specific instance;s
-Tip;;verb;;;s
-Tisane;;inan;;;s
+Tip, give gratuity;;verb;{basang} </i>[bä´.säŋ´]<i>;;s
+Tisane;;inan;she{kyo}ja </i>[ɕɛ̝.kjo̞´.dʑä]<i>;;s
 Titan, giant;;an;de{za} </i>[dɛ̝.zä´]<i>;;s
-Tithe;;verb;;;s
+Tithe, donate (to temple etc.);;verb;so{ba}yan </i>[so̞.bä´.jän]<i>;;s
 Tobacco ;;an;za{de} </i>[zä.dɛ̝´]<i>;;s
 Today;;inan;yonu </i>[jo̞.nu]<i>;;s
 Together, union;;inan;insa{se}zhu </i>[in.sä.sɛ̝´.ʑu]<i>;For anything not a country;s
@@ -1976,7 +1998,7 @@ Tooth;;an;fun{long} </i>[fun.lo̞ŋ´]<i>;;s
 Top (sexual);;an;fosi </i>[fo̞.si]<i>;;s
 Topic;;inan;e{ye}ju{kang} </i>[ɛ̝.jɛ̝´.dʑu.käŋ´]<i>;;s
 Torture;;verb;bezhu </i>[do̞.ʑu]<i>;;s
-Touch;;verb;{ju} </i>[dʑu´]<i>;;s
+Touch, tap;;verb;{ju} </i>[dʑu´]<i>;;s
 Tova;DOWA;inan;do{wa} {di}ye </i>[do̞.wä´ di´.jɛ̝]<i>;;s
 Toward, dative marker;;verb;le{ya} </i>[lɛ̝.jä´]<i>;;s
 Tower, pylon;;inan;ma{tse} </i>[mä.tsɛ̝´]<i>;;s
@@ -1995,7 +2017,7 @@ Traulian (People);LALULE;an;la{lu}le si </i>[lä.lu´.lɛ̝ si]<i>;;s
 Travel;;verb;je{tsa} </i>[dʑɛ̝.tsä´]<i>;;s
 Travel (far), journey;;verb;je{tsapo} </i>[dʑɛ̝.tsä´.po̞´]<i>;;s
 Tree;;an;{i}tsa </i>[i´.tsä]<i>;;s
-Tree sap;;an;;;s
+Tree sap;;an;{iwe} </i>[i´.wɛ̝´]<i>;;s
 Trench;;inan;po{ttu}ko </i>[po̞.t:u´.ko̞]<i>;;s
 Triangle;;inan;juzzo </i>[dʑu.z:o̞]<i>;;s
 Trim;;verb;;;s
