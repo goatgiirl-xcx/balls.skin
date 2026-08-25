@@ -116,8 +116,8 @@ function latinPronouncer() {
 		string = string.replace(/\.([^.]*)i(m)$/g, ".$1ɪ$2");
 		string = string.replace(/\.([^.]*)e([mn])$/g, ".$1ə$2");
 		
-		string = string.replace(/(\´)([^.]*)\.([^.]*)([aeiouɒəâêîô]*)([^.]*)\.([^.]*)ews$/g, "$2.$3$4$1$5.$6ê.əs");
-		string = string.replace(/\.([^.]*)ews$/g, "\.$1ê.əs");
+		string = string.replace(/(\´)([^.]*)\.([^.]*)([aeiouɒəâêîô]*)([^.]*)\.([^.]*)ews$/g, "$2.$3$4$1$5.$6ĭəs");
+		string = string.replace(/\.([^.]*)ews$/g, "\.$1ĭəs");
 		string = string.replace(/\.([^.]*)ewm$/g, ".$1ê.əm");
 		string = massReplace(string, { "ew" : "u" , "e([\´\`])w" : "u$1" });
 		string = string.replace(/^su\.b/g, "sə.b"); //sub-
@@ -214,12 +214,15 @@ function latinPronouncer() {
 		string = string.replace(/\.tj/g, ".ʧ");
 		string = string.replace(/\.zj/g, ".ʒ");
 		
-		string = massReplace(string, { "([ʃʒʧʤ])j([uᵿə])" : "$1$2" });
+		string = massReplace(string, { "([ʃʒʧʤwr])j([uᵿə])" : "$1$2" });
 		string = string.replace(/\.([^.]*)([\´\`])/g, ".$2$1");
 		string = string.replace(/^([^.]*)([\´\`])/g, "$2$1");
 		string = string.replace(/^\´([^.]*)$/g, "$1");
 		string = massReplace(string, { "´" : "ˈ" , "`" : "ˌ" });
 		string = massReplace(string, { "ʧ" : "t͡ʃ" , "ʤ" : "d͡ʒ" , "x" : "k"});
+		
+		string = string.replace(/n([\.]*)([kg])/g, "ŋ$1$2");
+		
 		latinText[i] = string;
 	}
 	
@@ -246,7 +249,7 @@ function latinPronouncer() {
 		string = massReplace(string, { "æ" : "a", "ɛ" : "e" , "ɪ" : "i" , "ᵻ" : "i" , "ɒ" : "o" , "ɔː" : "aw" , "ʌ" : "u" , "ᵿ" : "uu", "ʊ" : "uu" });
 		string = massReplace(string, { "j" : "y" });
 		string = string.replace(/t͡ʃ\./g, "tch."); 
-		string = massReplace(string, { "t͡ʃ" : "ch" , "d͡ʒ" : "j" , "ʃ" : "sh" , "ʒ" : "zh" , "θ" : "th" });		
+		string = massReplace(string, { "t͡ʃ" : "ch" , "d͡ʒ" : "j" , "ʃ" : "sh" , "ʒ" : "zh" , "θ" : "th", "ŋ" : "ng", "ngk" : "nk", "ngg" : "ng" });		
 		
 		string = string.split(/\./);
 		for (let j = 0; j < string.length; j++) {
