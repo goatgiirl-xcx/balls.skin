@@ -202,7 +202,7 @@ function latinPronouncer() {
 		string = string.replace(/oʊ([\´\`]?)(\.?)r/g, "ɔə$1r$2");
 		string = string.replace(/juː([\´\`]?)(\.?)r/g, "jʊə$1r$2");
 		string = string.replace(/[əᵻɪᵿ](\.?)r/g, "ər$1");
-		string = string.replace(/ʌ(\.?)r/g, "ɜːr$1");
+		string = string.replace(/ʌ([\´\`]?)(\.?)r/g, "ɜː$1r$2");
 		string = massReplace(string, { "ĭj" : "iː.j" , "ĭi" : "i"});
 		
 		string = massReplace(string, { "([ʃʒʧʤ])ĭ" : "$1" });
