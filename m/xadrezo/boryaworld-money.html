@@ -29,6 +29,9 @@
 <tr><td><input type="text" name="valueMAG" oninput="convertMAG();" value="0/0/0"></td><td> Machellian galdən, arcəndən and brindən</td></tr><!--gold, silver and brass</td></tr>-->
 <tr><td><input type="text" name="valueRAI" oninput="convertRAI();" value="0.00"></td><td> Ratharian iksisuthutse</td></tr>
 <tr><td><input type="text" name="valueDSO" oninput="convertDSO();" value="0/0"></td><td> Daquḍrana soḍuẓ and aṣew</td></tr>
+<tr><td><input type="text" name="valueKIV" oninput="convertKIV();" value="0/0"></td><td> Kisesej veñw and dasin</td></tr>
+<tr><td><input type="text" name="valueXRL" oninput="convertXRL();" value="0/0"></td><td> Xrwli lagon and dasin</td></tr>
+<tr><td><input type="text" name="valueAGK" oninput="convertAGK();" value="0.00"></td><td> Aghiren knojemodh</td></tr>
 </tbody></table>
 </form>
 </section>
@@ -111,6 +114,18 @@ function convertEUR(except) {
 		}
 	
 	if (except != "RAI") {document.forms.baseform.valueRAI.value = roundProp(document.forms.baseform.valueEUR.value / 0.0393 * exchange[document.forms.baseform.currency.value]["inverseRate"], 2)}
+	
+	if (except != "KIV") {
+		if (isNaN(document.forms.baseform.valueEUR.value)) {document.forms.baseform.valueKIV.value = NaN}
+		else {document.forms.baseform.valueKIV.value = (roundProp(document.forms.baseform.valueEUR.value * ((3*256 + 125)/100) * exchange[document.forms.baseform.currency.value]["inverseRate"], 0) < 0 ? "-" : "") + Math.floor(Math.abs(roundProp(document.forms.baseform.valueEUR.value * ((3*256 + 125)/100) * exchange[document.forms.baseform.currency.value]["inverseRate"], 0)) / 256) + "/" + Math.abs(roundProp(document.forms.baseform.valueEUR.value * ((3*256 + 125)/100) * exchange[document.forms.baseform.currency.value]["inverseRate"], 0) % 256)}
+		}
+	
+	if (except != "XRL") {
+		if (isNaN(document.forms.baseform.valueEUR.value)) {document.forms.baseform.valueXRL.value = NaN}
+		else {document.forms.baseform.valueXRL.value = (roundProp(document.forms.baseform.valueEUR.value * ((381*256 + 185)/100) * exchange[document.forms.baseform.currency.value]["inverseRate"], 0) < 0 ? "-" : "") + Math.floor(Math.abs(roundProp(document.forms.baseform.valueEUR.value * ((381*256 + 185)/100) * exchange[document.forms.baseform.currency.value]["inverseRate"], 0)) / 256) + "/" + Math.abs(roundProp(document.forms.baseform.valueEUR.value * ((381*256 + 185)/100) * exchange[document.forms.baseform.currency.value]["inverseRate"], 0) % 256)}
+		}
+	
+	if (except != "AGK") {document.forms.baseform.valueAGK.value = roundProp(document.forms.baseform.valueEUR.value / (1 / 6.7384) * exchange[document.forms.baseform.currency.value]["inverseRate"], 2)}
 }
 function convertLOP() {
 	document.forms.baseform.valueEUR.value = document.forms.baseform.valueLOP.value / 200 * exchange[document.forms.baseform.currency.value]["rate"]
@@ -242,6 +257,35 @@ function convertRAI() {
 	document.forms.baseform.valueEUR.value = document.forms.baseform.valueRAI.value * 0.0393 * exchange[document.forms.baseform.currency.value]["rate"]
 	
 	convertEUR("RAI")
+	document.forms.baseform.valueEUR.value = roundProp(document.forms.baseform.valueEUR.value, EURround)
+}
+
+function convertKIV() {
+	var bouns = document.forms.baseform.valueKIV.value.split("/"); bouns[0] = parseInt(bouns[0]); bouns[1] = parseInt(bouns[1])
+	var sign; if (Object.is(bouns[0], -0)) {sign = -1} else if (Object.is(bouns[0], 0)) {sign = 1} else {sign = Math.sign(bouns[0])}
+	
+	var bounsVal = sign * (Math.abs(bouns[0] * 256) + Math.abs(bouns[1]))
+	document.forms.baseform.valueEUR.value = bounsVal / ((3*256 + 125)/100) * exchange[document.forms.baseform.currency.value]["rate"]
+	
+	convertEUR("KIV")
+	document.forms.baseform.valueEUR.value = roundProp(document.forms.baseform.valueEUR.value, EURround)
+}
+
+function convertXRL() {
+	var bouns = document.forms.baseform.valueXRL.value.split("/"); bouns[0] = parseInt(bouns[0]); bouns[1] = parseInt(bouns[1])
+	var sign; if (Object.is(bouns[0], -0)) {sign = -1} else if (Object.is(bouns[0], 0)) {sign = 1} else {sign = Math.sign(bouns[0])}
+	
+	var bounsVal = sign * (Math.abs(bouns[0] * 256) + Math.abs(bouns[1]))
+	document.forms.baseform.valueEUR.value = bounsVal / ((381*256 + 185)/100) * exchange[document.forms.baseform.currency.value]["rate"]
+	
+	convertEUR("XRL")
+	document.forms.baseform.valueEUR.value = roundProp(document.forms.baseform.valueEUR.value, EURround)
+}
+
+function convertAGK() {
+	document.forms.baseform.valueEUR.value = document.forms.baseform.valueAGK.value * (1 / 6.7384) * exchange[document.forms.baseform.currency.value]["rate"]
+	
+	convertEUR("AGK")
 	document.forms.baseform.valueEUR.value = roundProp(document.forms.baseform.valueEUR.value, EURround)
 }
 
