@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charli's Diary</title>
+    <link href="" rel="stylesheet" type="text/css" media="screen" id="font-link">
+    <link href="" rel="stylesheet" type="text/css" media="screen" id="theme-link">
+	<link rel="icon" type="image/x-icon" href="">
+  </head>
+  <body>
+    <div class="main2" style="text-align: left;"
+		<h3 id="baphdaily" class="lang">Charli's Diary<h3>
+		<div name="linklist" id="linklist">
+	</div>
+	
+	
+	<script src="/m/charli/baphdaily/papaparse.min.js"></script>
+	<script>
+		//PAPA Parser (https://www.papaparse.com/) used to convert TEXT to CSV
+		function readFile() {  
+		  var reader = new FileReader();
+
+		  fetch("entries.csv")
+		  .then(res => res.blob())
+		  .then(blob => {
+			var content = reader.readAsText(blob);
+		});
+		
+		  reader.onload = function () {
+			var data = Papa.parse(reader.result, { header: false });
+
+			if (data.errors.length) {
+			  console.error(data.errors)
+			} else {
+			  console.log("Loaded links")
+			  dictData = Object.entries(data)[0][1]
+
+			  var totalEntries = ""
+			  
+			  for (var i = 0; i < dictData.length; i++) { 
+				var name = dictData[i][0]
+				var date = new Date(dictData[i][1])
+				var link = dictData[i][2]
+				
+				var indEntry = ""
+				
+				indEntry = "<p><b><a href=\"./entries/" + link +"\">" + name + "</a></b> <i>(" + new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'long', day: 'numeric'}).format(date) + ")</i></p>"
+			  
+				totalEntries += indEntry
+			  }
+			  document.getElementById("linklist").innerHTML = totalEntries
+			}
+		  };
+		}
+		
+		readFile()
+	</script>
+	</div>
+	<script src="/js.js"></script>
+  </body>
+</html>
