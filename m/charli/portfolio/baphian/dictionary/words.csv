@@ -45,7 +45,7 @@ Amafjk (Language);AMAHHI;inan;a{ma}hhi {di}ye </i>[ä.mä´.h:i di´.jɛ̝]<i
 Amber;;inan;shewoha{yi} </i>[ɕɛ̝.wo̞.ha.ji´]<i>;;s
 Analyze;;verb;gu{she}ne </i>[gu.ɕɛ̝´.nɛ̝]<i>;;s
 Anchor;;inan;o{lizang} </i>[o̞.li´.zäŋ´]<i>;Ultimately from Athi;s
-Anchor, weigh down;;verb;o{li} </i>[o̞.li´]<i>;Borrowed from Athi;s
+Anchor (down), weigh (down);;verb;a{hu} </i>[ä.hu´]<i>;Borrowed from Athi;s
 And;PE;;pe </i>[pɛ̝]<i>;;s
 Andria;ANDIJA;inan;an{di}ya{sa} </i>[än.di´.jä.sä´]<i>;;s
 Andrian (Language);ANDIJA;inan;an{di}ya {di}ye </i>[än.di´.jä di´.jɛ̝]<i>;;s
@@ -156,8 +156,8 @@ Beat, tempo;;inan;ko{je} </i>[ko̞.dʑɛ̝´]<i>;;s
 Beautiful, handsome;;adj;ze{pu}tu </i>[zɛ̝.pu´.tu]<i>;;s
 Beauty;;an;ze{pu} </i>[zɛ̝.pu´]<i>;;s
 Because;PETEÑ;;pe{teng} </i>[pɛ̝.tɛ̝ŋ´]<i>;;s
-Because;;;pe{teng} </i>[pɛ̝.tɛ̝ŋ´]<i>;;religion
 Because;;;pe{teng} </i>[pɛ̝.tɛ̝ŋ´]<i>;Formal;s
+Because;;;pe{teng} </i>[pɛ̝.tɛ̝ŋ´]<i>;;religion
 Become, transform;;verb;se{wa} </i>[sɛ̝.wä´]<i>;;s
 Bed;;inan;{sa} </i>[sä´]<i>;;s
 Bed;;inan;{sa} </i>[sä´]<i>;Archaic;s
@@ -451,6 +451,7 @@ Cum, semen (vulgar);;an;;;s
 Cunty;KISE;an;ki{se} </i>[ki.sɛ̝´]<i>;;ahan
 Cup;;inan;{ttute} </i>[t:u´.tɛ̝´]<i>;;s
 Cure;;verb;;;s
+Curry;;inan;ja{lang} </i>[dʑä.läŋ´]<i>;;s
 Cut;;verb;ko{she} </i>[ko̞.ɕɛ̝´]<i>;;s
 Cyan, sky blue;;adj;shuwe </i>[ɕu.wɛ̝]<i>;Sunterian borrowing. Uncommon;s
 Cycle;;inan;sho{tse} </i>[ɕo̞.tsɛ̝´]<i>;;s
@@ -566,6 +567,7 @@ Dual marker;;;{yo} </i>[jo̞´]<i>;;s
 Duck;;an;;;s
 Dull (Knife);;adj;do{fo} </i>[do̞.fo̞´]<i>;;s
 Dust;;inan;do{ze}de </i>[do̞.zɛ̝´.dɛ̝]<i>;;s
+Eachother;;an;lo{lo} </i>[lo̞.lo̞´]<i>;;s
 Ear;;an;te{te} </i>[tɛ̝.tɛ̝´]<i>;;s
 Early;;adj;ze{le} </i>[zɛ̝.lɛ̝´]<i>;;s
 Earth (planet);;an;zam{ka} </i>[zäm.kä´]<i>;;s
@@ -607,7 +609,7 @@ Enthrone;;verb;;;s
 Environmental;;adj;;;s
 Equal;;verb;de{su} </i>[dɛ̝.su´]<i>;;s
 Era, epoch;;inan;{keyu} </i>[kɛ̝´.ju´]<i>;;s
-Escape;;verb;;;s
+Escape, flee, run away;;verb;;;s
 Essential;;adj;je{jue}zan </i>[dʑɛ̝.dʑu´.ɛ̝´.zän]<i>;;s
 Evening;;inan;;;s
 Evermean, treeant;;an;;;hy
@@ -928,6 +930,7 @@ Hungry;;adj;do{gan} </i>[do̞.gän´]<i>;;s
 Hunt;;verb;fe </i>[fɛ̝]<i>;;s
 Hurry;;verb;;;s
 Hurt;;verb;dizhu </i>[di.ʑu]<i>;;s
+Husband;;;;;
 Hush, quiet down;;verb;;;s
 Hydrangea;;an;;;s
 Hyena;;an;no{pe} </i>[no̞.pɛ̝´]<i>;;s
@@ -1067,6 +1070,7 @@ Lasian (People);LASIJA;an;la{si}ya si </i>[lä.si´.jä si]<i>;;s
 Last;;verb;jede{ju} </i>[dʑɛ̝.dɛ̝.ju´]<i>;;s
 Last, final;;adj;pe{ke} </i>[pɛ̝.kɛ̝´]<i>;;s
 Laugh;;verb;le{ke} </i>[lɛ̝.kɛ̝´]<i>;;s
+Laugh, giggle;;verb;;Can be used as a transitive verb;s
 Launder (clothes);;verb;;;s
 Launder (money);;verb;;;s
 Lava;;inan;wojo{we} </i>[wo̞.dʑo̞.wɛ̝´]<i>;;s
@@ -1262,6 +1266,8 @@ Needle;;inan;to{de}gu </i>[to̞.dɛ̝´.gu]<i>;;s
 Neon (element);;inan;{i}zenge </i>[i´.zɛ̝ŋ.ɛ̝]<i>;;s
 Neon, very bright and saturated in colour;;adj;{i}zengze </i>[i´.zɛ̝ŋ.zɛ̝]<i>;;s
 Neptune; ;inan;be{weje} </i>[bɛ̝.wɛ̝´.dʑɛ̝´ ]<i>;;s
+Nerve;;an;sum{tse} </i>[sum.tsɛ̝´]<i>;;s
+Nerve damage;;an;sum{se} </i>[sum.sɛ̝´]<i>;;s
 Neutron;;inan;;;s
 New;;adj;ja </i>[dʑä]<i>;;s
 New;;adj;jang{ge} </i>[dʑäŋ.gɛ̝´]<i>;;s
@@ -1502,6 +1508,7 @@ Proxy-rule;;verb;;;s
 Public;;adj;;;s
 Publish;;verb;;;s
 Pull;;verb;{da}de </i>[dä´.dɛ̝]<i>;;s
+Pull up (anchor), flee;;verb;o{li} </i>[o̞.li´]<i>;Borrowed from Athi;s
 Puma, cougar, wild cat;;an;ting{li} </i>[tiŋ.li´]<i>;;s
 Puppet;;inan;tu{tse} </i>[tu.tsɛ̝´]<i>;;s
 Purple;;adj;coshu </i>[tɕo̞.ɕu]<i>;;s
@@ -1512,7 +1519,7 @@ Push;;verb;{bi}te </i>[bi´.tɛ̝]<i>;;s
 Push rocks down onto enemies;;verb;{bi}wo{zang} </i>[bi´.wo̞.zäŋ´]<i>;;s
 Put asleep, knocked out;;verb;;;s
 Put down;;verb;{a}te </i>[ä´.tɛ̝]<i>;;s
-Quake, shake;;verb;je{ge} </i>[dʑɛ̝.gɛ̝´]<i>;;s
+Quake, shake, bang, vibrate;;verb;je{ge} </i>[dʑɛ̝.gɛ̝´]<i>;;s
 Quark;;inan;;;s
 Queen (Chess);;inan;o{lizya}ni </i>[o̞.li´.zjä´.ni]<i>;Borrowed from Loremese;s
 Question;;inan;u{sya} </i>[u.sjä´]<i>;;s
@@ -1537,7 +1544,7 @@ Rat;;an;he{tu} </i>[hɛ̝.tu´]<i>;;s
 Reach (for);;verb;je{pum} </i>[dʑɛ̝.pum´]<i>;;s
 Reach an objective, reach a place;;verb;zo{de}zhono </i>[zo̞.dɛ̝:´.ʑo̞.no̞]<i>;;s
 Read;;verb;u{sye}ke </i>[u.sjɛ̝´.kɛ̝]<i>;;s
-Real;;adj;;;s
+Real;;adj;sanje </i>[sän.dʑɛ̝]<i>;;s
 Realise / realize, understand;;verb;;;s
 Reason, motive;;inan;{ba}tso </i>[bä´.tso]<i>;;s
 Receive, get;;verb;si{de}du </i>[si.dɛ̝´.du]<i>;;s
@@ -1595,6 +1602,7 @@ Road, highway;;inan;de{kye} </i>[dɛ̝.kjɛ̝´]<i>;;s
 Roar, scream (animal);;verb;{po}ge </i>[po̞´.gɛ̝]<i>;;s
 Roast (cooking);;verb;zho{we} </i>[ʑo̞.wɛ̝´]<i>;;s
 Roast, insult (playfully);;verb;;;s
+Rock n roll music;;inan;je{zhe} </i>[dʑɛ̝.ʑɛ̝´]<i>;;s
 Rockeater;;inan;wo{zang}sisi </i>[wo̞.zäŋ´.si.si]<i>;Slur for Kalis;s
 Rod (metal), blade (unattached);;inan;;;s
 Rodent;;an;he{la}to </i>[hɛ̝.lä´.to̞]<i>;;s
@@ -1919,6 +1927,7 @@ Tail;;an;ko{se} </i>[ko̞.sɛ̝´]<i>;;s
 Tailor;;verb;u{be} </i>[u.bɛ̝´]<i>;;s
 Tailor;;an;u{be}si </i>[u.bɛ̝´.si]<i>;;s
 Take;;verb;e{ke}te </i>[ɛ̝.kɛ̝´.tɛ̝]<i>;;s
+Take (photo), capture (photo, moment);;verb;{ke}da </i>[kɛ̝´.dä]<i>;;s
 Talus;;inan;;;hy
 Tame;;adj;ze{juya} </i>[zɛ̝.dʑu´.jä´]<i>;;s
 Tame;;verb;ze{juya} </i>[zɛ̝.dʑu´.jä´]<i>;;s
@@ -1929,7 +1938,7 @@ Taste;;verb;du{tse} </i>[du.tsɛ̝´]<i>;;s
 Tattoo;;inan;su{zun} </i>[su.zun´]<i>;;ahan
 Tattoo;;inan;su{zun} </i>[su.zun´]<i>;;s
 Tea;;inan;we{mi} </i>[wɛ̝.mi´]<i>;Borrowed from Athi;s
-Tea (black);;inan;weye </i>[wɛ̝.jɛ̝]<i>;Borrowed from Athi;s
+Tea (black);;inan;weye </i>[wɛ̝.jɛ̝]<i>;Ultimately from Athi;s
 Tea (formal);;inan;wa{mi} </i>[wä.mi´]<i>;Ultimately from Athi;s
 Tea (green);;inan;we{zhu} </i>[wɛ̝.ʑu´]<i>;Ultimately from Athi;s
 Tea (herbal);;inan;wewe </i>[wɛ̝.wɛ̝]<i>;Ultimately from Athi;s
@@ -1992,6 +2001,7 @@ Titan, giant;;an;de{za} </i>[dɛ̝.zä´]<i>;;s
 Tithe, donate (to temple etc.);;verb;so{ba}yan </i>[so̞.bä´.jän]<i>;;s
 Tobacco ;;an;za{de} </i>[zä.dɛ̝´]<i>;;s
 Today;;inan;yonu </i>[jo̞.nu]<i>;;s
+Together;;inan;in{se} </i>[in.sɛ̝´]<i>;Slang;s
 Together, union;;inan;insa{se}zhu </i>[in.sä.sɛ̝´.ʑu]<i>;For anything not a country;s
 Tomato;;an;co{pe}le </i>[tɕo̞.pɛ̝´.lɛ̝]<i>;;s
 Tomb, mausoleum;;inan;{dodyi} </i>[do̞´.dji´]<i>;;s
@@ -2031,7 +2041,7 @@ Trim;;verb;;;s
 Trip, journey;;inan;ledeke{yen} </i>[lɛ̝.dɛ̝.kɛ̝.jɛ̝n´]<i>;A partial Jkawi borrowing. ;s
 Trot;;verb;;;s
 Truth;;inan;san{ce} </i>[sän.tɕɛ̝´]<i>;Archaic;s
-Truth; true;;inan;san{ce} </i>[sän.tɕɛ̝´]<i>;;s
+Truth, true;;inan;san{ce} </i>[sän.tɕɛ̝´]<i>;;s
 Try;;verb;ze{fya} </i>[zɛ̝.fjä´]<i>;;s
 Tulip;;an;;;s
 Turn (around);;verb;{go}zhe </i>[go̞´.ʑɛ̝]<i>;;s
@@ -2127,6 +2137,7 @@ Who;;;no{si} </i>[no̞.si´]<i>;;s
 Whore;;an;;;s
 Why;;;no{se} </i>[no̞.sɛ̝´]<i>;;s
 Wide, big;;adj;{no}da </i>[no̞´.dä]<i>;;s
+Wife;;;;;
 Wig;;inan;be{seye} </i>[bɛ̝.sɛ̝´.jɛ̝´]<i>;;s
 Will;;verb;;;s
 Win;;verb;zodee </i>[zo̞.dɛ̝:´]<i>;;s
@@ -2160,6 +2171,7 @@ World;;inan;{je} </i>[dʑɛ̝´]<i>;;s
 Worm;;an;tu{te} </i>[tu.tɛ̝´]<i>;;s
 Worship;;verb;;;s
 Wound;;inan;;;s
+Wow;WAU;;wa{u} </i>[wä.u´]<i>;;real
 Wrapping;;inan;ze{tem} </i>[zɛ̝.tɛ̝m´]<i>;;s
 Write;;verb;{je} </i>[dʑɛ̝´]<i>;;s
 Writer;;an;{je}si </i>[dʑɛ̝´.si]<i>;;s
