@@ -327,8 +327,8 @@
 				var monthNamesSUN = ["Neuia", "Solmia", "Hmetmenia", "Uoihnia", "Loubia", "Moreitia", "Duskia", "Snoiguia", "Gelia", "Huersmenia", "Blehmia", "Bloidia", "Tridia"]
 				var monthNamesSUN1 = ["Neu-\\ia", "Solm-\\ia", "u+e11e-\\menia", "u+e10d-\\ia", "u+e115-\\ia", "Guen2-\\ia", "u+e124-\\ia", "u+e126-\\ia", "u+e127-\\ia", "Huers-\\menia", "u+e12a-\\ia", "u+e125-\\ia", "\\Tridia"]
 				
-				var ponkudoNamesSUN = ["Oikdeino", "Ikuistdeino", "Sagudeino", "Tinirdeino", "Duskdeino", "Piordeino", "Leukdeino", "Hertikdeino", "Noktdeino", "Sehueldeino", "Deindeino", "Mehnotdeino", "Doždeino", "Husdeino", "Uodrikdeino"]
-				var ponkudoNamesSUN1 = ["\\oik-U+E139-\\o", "\\ikuist-U+E139-\\o", "\\sagu-U+E139-\\o", "\\tinir-U+E139-\\o", "U+E124-U+E139-\\o", "PIOR-U+E139-\\o", "\\leuk-U+E139-\\o", "HERT-\\ik-U+E139-\\o", "U+E13A-U+E139-\\o", "\\sehuel-U+E139-\\o", "U+E139-U+E139-\\o", "\\mehnot-U+E139-\\o", "\\dož-U+E139-\\o", "\\hus-U+E139-\\o", "UODER-\\ik-U+E139-\\o"]
+				var ponkudoNamesSUN = ["Oikdeino", "Ikuistdeino", "Sagudeino", "Tinirdeino", "Duskdeino", "Piordeino", "Leukdeino", "Hertikdeino", "Noktdeino", "Sehueldeino", "Deindeino", "Mehnotdeino", "Doždeino", "Husdeino", "Uopatsedeino"]
+				var ponkudoNamesSUN1 = ["\\oik-U+E139-\\o", "\\ikuist-U+E139-\\o", "\\sagu-U+E139-\\o", "\\tinir-U+E139-\\o", "U+E124-U+E139-\\o", "PIOR-U+E139-\\o", "\\leuk-U+E139-\\o", "HERT-\\ik-U+E139-\\o", "U+E13A-U+E139-\\o", "\\sehuel-U+E139-\\o", "U+E139-U+E139-\\o", "\\mehnot-U+E139-\\o", "\\dož-U+E139-\\o", "\\hus-U+E139-\\o", "\\uopatse-U+E139-\\o"]
 				
 				document.getElementById('convSUN').innerHTML = ponkudoNamesSUN[convDateSUN[4]] + ", " + convDateSUN[0] + " " + monthNamesSUN[convDateSUN[1]] + " " + convDateSUN[2] + convDateSUN[3]
 				document.getElementById('convSUN1').innerHTML = " <uki>" + convertText(ponkudoNamesSUN1[convDateSUN[4]] + " ,  " + convDateSUN[0] + "  " + monthNamesSUN1[convDateSUN[1]] + "  " + convDateSUN[2] + String(convDateSUN[3]).replace(" IPT", "  \\IPT"), "sun") + "</uki>"
