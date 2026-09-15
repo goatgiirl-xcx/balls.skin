@@ -200,6 +200,7 @@ Black;;adj;{so}ye </i>[so̞´.jɛ̝]<i>;;s
 Blight;;inan;so{syede} </i>[so̞.sjɛ̝´.dɛ̝´]<i>;;s
 Blind;;adj;tso{bi}do{ki}de </i>[tso̞.bi´.do̞.ki´.dɛ̝]<i>;;s
 Blind;;verb;tso{syi} </i>[tso̞.sji´]<i>;;s
+Bliss;;inan;zopu{de} </i>[zo̞.pu.dɛ̝´]<i>;;s
 Block;;verb;jeju{se} </i>[dʑɛ̝.dʑu.sɛ̝´]<i>;;s
 Blood (informal);;an;se{we} </i>[sɛ̝.wɛ̝´]<i>;;s
 Blood (vulgar);;an;se{kye} </i>[sɛ̝.kjɛ̝´]<i>;;s
@@ -635,11 +636,11 @@ Eyebrow;;an;a{bu}ha </i>[ä.bu´.hä]<i>;Borrowed from Oikan;s
 Eyeliner;;inan;tso{gya} </i>[tso̞.gyä´]<i>;;s
 Fabric;;inan;{tsa}kyoong </i>[tsä´.kyo̞:ŋ ]<i>;;s
 Face;;an;zo{zi} </i>[zo̞.zi´]<i>;;s
-Fact;;inan;;;s
+Fact;;inan;sanda </i>[sän.dä]<i>;;s
 Fake;;adj;{zam}ku </i>[zäm´.ku]<i>;;s
 Fall;;verb;um{we} </i>[um.wɛ̝´]<i>;;s
 Fall in love, become enfatuated with;;verb;;;s
-False, not true;;adj;;;s
+False, not true;;adj;do{ce} </i>[do̞.tɕɛ̝´]<i>;;s
 Family;;an;ke{zzo} </i>[kɛ̝.z:o̞´]<i>;;s
 Fan (of something);;an;jasi </i>[dʑä.si]<i>;;s
 Fang, canine tooth;;an;{ce}fun{long} </i>[tɕɛ̝´.fun.lo̞ŋ´]<i>;;s
@@ -692,6 +693,7 @@ First person, 1st person;;prn;lo </i>[lo̞]<i>;;s
 Fish;;an;po </i>[po̞]<i>;;s
 Fish;;an;po{gu} </i>[po̞.gu´]<i>;;s
 Fisherman;;an;posi </i>[po̞.si]<i>;;s
+Fishify, become a fish;;verb;po{wa} </i>[po̞.wä´]<i>;;s
 Five;5;;jim </i>[dʑim]<i>;;s
 Fix;;verb;jan{ge}sa{se} </i>[dʑäŋ.gɛ̝´.sä.sɛ̝´]<i>;;s
 Flag, banner;;inan;;;s
@@ -1236,6 +1238,7 @@ Moon worship;;inan;;;s
 Moon, Stellar body;;an;{ge} </i>[gɛ̝´]<i>;;s
 Moonrise;;an;{ge}ze </i>[gɛ̝´.zɛ̝]<i>;;s
 More;ITO;adj;{i}to </i>[i´.to̞]<i>;;s
+More;ITOZAN;adj;{i}to{zan} </i>[i´.to̞.zän´]<i>;In a begging sense;s
 More, comparative;;adj;{zan} </i>[zän´]<i>;;s
 Morning;;inan;{epe} </i>[ɛ̝´.pɛ̝´]<i>;;s
 Moss;;an;;;s
@@ -1318,6 +1321,7 @@ Onesie, babies clothes;;inan;pe{le}u{ya} </i>[pɛ̝.lɛ̝´.u.jä´]<i>;;s
 Only, sole, singular, solo, alone;;adj;in{wa} </i>[in.wä´]<i>;;s
 Open;;verb;be{he} </i>[bɛ̝.hɛ̝´]<i>;;s
 Operate;;verb;;;s
+Oppose;;verb;he{gee} </i>[hɛ̝.gɛ̝:´]<i>;;s
 Opposite;;adj;he{gee} </i>[hɛ̝.gɛ̝:´]<i>;;s
 Opress;;verb;;;s
 Or;DONUN;;do{nun} </i>[do̞.nun´]<i>;;s
@@ -1356,7 +1360,7 @@ Parliment;;an;ko{wa}zhu </i>[ko̞.wä´.ʑu]<i>;;s
 Part;;inan;{i}zzo </i>[i´.z:o̞]<i>;;s
 Part of, piece;;adj;{i}zzo </i>[i´.z:o̞]<i>;;s
 Particle;;inan;se{zhu}zam{fong} </i>[sɛ̝.ʑu´.zäm.fo̞ŋ´]<i>;;s
-Partner;;an;si{tsa} </i>[si.tsä´]<i>;;s
+Partner, friend;;an;si{tsa} </i>[si.tsä´]<i>;;s
 Party;;inan;;;ahan
 Party;;inan;;;s
 Pass;;verb;ke{pum} </i>[kɛ̝.pum´]<i>;;s
@@ -1589,6 +1593,8 @@ Respond;;verb;fo{ye}tu </i>[fo̞.jɛ̝´.tu]<i>;;s
 Rest;;verb;tetsa </i>[tɛ̝.tsä]<i>;;s
 Restore;;verb;;;s
 Result;;inan;{e}zhu </i>[ɛ̝´.ʑu]<i>;;s
+Revel;;verb;{e}pese </i>[ɛ̝´.pɛ̝.sɛ̝]<i>;;s
+Revel;;verb;{e}zepe </i>[ɛ̝´.zɛ̝.pɛ̝]<i>;Has sexual connotations;s
 Revolt;;verb;;;s
 Rice, grains;;inan;ma{kyo} </i>[mä.kjo̞´]<i>;;s
 Ride;;verb;{e}ze{pwi} </i>[ɛ̝´.zɛ̝.pwi´]<i>;;s
@@ -2089,7 +2095,7 @@ Vagina;;an;;;s
 Valley;;inan;;;s
 Vampire, bloodsucker;;inan;jo{we}si{we}si </i>[dʑo̞.wɛ̝´.si.wɛ̝´.si]<i>;;s
 Vanilla (bean);INU;an;i{nu} </i>[i.nu´]<i>;Borrowed from Athi;s
-Vanilla (bean);;an;sezengsa{su} </i>[sezengsa{su}]<i>;;s
+Vanilla (bean);;an;sezengsa{su} </i>[sɛ̝.zɛ̝ŋ.sä.su´]<i>;;s
 Vanilla (flavour);IRINU;inan;i{li}nu </i>[i.li´.nu]<i>;Slang, borrowed from Athi, mostly used in Turku due to cheaper imported Athi vanilla being very common;s
 Vanilla (flavour);;inan;sezenge{bbi} </i>[sɛ̝.zɛ̝ŋ.ɛ̝.b:i´]<i>;;s
 Vanilla (plant);;an;sezeng </i>[sɛ̝.zɛ̝ŋ]<i>;;s
@@ -2150,6 +2156,7 @@ Wide, big;;adj;{no}da </i>[no̞´.dä]<i>;;s
 Wife;;;;;
 Wig;;inan;be{seye} </i>[bɛ̝.sɛ̝´.jɛ̝´]<i>;;s
 Will;;verb;;;s
+Will, drive;;an;jaye </i>[dʑä.jɛ̝]<i>;;s
 Win;;verb;zodee </i>[zo̞.dɛ̝:´]<i>;;s
 Wind;;an;{sa}zhe </i>[sä´.ʑɛ̝]<i>;;s
 Winding, not straight, squiggly;;adj;;Slang for queer people ;s
