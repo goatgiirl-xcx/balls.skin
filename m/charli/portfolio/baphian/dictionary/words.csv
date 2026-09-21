@@ -278,7 +278,7 @@ Capitalism;;inan;pofo{lu}te </i>[po̞.fo̞.lu´.tɛ̝]<i>;;s
 Captain (ship);;an;zon{e}fo{nu} </i>[zo̞n.ɛ̝´.fo̞.nu´]<i>;;s
 Car;;inan;kepe{ce} </i>[kɛ̝.pɛ̝.tɕɛ̝´]<i>;;s
 Card (deck);;inan;zu{zhe} </i>[zu.ʑɛ̝´]<i>;;s
-Card (game);;inan;;;s
+Card game;;inan;{dya}ti </i>[djä´.ti]<i>;Borrowed from Loremese;s
 Card game;;inan;zu{zhe}zo{ka} </i>[zu.ʑɛ̝´.zo̞.kä´]<i>;;s
 Card, contact card;;inan;zu{zhe} </i>[zu.ʑɛ̝´]<i>;;s
 Care;;verb;{e}pe{ba} </i>[ɛ̝´.pɛ̝.bä´]<i>;;s
@@ -353,7 +353,7 @@ Cloud;;inan;{pu}ce </i>[pu´.tɕɛ̝]<i>;;s
 Club, rave;;inan;ze{pun} </i>[zɛ̝.pun´]<i>;;s
 Cobblestone;;inan;wozzo </i>[wo̞.z:o̞]<i>;;s
 Cocaine, coke;;inan;{izi}de </i>[i´.zi´.dɛ̝]<i>;;s
-Code (software);;;mu{ke}ye </i>[mu.kɛ̝´.jɛ̝]<i>;;
+Code (software);;inan;mu{ke}ye </i>[mu.kɛ̝´.jɛ̝]<i>;;s
 Coffee;;inan;do{te}do{sushe} </i>[do̞.tɛ̝´.do̞.su´.ɕɛ̝´]<i>;;s
 Coffee bean;;an;do{te}do{su} </i>[do̞.tɛ̝´.do̞.su´]<i>;;s
 Coffin;;inan;{i}ku{sa} </i>[i´.ku.sä´]<i>;;s
@@ -399,7 +399,6 @@ Contrary;;adj;{zze} </i>[z:ɛ̝´]<i>;;s
 Control;;verb;{si}date </i>[si´.dä.tɛ̝]<i>;;s
 Control;;inan;{si}datefo{nu} </i>[si´.dä.tɛ̝.fo̞.nu´]<i>;;s
 Control;;verb;{si}te </i>[si´.tɛ̝]<i>;;s
-Convalesce;;verb;;;s
 Convene, meet;;verb;;;s
 Conversation, speech;;inan;tu{ye} </i>[tu.jɛ̝´]<i>;;s
 Cook;;verb;de{fee} </i>[dɛ̝.fɛ̝:´]<i>;;s
@@ -444,7 +443,7 @@ Crumble;;verb;be{zhu}zu </i>[bɛ̝.ʑu´.zu]<i>;;s
 Crunk, incredibly intoxicated;;verb;;;ahan
 Crush, squish;;verb;{bi}tu </i>[bi´.tu]<i>;;s
 Cry;;verb;ba{ka} </i>[bä.kä´]<i>;;s
-Cucco;;an;;;hy
+Cucco;KUKU;an;kuku </i>[ku.ku]<i>;;hy
 Cuddle, spoon;;verb;;;s
 Cult classic;;inan;uja </i>[u.dʑä]<i>;;real
 Cultivate;;verb;;;s
@@ -692,6 +691,8 @@ First person, 1st person;;prn;{ya} </i>[jä´]<i>;Borrowed from Loremese;reli
 First person, 1st person;;prn;lo </i>[lo̞]<i>;;s
 Fish;;an;po </i>[po̞]<i>;;s
 Fish;;an;po{gu} </i>[po̞.gu´]<i>;;s
+Fish;;verb;po{ku} </i>[po̞.ku´]<i>;;s
+Fish (incorrectly);;verb;po{ze} </i>[po̞.zɛ̝´]<i>;;s
 Fisherman;;an;posi </i>[po̞.si]<i>;;s
 Fishify, become a fish;;verb;po{wa} </i>[po̞.wä´]<i>;;s
 Five;5;;jim </i>[dʑim]<i>;;s
@@ -934,7 +935,7 @@ Hungry;;adj;do{gan} </i>[do̞.gän´]<i>;;s
 Hunt;;verb;fe </i>[fɛ̝]<i>;;s
 Hurry;;verb;;;s
 Hurt;;verb;dizhu </i>[di.ʑu]<i>;;s
-Husband;;;;;
+Husband;;an;;;s
 Hush, quiet down;;verb;;;s
 Hydrangea;;an;;;s
 Hyena;;an;no{pe} </i>[no̞.pɛ̝´]<i>;;s
@@ -1169,8 +1170,8 @@ Makeup;;inan;pu{ko} </i>[pu.ko̞´]<i>;;s
 Mall, shopping mall, shopping centre / center;;inan;;;s
 Man;;an;ana </i>[ä.nä]<i>;Used for nonkaneeds, borrowed from Loremese;s
 Mandrake;;inan;ko(be) </i>[ko̞.bɛ̝´]<i>;;s
-Mania;GUŚUFJEŽU;inan;gu{shufye}zhu </i>[gu.ɕɛ̝´.fjɛ̝´.ʑu]<i>;;s
-Mania;;an;gu{shufye}zhu </i>[gu.ɕɛ̝´.fjɛ̝´.ʑu]<i>;;ahan
+Mania;GUŚUFJEŽU;inan;gu{shufye}zhu </i>[gu.ɕɛ̝´.fjɛ̝´.ʑu]<i>;;ahan
+Mania;;an;gu{shufye}zhu </i>[gu.ɕɛ̝´.fjɛ̝´.ʑu]<i>;;s
 Manipulate;;verb;;;s
 Mantra, incantation;;inan;;;s
 Manual, by self;;adj;su{to} </i>[su.to̞´]<i>;;s
@@ -1560,7 +1561,7 @@ Recieve;;verb;si{de} </i>[si.dɛ̝´]<i>;;s
 Recite (prayer, mantra);;verb;ete </i>[ɛ̝.tɛ̝]<i>;;s
 Record;;verb;{sha}ke </i>[ɕä´.kɛ̝]<i>;;s
 Recording;;inan;{sha}ke </i>[ɕä´.kɛ̝]<i>;;s
-Recover;;verb;;;s
+Recover, convalesce;;verb;so{wa} </i>[so̞.wä´]<i>;;s
 Red;;adj;co{shu} </i>[tɕo̞.ɕu´]<i>;;s
 Redden, baphianize;IKIZI;verb;iki{zi} </i>[i.ki.zi´]<i>;Usually derogatory, borrowed from Tithri;ahan
 Redden, baphianize;;verb;co{shuwa} </i>[tɕo̞.ɕu´.wä´]<i>;;s
@@ -1877,17 +1878,19 @@ Straight;;adj;{so}do </i>[so̞´.do̞]<i>;;s
 Strange;;adj;ke{yo}de </i>[kɛ̝.jo̞´.dɛ̝]<i>;;s
 Strawberry;;an;co{se}le </i>[tɕo̞.sɛ̝´.lɛ̝]<i>;;s
 Streak;;inan;;;s
+Strengthen, become stronger;;verb;{wa}se </i>[wä´.sɛ̝]<i>;;s
 Stress (a point), press;;verb;;;s
 Strike, hit (with great strength);;verb;di{kang} </i>[di.käŋ´]<i>;;s
 String;;inan;kute </i>[ku.tɛ̝´]<i>;;s
 String;;inan;{tse} </i>[tsɛ̝´]<i>;;s
-Strong;;adj;;;s
+Strong;;adj;{wapo} </i>[wä´.po̞´]<i>;;s
 Stuck;;verb;;;s
 Student;;an;;;s
 Study;;verb;{ye}e{ke} </i>[jɛ̝´.ɛ̝.kɛ̝´]<i>;;s
 Stupid, dumb, foolish;;adj;{e}teto </i>[ɛ̝´.tɛ̝.to̞]<i>;;s
 Style (fashion);;inan;le{ze} </i>[lɛ̝.zɛ̝´]<i>;;s
 Stylish;;adj;le{ze}tu </i>[lɛ̝.zɛ̝´.tu]<i>;;s
+Sublate, aufheben;;verb;be{le} </i>[bɛ̝.lɛ̝´]<i>;Hegelian term, meaning to destroy something but preserving it and making it better all at the same time;s
 Submit, give up;;verb;;;s
 Subscribe;;verb;;;s
 Succeed;;verb;;;s
@@ -1919,6 +1922,7 @@ Sure, certain;;adj;;;s
 Surgery;;inan;{kye}te </i>[kjɛ̝´.tɛ̝]<i>;;s
 Survey;;inan;;;s
 Sushi;;inan;po{kyo} </i>[po̞.kjo̞´]<i>;;s
+Sushi;POKJO;inan;po{kyo} </i>[po̞.kjo̞´]<i>;;s
 Suspicious;;verb;{so}gudo </i>[so̞´.gu.do̞]<i>;;s
 Swarm;;an;;;s
 Sweat;;verb;in{pe} </i>[in.pɛ̝´]<i>;;s
@@ -2020,6 +2024,7 @@ Tone (music);;inan;;;s
 Tongue;;an;{e}tse </i>[ɛ̝´.tsɛ̝]<i>;;s
 Tooth;;an;fun{long} </i>[fun.lo̞ŋ´]<i>;;s
 Top (sexual);;an;fosi </i>[fo̞.si]<i>;;s
+
 Topic;;inan;e{ye}ju{kang} </i>[ɛ̝.jɛ̝´.dʑu.käŋ´]<i>;;s
 Torture;;verb;bezhu </i>[do̞.ʑu]<i>;;s
 Touch, tap;;verb;{ju} </i>[dʑu´]<i>;;s
@@ -2153,7 +2158,7 @@ Who;;;no{si} </i>[no̞.si´]<i>;;s
 Whore;;an;;;s
 Why;;;no{se} </i>[no̞.sɛ̝´]<i>;;s
 Wide, big;;adj;{no}da </i>[no̞´.dä]<i>;;s
-Wife;;;;;
+Wife;;an;;;s
 Wig;;inan;be{seye} </i>[bɛ̝.sɛ̝´.jɛ̝´]<i>;;s
 Will;;verb;;;s
 Will, drive;;an;jaye </i>[dʑä.jɛ̝]<i>;;s
