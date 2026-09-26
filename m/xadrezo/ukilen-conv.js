@@ -776,6 +776,9 @@ function bijectiveString(m, k) {
 						"eiebeiit": "",
 						"mu": "",
 						"nu": "",
+						"iemie": "",
+						"suenmen": "",
+						"saian": "",
 						
 						
 						":": ":",
