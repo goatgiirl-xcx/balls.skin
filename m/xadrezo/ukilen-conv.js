@@ -772,6 +772,7 @@ function bijectiveString(m, k) {
 						"duhr": "",
 						"usok": "",
 						"eiebeiit": "",
+						"mu": "",
 						
 						
 						":": ":",
