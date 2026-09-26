@@ -527,6 +527,7 @@ function bijectiveString(m, k) {
 						"hnes": "",
 						"guem": "",
 						"skreib": "",
+						"ikie": "",
 						"edont": "",
 						"heiger": "",
 						"heigr": "",
