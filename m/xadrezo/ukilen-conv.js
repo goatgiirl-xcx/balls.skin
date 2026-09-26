@@ -646,6 +646,7 @@ function bijectiveString(m, k) {
 						"alb": "",
 						"sleb": "",
 						"neu": "",
+						"džangie": "",
 						"ioher": "",
 						"ior": "",
 						"neuioher": "",
