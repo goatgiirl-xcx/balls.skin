@@ -508,6 +508,7 @@ function bijectiveString(m, k) {
 						"šern": "",
 						"host": "",
 						"moin": "",
+						"egie": "",
 						"solm": "",
 						"kail": "",
 						"kaput": "",
