@@ -580,7 +580,7 @@ function bijectiveString(m, k) {
 						"kuei": "",
 						"kuoda": "",
 						"kuebi": "",
-						"n": "",
+						"n2": "",
 						"en": "",
 						"ne": "",
 						"tegu": "",
