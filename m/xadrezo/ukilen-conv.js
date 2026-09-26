@@ -756,10 +756,10 @@ function bijectiveString(m, k) {
 						"i3": "",
 						"su": "",
 						"u2": "",
-						"ve": "",
+						"ue": "",
 						"ge": "",
-						"ze": "",
-						"ve2": "",
+						"se": "",
+						"ue2": "",
 						"še2": "",
 						"ke": "",
 						"ge2": "",
@@ -773,6 +773,7 @@ function bijectiveString(m, k) {
 						"usok": "",
 						"eiebeiit": "",
 						"mu": "",
+						"nu": "",
 						
 						
 						":": ":",
