@@ -630,6 +630,7 @@ function bijectiveString(m, k) {
 						"kali": "",
 						"kaui": "",
 						"lond": "",
+						"berat": "",
 						"hreud": "",
 						"želhu": "",
 						"grohen": "",
