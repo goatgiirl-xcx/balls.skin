@@ -770,6 +770,7 @@ function bijectiveString(m, k) {
 						"duher": "",
 						"duhr": "",
 						"usok": "",
+						"eiebeiit": "",
 						
 						
 						":": ":",
