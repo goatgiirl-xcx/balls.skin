@@ -217,6 +217,7 @@ Bone;;an;mon{zang} </i>[mo̞n.zäŋ´]<i>;;s
 Book;;inan;mu{za} </i>[mu.zä´]<i>;;s
 Border;;inan;ono{tsa} </i>[o̞.no̞.tsä´]<i>;;s
 Born;;verb;wi{le}te </i>[wi.lɛ̝´.tɛ̝]<i>;;s
+Borrow;;verb;;;s
 Bottle;;inan;li{tepe}we </i>[li.tɛ̝´.pɛ̝´.wɛ̝]<i>;;s
 Bottom (sexual);;an;kasi </i>[kä.si]<i>;;s
 Bow;;inan;zo{ce} </i>[zo̞.ɕɛ̝´]<i>;;s
@@ -420,12 +421,12 @@ Counsel / council;;inan;{waje} </i>[wä´.dʑɛ̝´]<i>;;s
 Count;;verb;zo{te} </i>[zo̞.tɛ̝´]<i>;;s
 Countdown;;inan;ye{te} </i>[jɛ̝.tɛ̝´]<i>;;s
 Country, nation;;inan;pe{ta} </i>[pɛ̝.tä´]<i>;;s
-County;;inan;;;s
+County, district;;inan;{ki}zam </i>[ki´.zäm]<i>;;s
 Cousin;;an;{sshele} </i>[ɕ:ɛ̝´.lɛ̝´]<i>;;s
 Cover;;verb;ke{de} </i>[kɛ̝.dɛ̝´]<i>;;s
 Cow;;an;se{ku} </i>[sɛ̝.ku´]<i>;;s
 Crab;;an;ke{ye} </i>[kɛ̝.jɛ̝´]<i>;;s
-Crane (bird);;an;;;s
+Crane (bird);;an;ke{tso} </i>[kɛ̝.tso̞´]<i>;;s
 Crayon;;inan;{ca}tu{pe} </i>[tɕä´.tu.pɛ̝´]<i>;;s
 Cream;;inan;e{bbi} </i>[ɛ̝.b:i´]<i>;;s
 Create, craft;;verb;ja{be} </i>[dʑä.bɛ̝´]<i>;;s
@@ -477,9 +478,9 @@ Dead;;adj;{bi} </i>[bi´]<i>;;s
 Death;;inan;bi{ye}fo{nu} </i>[bi.jɛ̝´.fo̞.nu´]<i>;;s
 Death bed, where someone is (bed)rotting;;inan;ku{sa} </i>[ku.sä´]<i>;;s
 Death bed, where someone is (bed)rotting;;inan;ku{sa} </i>[ku.sä´]<i>;;s
-Debate;;verb;;;s
-Debt (general);;inan;;;s
-Debt (money);;inan;;;s
+Debate, argue;;verb;difo{lu} </i>[di.fo̞.lu´]<i>;;s
+Debt (general), IOU, (owed) favour;;inan;yu{di} </i>[ju.di´]<i>;;s
+Debt (money);;inan;{disang} </i>[di´.säŋ´]<i>;;s
 Decay;;verb;{se}be{zhu}zu </i>[sɛ̝´.bɛ̝.ʑu´.zu]<i>;;s
 Decide, choose, pick, vote;;verb;ko{wa} </i>[ko̞.wä´]<i>;;s
 Declaration, manifesto;;inan;e{biza} </i>[ɛ̝.bi´.zä´]<i>;;s
@@ -570,6 +571,7 @@ Dual marker;;;{yo} </i>[jo̞´]<i>;;s
 Duck;;an;;;s
 Dull (Knife);;adj;do{fo} </i>[do̞.fo̞´]<i>;;s
 Dust;;inan;do{ze}de </i>[do̞.zɛ̝´.dɛ̝]<i>;;s
+Duty, task, assignment;;inan;yuso </i>[ju.so̞.]<i>;;s
 Eachother;;an;lo{lo} </i>[lo̞.lo̞´]<i>;;s
 Ear;;an;te{te} </i>[tɛ̝.tɛ̝´]<i>;;s
 Early;;adj;ze{le} </i>[zɛ̝.lɛ̝´]<i>;;s
@@ -601,6 +603,7 @@ Emerald;;inan;je{izang} </i>[dʑɛ̝.i´.zäŋ´]<i>;;s
 Empty;;adj;tsu{te} </i>[tsu´.tɛ̝]<i>;;s
 En passant (Chess);;inan;;;s
 Enact;;verb;;;s
+Endless;;adj;do{ke} </i>[do̞.kɛ̝´]<i>;;s
 Energy;;an;do{kyu} </i>[do̞.kju´]<i>;;s
 Energy drink;BOJEKAA~;inan;boje{kaa}~ </i>[bo̞.jɛ̝.kä:´ ]<i>;Generalized brand name;s
 Engine (vehicle), an essential part of something;;inan;;;s
@@ -963,6 +966,7 @@ Ihoshari (People);;an;{yo}sha si </i>[jo̞´.ɕä.si]<i>;;s
 Ill, be sick;;verb;sa{de} </i>[sä.dɛ̝´]<i>;;s
 Illness, virus, plague, disease, sickness;;an;sa{de}ne </i>[sä.dɛ̝´.nɛ̝]<i>;;s
 Imagine;;verb;;;s
+Immortal;;adj;do{ke}so </i>[do̞.kɛ̝´.so̞]<i>;;s
 Impact;;verb;tan{zhe}di </i>[tän.ʑɛ̝´.di]<i>;;s
 Important;;adj;;;s
 Impulse;;inan;{gapum} </i>[gä´.pum´]<i>;;s
@@ -1194,6 +1198,7 @@ Marsh;;inan;;;s
 Mascara;;inan;;;s
 Masculanize;;verb;ana{wa} </i>[ä.nä.wä´]<i>;;s
 Masculine;;adj;anade{ya} </i>[ä.nä.dɛ̝.jä´]<i>;;s
+Mask, (face) covering, viel;;inan;ke{de} </i>[kɛ̝.dɛ̝´]<i>;;s
 Master;;verb;;;s
 Masturbate, jerk off;;verb;;;s
 Match;;inan;de{pa} </i>[dɛ̝.pä´]<i>;;religion
@@ -1235,8 +1240,8 @@ Minecraft;;inan;mu{be} </i>[mu.bɛ̝´]<i>;;real
 Mint;;verb;;;s
 Minute;;inan;;;s
 Mirror;;inan;;;s
-Misotheism;;;;;
-Misotheist;;;;;
+Misotheism;;inan;;;s
+Misotheist;;an;;;s
 Misunderstood;;adj;{na}pu </i>[nä´.pu]<i>;Borrowed from Jkawi;s
 Moblin;;an;;;hy
 Model (person);;inan;somugunusi </i>[so̞.mu.gu.nu.si ]<i>;;s
@@ -1253,6 +1258,7 @@ More;ITO;adj;{i}to </i>[i´.to̞]<i>;;s
 More;ITOZAN;adj;{i}to{zan} </i>[i´.to̞.zän´]<i>;In a begging sense;s
 More, comparative;;adj;{zan} </i>[zän´]<i>;;s
 Morning;;inan;{epe} </i>[ɛ̝´.pɛ̝´]<i>;;s
+Mortal;;adj;{ke}anso </i>[kɛ̝´.än.so̞]<i>;;s
 Moss;;an;;;s
 Most, superlative;;adj;hu{zan} </i>[hu.zän´]<i>;;s
 Mother;MACA;an;ma{ca} </i>[mä.tɕä´]<i>;Used for nonkaneeds;s
@@ -1435,7 +1441,7 @@ Pickaxe;;inan;ze{popa}te </i>[zɛ̝.po̞´.pä´.tɛ̝]<i>;;s
 Pickaxe;;inan;ze{popa}te </i>[zɛ̝.po̞´.pä´.tɛ̝]<i>;;s
 Pig;;an;su{ha} </i>[su.hä´]<i>;Borrowed from Oikan;s
 Pile;;inan;;;s
-Pilot (mech);PECE;an;pece </i>[pɛ̝.tɕɛ̝]<i>;Used exclusively in mech shows, from “<span class="ukilen"></span> [pɛ̝.tɕɛ̝´.tɕɛ̝]”, pilot;s
+Pilot (mech);PECE;an;pece </i>[pɛ̝.tɕɛ̝]<i>;Used exclusively in mech shows, from “[pɛ̝.tɕɛ̝´.tɕɛ̝]”, pilot;s
 Pilot (show);;inan;{e}ko{be} </i>[ɛ̝´.ko̞.bɛ̝´]<i>;;s
 Pilot (vehicle, aircraft);;an;pe{ce}ce </i>[pɛ̝.tɕɛ̝´.tɕɛ̝]<i>;;s
 Pink;;adj;coke </i>[tɕo̞.kɛ̝]<i>;;s
@@ -1596,7 +1602,7 @@ Remain;;verb;zhu{le} </i>[ʑu.lɛ̝´]<i>;;s
 Remember;;verb;yu{tin} </i>[ju.tin´]<i>;;s
 Remove;;verb;e{ke} </i>[ɛ̝.kɛ̝´]<i>;;s
 Renew;;verb;;;s
-Rent;;verb;;;s
+Rent, borrow;;verb;ba{di} </i>[bä.di´]<i>;;s
 Repair;;verb;;;s
 Repeat (a prayer, mantra);;verb;etezo </i>[ɛ̝.tɛ̝.zo̞]<i>;;s
 Report;;verb;yu{ba} </i>[ju.bä´]<i>;;s
@@ -1669,6 +1675,8 @@ Salt;;inan;to{ze} </i>[to̞.zɛ̝´]<i>;;s
 Same;;adj;de{su} </i>[dɛ̝.su´]<i>;;s
 Sand;;inan;li{she} </i>[li.ɕɛ̝´]<i>;;s
 Sanguine, blood (formal);;an;jo{we} </i>[dʑo̞.wɛ̝´]<i>;;s
+Satan;;inan;;;real
+Satanist;;an;;;real
 Satisfy;;verb;de{fa} </i>[dɛ̝.fä´]<i>;;s
 Saturn;;inan;{sang} </i>[säŋ´]<i>;;s
 Sauté;;verb;desa{be} </i>[dɛ̝.sä.bɛ̝´]<i>;;s
@@ -1968,6 +1976,7 @@ Tame;;verb;ze{juya} </i>[zɛ̝.dʑu´.jä´]<i>;;s
 Tan;;verb;ze{cen} </i>[zɛ̝.tɕɛ̝n´]<i>;;s
 Tan;;adj;ze{cen} </i>[zɛ̝.tɕɛ̝n´]<i>;;s
 Target;;inan;be{kam} </i>[bɛ̝.käm´]<i>;;s
+Task (general);;inan;;;s
 Taste;;verb;du{tse} </i>[du.tsɛ̝´]<i>;;s
 Tattoo;;inan;su{zun} </i>[su.zun´]<i>;;ahan
 Tattoo;;inan;su{zun} </i>[su.zun´]<i>;;s
