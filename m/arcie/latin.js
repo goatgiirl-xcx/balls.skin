@@ -221,7 +221,7 @@ function latinPronouncer() {
 		string = massReplace(string, { "´" : "ˈ" , "`" : "ˌ" });
 		string = massReplace(string, { "ʧ" : "t͡ʃ" , "ʤ" : "d͡ʒ" , "x" : "k"});
 		
-		string = string.replace(/n([\.]*)([kg])/g, "ŋ$1$2");
+		string = string.replace(/n([\.]?)([\´\`]?)([kg])/g, "ŋ$1$2$3");
 		
 		latinText[i] = string;
 	}
