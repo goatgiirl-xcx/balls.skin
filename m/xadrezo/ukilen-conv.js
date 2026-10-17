@@ -694,7 +694,8 @@ function bijectiveString(m, k) {
 						"a2": "",
 						"det": "",
 						"geb": "",
-						"det2": "",
+						"deh": "",
+						"dea": "
 						"bel": "",
 						"gem": "",
 						"žneh": "",
