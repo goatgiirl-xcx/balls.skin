@@ -779,6 +779,7 @@ function bijectiveString(m, k) {
 						"iemie": "",
 						"suenmen": "",
 						"saian": "",
+						"mori": "",
 						
 						
 						":": ":",
