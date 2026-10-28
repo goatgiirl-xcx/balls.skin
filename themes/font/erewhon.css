@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "erewhon";
+  src: url("/font/erewhon/Erewhon-Regular.otf");
+}
+@font-face {
+  font-family: "erewhonb";
+  src: url("/font/erewhon/Erewhon-Bold.otf");
+}
+@font-face {
+  font-family: "Evajp";
+  src: url("/font/default/NotoSerifJP-Black.otf");
+}
+@font-face {
+  font-family: "Evatc";
+  src: url("/font/default/NotoSerifTC-Black.otf");
+}
+@font-face {
+  font-family: "Evasc";
+  src: url("/font/default/NotoSerifSC-Black.otf");
+}
+@font-face {
+  font-family: "Evakr";
+  src: url("/font/default/NotoSerifKR-Black.otf");
+}
+.noto-serif jp-regular {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1,h2,h3,h4,h5,h6,h7 {
+ font-family: "erewhonb", "Evajp", "Evatc", "Evasc", "Evakr", "ukilen";
+}
+p, ul, table, th, td, tr, a, a:visited, button {
+  font-family: "erewhon", "ukilen";
+  font-size: 15px;
+}
+body {
+  font-family: "erewhon";
+}
