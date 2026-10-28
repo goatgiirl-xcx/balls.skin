@@ -145,6 +145,9 @@ function loadFont() {
 		} else if (localStorage.font == "pecita") {
 			font.href = "/themes/font/pecita.css"
 			console.log("pecita")
+		} else if (localStorage.font == "erewhon") {
+			font.href = "/themes/font/erewhon.css"
+			console.log("pecita")
 		} else {
 			font.href = "/themes/font/defaultfont.css"
 			console.log("default") 
