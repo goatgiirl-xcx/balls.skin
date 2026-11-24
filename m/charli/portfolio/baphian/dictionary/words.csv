@@ -312,11 +312,13 @@ Center;;adj;{fo}pu </i>[fo̞´.pu]<i>;;s
 Certain, be certain;;verb;yu{ye}yim </i>[ju.jɛ̝´.jim]<i>;;s
 Chaebol;;inan;{ku}ssabate </i>[ku´.s:ä.bä.tɛ̝]<i>;Considered rude but is becoming more widely used, especially in news outlets;s
 Chain;;inan;ke{zha} </i>[kɛ̝.ʑä´]<i>;;s
+Chain mail;;inan;kezu{pe} </i>[kɛ̝.zu.pɛ̝´]<i>;;s
 Chainmail;;inan;ke{zhase} </i>[kɛ̝.ʑä´.sɛ̝´]<i>;;s
 Chair;;inan;so{lum} </i>[so̞.lum´]<i>;;s
 Change;;verb;de{kye} </i>[dɛ̝.kjɛ̝´]<i>;;s
 Chaos, randomness;;inan;yim{te} </i>[jim.tɛ̝´]<i>;;s
 Chapter;;inan;mu{za}zzo </i>[mu.zä´.z:o̞]<i>;;s
+Chariot (tarot);;inan;peshe </i>[pɛ̝.ɕɛ̝]<i>;;s
 Chasm;;inan;{jue}de </i>[ju´.ɛ̝´.dɛ̝]<i>;;s
 Chastity, abstinence;;inan;{si}teyo </i>[si´.tɛ̝.jo̞]<i>;;s
 Cheeky;;adj;su{zi} </i>[su.zi´]<i>;;s
@@ -464,6 +466,8 @@ Cup;;inan;{ttute} </i>[t:u´.tɛ̝´]<i>;;s
 Cure;;verb;so{ju} </i>[so̞.dʑu´]<i>;;s
 Curry;;inan;ja{lang} </i>[dʑä.läŋ´]<i>;;s
 Cut;;verb;ko{she} </i>[ko̞.ɕɛ̝´]<i>;;s
+Cute, kawaii, moe;;adj;detso </i>[dɛ̝.tso̞]<i>;Specifically cute with an anime vibe;baph
+Cute, pretty;;adj;zese </i>[zɛ̝.sɛ̝]<i>;;s
 Cyan, sky blue;;adj;shuwe </i>[ɕu.wɛ̝]<i>;Sunterian borrowing. Uncommon;s
 Cycle;;inan;sho{tse} </i>[ɕo̞.tsɛ̝´]<i>;;s
 Cyclical;;adj;sho{tse} </i>[ɕo̞.tsɛ̝´]<i>;;s
@@ -665,7 +669,7 @@ False, not true;;adj;do{ce} </i>[do̞.tɕɛ̝´]<i>;;s
 Family;;an;ke{zzo} </i>[kɛ̝.z:o̞´]<i>;;s
 Fan (of something);;an;jasi </i>[dʑä.si]<i>;;s
 Fang, canine tooth;;an;{ce}fun{long} </i>[tɕɛ̝´.fun.lo̞ŋ´]<i>;;s
-Fang, canine tooth;;ahan;{celong} </i>[tɕɛ̝´.lo̞ŋ´]<i>;;s
+Fang, canine tooth;;an;{celong} </i>[tɕɛ̝´.lo̞ŋ´]<i>;;ahan
 Fantasy;;inan;{ling}e </i>[liŋ´.ɛ̝]<i>;;s
 Far;;adj;{u}zzo </i>[u´.z:o̞]<i>;;s
 Farewell, goodbye;;phr;ha{non} </i>[hä.no̞n´]<i>;More formal then Cucis;s
@@ -1066,6 +1070,7 @@ Jyosti Baphian (Language);JOTSEBAFI;inan;yo{tse} ba{fi} {di}ye </i>[jo̞.tsɛ
 Jyostian (language);JOTSE;inan;yo{tse} {di}ye </i>[jo̞.tsɛ̝´.di´.jɛ̝]<i>;;s
 Kasten;SADEN;inan;{sa}densa </i>[sä´.dɛ̝n.sä]<i>;;s
 Kastenian;SADEN;inan;{sa}den si </i>[sä´.dɛ̝n si]<i>;;s
+Kawaii complex;;inan;detsoke </i>[dɛ̝.tso̞.kɛ̝]<i>;The concept of being obsessed with anything remotely cute, especially if it’s of Japanese origin. ;baph
 Keep;;verb;ze{ko} </i>[zɛ̝.ko̞´]<i>;;s
 Keese;;an;;;hy
 Kes;SE;inan;se {di}ye </i>[sɛ̝ di´.jɛ̝]<i>;;s
@@ -1131,6 +1136,7 @@ Lemonade, lemon juice;;inan;;;s
 Length;;inan;;;s
 Lentil;;an;fa{su} </i>[fä.su´]<i>;;s
 Let, allow;;verb;ze{bee} </i>[zɛ̝.bɛ̝:´]<i>;;s
+Letter, mail;;ahan;zu{pe} </i>[zu.pɛ̝´]<i>;More commonly used in Ahanan but used everywhere as a shortening of all mail;s
 Library;;inan;mu{za}je </i>[mu.zä´.dʑɛ̝]<i>;;s
 Lie (in bed);;verb;jo{da} </i>[dʑo̞.dä´]<i>;;s
 Lie, tell untruths;;verb;edosan{ce} </i>[ɛ̝.do̞.sän.tɕɛ̝´]<i>;;s
@@ -1203,8 +1209,8 @@ Makeup;;inan;pu{ko} </i>[pu.ko̞´]<i>;;s
 Mall, shopping mall, shopping centre / center;;inan;;;s
 Man;;an;ana </i>[ä.nä]<i>;Used for nonkaneeds, borrowed from Loremese;s
 Mandrake;;inan;ko{be} </i>[ko̞.bɛ̝´]<i>;;s
-Mania;;an;gu{shufye}zhu </i>[gu.ɕɛ̝´.fjɛ̝´.ʑu]<i>;;s
 Mania;GUŚUFJEŽU;inan;gu{shufye}zhu </i>[gu.ɕɛ̝´.fjɛ̝´.ʑu]<i>;;ahan
+Mania;;an;gu{shufye}zhu </i>[gu.ɕɛ̝´.fjɛ̝´.ʑu]<i>;;s
 Manipulate;;verb;;;s
 Mantra, incantation;;inan;;;s
 Manual, by self;;adj;su{to} </i>[su.to̞´]<i>;;s
@@ -1230,6 +1236,8 @@ Meat;;inan;din{te} </i>[din.tɛ̝´]<i>;;s
 Medal, trophy;;inan;kan{syu} </i>[kän.sju´]<i>;;s
 Medicine;;inan;so{shezhi} </i>[so̞.ɕɛ̝´.ʑi´]<i>;;s
 Meditate;;verb;ze{ju}mu </i>[zɛ̝.dʑu´.mu]<i>;;s
+Meditate, think (deeply on…);;verb;tintin{lu} </i>[tin.tin.lu´]<i>;;s
+Meditation;;inan;tintin{lu} </i>[tin.tin.lu´]<i>;;s
 Meet, gather, convene, assemble;;verb;juje </i>[dʑu.dʑɛ̝´]<i>;;s
 Meeting place;;inan;;;s
 Member (of group);;an;;;s
@@ -1380,10 +1388,11 @@ Other;;inan;de{yun} </i>[dɛ̝.jun´]<i>;;s
 Out;;adj;ke{yen} </i>[kɛ̝.jɛ̝n´]<i>;;s
 Outside;;inan;ke{yen}yan </i>[kɛ̝.jɛ̝n´.jän]<i>;;s
 Oven, stove;;inan;wo{lang} </i>[wo̞.läŋ´]<i>;when used as “Stove” it is an Ahananism;s
+Overnight shipping;;inan;fo{pezhi} </i>[fo̞.pɛ̝´.ʑi´]<i>;;s
 Oversleep (more than one wanted);;verb;teda </i>[tɛ̝.dä]<i>;;s
 Oversleep (past an event);;verb;tee{de} </i>[tɛ̝.ɛ̝.dɛ̝´]<i>;;s
 Owe;;verb;;;s
-Package;;inan;te{zhi} </i>[tɛ̝.ʑi´]<i>;;s
+Package, mail;;inan;te{zhi} </i>[tɛ̝.ʑi´]<i>;Rarely used for mail, usually only to refer to specifically mailed in packages with items, not letters.;s
 Package, wrap;;verb;te{zhi} </i>[tɛ̝.ʑi´]<i>;;s
 Page, paper;;inan;zu{pe} </i>[zu.pɛ̝´]<i>;When used as “paper” it’s informal;s
 Pain;;inan;dizhu </i>[di.ʑu]<i>;;s
@@ -1485,7 +1494,7 @@ Play (instrument, music, song);;verb;no{iyan} </i>[no̞.i´.jän´]<i>;;s
 Play (with kids);;verb;o{le} </i>[o̞.lɛ̝´]<i>;Can obviously mean a lot of things depending on context, usually it means playing easier for little kids;s
 Plaza, market;;inan;;;s
 Plural marker;;par;{we} </i>[wɛ̝´]<i>;;s
-Plush / plushie, stuffed (animal, toy);;inan;{pa} </i>[dɛ̝.pä´]<i>;;s
+Plush / plushie, stuffed (animal, toy);;inan;de{pa} </i>[dɛ̝.pä´]<i>;;s
 Pocket (clothes);;inan;;;s
 Podcast;;inan;;;s
 Poe;;inan;;;hy
@@ -1625,7 +1634,7 @@ Relay;;verb;;;s
 Release, set off, let out;;verb;pewo </i>[pɛ̝.wo̞]<i>;;s
 Remain;;verb;zhu{le} </i>[ʑu.lɛ̝´]<i>;;s
 Remember;;verb;yu{tin} </i>[ju.tin´]<i>;;s
-Remove;;verb;e{ke} </i>[ɛ̝.kɛ̝´]<i>;;s
+Remove, rid (of), take (away), purge;;verb;e{ke} </i>[ɛ̝.kɛ̝´]<i>;;s
 Renew;;verb;;;s
 Rent, borrow;;verb;ba{di} </i>[bä.di´]<i>;;s
 Repair;;verb;;;s
@@ -1999,6 +2008,7 @@ Tame;;adj;ze{juya} </i>[zɛ̝.dʑu´.jä´]<i>;;s
 Tame;;verb;ze{juya} </i>[zɛ̝.dʑu´.jä´]<i>;;s
 Tan;;adj;ze{cen} </i>[zɛ̝.tɕɛ̝n´]<i>;;s
 Tan;;verb;ze{cen} </i>[zɛ̝.tɕɛ̝n´]<i>;;s
+Tantra;;inan;e{ye} </i>[ɛ̝.jɛ̝´]<i>;;s
 Target;;inan;be{kam} </i>[bɛ̝.käm´]<i>;;s
 Task (general);;inan;;;s
 Taste;;verb;du{tse} </i>[du.tsɛ̝´]<i>;;s
@@ -2126,6 +2136,8 @@ Tyrosia;DAILOŚIJA;inan;da{i}lo{shi}ya{sa} </i>[dä.i´.lo̞.ɕi´.jä.sä´]
 Tyrosian (Language);DAILOŚIJA;inan;da{i}lo{shi}ya {di}ye </i>[dä.i´.lo̞.ɕi´.jä di´.jɛ̝]<i>;;s
 Tyrosian (People);DAILOŚIJA;an;da{i}lo{shi}ya si </i>[dä.i´.lo̞.ɕi´.jä si]<i>;;s
 Ukilen;;inan;{u}jelin </i>[u´.dʑɛ̝.lin]<i>;;s
+Unbreakable, (super) hard, tough;;adj;kehu{zan} </i>[kɛ̝.hu]<i>;;s
+Unbreakable, (super) hard, tough;;adj;ke{ke} </i>[kɛ̝.kɛ̝´]<i>;;ahan
 Under;;adj;nu{wun} </i>[nu.wun´]<i>;;s
 Understand, get;;verb;{ye}tu </i>[jɛ̝´.tu]<i>;;s
 Unequal;;verb;de{du} </i>[dɛ̝.du´]<i>;;s
@@ -2266,6 +2278,7 @@ Year;;inan;se{de} </i>[sɛ̝.dɛ̝´]<i>;;s
 Yell; ;verb;e{ye}je </i>[ɛ̝.jɛ̝´.dʑɛ̝ ]<i>;;s
 Yellow;;adj;she{zze} </i>[ɕɛ̝.z:ɛ̝´]<i>;;s
 Yesterday;;inan;;;s
+Yoga;;inan;;;s
 Young;;adj;je{se} </i>[dʑɛ̝.sɛ̝´]<i>;;s
 Young child;;an;pe{le} </i>[pɛ̝.lɛ̝´]<i>;;s
 Youth, young person;;an;jesi </i>[dʑɛ̝.si]<i>;;s
@@ -2275,4 +2288,4 @@ Zombie;;inan;deso{yan}nu{e}ze </i>[dɛ̝.so̞.jän´.nu.ɛ̝´.zɛ̝
 Zombie, reanimated person (not necessarily flesh eating);;inan;deso{yan}nu{e}ze </i>[dɛ̝.so̞.jän´.nu.ɛ̝´.zɛ̝ ]<i>;Incredibly formal, usually only used in Treveist text;s
 Zombify;;verb;sebi{ye}si </i>[sɛ̝.bi.jɛ̝´.si]<i>;;s
 Zora;ZOLA;an;{zo}la{zzo} </i>[zo̞´.lä.z:o̞´]<i>;;hy
-?;;inan;{kam}ni </i>[käm´.ni]<i>;Unknown origin, came to me in a dream... /g;s
+?;;inan;{kam}ni </i>[käm´.ni]<i>;Unknown origin, literally came to me in a dream, more or less means in my opinion the victim of a vampire attack;s
